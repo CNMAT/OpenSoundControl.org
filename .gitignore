@@ -1,0 +1,9 @@
+raw/
+toc.md
+toc.html
+index.md
+index.html
+
+# These may become problems but don't check them into the repo for now:
+*.pdf
+*.html

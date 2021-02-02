@@ -1,19 +1,8 @@
 # Download the old site from archive.org
 
 wget -r --accept-regex '.*/web.archive.org/.*/opensoundcontrol.org/.*' \
-     --reject-regex '(.*\.(css|js|ico|png))|(.*/user/login.*)' \
+     --reject-regex '(.*\.(css|js|ico|png))|(.*/(user|image_captcha|filter|export)/.*)|(.*((\?sort)|/node).*)|(.*/(tracker|feed))' \
      https://web.archive.org/web/20201128050430/http://opensoundcontrol.org 
 
-exit
 
-
-
-# Add a .html suffix to every filename (that isn't a directory)
-
-for f in `find web.archive.org  -type f`; do mv $f $f.html ; done
-
-
-# Keep only the latest version of each file
-
-# Remove the boring junk (navigation, etc.) from each file
-
+# Some bad files left behind include rss.xml, pages of publications...

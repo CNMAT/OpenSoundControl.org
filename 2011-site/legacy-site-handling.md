@@ -45,9 +45,20 @@ Keep only the latest version of each file.
 how files changed over time, but it's bad enough having legacy content
 without also thinking about the legacy legacy content.)
 
+Sample invocation during testing:
+
+        rm -rf latest; ./keep-latest.sh depth6/web.archive.org/web ; du -sh latest
+
 ## cleanup-all.sh
 
 Iterate recursively through a "latest" folder, creating a "clean" folder.
+
+Sample invocation during testing (wanting `du` to go down but not too
+much while trying different arguments to `pup`):
+
+        rm -rf clean ; ./cleanup-all.sh latest ; du -sh clean
+
+Afterwards manually delete some spam pages under `topic`.
 
 ### cleanup.sh
 

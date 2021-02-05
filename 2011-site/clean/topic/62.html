@@ -1,0 +1,99 @@
+<div class="content">
+ <p>
+  Tactex’s MTC Express controller senses pressure at multiple points on
+  <br>
+  a surface. The primary challenge using the device is to reduce the high
+  <br>
+  dimensionality of the raw sensor output (over a hundred pressure values) to a
+  <br>
+  small number of parameters that can be reliably controlled.
+  <br>
+  One approach is to install physical  tactile guides over the surface and interpret the result as a set of sliders controlled  by a performer’s fingers. Apart from not fully exploiting the potential of  the controller this approach has the disadvantage of introducing delays as the  performer finds the slider positions.
+ </p>
+ <p>
+  An alternative approach  is to interpret the output of the tactile array as an "image" and use  computer vision techniques to estimate pressure for each finger of the hand. Software provided by Tactex outputs four  parameters for each of up to five sensed "fingers," which we represent with the following OSC addresses:
+  <br>
+ </p>
+ <ul>
+  <p>
+  </p>
+  <p>
+  </p>
+  <li>
+   /x
+   <br>
+   – X position on the surface
+  </li>
+  <p>
+  </p>
+  <p>
+  </p>
+  <li>
+   /y
+   <br>
+   – Y position on the surface
+  </li>
+  <p>
+  </p>
+  <p>
+  </p>
+  <li>
+   /z
+   <br>
+   – Pressure
+  </li>
+  <p>
+  </p>
+  <p>
+  </p>
+  <li>
+   /age
+   <br>
+   – Amount of time this finger has been touching the surface
+  </li>
+  <p>
+  </p>
+  <p>
+  </p>
+ </ul>
+ <p>
+ </p>
+ <p>
+  The anatomy of the human hand makes it impossible to control these four variables independently for each of five fingers. We have developed another level of analysis, based on interpreting the parameters of three fingers as a triangle:
+ </p>
+ <p>
+  <img src="https://web.archive.org/web/20201025224349im_/http://www.cnmat.berkeley.edu/ICMC2001/html/triangle-params.gif" width="242" height="309">
+  <br>
+  /area
+  <br>
+  /averageX
+  <br>
+  /averageY
+  <br>
+  /incircle/radius
+  <br>
+  /incircle/area
+  <br>
+  /sideLengths
+  <br>
+  /baseLength
+  <br>
+  /orientation
+  <br>
+  /pressure/average
+  <br>
+  /pressure/max
+  <br>
+  /pressure/min
+  <br>
+  /pressure/tilt
+ </p>
+ <div class="forum-topic-navigation clear-block">
+  <a href="/web/20201025224349/http://opensoundcontrol.org/topic/61" class="topic-previous" title="Go to previous forum topic">
+   â€¹ An OSC Address Subspace for Wacom Tablet Data
+  </a>
+  <a href="/web/20201025224349/http://opensoundcontrol.org/topic/60" class="topic-next" title="Go to next forum topic">
+   Addressing software using OSC messages â€º
+  </a>
+ </div>
+</div>

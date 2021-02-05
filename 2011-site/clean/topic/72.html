@@ -1,0 +1,48 @@
+<div class="content">
+ <p>
+  I've just got a half-size
+  <a href="https://web.archive.org/web/20180209132703/http://www.hakenaudio.com/Continuum/" rel="nofollow">
+   continuum fingerboard
+  </a>
+  , and I'm now in the process of implementing basic Max patches for interpreting incoming MIDI so that it can be used to control sound processes as flexible as possible. It makes sense to do so using the OSC protocol. But before finishing of the patches I'm wondering if there are any standard practice for how to design the name space.  The continuum transmit various MIDI messages (note on, CC, pitch bend) but converting into x-, y-, z-positions is fairly trivial. The fingerboard is multiphonic, able to keep track of up to 10 fingers at the same time. When using the data to control a polyphonic synth, it will be important to keep track of the various voices.
+ </p>
+ <p>
+  Alexander Refsum Jensenius has pointed me in the direction of the article "Managing Complexity with Explicit Mapping of Gestures to Sound control with OSC" by Wright et. al. Based on the discussions of the OSC address subspace for the wacom as well as the hexaphonic guitar processing, and my own reasoning, the following namespace seems practical.
+ </p>
+ <p>
+  /n/x - x position for the nth voice, 1Ã¢â€°Â¤nÃ¢â€°Â¤10
+  <br>
+  /n/y - Y position for the nth voice
+  <br>
+  /n/z - Z position (pressure) for the nth voice
+  <br>
+  /n/active - boolean value to indicate if the nth voice is active or not. 1 when a finger touch the fingerboard, 0 when it is removed form the fingerboard again>
+ </p>
+ <p>
+  The range for /n/y and /n/z can be scaled to [0,1], but for /n/x it makes more sense to keep the range equivalent to the (float) MIDI pitch values represented by the fignerboard.
+ </p>
+ <p>
+  My two questions are:
+ </p>
+ <p>
+  1) Do this name space seem reasonable?
+  <br>
+  2) Is there any central repository or online directory overview of patches for mapping various control interfaces to OSC in MaxMSP?
+ </p>
+ <p>
+  Alexander Refsum Jensenius has made OSC wrappers for several interfaces. The paper by Wright et al. seems to suggest that more patches do exist. Maybe it would be a good idea to try to gather them all in the same place instead of having them scattered over a wide range of libraries of 3rd part MaxMSP externals/abstractions?
+ </p>
+ <p>
+  Thanks,
+  <br>
+  Trond
+ </p>
+ <div class="forum-topic-navigation clear-block">
+  <a href="/web/20180209132703/http://opensoundcontrol.org/topic/97" class="topic-previous" title="Go to previous forum topic">
+   â€¹ MIDI address space
+  </a>
+  <a href="/web/20180209132703/http://opensoundcontrol.org/topic/73" class="topic-next" title="Go to next forum topic">
+   Possible OSC support in Jamoma â€º
+  </a>
+ </div>
+</div>

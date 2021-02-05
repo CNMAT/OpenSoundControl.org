@@ -1,0 +1,194 @@
+<div class="content">
+ <div class="field field-type-text field-field-project-type">
+  <div class="field-items">
+   <div class="field-item">
+    <div class="field-label-inline-first">
+     Project Type:
+    </div>
+    Programming Language Library
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-link field-field-project-url">
+  <div class="field-items">
+   <div class="field-item">
+    <div class="field-label-inline-first">
+     Project URL:
+    </div>
+    <a href="https://web.archive.org/web/20201028115406/http://bitbucket.org/arjan/txosc">
+     TxOSC: OSC protocol for Twisted
+    </a>
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-link field-field-osc-documentation-referen">
+  <div class="field-items">
+   <div class="field-item">
+    <div class="field-label-inline-first">
+     OSC Documentation URL:
+    </div>
+    <a href="https://web.archive.org/web/20201028115406/http://bitbucket.org/arjan/txosc/src">
+     README File
+    </a>
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-text field-field-description">
+  <div class="field-items">
+   <div class="field-item">
+    <h1>
+     Open Sound Control (OSC) protocol for Twisted
+    </h1>
+    <p>
+     This library implements OSC version 1.1 over both UDP and TCP for  the Twisted Python framework.
+    </p>
+    <p>
+     It supports listening to a multicast group. Twisted is an event-based framework for internet applications which works on Python 2.3 through 2.6.
+    </p>
+    <p>
+     Note that there could be a non-Twisted implementation derived from this code, since the main txosc/osc.py file is not Twisted-specific. (and it has less bugs and more tests and features than the OSC.py and simpleosc.py modules found everywhere on the Web) It's only the sender and receiver classes that are implemented with the tools provided by Twisted. The developers of txosc are open for some Python developer to help with the non-Twisted part.
+    </p>
+    <h1>
+     Installing
+    </h1>
+    <ul>
+     <li>
+      Get it from PyPI: http://pypi.python.org/pypi/txosc
+     </li>
+     <li>
+      Use the Ubuntu package (soon in Debian unstable): https://launchpad.net/~sat-metalab/+archive/metalab/+packages
+     </li>
+     <li>
+      Get the tarball: http://bitbucket.org/arjan/txosc/downloads
+     </li>
+    </ul>
+    <h1>
+     Authors
+    </h1>
+    <p>
+     Arjan Scherpenisse and Alexandre Quessy.
+    </p>
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-number-integer field-field-transport-type">
+  <div class="field-label">
+   Transport Type:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    UDP
+   </div>
+   <div class="field-item">
+    TCP
+   </div>
+   <div class="field-item">
+    None / Transport Independent
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-text field-field-platform">
+  <div class="field-label">
+   Platform:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    Any / Platform Independent
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-number-integer field-field-features">
+  <div class="field-label">
+   Features:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    Packet Parsing (Client)
+   </div>
+   <div class="field-item">
+    Packet Construction (Server)
+   </div>
+   <div class="field-item">
+    Bundle Support
+   </div>
+   <div class="field-item">
+    Timetag Support
+   </div>
+   <div class="field-item">
+    Wildcard Matching Support
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-number-integer field-field-bundle-support">
+  <div class="field-label">
+   Bundle Support:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    Reads Bundles
+   </div>
+   <div class="field-item">
+    Creates Bundles
+   </div>
+   <div class="field-item">
+    Supports Nested Bundles
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-number-integer field-field-timetag-support">
+  <div class="field-label">
+   Timetag Support:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    Generates "IMMEDATE" timestamp
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-text field-field-type-support">
+  <div class="field-label">
+   Type Support:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    i: int32
+   </div>
+   <div class="field-item">
+    b: blob
+   </div>
+   <div class="field-item">
+    s: string
+   </div>
+   <div class="field-item">
+    f: float32
+   </div>
+   <div class="field-item">
+    t: timetag
+   </div>
+   <div class="field-item">
+    d: double precision float
+   </div>
+   <div class="field-item">
+    c: char
+   </div>
+   <div class="field-item">
+    r: RGBA color (char*4)
+   </div>
+   <div class="field-item">
+    m: MIDI message (char*4)
+   </div>
+   <div class="field-item">
+    T: true
+   </div>
+   <div class="field-item">
+    F: false
+   </div>
+   <div class="field-item">
+    N: null
+   </div>
+   <div class="field-item">
+    I: infinitum
+   </div>
+  </div>
+ </div>
+</div>

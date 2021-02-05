@@ -1,0 +1,378 @@
+<div class="content">
+ <p>
+  version 1.0, March 29 2002, Matt Wright
+ </p>
+ <p>
+  This document provides examples to support the
+  <a href="/web/20201028121400/http://opensoundcontrol.org/OSC-spec.html">
+   OpenSound
+   <br>
+   Control Specification
+  </a>
+  .
+ </p>
+ <p>
+ </p>
+ <h4>
+  <a name="OSCstrings">
+  </a>
+  OSC-string examples
+ </h4>
+ <p>
+  The string "OSC" is represented as an OSC-string with these four
+  <br>
+  bytes:
+ </p>
+ <table border="1">
+  <tbody>
+   <tr>
+    <td>
+     O
+    </td>
+    <td>
+     S
+    </td>
+    <td>
+     C
+    </td>
+    <td>
+     \0
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  The string "data" is represented as an OSC-string with these eight
+  <br>
+  bytes:
+ </p>
+ <table border="1">
+  <tbody>
+   <tr>
+    <td>
+     d
+    </td>
+    <td>
+     a
+    </td>
+    <td>
+     t
+    </td>
+    <td>
+     a
+    </td>
+    <td>
+     \0
+    </td>
+    <td>
+     \0
+    </td>
+    <td>
+     \0
+    </td>
+    <td>
+     \0
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <a name="typetagstrings">
+  </a>
+  OSC Type Tag String Examples
+ </h4>
+ <table border="1" cellpadding="1">
+  <caption align="bottom">
+   Example OSC Type Tag Strings
+  </caption>
+  <tbody>
+   <tr>
+    <td height="29">
+     <b>
+      Argument types
+     </b>
+    </td>
+    <td height="29">
+     <b>
+      OSC Type Tag String
+     </b>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     One float32 argument
+    </td>
+    <td>
+     ",f"
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Two int32 arguments followed by one OSC-string argument followed by three
+     <br>
+     float32 arguments
+    </td>
+    <td>
+     ",iisfff"
+    </td>
+   </tr>
+   <tr>
+    <td>
+     No arguments
+    </td>
+    <td>
+     ","
+    </td>
+   </tr>
+   <tr>
+    <td>
+     An int32 argument followed by two OSC-blob arguments
+    </td>
+    <td>
+     ",ibb"
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h4>
+  <a name="OSCaddress">
+  </a>
+  OSC Address Examples
+ </h4>
+ <p>
+  Suppose a particular OSC Address Space includes an OSC Method with the name
+  <br>
+  "frequency". This method is contained in an OSC Container with the
+  <br>
+  name "3", which is contained in another OSC container named "resonators",
+  <br>
+  which is contained in the OSC container that is the root of the address space
+  <br>
+  tree. The method's OSC Address is "/resonators/3/frequency".
+ </p>
+ <p>
+  The OSC Address "/a/b/c/d/e" means that:
+ </p>
+ <ul>
+  <li>
+   The root of the tree contains an OSC Container with the name "a",
+  </li>
+  <li>
+   that OSC Container contains an OSC Container with the name "b",
+  </li>
+  <li>
+   that OSC Container contains an OSC Container with the name "c",
+  </li>
+  <li>
+   that OSC Container contains an OSC Container with the name "d",
+   <br>
+   and
+  </li>
+  <li>
+   that OSC Container contains an OSC Method with the name "e".
+  </li>
+ </ul>
+ <h4>
+  <a name="addressparts">
+  </a>
+  OSC Address Parts Examples
+ </h4>
+ <p>
+  There are three parts of the OSC Address "/a/b/cde": "a",
+  <br>
+  "b", and "cde". Note that the last part is the name of the
+  <br>
+  OSC Method and the other parts are the names of the OSC Containers that (recursively)
+  <br>
+  contain the method.
+ </p>
+ <p>
+  There are three parts of the OSC Address pattern "/?/b/*c": "?",
+  <br>
+  "b", and "*c".
+ </p>
+ <h4>
+  <a name="argument">
+  </a>
+  OSC Message Examples
+ </h4>
+ <p>
+  In each of these examples, each byte of a message is printed first in hexadecimal,
+  <br>
+  followed by the corresponding ASCII character in parentheses.
+ </p>
+ <p>
+  The OSC Message with the OSC Address Pattern "/oscillator/4/frequency"
+  <br>
+  and the floating point number 440.0 as the single argument would be represented
+  <br>
+  by the following 32-byte message:
+ </p>
+ <pre>
+  2f (/)  6f (o)  73 (s)  63 (c)
+  <br>
+  69 (i)  6c (l)  6c (l)  61 (a)
+  <br>
+  74 (t)  6f (o)  72 (r)  2f (/)
+  <br>
+  34 (4)  2f (/)  66 (f)  72 (r)
+  <br>
+  65 (e)  71 (q)  75 (u)  65 (e)
+  <br>
+  6e (n)  63 (c)  79 (y)  0 ()
+  <br>
+  2c (,)  66 (f)  0 ()    0 ()
+  <br>
+  43 (C)  dc (Ü)  0 ()    0 ()
+ </pre>
+ <p>
+  The next example shows the 40 bytes in the representation of the OSC Message
+  <br>
+  with OSC Address Pattern "/foo" and 5 arguments:
+ </p>
+ <ol>
+  <li>
+   The int32 1000
+  </li>
+  <li>
+   The int32 -1
+  </li>
+  <li>
+   The string "hello"
+  </li>
+  <li>
+   The float32 1.234
+  </li>
+  <li>
+   The float32 5.678
+  </li>
+ </ol>
+ <pre>
+  2f (/)  66 (f)  6f (o)  6f (o)
+  <br>
+  0 ()    0 ()    0 ()    0 ()
+  <br>
+  2c (,)  69 (i)  69 (i)  73 (s)
+  <br>
+  66 (f)  66 (f)  0 ()    0 ()
+  <br>
+  0 ()    0 ()    3 ()    e8 (è)
+  <br>
+  ff (ÿ)  ff (ÿ)  ff (ÿ)  ff (ÿ)
+  <br>
+  68 (h)  65 (e)  6c (l)  6c (l)
+  <br>
+  6f (o)  0 ()    0 ()    0 ()
+  <br>
+  3f (?)  9d ()   f3 (ó)  b6 (¶)
+  <br>
+  40 (@)  b5 (µ)  b2 (”)  2d (-)
+ </pre>
+ <h4>
+  <a name="bundledispatchorder">
+  </a>
+  Order of Invocation of OSC Methods matched
+  <br>
+  by OSC Messages in an OSC Bundle
+ </h4>
+ <p>
+  Suppose an OSC Servers' OSC Address Space includes methods with the following
+  <br>
+  OSC Addresses:
+ </p>
+ <ul>
+  <li>
+   /first/this/one
+  </li>
+  <li>
+   /second/1
+  </li>
+  <li>
+   /second/2
+  </li>
+  <li>
+   /third/a
+  </li>
+  <li>
+   /third/b
+  </li>
+  <li>
+   /third/c
+  </li>
+ </ul>
+ <p>
+  Suppose an OSC Bundle is received that contains three OSC Messages, and that
+  <br>
+  the three OSC Messages have these OSC Address Patterns:
+ </p>
+ <ol>
+  <li>
+   /first/this/one
+  </li>
+  <li>
+   /second/[1-2]
+  </li>
+  <li>
+   /third/*
+  </li>
+ </ol>
+ <p>
+  Six methods will be invoked in this order:
+ </p>
+ <p>
+  (1) First /first/this/one, since that OSC Address Pattern appeared first in
+  <br>
+  the OSC Bundle; then
+ </p>
+ <p>
+  (2-3) Either /second/1 followed /second/2 or /second/2 followed by /second/1;
+  <br>
+  then
+ </p>
+ <p>
+  (3-6) /third/a, /third/b, and /third/c, in any order.
+ </p>
+ <p>
+  There are twelve possible orders in which an OSC server may invoke these six
+  <br>
+  methods:
+ </p>
+ <ol>
+  <li>
+   /first/this/one, /second/1, /second/2, /third/a, /third/b, /third/c
+  </li>
+  <li>
+   /first/this/one, /second/1, /second/2, /third/a, /third/c, /third/b
+  </li>
+  <li>
+   /first/this/one, /second/1, /second/2, /third/b, /third/a, /third/c
+  </li>
+  <li>
+   /first/this/one, /second/1, /second/2, /third/b, /third/c, /third/a
+  </li>
+  <li>
+   /first/this/one, /second/1, /second/2, /third/c, /third/a, /third/b
+  </li>
+  <li>
+   /first/this/one, /second/1, /second/2, /third/c, /third/b, /third/a
+  </li>
+  <li>
+   /first/this/one, /second/2, /second/1, /third/a, /third/b, /third/c
+  </li>
+  <li>
+   /first/this/one, /second/2, /second/1, /third/a, /third/c, /third/b
+  </li>
+  <li>
+   /first/this/one, /second/2, /second/1, /third/b, /third/a, /third/c
+  </li>
+  <li>
+   /first/this/one, /second/2, /second/1, /third/b, /third/c, /third/a
+  </li>
+  <li>
+   /first/this/one, /second/2, /second/1, /third/c, /third/a, /third/b
+  </li>
+  <li>
+   /first/this/one, /second/2, /second/1, /third/c, /third/b, /third/a
+  </li>
+ </ol>
+ <div class="book-navigation">

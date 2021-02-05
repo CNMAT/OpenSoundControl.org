@@ -1,0 +1,41 @@
+<div class="content">
+ <p>
+  I guess we are all trying to get rid of MIDI, but as long as we have tons of gear around, it would be good to have a generic way of describing MIDI information in OSC. Perhaps I am missing something obvious, but I have looked around and haven't found any suggestions for a full implementation of MIDI messages as an OSC address space. Is there any?
+ </p>
+ <p>
+  I guess it would be smart to start with /midi so that it is clear what we are dealing with:
+  <br>
+  /midi/note {pitch, velocity, channel}
+ </p>
+ <p>
+  or:
+  <br>
+  /midi/note/pitch {values}
+  <br>
+  /midi/note/velocity {values}
+  <br>
+  /midi/note/channel {values}
+ </p>
+ <p>
+  Even though this would make it much easier to read an incoming stream, it would also require a lot more information to be transported, which is not ideal. Another problem is that of keeping messages together, to ensure that noteons and noteoffs don't disappear.
+ </p>
+ <p>
+  What about putting the channel information first, so that it would be easier to route per channel, perhaps:
+  <br>
+  /midi/channel/note {velocity, pitch}
+ </p>
+ <p>
+  The same questions go for all other types of MIDI information: ctrl, poly, bend, pgm, touch, rt, sysex. Or should we use full names rather than abbrevations: control, polyfony, bend, program, touch, realtime, sysex?
+ </p>
+ <p>
+  Any suggestions or comments are welcome.
+ </p>
+ <div class="forum-topic-navigation clear-block">
+  <a href="/web/20200925155754/http://opensoundcontrol.org/topic/145" class="topic-previous" title="Go to previous forum topic">
+   â€¹ Guitar OSC controller
+  </a>
+  <a href="/web/20200925155754/http://opensoundcontrol.org/topic/72" class="topic-next" title="Go to next forum topic">
+   OSC Address Subspace for Continuum Fingerboard â€º
+  </a>
+ </div>
+</div>

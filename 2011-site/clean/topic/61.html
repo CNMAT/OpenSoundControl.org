@@ -1,0 +1,128 @@
+<div class="content">
+ <p>
+  Wacom digitizing graphic tablets are attractive gestural interfaces for
+real-time computer music. They provide extremely accurate two-dimensional
+absolute position sensing of a stylus, along with measurements of pressure,
+two-dimensional tilt, and the state of the switches on the side of the stylus,
+with reasonably low latency.  The styli (pens) are two-sided, with a
+"tip" and an "eraser." The tablets also support other
+devices, including a mouse-like "puck," and can be used with two
+devices simultaneously.
+ </p>
+ <p>
+  Unfortunately, 
+this measurement data comes from the Wacom drivers in an inconvenient form. Each 
+of the five continuous parameters is available independently, but another parameter, 
+the "device type," indicates what kind of device is being used and, 
+for the case of pens, whether the tip or eraser is being used. For a program to 
+have different behavior based on which end of the pen is used, there must be a 
+switching and gating mechanism to route the continuous parameters to the correct 
+processing based on the "device type." Similarly, the tablet senses 
+position and tilt even when the pen is not touching the tablet, so a program that 
+behaves differently based on whether or not the pen is touching the tablet must 
+examine another variable to properly dispatch the continuous parameters.
+ </p>
+ <p>
+  Instead of simply providing the raw data from the Wacom drivers, our
+  <b>
+   Wacom-OSC
+  </b>
+  object outputs OSC messages with different addresses for the
+different states.  For example, if the eraser end of the pen is currently
+touching the tablet,
+  <b>
+   Wacom-OSC
+  </b>
+  continuously outputs messages whose
+address is
+  <font face="Courier" size="2">
+   /eraser/drawing
+  </font>
+  and whose arguments are the current values of position, tilt, and pressure.
+At the moment the eraser end of the pen is released from the tablet,
+  <b>
+   Wacom-OSC
+  </b>
+  outputs the message
+  <font face="Courier" size="2">
+   /eraser/release
+  </font>
+  .  As long as the
+eraser is within range of the tablet surface,
+  <b>
+   Wacom-OSC
+  </b>
+  continuously
+outputs messages with the address
+  <font face="Courier" size="2">
+   /eraser/hovering
+  </font>
+  and the same
+position, tilt, and pressure arguments.
+ </p>
+ <p>
+  With this scheme, all of the dispatching on the "device type"
+variables is done once and for all inside
+  <b>
+   Wacom-OSC
+  </b>
+  , and hidden from
+the interface designer. The interface designer simply uses the existing
+mechanisms for routing OSC messages to map the different pen states to
+different musical behaviors.
+ </p>
+ <p>
+  We use another level of OSC addressing to define 
+distinct behaviors for different regions of the tablet. The interface designer 
+creates a data structure giving the names and locations of any number of regions 
+on the tablet surface. An object called
+  <b>
+   Wacom-Regions
+  </b>
+  takes the OSC messages 
+from
+  <b>
+   Wacom-OSC
+  </b>
+  and prepends the appropriate region name for events that 
+occur in the region.
+ </p>
+ <p>
+  For example, suppose the pen is drawing within a region named
+"foo."
+  <b>
+   Wacom-OSC
+  </b>
+  outputs the message
+  <font face="Courier" size="2">
+   /tip/drawing
+  </font>
+  with
+arguments giving the current pen position, tilt, and pressure.
+  <b>
+   Wacom-Regions
+  </b>
+  looks up this current pen position in the data structure
+of all the regions and sees that the pen is currently in region
+"foo," so it outputs the message
+  <font face="Courier" size="2">
+   /foo/tip/drawing
+  </font>
+  with the same arguments. Now the standard OSC message routing mechanisms can
+dispatch these messages to the part of the program that implements the
+behavior of the region "foo."
+ </p>
+ <p>
+  Once again tedious programming work is hidden from the interface designer,
+whose job is simply to take OSC messages describing tablet gestures and map
+them to musical control.
+ </p>
+ <div class="forum-topic-navigation clear-block">
+  <a href="/web/20201025215155/http://opensoundcontrol.org/topic/48" class="topic-previous" title="Go to previous forum topic">
+   â€¹ Control of VST plug-ins using OSC
+  </a>
+  <a href="/web/20201025215155/http://opensoundcontrol.org/topic/62" class="topic-next" title="Go to next forum topic">
+   Reducing dimensionality for multipoint touch surfaces â€º
+  </a>
+ </div>
+</div>

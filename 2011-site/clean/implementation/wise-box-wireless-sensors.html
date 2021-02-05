@@ -1,0 +1,89 @@
+<div class="content">
+ <div class="field field-type-text field-field-project-type">
+  <div class="field-items">
+   <div class="field-item">
+    <div class="field-label-inline-first">
+     Project Type:
+    </div>
+    Hardware
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-link field-field-project-url">
+  <div class="field-items">
+   <div class="field-item">
+    <div class="field-label-inline-first">
+     Project URL:
+    </div>
+    <a href="https://web.archive.org/web/20200929193208/http://recherche.ircam.fr/equipes/temps-reel/movement/flety/static.php?page=static050309-144808">
+     http://recherche.ircam.fr/equipes/temps-reel/movement/flety/static.php?page=stat...
+    </a>
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-link field-field-osc-documentation-referen">
+  <div class="field-items">
+   <div class="field-item">
+    <div class="field-label-inline-first">
+     OSC Documentation URL:
+    </div>
+    <a href="https://web.archive.org/web/20200929193208/http://recherche.ircam.fr/equipes/temps-reel/movement/flety/images/Sell-Sheet-WiSeBox.pdf">
+     http://recherche.ircam.fr/equipes/temps-reel/movement/flety/images/Sell-Sheet-Wi...
+    </a>
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-text field-field-description">
+  <div class="field-items">
+   <div class="field-item">
+    <p>
+     The WiSe Box project was started to solve the question of multiple performers equipped with sensors on stage, sharing the same wireless media. First, RF transmissions are regulated by local FCC and it's pretty difficult to find radio channels available and authorized worldwide. Second, sharing a single radio carrier requires a good and robust protocol to avoid collision of information.
+     <a href="https://web.archive.org/web/20200929193208/http://grouper.ieee.org/groups/802/11" rel="nofollow">
+      IEEE 802.11
+     </a>
+     standard was designed for this purpose with a CSMA/CA (collision avoidance) mechanism and statistic delays before transmitting to autoregulate traffic and probability of being able to transmit when you need to.
+    </p>
+    <p>
+     The challenge was to make a WiFi pocket size digitizer, not base on a tiny linux board, but designed from scratch in order to be as close as possible from the hardware (an of-the-shelf CompactFlash 802.11b card) and an optimised UDP/IP stack. 802.11 is actually "only" a transportation layer for 802.3 (Ethernet) : OSC was then just as close as it can be.
+    </p>
+    <p>
+     The basic implementation of OSC is like the one of the Ethersense Project.
+     <br>
+     <strong>
+      /WBxx [16 int list]
+     </strong>
+    </p>
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-number-integer field-field-transport-type">
+  <div class="field-label">
+   Transport Type:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    UDP
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-number-integer field-field-features">
+  <div class="field-label">
+   Features:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    Packet Construction (Server)
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-text field-field-type-support">
+  <div class="field-label">
+   Type Support:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    i: int32
+   </div>
+  </div>
+ </div>
+</div>

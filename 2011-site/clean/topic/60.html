@@ -1,0 +1,46 @@
+<div class="content">
+ <p>
+  We propose a style of programming in which the entire functionality of each software module is addressable through OSC messages. Advantages of this style include the following:
+ </p>
+ <p>
+  1. The OSC namespace for each module explicitly names all of that module's features. This can enable software to be self-documenting and transparent in its functionality.
+ </p>
+ <p>
+  2. The entire functionality of each module is accessible via a single control mechanism: incoming OSC messages. In graphical languages such as Max/MSP and Pd, this allows even the most complex objects to have a single control inlet, reducing the clutter and confusion of connecting to multiple inlets (Figure 1). As a module's functionality grows, no structural changes (such as adding more inlets) are required; the programmer simply expands the module's OSC namespace.
+ </p>
+ <p>
+  3 . If the components of a complex system already communicate among themselves exclusively with OSC messages, then it becomes very easy to move some of the components to other computers to form a distributed local area network system.
+ </p>
+ <p>
+  4. Certain OSC messages can be standardized across different modules. For example, the message "/gain"Â� with a floating point argument can be used in many different synthesis and processing components to change gain; the message "/namespace"Â� can trigger any module to display its OSC namespace; the message "/go"Â� followed by the argument 1 or 0 can be used to turn on and off the processing in the module; and the message "/init" can initialize a module.
+ </p>
+ <p>
+  By sending the "/namespace"Â� message to the Max/MSP patch above the user is presented with this list of OSC messages and can quickly learn how to control the patch:
+  <br>
+  1, /go _int_ turn processing on and off;
+  <br>
+  2, /rate _float_ play rate;
+  <br>
+  3, /set-position _float_ between 0 and 1 sets position
+  <br>
+  from start to end;
+  <br>
+  4, /gain _float_ sets gain;
+  <br>
+  5, /SDIF-tuples _anything_ talks to SDIF-tuples;
+  <br>
+  6, /SDIF-buffer _symbol_ sets SDIF-buffer for
+  <br>
+  7, /sinusoids~ _anything_ talks to sinusoids~;
+  <br>
+  8, /namespace _bang_ opens this collection;
+ </p>
+ <div class="forum-topic-navigation clear-block">
+  <a href="/web/20201025225402/http://opensoundcontrol.org/topic/62" class="topic-previous" title="Go to previous forum topic">
+   â€¹ Reducing dimensionality for multipoint touch surfaces
+  </a>
+  <a href="/web/20201025225402/http://opensoundcontrol.org/topic/44" class="topic-next" title="Go to next forum topic">
+   Regular expressions to address more than 10 things â€º
+  </a>
+ </div>
+</div>

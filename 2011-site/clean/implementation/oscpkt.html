@@ -1,0 +1,164 @@
+<div class="content">
+ <div class="field field-type-text field-field-project-type">
+  <div class="field-items">
+   <div class="field-item">
+    <div class="field-label-inline-first">
+     Project Type:
+    </div>
+    Programming Language Library
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-link field-field-project-url">
+  <div class="field-items">
+   <div class="field-item">
+    <div class="field-label-inline-first">
+     Project URL:
+    </div>
+    <a href="https://web.archive.org/web/20200706221757/http://gruntthepeon.free.fr/oscpkt/">
+     http://gruntthepeon.free.fr/oscpkt/
+    </a>
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-link field-field-osc-documentation-referen">
+  <div class="field-items">
+   <div class="field-item">
+    <div class="field-label-inline-first">
+     OSC Documentation URL:
+    </div>
+    <a href="https://web.archive.org/web/20200706221757/http://gruntthepeon.free.fr/oscpkt/html/">
+     http://gruntthepeon.free.fr/oscpkt/html/
+    </a>
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-text field-field-description">
+  <div class="field-items">
+   <div class="field-item">
+    <p>
+     (I didn't write this.) This is a very minimalistic OSC 1.0 library written completely in C++ and released under the zlib license. There is one header file for most of the implementation, one for UDP transport, and two supplementary files (a simple test and demo). It's robust with respect to malformed packets, doesn't throw exceptions, and doesn't rely on the outdated gethostbyname. It does not, however, take into account timestamp values or provide a cpu-scalable message dispatching, and it may not be suitable for use inside a realtime thread as it allocates memory when building or reading messages.
+    </p>
+    <p>
+     Note: You may have to make some changes to the UDP file to be able to use it with MinGW on Windows. Using line numbers from http://gruntthepeon.free.fr/oscpkt/html/udp_8hh_source.html (as of Dec. 2011), add "#define _WIN32_WINNT 0x501" before line 26 and comment out lines 243-249, 254, 306-308, 310, and the last three error checks in lines 250-251. The modified file is also attached (change extension to .hh).
+    </p>
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-number-integer field-field-transport-type">
+  <div class="field-label">
+   Transport Type:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    UDP
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-number-integer field-field-features">
+  <div class="field-label">
+   Features:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    Packet Parsing (Client)
+   </div>
+   <div class="field-item">
+    Packet Construction (Server)
+   </div>
+   <div class="field-item">
+    Bundle Support
+   </div>
+   <div class="field-item">
+    Wildcard Matching Support
+   </div>
+   <div class="field-item">
+    High Speed (> 100 hz packet rate)
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-text field-field-platform">
+  <div class="field-label">
+   Platform:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    Windows
+   </div>
+   <div class="field-item">
+    Linux
+   </div>
+   <div class="field-item">
+    Mac OSX
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-number-integer field-field-bundle-support">
+  <div class="field-label">
+   Bundle Support:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    Reads Bundles
+   </div>
+   <div class="field-item">
+    Creates Bundles
+   </div>
+  </div>
+ </div>
+ <div class="field field-type-text field-field-type-support">
+  <div class="field-label">
+   Type Support:
+  </div>
+  <div class="field-items">
+   <div class="field-item">
+    i: int32
+   </div>
+   <div class="field-item">
+    b: blob
+   </div>
+   <div class="field-item">
+    s: string
+   </div>
+   <div class="field-item">
+    f: float32
+   </div>
+   <div class="field-item">
+    h: int64
+   </div>
+   <div class="field-item">
+    d: double precision float
+   </div>
+   <div class="field-item">
+    T: true
+   </div>
+   <div class="field-item">
+    F: false
+   </div>
+  </div>
+ </div>
+ <table id="attachments">
+  <thead>
+   <tr>
+    <th>
+     Attachment
+    </th>
+    <th>
+     Size
+    </th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr class="odd">
+    <td>
+     <a href="https://web.archive.org/web/20200706221757/http://opensoundcontrol.org/files/udp.txt">
+      udp.txt
+     </a>
+    </td>
+    <td>
+     13.46 KB
+    </td>
+   </tr>
+  </tbody>
+ </table>
+</div>

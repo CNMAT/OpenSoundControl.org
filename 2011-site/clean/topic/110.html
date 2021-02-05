@@ -1,0 +1,107 @@
+<div class="content">
+ <p>
+  hi,
+ </p>
+ <p>
+  I've successfully used the Bonjour API to advertise OSC services of type
+  <strong>
+   "_osc._udp".
+  </strong>
+  <br>
+  for more information on Bonjour, zeroconf, dns-sd have a look here:
+  <br>
+  <a href="https://web.archive.org/web/20200810014719/http://developer.apple.com/networking/bonjour/index.html" rel="nofollow">
+   http://developer.apple.com/networking/bonjour/index.html
+  </a>
+  <br>
+  <a href="https://web.archive.org/web/20200810014719/http://www.dns-sd.org/" rel="nofollow">
+   http://www.dns-sd.org/
+  </a>
+  <br>
+  <a href="https://web.archive.org/web/20200810014719/http://www.multicastdns.org/" rel="nofollow">
+   http://www.multicastdns.org/
+  </a>
+  <br>
+  <a href="https://web.archive.org/web/20200810014719/http://www.zeroconf.org/" rel="nofollow">
+   http://www.zeroconf.org/
+  </a>
+ </p>
+ <p>
+  you can find an external for max/msp here:
+  <br>
+  <a href="https://web.archive.org/web/20200810014719/http://recherche.ircam.fr/equipes/temps-reel/movement/muller/soft/oscbonjour.zip" rel="nofollow">
+   oscbonjour.zip
+  </a>
+ </p>
+ <p>
+  and the source code is available on sourceforge here:
+  <br>
+  <a href="https://web.archive.org/web/20200810014719/http://svn.sourceforge.net/viewcvs.cgi/osctools/trunk/oscbonjour/oscbonjour.cpp?view=markup&rev=1" rel="nofollow">
+   oscbonjour.cpp
+  </a>
+ </p>
+ <p>
+  What I have done for now, is to register OSC receivers that clients can connect to, by resolving the IP and port from the service name.
+ </p>
+ <p>
+  However when using Bonjour for hardware plateforms that don't have contextual menus and advanced configuration interface, one might want to register a service for an OSC emitter, and not a receiver. That's closer to what people are used to when browsing for midi devices, HID interfaces or soundcards.
+ </p>
+ <p>
+  So the question is how to register both OSC sources and recievers using Bonjour?
+ </p>
+ <p>
+  <strong>
+   1) use different service types?
+  </strong>
+ </p>
+ <ul>
+  <li>
+   "_oscclient._udp"
+  </li>
+  <li>
+   "_oscserver._udp"
+  </li>
+ </ul>
+ <p>
+  and only use the port when listening to a client
+ </p>
+ <p>
+  <strong>
+   2) use Bonjour optionnal key/value text fields
+  </strong>
+ </p>
+ <ul>
+  <li>
+   "_osc._udp"
+  </li>
+  <li>
+   servicename
+  </li>
+  <li>
+   port
+  </li>
+  <li>
+   type=
+   <strong>
+    client/server
+   </strong>
+  </li>
+  <li>
+   another_optionnal_value=
+   <strong>
+    the_valuew
+   </strong>
+  </li>
+ </ul>
+ <p>
+  any thoughts?
+ </p>
+ <div class="forum-topic-navigation clear-block">
+  <a href="/web/20200810014719/http://opensoundcontrol.org/topic/133" class="topic-previous" title="Go to previous forum topic">
+   â€¹ use cases in the "Introduction to OSC" page
+  </a>
+  <a href="/web/20200810014719/http://opensoundcontrol.org/topic/95" class="topic-next" title="Go to next forum topic">
+   OpenSound java and Max/Msp â€º
+  </a>
+ </div>
+</div>

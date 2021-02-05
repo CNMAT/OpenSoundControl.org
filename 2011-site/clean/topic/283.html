@@ -1,0 +1,73 @@
+<div class="content">
+ <p>
+  Hi, I'm new here so I'm not sure if the topic is in the right place ^^
+ </p>
+ <p>
+  As you may know, pure data extended has a lot of different packages for almost any 32 bits distro, but not for a single 64 bits one. In order to make pd-extended work under a 64 bits OS, the easiest trick is to use the i386 packages and install the lib32 manually or with getlibs. I am going to write a little tut' about that, but here comes a second issue.
+ </p>
+ <p>
+  I'd like to use libOSC library in pd. Actually, just 'sendOSC' and 'dumpOSC' commands.
+  <br>
+  Basically, in orded to use an iPhone as a wireless MIDI controller on Ubuntu. The most known iPhone app to do that is
+  <a href="https://web.archive.org/web/20110119183333/http://hexler.net/software/touchosc" rel="nofollow">
+   TouchOSC
+  </a>
+  and it comes with a set of pre-written pd scripts (
+  <a href="https://web.archive.org/web/20110119183333/http://hexler.net/mint/pepper/orderedlist/downloads/download.php?file=http%3A//hexler.net/pub/touchosc/basic.pd" rel="nofollow">
+   this one
+  </a>
+  for instance ). Nevertheless, I didn't manage to compile OSCx libs. I've grabbed a tar package
+  <a href="https://web.archive.org/web/20110119183333/http://pure-data.svn.sourceforge.net/vi â€¦ z?view=tar" rel="nofollow">
+   there
+  </a>
+  but I haven't figured out how to compile it. README says :
+ </p>
+ <p>
+  <cite>
+   tar zxvf OSCx.tgz
+   <br>
+   cd OSCx
+   <br>
+   cat README
+   <br>
+   cd libOSC && make
+   <br>
+   cd ../OSC && "adjust makefile" && make OSC && make install
+   <br>
+   cd ../..
+   <br>
+   pd -lib OSC OSCx/doc/OSC-help.pd
+   <br>
+  </cite>
+ </p>
+ <p>
+  but basically, command 'make' in /libOSC/ doesn't work. There's just a 'Makefike.in' but it doesn't want to be ran by the command make. Then I've tried to chmod +x Makefile.in and rename it as 'makefile' but then comes a bunch of errors :
+ </p>
+ <p>
+  <code>
+   <br>
+   cc -c @CFLAGS@ @INCLUDES@  OSC-client.c
+   <br>
+   cc: @CFLAGS@: Aucun fichier ou dossier de ce type  (means that there's no folder named like this  )
+   <br>
+   cc: @INCLUDES@: Aucun fichier ou dossier de ce type ( the same )
+   <br>
+   OSC-client.c:79: warning: conflicting types for built-in function â€˜strlenâ€™
+   <br>
+   make: *** [libOSC.a(OSC-client.o)] Erreur 1
+   <br>
+  </code>
+ </p>
+ <p>
+  So what should I do in orded to manage to compile libOSC ?
+ </p>
+ <p>
+  Thanks a lot.
+ </p>
+ <p>
+  Regards
+ </p>
+ <p>
+  Leo Tomas.
+ </p>
+</div>

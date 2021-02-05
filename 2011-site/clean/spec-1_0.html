@@ -1,0 +1,856 @@
+<div class="content">
+ <p>
+  Version 1.0, March 26 2002, Matt Wright
+ </p>
+ <h2>
+  Introduction
+ </h2>
+ <p>
+  Open Sound Control (OSC) is an open, transport-independent, message-based protocol 
+  developed for communication among computers, sound synthesizers, and other multimedia 
+  devices.
+ </p>
+ <h2>
+  OSC Syntax
+ </h2>
+ <p>
+  This section defines the syntax of OSC data.
+ </p>
+ <h3>
+  Atomic Data Types
+ </h3>
+ <p>
+  All OSC data is composed of the following fundamental data types:
+ </p>
+ <dl>
+  <dt>
+   <b>
+    int32
+   </b>
+  </dt>
+  <dd>
+   32-bit big-endian two's complement integer
+  </dd>
+  <dt>
+   <b>
+    OSC-timetag
+   </b>
+  </dt>
+  <dd>
+   64-bit big-endian fixed-point time tag, semantics defined below
+  </dd>
+  <dt>
+   <b>
+    float32
+   </b>
+  </dt>
+  <dd>
+   32-bit big-endian IEEE 754 floating point number
+  </dd>
+  <dt>
+   <b>
+    OSC-string
+   </b>
+  </dt>
+  <dd>
+   A sequence of non-null ASCII characters followed by a null, followed by 
+    0-3 additional null characters to make the total number of bits a multiple 
+    of 32. (
+   <a href="/web/20201211193930/http://opensoundcontrol.org/spec-1_0-examples#OSCstrings">
+    OSC-string examples
+   </a>
+   ) In this 
+    document, example OSC-strings will be written without the null characters, 
+    surrounded by double quotes.
+  </dd>
+  <dt>
+   <b>
+    OSC-blob
+   </b>
+  </dt>
+  <dd>
+   An int32 size count, followed by that many 8-bit bytes of arbitrary binary 
+    data, followed by 0-3 additional zero bytes to make the total number of bits 
+    a multiple of 32.
+  </dd>
+ </dl>
+ <p>
+  The size of every atomic data type in OSC is a multiple of 32 bits. This guarantees 
+  that if the beginning of a block of OSC data is 32-bit aligned, every number 
+  in the OSC data will be 32-bit aligned.
+ </p>
+ <h3>
+  OSC Packets
+ </h3>
+ <p>
+  The unit of transmission of OSC is an
+  <i>
+   OSC Packet
+  </i>
+  . Any application that 
+  sends OSC Packets is an
+  <i>
+   OSC Client
+  </i>
+  ; any application that receives OSC 
+  Packets is an
+  <i>
+   OSC Server
+  </i>
+  .
+ </p>
+ <p>
+  An OSC packet consists of its
+  <i>
+   contents
+  </i>
+  , a contiguous block of binary 
+  data, and its
+  <i>
+   size
+  </i>
+  , the number of 8-bit bytes that comprise the contents. 
+  The size of an OSC packet is always a multiple of 4.
+ </p>
+ <p>
+  The underlying network that delivers an OSC packet is responsible for delivering 
+  both the contents and the size to the OSC application. An OSC packet can be 
+  naturally represented by a datagram by a network protocol such as UDP. In a 
+  stream-based protocol such as TCP, the stream should begin with an int32 giving 
+  the size of the first packet, followed by the contents of the first packet, 
+  followed by the size of the second packet, etc.
+ </p>
+ <p>
+  The contents of an OSC packet must be either an
+  <i>
+   OSC Message
+  </i>
+  or an
+  <i>
+   OSC 
+  Bundle
+  </i>
+  . The first byte of the packet's contents unambiguously distinguishes 
+  between these two alternatives.
+  <br>
+ </p>
+ <h3>
+  OSC Messages
+ </h3>
+ <p>
+  An OSC message consists of an
+  <i>
+   OSC Address Pattern
+  </i>
+  followed by an
+  <i>
+   OSC 
+  Type Tag String
+  </i>
+  followed by zero or more
+  <i>
+   OSC Arguments
+  </i>
+  .
+ </p>
+ <p>
+  Note: some older implementations of OSC may omit the OSC Type Tag string. Until 
+  all such implementations are updated, OSC implementations should be robust in 
+  the case of a missing OSC Type Tag String.
+ </p>
+ <h3>
+  OSC Address Patterns
+ </h3>
+ <p>
+  An OSC Address Pattern is an OSC-string beginning with the character '/' (forward 
+  slash).
+ </p>
+ <h3>
+  OSC Type Tag String
+ </h3>
+ <p>
+  An OSC Type Tag String is an OSC-string beginning with the character ',' (comma) 
+  followed by a sequence of characters corresponding exactly to the sequence of 
+  OSC Arguments in the given message. Each character after the comma is called 
+  an
+  <i>
+   OSC Type Tag
+  </i>
+  and represents the type of the corresponding OSC Argument. 
+  (The requirement for OSC Type Tag Strings to start with a comma makes it easier 
+  for the recipient of an OSC Message to determine whether that OSC Message is 
+  lacking an OSC Type Tag String.)
+ </p>
+ <p>
+  This table lists the correspondance between each OSC Type Tag and the type 
+  of its corresponding OSC Argument:
+ </p>
+ <table border="1">
+  <caption align="bottom">
+   The meaning of each OSC Type Tag
+  </caption>
+  <tbody>
+   <tr>
+    <td>
+     <b>
+      OSC Type Tag
+     </b>
+    </td>
+    <td>
+     <b>
+      Type of corresponding argument
+     </b>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     i
+    </td>
+    <td>
+     int32
+    </td>
+   </tr>
+   <tr>
+    <td>
+     f
+    </td>
+    <td>
+     float32
+    </td>
+   </tr>
+   <tr>
+    <td>
+     s
+    </td>
+    <td>
+     OSC-string
+    </td>
+   </tr>
+   <tr>
+    <td>
+     b
+    </td>
+    <td>
+     OSC-blob
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  Some OSC applications communicate among instances of themselves with additional, 
+  nonstandard argument types beyond those specified above. OSC applications are 
+  not required to recognize these types; an OSC application should discard any 
+  message whose OSC Type Tag String contains any unrecognized OSC Type Tags. An 
+  application that does use any additional argument types must encode them with 
+  the OSC Type Tags in this table:
+ </p>
+ <table border="1" cellpadding="1">
+  <caption align="bottom">
+   OSC Type Tags that must be used for certain nonstandard 
+  argument types
+  </caption>
+  <tbody>
+   <tr>
+    <td>
+     <b>
+      OSC Type Tag
+     </b>
+    </td>
+    <td>
+     <b>
+      Type of corresponding argument
+     </b>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     h
+    </td>
+    <td>
+     64 bit big-endian two's complement integer
+    </td>
+   </tr>
+   <tr>
+    <td>
+     t
+    </td>
+    <td>
+     OSC-timetag
+    </td>
+   </tr>
+   <tr>
+    <td>
+     d
+    </td>
+    <td>
+     64 bit ("double") IEEE 754 floating point number
+    </td>
+   </tr>
+   <tr>
+    <td>
+     S
+    </td>
+    <td>
+     Alternate type represented as an OSC-string (for example, for systems 
+      that differentiate "symbols" from "strings")
+    </td>
+   </tr>
+   <tr>
+    <td>
+     c
+    </td>
+    <td>
+     an ascii character, sent as 32 bits
+    </td>
+   </tr>
+   <tr>
+    <td>
+     r
+    </td>
+    <td>
+     32 bit RGBA color
+    </td>
+   </tr>
+   <tr>
+    <td>
+     m
+    </td>
+    <td>
+     4 byte MIDI message. Bytes from MSB to LSB are: port id, status byte, 
+      data1, data2
+    </td>
+   </tr>
+   <tr>
+    <td>
+     T
+    </td>
+    <td>
+     True. No bytes are allocated in the argument data.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     F
+    </td>
+    <td>
+     False. No bytes are allocated in the argument data.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     N
+    </td>
+    <td>
+     Nil. No bytes are allocated in the argument data.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     I
+    </td>
+    <td>
+     Infinitum. No bytes are allocated in the argument data.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     [
+    </td>
+    <td>
+     Indicates the beginning of an array. The tags following are for data in 
+      the Array until a close brace tag is reached.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ]
+    </td>
+    <td>
+     Indicates the end of an array.
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  <a href="/web/20201211193930/http://opensoundcontrol.org/spec-1_0-examples#typetagstrings">
+   OSC Type Tag String examples
+  </a>
+  .
+ </p>
+ <h3>
+  OSC Arguments
+ </h3>
+ <p>
+  A sequence of OSC Arguments is represented by a contiguous sequence of the 
+  binary representations of each argument.
+ </p>
+ <h3>
+  OSC Bundles
+ </h3>
+ <p>
+  An OSC Bundle consists of the OSC-string "#bundle" followed by an
+  <i>
+   OSC Time Tag
+  </i>
+  , followed by zero or more
+  <i>
+   OSC Bundle Elements
+  </i>
+  . The 
+  OSC-timetag is a 64-bit fixed point time tag whose semantics are
+  <a href="/web/20201211193930/http://opensoundcontrol.org/node/3/#timetags">
+   described 
+  below
+  </a>
+  .
+ </p>
+ <p>
+  An OSC Bundle Element consists of its
+  <i>
+   size
+  </i>
+  and its
+  <i>
+   contents
+  </i>
+  . The 
+  size is an int32 representing the number of 8-bit bytes in the contents, and 
+  will always be a multiple of 4. The contents are either an OSC Message or an 
+  OSC Bundle.
+ </p>
+ <p>
+  Note this recursive definition: bundle may contain bundles.
+ </p>
+ <p>
+  This table shows the parts of a two-or-more-element OSC Bundle and the size 
+  (in 8-bit bytes) of each part.
+ </p>
+ <table border="1" cellpadding="1">
+  <caption align="bottom">
+   Parts of an OSC Bundle
+  </caption>
+  <tbody>
+   <tr>
+    <td>
+     <b>
+      Data
+     </b>
+    </td>
+    <td>
+     <b>
+      Size
+     </b>
+    </td>
+    <td>
+     <b>
+      Purpose
+     </b>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     OSC-string "#bundle"
+    </td>
+    <td>
+     8 bytes
+    </td>
+    <td>
+     How to know that this data is a bundle
+    </td>
+   </tr>
+   <tr>
+    <td>
+     OSC-timetag
+    </td>
+    <td>
+     8 bytes
+    </td>
+    <td>
+     Time tag that applies to the entire bundle
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Size of first bundle element
+    </td>
+    <td>
+     int32 = 4 bytes
+    </td>
+    <td rowspan="2">
+     First bundle element
+    </td>
+   </tr>
+   <tr>
+    <td height="15">
+     First bundle element's contents
+    </td>
+    <td height="15">
+     As many bytes as given by "size of first bundle element"
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Size of second bundle element
+    </td>
+    <td>
+     int32 = 4 bytes
+    </td>
+    <td rowspan="2">
+     Second bundle element
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Second bundle element's contents
+    </td>
+    <td>
+     As many bytes as given by "size of second bundle element"
+    </td>
+   </tr>
+   <tr>
+    <td>
+     etc.
+    </td>
+    <td>
+    </td>
+    <td>
+     Addtional bundle elements
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <h2>
+  OSC Semantics
+ </h2>
+ <p>
+  This section defines the semantics of OSC data.
+ </p>
+ <h3>
+  OSC Address Spaces and OSC Addresses
+ </h3>
+ <p>
+  Every OSC server has a set of
+  <i>
+   OSC Methods
+  </i>
+  . OSC Methods are the potential 
+  destinations of OSC messages received by the OSC server and correspond to each 
+  of the points of control that the application makes available. "Invoking" 
+  an OSC method is analogous to a procedure call; it means supplying the method 
+  with arguments and causing the method's effect to take place.
+ </p>
+ <p>
+  An OSC Server's OSC Methods are arranged in a tree strcuture called an
+  <i>
+   OSC 
+  Address Space
+  </i>
+  . The leaves of this tree are the OSC Methods and the branch 
+  nodes are called
+  <i>
+   OSC Containers
+  </i>
+  . An OSC Server's OSC Address Space can 
+  be dynamic; that is, its contents and shape can change over time.
+ </p>
+ <p>
+  Each OSC Method and each OSC Container other than the root of the tree has 
+  a symbolic name, an ASCII string consiting of printable characters other than 
+  the following:
+ </p>
+ <table border="1" cellpadding="1">
+  <caption align="bottom">
+   Printable ASCII characters not allowed in names of OSC 
+  Methods or OSC Containers
+  </caption>
+  <tbody>
+   <tr>
+    <td>
+     <b>
+      character
+     </b>
+    </td>
+    <td>
+     <b>
+      name
+     </b>
+    </td>
+    <td>
+     <b>
+      ASCII code (decimal)
+     </b>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ' '
+    </td>
+    <td>
+     space
+    </td>
+    <td>
+     32
+    </td>
+   </tr>
+   <tr>
+    <td>
+     #
+    </td>
+    <td>
+     number sign
+    </td>
+    <td>
+     35
+    </td>
+   </tr>
+   <tr>
+    <td>
+     *
+    </td>
+    <td>
+     asterisk
+    </td>
+    <td>
+     42
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ,
+    </td>
+    <td>
+     comma
+    </td>
+    <td>
+     44
+    </td>
+   </tr>
+   <tr>
+    <td>
+     /
+    </td>
+    <td>
+     forward slash
+    </td>
+    <td>
+     47
+    </td>
+   </tr>
+   <tr>
+    <td height="17">
+     ?
+    </td>
+    <td height="17">
+     question mark
+    </td>
+    <td height="17">
+     63
+    </td>
+   </tr>
+   <tr>
+    <td height="17">
+     [
+    </td>
+    <td height="17">
+     open bracket
+    </td>
+    <td height="17">
+     91
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ]
+    </td>
+    <td>
+     close bracket
+    </td>
+    <td>
+     93
+    </td>
+   </tr>
+   <tr>
+    <td>
+     {
+    </td>
+    <td>
+     open curly brace
+    </td>
+    <td>
+     123
+    </td>
+   </tr>
+   <tr>
+    <td>
+     }
+    </td>
+    <td>
+     close curly brace
+    </td>
+    <td>
+     125
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p>
+  The
+  <i>
+   OSC Address
+  </i>
+  of an OSC Method is a symbolic name giving the full 
+  path to the OSC Method in the OSC Address Space, starting from the root of the 
+  tree. An OSC Method's OSC Address begins with the character '/' (forward slash), 
+  followed by the names of all the containers, in order, along the path from the 
+  root of the tree to the OSC Method, separated by forward slash characters, followed 
+  by the name of the OSC Method. The syntax of OSC Addresses was chosen to match 
+  the syntax of URLs. (
+  <a href="/web/20201211193930/http://opensoundcontrol.org/spec-1_0-examples#OSCaddress">
+   OSC Address 
+  Examples
+  </a>
+  )
+ </p>
+ <h3>
+  OSC Message Dispatching and Pattern Matching
+ </h3>
+ <p>
+  When an OSC server receives an OSC Message, it must invoke the appropriate 
+  OSC Methods in its OSC Address Space based on the OSC Message's OSC Address 
+  Pattern. This process is called
+  <i>
+   dispatching
+  </i>
+  the OSC Message to the OSC 
+  Methods that
+  <i>
+   match
+  </i>
+  its OSC Address Pattern. All the matching OSC Methods 
+  are invoked with the same argument data, namely, the OSC Arguments in the OSC 
+  Message.
+ </p>
+ <p>
+  The
+  <i>
+   parts
+  </i>
+  of an OSC Address or an OSC Address Pattern are the substrings 
+  between adjacent pairs of forward slash characters and the substring after the 
+  last forward slash character. (
+  <a href="/web/20201211193930/http://opensoundcontrol.org/spec-1_0-examples#addressparts">
+   examples
+  </a>
+  )
+ </p>
+ <p>
+  A received OSC Message must be disptched to every OSC method in the current 
+  OSC Address Space whose OSC Address matches the OSC Message's OSC Address Pattern. 
+  An OSC Address Pattern matches an OSC Address if
+ </p>
+ <ol>
+  <li>
+   The OSC Address and the OSC Address Pattern contain the same number of parts; 
+    and
+  </li>
+  <li>
+   Each part of the OSC Address Pattern matches the corresponding part of the 
+    OSC Address.
+  </li>
+ </ol>
+ <p>
+  A part of an OSC Address Pattern matches a part of an OSC Address if every 
+  consecutive character in the OSC Address Pattern matches the next consecutive 
+  substring of the OSC Address and every character in the OSC Address is matched 
+  by something in the OSC Address Pattern. These are the matching rules for characters 
+  in the OSC Address Pattern:
+ </p>
+ <ol>
+  <li>
+   '?' in the OSC Address Pattern matches any single character
+  </li>
+  <li>
+   '*' in the OSC Address Pattern matches any sequence of zero or more characters
+  </li>
+  <li>
+   A string of characters in square brackets (e.g., "[string]") in 
+    the OSC Address Pattern matches any character in the string. Inside square 
+    brackets, the minus sign (-) and exclamation point (!) have special meanings:
+   <ul>
+    <li>
+     two characters separated by a minus sign indicate the range of characters 
+        between the given two in ASCII collating sequence. (A minus sign at the 
+        end of the string has no special meaning.)
+    </li>
+    <li>
+     An exclamation point at the beginning of a bracketed string negates 
+        the sense of the list, meaning that the list matches any character not 
+        in the list. (An exclamation point anywhere besides the first character 
+        after the open bracket has no special meaning.)
+    </li>
+   </ul>
+  </li>
+  <li>
+   A comma-separated list of strings enclosed in curly braces (e.g., "{foo,bar}") 
+    in the OSC Address Pattern matches any of the strings in the list.
+  </li>
+  <li>
+   Any other character in an OSC Address Pattern can match only the same character.
+  </li>
+ </ol>
+ <h3>
+  <a name="timetags">
+  </a>
+  Temporal Semantics and OSC Time Tags
+ </h3>
+ <p>
+  An OSC server must have access to a representation of the correct current absolute 
+  time. OSC does not provide any mechanism for clock synchronization.
+ </p>
+ <p>
+  When a received OSC Packet contains only a single OSC Message, the OSC Server 
+  should invoke the correponding OSC Methods immediately, i.e., as soon as possible 
+  after receipt of the packet. Otherwise a received OSC Packet contains an OSC 
+  Bundle, in which case the OSC Bundle's OSC Time Tag determines when the OSC 
+  Bundle's OSC Messages' corresponding OSC Methods should be invoked. If the time 
+  represented by the OSC Time Tag is before or equal to the current time, the 
+  OSC Server should invoke the methods immediately (unless the user has configured 
+  the OSC Server to discard messages that arrive too late). Otherwise the OSC 
+  Time Tag represents a time in the future, and the OSC server must store the 
+  OSC Bundle until the specified time and then invoke the appropriate OSC Methods.
+ </p>
+ <p>
+  Time tags are represented by a 64 bit fixed point number. The first 32 bits 
+  specify the number of seconds since midnight on January 1, 1900, and the last 
+  32 bits specify fractional parts of a second to a precision of about 200 picoseconds. 
+  This is the representation used by Internet NTP timestamps.The time tag value 
+  consisting of 63 zero bits followed by a one in the least signifigant bit is 
+  a special case meaning "immediately."
+ </p>
+ <p>
+  OSC Messages in the same OSC Bundle are
+  <i>
+   atomic
+  </i>
+  ; their corresponding 
+  OSC Methods should be invoked in immediate succession as if no other processing 
+  took place between the OSC Method invocations.
+ </p>
+ <p>
+  When an OSC Address Pattern is dispatched to multiple OSC Methods, the order 
+  in which the matching OSC Methods are invoked is unspecified. When an OSC Bundle 
+  contains multiple OSC Messages, the sets of OSC Methods corresponding to the 
+  OSC Messages must be invoked in the same order as the OSC Messages appear in 
+  the packet. (
+  <a href="/web/20201211193930/http://opensoundcontrol.org/spec-1_0-examples.html#bundledispatchorder">
+   example
+  </a>
+  )
+ </p>
+ <p>
+  When bundles contain other bundles, the OSC Time Tag of the enclosed bundle 
+  must be greater than or equal to the OSC Time Tag of the enclosing bundle. The 
+  atomicity requirement for OSC Messages in the same OSC Bundle does not apply 
+  to OSC Bundles within an OSC Bundle.
+ </p>
+ <div class="book-navigation">

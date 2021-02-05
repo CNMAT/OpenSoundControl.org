@@ -1,0 +1,861 @@
+<div class="content">
+ These examples were exerpted from
+ <a href="https://web.archive.org/web/20201025223546/http://www.cnmat.berkeley.edu/ICMC2005/ICMC_mzed6.html">
+  a paper by Michael Zbyszynski
+and 
+Adrian Freed presented at ICMC in 2005
+ </a>
+ .
+ <h4 style="margin-top:12.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+1.4pt">
+  1. INTRODUCTION
+ </h4>
+ <p style="font-size:10.0pt">
+  While audio plug-ins are
+extremely useful, limitations of their control structure can make them unwieldy
+to use.  Specifically, the name space of each VST plug-in [1] is flat and
+populated by parameter names that have been carefully chosen by the designers
+of the plug-in, but do not necessarily represent the terminology or language
+preferred by the user.  Parameter names are mapped through a generic range (0.
+to 1.) without informing the user about the mapping range or the specific units
+that are employed inside the plug-in, and each message controls only one
+parameter.
+ </p>
+ <p style="text-indent:.5in;font-size:10.0pt">
+  Through
+the use of Open Sound Control (OSC) [2], a flexible name space can be developed
+that employs multiple, intuitive parameter names (and aliases), higher-level
+controls and range mapping, simplifying control for the user. We will demonstrate these ideas with Max/MSP patches that
+repackage VST plug-ins in a more usable way and also introduce the idea that
+plug-in interfaces themselves can be improved by building in a well-formed OSC
+name space. We will also suggest ways (e.g., atomicity and queries) that
+control could be further improved if the plug-in could be controlled directly
+with OSC.
+ </p>
+ <p style="text-indent:.5in;font-size:10.0pt">
+  In addition to creating a more useable control structure,
+careful use of the OSC abstractions proposed here will allow composers and
+performers to create more fully documented works than can be easily updated
+with changing technologies.  A thoughtfully designed name space can separate
+the musical intention from the particular plug-in, allowing composers to adapt
+and repurpose pieces as plug-ins evolve.
+ </p>
+ <h1>
+  <span lang="EN-GB" style="font-size:12.0pt">
+   2.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span style="font-size:12.0pt">
+   Problems with VST Control
+Structure
+  </span>
+ </h1>
+ <h2 style="margin-left:0in;text-indent:0in">
+  <span style="font-size:10.0pt">
+   2.1.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span style="font-size:
+10.0pt">
+   Names Dictated by Plug-In Designers
+  </span>
+ </h2>
+ <h3 style="margin-left:0in">
+  <span lang="EN-GB" style="font-size:10.0pt">
+   2.1.1.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span lang="EN-GB" style="font-size:10.0pt">
+   Non-intuitive names
+  </span>
+ </h3>
+ <p>
+  <span lang="EN-GB" style="font-size:10.0pt">
+   Many audio
+processing plug-ins fall into typical categories, such as dynamics processors
+or reverbs.  Each specific user has expectations for the names of the
+parameters in an archetypical reverb, for instance, which are determined by
+that user’s technical and linguistic background.  Where one user might expect a
+parameter called “Wet Level,” another might be more familiar with “Reverb
+Gain.”  Users must adapt to the naming scheme of the plug-in designer.  This
+complicates the use of multiple plug-ins from disparate sources; the user must
+constantly change naming schemes to do something as simple as auditioning
+multiple reverbs with similar parameter settings.
+  </span>
+ </p>
+ <h3 style="margin-left:0in">
+  <span lang="EN-GB" style="font-size:10.0pt">
+   2.1.2.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span lang="EN-GB" style="font-size:10.0pt">
+   Need for aliases
+  </span>
+ </h3>
+ <p style="margin-top:6.0pt;margin-right:2.25pt;margin-bottom:
+0in;margin-left:1.4pt;margin-bottom:.0001pt">
+  <span lang="EN-GB" style="font-size:
+10.0pt">
+   The use of a rich OSC name space provides the opportunity for multiple
+aliases to the same parameter.  An intelligent naming scheme would direct both
+“Wet Level” and “Reverb Gain” to the same parameter, allowing the user to focus
+on the specifics of controlling the sound.  If the user changes reverb
+plug-ins, they could continue with their preferred naming scheme for the
+generic parameters.  They could concentrate on the sonic differences between
+reverb algorithms, rather then the naming idiosyncrasies of each design.
+  </span>
+ </p>
+ <h3 style="margin-left:0in">
+  <span lang="EN-GB" style="font-size:10.0pt">
+   2.1.3.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span lang="EN-GB" style="font-size:10.0pt">
+   Simplified
+reconstruction
+  </span>
+ </h3>
+ <p style="margin-top:6.0pt;margin-right:2.25pt;margin-bottom:
+0in;margin-left:1.4pt;margin-bottom:.0001pt">
+  <span lang="EN-GB" style="font-size:
+10.0pt">
+   Another advantage to a carefully designed name space would come when
+documenting, preserving, or reconstructing a finished musical work. Because the
+musician’s original sonic intent would be represented in a form that was not
+tied to a specific plug-in technology, it could be easily understood and
+adapted to suit the situation of future technologies. When a piece travels or
+is revisited, explicitly descriptive parameter names, such as “Reverb Gain,”
+are more easily interpreted than opaque names, such as “Mix” or Mode.”
+  </span>
+ </p>
+ <h2 style="margin-left:0in;text-indent:0in">
+  <span lang="EN-GB" style="font-size:
+10.0pt">
+   2.2.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span lang="EN-GB" style="font-size:10.0pt">
+   Parameters mapped to a generic range
+  </span>
+ </h2>
+ <p style="font-size:10.0pt">
+  The next step in an intelligent plug-in control scheme
+would be to address parameters in established units.  All VST parameters are
+currently mapped to the range of 0.0 to 1.0, effectively obscuring the values
+being controlled.  Furthermore, a particular user might prefer setting
+crossover frequencies in Hertz or MIDI cents, and might prefer percentages to
+decibels as a unit of loudness.  In addition to parameter name aliases,
+parameters could be addressed in specific units.  For example “Wet Level 63%”
+or “Reverb Gain –6dB.”  By accommodating specific user’s predilections,
+plug-ins would become more intuitively useable.
+ </p>
+ <h2 style="margin-left:0in;text-indent:0in">
+  <span lang="EN-GB" style="font-size:
+10.0pt">
+   2.3.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span lang="EN-GB" style="font-size:10.0pt">
+   Flat Name Space
+  </span>
+ </h2>
+ <h3 style="margin-left:0in">
+  <span lang="EN-GB" style="font-size:10.0pt">
+   2.3.1.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span lang="EN-GB" style="font-size:10.0pt">
+   Hierarchical name space
+  </span>
+ </h3>
+ <p style="font-size:10.0pt">
+  The naming space for VST plug-ins is flat, simply a list of
+parameters that could be addressed.  While this might be adequate for plug-ins
+with a few parameters, some plug-ins (e.g. Waves Parametric Convolution Reverb
+[3]) can have dozens of parameters.  In such a case, it makes sense to organize
+parameters in a hierarchical name space.  For instance, a multiband compressor
+will have many crossover frequencies.  These could be addressed as
+“/crossover/low<->mid
+  <i>
+   n
+  </i>
+  ” and
+“/crossover/mid<->high
+  <i>
+   n
+  </i>
+  ”
+(or, depending on the user, “/crossover/middle<->hi
+  <i>
+   n
+  </i>
+  <span style="font-style:normal">
+   ” or “/x-over/m<->h
+  </span>
+  <i>
+   n
+  </i>
+  <span style="font-style:normal">
+   ”).  Such a naming scheme would help keep the control
+structure clear and comprehensible.
+  </span>
+ </p>
+ <p style="text-indent:.5in;font-size:10.0pt">
+  The
+ability to reorganize parameters in a clear hierarchy would have special
+significance in to users working with assistive technologies.  For example,
+blind users working with screen readers could customize their name space to
+quickly navigate to the most pertinent parameters, rather than waiting to read
+through a long list of all possibilities.
+ </p>
+ <h3 style="margin-left:0in">
+  <span lang="EN-GB" style="font-size:10.0pt">
+   2.3.2.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span lang="EN-GB" style="font-size:10.0pt">
+   Pattern matching
+  </span>
+ </h3>
+ <p style="margin-top:6.0pt">
+  <span style="font-size:10.0pt">
+   A
+carefully designed hierarchical name space would allow the user leverage OSC’s
+use of pattern matching. [4] Following the example of a multiband compressor,
+the compression thresholds might be named “/low/threshold
+   <i>
+    n
+   </i>
+  </span>
+  <span style="font-size:10.0pt">
+   ,” /middle/threshold
+   <i>
+    n
+   </i>
+  </span>
+  <span style="font-size:10.0pt">
+   ,” and “/high/threshold
+   <i>
+    n
+   </i>
+  </span>
+  <span style="font-size:10.0pt">
+   .” In the OSC Address Pattern, “*” matches any
+sequence of zero or more characters.  This would allow the user to
+simultaneously adjust all thresholds by sending the message “/*/threshold
+   <i>
+    n
+   </i>
+  </span>
+  <span style="font-size:10.0pt">
+   .”
+  </span>
+ </p>
+ <h3 style="margin-left:0in">
+  <span style="font-size:10.0pt">
+   2.3.3.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span style="font-size:10.0pt">
+   One message, many parameters
+  </span>
+ </h3>
+ <p style="font-size:10.0pt">
+  Another
+advantage of a careful created OSC name space would the use higher-level names
+that control multiple parameters.  In the example the context of multi-band compression,
+the user might be  given explicit control of the cut-off frequencies between
+the low, middle, and high bands.  Alternatively, the user could prefer to
+control the center frequency and bandwidth of the middle band.  With OSC, these
+high-level parameter names could be created to adjust the appropriate crossover
+frequencies accordingly.
+ </p>
+ <h1 style="margin-top:12.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+1.4pt">
+  <span lang="EN-GB" style="font-size:12.0pt;text-transform:uppercase">
+   3.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span lang="EN-GB" style="font-size:12.0pt;text-transform:uppercase">
+   OSC Solution IN
+MAx/MSP
+  </span>
+ </h1>
+ <h2 style="margin-left:0in;text-indent:0in">
+  <span style="font-size:10.0pt">
+   3.1.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span style="font-size:
+10.0pt">
+   Two reverb example
+  </span>
+ </h2>
+ <p style="font-size:10.0pt">
+  The following examples were
+programmed in Max/MSP following the name space design guidelines suggest above.
+ The first demonstrates a control structure for controlling two reverb plug-ins
+(mda Freeverb [5] and Griesinger 2.2 by Nathan Wolek [6]), each with different
+parameter names.
+ </p>
+ <p align="center">
+  <span style="font-size:10.0pt">
+   <img border="0" width="245" height="331" src="https://web.archive.org/web/20201025223546im_/http://www.cnmat.berkeley.edu/ICMC2005/ICMC_mzed6_files/image001.jpg" alt="max patch">
+  </span>
+  <br>
+  <b>
+   Figure 1
+  </b>
+  Top level of two reverb patch
+ </p>
+ <p style="font-size:10.0pt">
+  This name space was designed
+to enable the user to switch between the reverb plug-ins while maintaining a
+consistent control structure.  Similar parameters in each plug-in are addressed
+with the same name.  For instance, “Reverblevel” addresses “Wetlevel” in the
+Freeverb and “reverbgain” in the Griesinger reverb.  The example also suggests
+the possibility of aliases and unconventional terminology; “slimeyness” is also
+mapped to “Wetlevel” and “reverbgain.”
+ </p>
+ <p>
+ </p>
+ <table align="center" border="1">
+  <tbody>
+   <tr>
+    <td width="200">
+     <p align="center">
+      <span style="font-size:10.0pt">
+       <b>
+        Freeverb:
+       </b>
+      </span>
+     </p>
+    </td>
+    <td width="200">
+     <p align="center">
+      <span style="font-size:10.0pt">
+       <b>
+        Griesinger:
+       </b>
+      </span>
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Freeverb, 1]/Mode
+  [0.-1.]
+     </p>
+    </td>
+    <td>
+     <p align="center" style="text-align:center">
+      <span style="font-size:10.0pt">
+       n/a
+      </span>
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p align="center" style="text-align:center">
+      <span style="font-size:10.0pt">
+       n/a
+      </span>
+     </p>
+    </td>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Griesinger, 2]/bandwidth
+  [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Freeverb, 1]/Roomsize
+  [0.-1.]
+     </p>
+    </td>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Griesinger, 2]/Roomsize
+  [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Freeverb, 1]/Width
+  [0.-1.]
+     </p>
+    </td>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Griesinger, 2]/Damping
+  [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p align="center" style="text-align:center">
+      <span style="font-size:10.0pt">
+       n/a
+      </span>
+     </p>
+    </td>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Griesinger,
+  2]/pre-delay [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Freeverb,
+  1]/Reverblevel [0.-1.]
+     </p>
+    </td>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Griesinger,
+  2]/Reverblevel [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Freeverb, 1]/Drylevel
+  [0.-1.]
+     </p>
+    </td>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Griesinger, 2]/Drylevel
+  [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Freeverb, 1]/slimeyness
+  [0.-1.]
+     </p>
+    </td>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Griesinger,
+  2]/slimeyness [0.-1.]
+     </p>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p align="center" style="font-size:10.0pt">
+  <b>
+   Table 1.
+  </b>
+  Name space for two reverb patch
+ </p>
+ <p style="font-size:10.0pt">
+ </p>
+ <h2 style="margin-left:0in;text-indent:0in">
+  <span style="font-size:10.0pt">
+   3.2.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span style="font-size:
+10.0pt">
+   Multiband compressor example
+  </span>
+ </h2>
+ <p style="font-size:10.0pt">
+  The namespace for
+controlling a multiband compressor  (mda MultiBand [7]) is much more
+complicated, especially in its use of aliases.  It also includes higer level
+parameters that influence more than one of the plug-in’s built in parameters.
+ </p>
+ <p>
+ </p>
+ <table align="center" border="1">
+  <tbody>
+   <tr>
+    <td width="240">
+     <p align="center" style="margin-top:6.0pt;text-align:center">
+      <span style="font-size:10.0pt">
+       <b>
+        Specific bands:
+       </b>
+      </span>
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Low, low, L, l]/[Comp,
+  Compression, comp, compression] [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Low, low, L,
+  l]/[dbcomp, dBcomp] [0.-30.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Low, low, L, l]/[Out,
+  Output, out, output] [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Low, low, L,
+  l]/[dboutput, dBoutput] [-20.- 20.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Mid, mid, M, m/[Comp,
+  Compression, comp, compression] [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Mid, mid, M, m]/[Out,
+  Output, out, output] [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Mid, mid, M, m/[dbcomp,
+  dBcomp] [0.-30.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Mid, mid, M,
+  m]/[dboutput, dBoutput] [-20.- 20.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Hi, hi, H, high]/[Comp,
+  Compression, comp, compression] [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Hi, hi, H, high]/[Out,
+  Output, out, output] [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Hi, hi, H,
+  high]/[dbcomp, dBcomp] [0.-30.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /[Hi, hi, H,
+  high]/[dboutput, dBoutput] [-20.- 20.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p align="center" style="margin-top:6.0pt;text-align:center">
+      <span style="font-size:10.0pt">
+       <b>
+        Higher-level parameters:
+       </b>
+      </span>
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /Mid-CF [value in HZ]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /Mid-BW [value in HZ]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p align="center" style="margin-top:6.0pt;text-align:center">
+      <span style="font-size:10.0pt">
+       <b>
+        General Parameters:
+       </b>
+      </span>
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /L<>M [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /M<>H [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /LM-Hz [87.-1020.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /MH-HZ [111.-19606.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /Attack [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /Release [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /Stereo [0.-1.]
+     </p>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <p style="font-size:10.0pt">
+      /Process [0.-1.]
+     </p>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <p align="center" style="font-size:10.0pt">
+  <b>
+   Table 2.
+  </b>
+  Name space for multiband compressor patch
+ </p>
+ <p style="font-size:10.0pt">
+ </p>
+ <p style="text-indent:.5in;font-size:10.0pt">
+  The
+first group of names address single plug-in parameters, and demonstrate
+multiple naming possibilities for the same parameter.  Different users might
+prefer “Hi” to “high,” or simply “H.”  This space could be expanded to include
+other aliases for language localization.  Additionally, the parameters
+“/*/[dbcomp, dBcomp]” and “/*/[dboutput, dBoutput]” employ real units, decibels
+instead of the generic range of 0. to 1.  They are mapped accordingly in the
+max patch before being sent to the plug-in.  Other units of loudness or
+intensity could be added, each with their own mapping.
+ </p>
+ <p style="text-indent:.5in;font-size:10.0pt">
+  The
+second pair of names are higher-level parameters.  They allow the user to
+directly control the center frequency and bandwidth of the middle compression
+band, implicitly influence all three bands.  The OSC parameter value is
+translated into the proper crossover frequencies for both the low to middle and
+the middle to high crossover, and forwarded to the plug-ins built in
+parameters.
+ </p>
+ <p style="text-indent:.5in;font-size:10.0pt">
+  The
+final group of generalized parameters includes another example of real units,
+setting the crossover frequencies in Hertz.
+ </p>
+ <p style="text-indent:.5in;font-size:10.0pt">
+  The
+patch, below, also uses OSC’s pattern matching abilities.  To adjust all of the
+output gains simultaneously and in decibles, the user sends the message:
+“/?/dboutput
+  <i>
+   n
+  </i>
+  <span style="font-size:10.0pt">
+   .”  Variants of this
+message using other aliases are also available.
+  </span>
+ </p>
+ <p style="text-indent:.5in;font-size:10.0pt">
+ </p>
+ <p style="font-size:10.0pt" align="center">
+  <img border="0" src="https://web.archive.org/web/20201025223546im_/http://www.cnmat.berkeley.edu/ICMC2005/ICMC_mzed6_files/image002.jpg" alt="another max patch" width="233" height="201">
+ </p>
+ <p align="center" style="font-size:10.0pt">
+  <b>
+   Figure 2.
+  </b>
+  Top level of multiband compression patch
+ </p>
+ <h1 style="margin-top:12.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+1.4pt">
+  <span style="font-size:12.0pt">
+   7.
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span lang="EN-GB" style="font-size:12.0pt">
+   REFERENCES
+  </span>
+ </h1>
+ <p style="font-size:10.0pt">
+  [1]    
+Steinberg Media Technologies "VST
+Plug-ins SDK 2.3. "
+  <a href="https://web.archive.org/web/20201025223546/http://www.steinberg.net/steinberg/ygrabit/vstsk%20%20/OnlineDoc/vstsdk2.3/index.html">
+   http://www.steinberg.net/steinberg/ygrabit/vstsk
+ /OnlineDoc/vstsdk2.3/index.html
+  </a>
+  , 4 March
+2005.
+ </p>
+ <p style="font-size:10.0pt">
+  [2]    Wright, Matthew, and Adrian Freed.
+"Open Sound Control: A New Protocol for Communicating with Sound
+Synthesizers." Paper presented at the International Computer Music
+Conference, Thessaloniki, Hellas 1997.
+ </p>
+ <p style="font-size:10.0pt">
+  [3]    Waves Ltd. Digital Audio
+Processing, IR1 Parametric Convolution Reverb,
+  <a href="https://web.archive.org/web/20201025223546/http://www.waves.com/content.asp?id=1564">
+   http://www.waves.com/content.asp?id=1564
+  </a>
+  , 4 March 2005.
+ </p>
+ <p style="font-size:10.0pt">
+  [4]    Torkington, Nathan.
+  <i>
+   Regular
+Expression Pocket Reference
+  </i>
+  . Sebastopol, Calif. ; Farnham: O'Reilly, 2003.
+ </p>
+ <p style="font-size:10.0pt">
+  [5]    Maxim Digital Audio
+"Freeverb"
+  <a href="https://web.archive.org/web/20201025223546/http://www.mda-vst.com/">
+   http://www.mda-vst.com/
+  </a>
+  , 5 March 2005.
+ </p>
+ <p style="font-size:10.0pt">
+  [6]    Wolek, Nathan “Griesinger 2.2”
+  <a href="https://web.archive.org/web/20201025223546/http://www.nathanwolek.com/">
+   http://www.nathanwolek.com/
+  </a>
+  , 5 March 2005.
+ </p>
+ <p style="font-size:10.0pt">
+  <span style="font-size:10.0pt">
+   [7]
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span style="font-size:10.0pt">
+   Maxim Digital Audio "mda
+MultiBand"
+   <a href="https://web.archive.org/web/20201025223546/http://www.mda-vst.com/">
+    http:/www.mda-vst.com/
+   </a>
+   , 5 March 2005.
+  </span>
+ </p>
+ <p style="font-size:10.0pt">
+  <span style="font-size:10.0pt">
+   [8]
+   <span style="font:7.0pt "Times New Roman"">
+   </span>
+  </span>
+  <span style="font-size:10.0pt">
+   Zbyszynski, Michael "OSC
+Control of VST Plug-ins." Poster presented at the Open Sound Control
+Conference, Berkeley, CA, USA, 2004.
+  </span>
+ </p>
+ <p style="font-size:10.0pt">
+  [9]    Native Instruments GmbH
+  <a href="https://web.archive.org/web/20201025223546/http://www.nativinstruments.de/">
+   http://www.nativinstruments.de/
+  </a>
+  , 10 March 2005.
+ </p>
+ <div class="forum-topic-navigation clear-block">
+  <a href="/web/20201025223546/http://opensoundcontrol.org/topic/73" class="topic-previous" title="Go to previous forum topic">
+   â€¹ Possible OSC support in Jamoma
+  </a>
+  <a href="/web/20201025223546/http://opensoundcontrol.org/topic/61" class="topic-next" title="Go to next forum topic">
+   An OSC Address Subspace for Wacom Tablet Data â€º
+  </a>
+ </div>
+</div>

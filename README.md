@@ -54,10 +54,14 @@ Here are some of the values and goals embodied in this project:
 
 * Simple, clear documentation oriented towards both beginngers ("what
   is OSC? / "how do I use it?") and experts (implementors, developers, etc.)
+* The site is for publication, not discussion.
+* Make site navigation clear and useful.
 * Central location aspiring to link to "all" the world's information
   about OpenSoundControl
 * Mechanism for the OSC community to contribute site content so it stays
   up do date.
+* Slow publication cycle, easy to maintain (by volunteers hoping to
+  spend ~1-2 hours/month)
 * Source content stored in simple files not some software's internal
   database
 * Simple, lightweight open-source toolchain; not tied to any "heavy"

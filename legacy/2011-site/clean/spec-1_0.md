@@ -30,7 +30,7 @@ All OSC data is composed of the following fundamental data types:
 :   A sequence of non-null ASCII characters followed by a null, followed
     by 0-3 additional null characters to make the total number of bits a
     multiple of 32. ( [OSC-string
-    examples](spec-1_0-examples#OSCstrings) ) In this document, example
+    examples](spec-1_0-examples.html#OSCstrings) ) In this document, example
     OSC-strings will be written without the null characters, surrounded
     by double quotes.
 
@@ -131,7 +131,7 @@ this table:
   :  OSC Type Tags that must be used for certain nonstandard argument
   types
 
-[OSC Type Tag String examples](spec-1_0-examples#typetagstrings) .
+[OSC Type Tag String examples](spec-1_0-examples.html#typetagstrings) .
 
 ### OSC Arguments
 
@@ -248,7 +248,7 @@ of the tree. An OSC Method\'s OSC Address begins with the character
 order, along the path from the root of the tree to the OSC Method,
 separated by forward slash characters, followed by the name of the OSC
 Method. The syntax of OSC Addresses was chosen to match the syntax of
-URLs. ( [OSC Address Examples](spec-1_0-examples#OSCaddress) )
+URLs. ( [OSC Address Examples](spec-1_0-examples.html#OSCaddress) )
 
 ### OSC Message Dispatching and Pattern Matching
 
@@ -262,7 +262,7 @@ namely, the OSC Arguments in the OSC Message.
 The *parts* of an OSC Address or an OSC Address Pattern are the
 substrings between adjacent pairs of forward slash characters and the
 substring after the last forward slash character. (
-[examples](spec-1_0-examples#addressparts) )
+[examples](spec-1_0-examples.html#addressparts) )
 
 A received OSC Message must be disptched to every OSC method in the
 current OSC Address Space whose OSC Address matches the OSC Message\'s

@@ -75,18 +75,16 @@ if [ `basename $in` == implementations ]; then
 fi
 
 
-#echo XX${pupgoodness}YY
-#cat $in | pup $pupgoodness  > $out
 
-# cat $in | pup '[class="node"] :not(class="book-navigation")' > $out
-# cat $in | pup '[class="node"]' | pup ':not(class="book-navigation")' > $out
-# cat $in | pup $pupgoodness | pup -p ':not([class="page-links"] clear-block"])' > $out
+# the first one makes internal links only have the part within the site; the
+# second reqrites the extenral links to point to "real" sites rather than archives.
+sedgoodness='s|(https://web.archive.org)?/web/[0-9]+/http://opensoundcontrol.org/||g;s|https://web.archive.org/web/[0-9]+/http://|http://|g'
 
 outTooBig="$out"-toobig
 rm -f $outTooBig
 
 # more than we want
-cat $in | pup -p $pupgoodness > $outTooBig
+cat $in | pup -p $pupgoodness | sed -E $sedgoodness > $outTooBig
 
 num_lines=`cat $outTooBig | wc -l | tr -d ' '`
 # echo file has $num_lines lines

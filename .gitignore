@@ -6,4 +6,11 @@ index.html
 
 # These may become problems but don't check them into the repo for now:
 # *.pdf
-# *.html
+
+# In general html files should be generated from the corresponding md
+#  files and therefore not checked into the repo...
+*.html
+
+# ...except that some of our saved legacy site content came as html
+#  files, so allow those in the repo.
+!legacy/**/*.html

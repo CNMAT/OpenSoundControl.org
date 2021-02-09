@@ -143,7 +143,7 @@ the binary representations of each argument.
 An OSC Bundle consists of the OSC-string \"\#bundle\" followed by an
 *OSC Time Tag* , followed by zero or more *OSC Bundle Elements* . The
 OSC-timetag is a 64-bit fixed point time tag whose semantics are
-[described below](node/3/#timetags) .
+[described below](#timetags) .
 
 An OSC Bundle Element consists of its *size* and its *contents* . The
 size is an int32 representing the number of 8-bit bytes in the contents,

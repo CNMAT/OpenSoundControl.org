@@ -7,14 +7,12 @@ Control Specification](OSC-spec.html) .
 
 The string \"OSC\" is represented as an OSC-string with these four\
 bytes:
-
   --- --- --- -----
-  O   S   C   \\0
+  <span style="font-family:Menlo; font-size:4em;">O   S   C   \\0</span>
   --- --- --- -----
 
 The string \"data\" is represented as an OSC-string with these eight\
 bytes:
-
   --- --- --- --- ----- ----- ----- -----
   d   a   t   a   \\0   \\0   \\0   \\0
   --- --- --- --- ----- ----- ----- -----

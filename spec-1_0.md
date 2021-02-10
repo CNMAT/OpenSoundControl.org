@@ -154,50 +154,29 @@ Note this recursive definition: bundle may contain bundles.
 This table shows the parts of a two-or-more-element OSC Bundle and the
 size (in 8-bit bytes) of each part.
 
-Parts of an OSC Bundle
 
-**Data**
-:::
 
-**Size**
 
-**Purpose**
+  ---------------------------------- ------------------------------------------------------------ --------------------------------------
+  **Data**                           **Size**                                                     **Purpose**
 
-OSC-string \"\#bundle\"
+  OSC-string \"\#bundle\"            8 bytes                                                      How to know that this data is a bundle
 
-8 bytes
+  OSC-timetag                        8 bytes                                                      Time tag that applies to the entire bundle
 
-How to know that this data is a bundle
+  Size of first bundle element       int32 = 4 bytes                                              
 
-OSC-timetag
+  First bundle element\'s contents   As many bytes as given by \"size of first bundle element\"   First bundle element
 
-8 bytes
+  Size of second bundle element      int32 = 4 bytes                                              
 
-Time tag that applies to the entire bundle
+  Second bundle element\'s contents  As many bytes as given by \"size of second bundle element\"  Second bundle element
 
-Size of first bundle element
+  etc.                                                                                            Addtional bundle elements
 
-int32 = 4 bytes
+  ---------------------------------- ------------------------------------------------------------ --------------------------------------
 
-First bundle element
-
-First bundle element\'s contents
-
-As many bytes as given by \"size of first bundle element\"
-
-Size of second bundle element
-
-int32 = 4 bytes
-
-Second bundle element
-
-Second bundle element\'s contents
-
-As many bytes as given by \"size of second bundle element\"
-
-etc.
-
-Addtional bundle elements
+  :  Parts of an OSC Bundle
 
 OSC Semantics
 -------------

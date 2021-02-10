@@ -7,12 +7,14 @@ Control Specification](OSC-spec.html) .
 
 The string \"OSC\" is represented as an OSC-string with these four\
 bytes:
+
   --- --- --- -----
-  <span style="font-family:Menlo; font-size:4em;">O   S   C   \\0</span>
+  O   S   C   \\0
   --- --- --- -----
 
 The string \"data\" is represented as an OSC-string with these eight\
 bytes:
+
   --- --- --- --- ----- ----- ----- -----
   d   a   t   a   \\0   \\0   \\0   \\0
   --- --- --- --- ----- ----- ----- -----
@@ -81,28 +83,20 @@ represented\
 by the following 32-byte message:
 
       2f (/)  6f (o)  73 (s)  63 (c)
-      
 
       69 (i)  6c (l)  6c (l)  61 (a)
-      
 
       74 (t)  6f (o)  72 (r)  2f (/)
-      
 
       34 (4)  2f (/)  66 (f)  72 (r)
-      
 
       65 (e)  71 (q)  75 (u)  65 (e)
-      
 
       6e (n)  63 (c)  79 (y)  0 ()
-      
 
       2c (,)  66 (f)  0 ()    0 ()
-      
 
       43 (C)  dc (Ü)  0 ()    0 ()
-     
 
 The next example shows the 40 bytes in the representation of the OSC
 Message\
@@ -115,36 +109,25 @@ with OSC Address Pattern \"/foo\" and 5 arguments:
 5.  The float32 5.678
 
 <!-- -->
-
       2f (/)  66 (f)  6f (o)  6f (o)
-      
 
       0 ()    0 ()    0 ()    0 ()
-      
 
       2c (,)  69 (i)  69 (i)  73 (s)
-      
 
       66 (f)  66 (f)  0 ()    0 ()
-      
 
       0 ()    0 ()    3 ()    e8 (è)
-      
 
       ff (ÿ)  ff (ÿ)  ff (ÿ)  ff (ÿ)
-      
 
       68 (h)  65 (e)  6c (l)  6c (l)
-      
 
       6f (o)  0 ()    0 ()    0 ()
-      
 
       3f (?)  9d ()   f3 (ó)  b6 (¶)
-      
 
       40 (@)  b5 (µ)  b2 (”)  2d (-)
-     
 
 #### []{#bundledispatchorder} Order of Invocation of OSC Methods matched by OSC Messages in an OSC Bundle
 

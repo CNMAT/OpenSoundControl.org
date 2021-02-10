@@ -17,7 +17,7 @@ This section defines the syntax of OSC data.
 All OSC data is composed of the following fundamental data types:
 
 **int32**
-:   32-bit big-endian two\'s complement integer
+:   32-bit big-endian two's complement integer
 
 **OSC-timetag**
 :   64-bit big-endian fixed-point time tag, semantics defined below
@@ -44,9 +44,9 @@ aligned, every number in the OSC data will be 32-bit aligned.
 
 ### OSC Packets
 
-The unit of transmission of OSC is an *OSC Packet* . Any application
-that sends OSC Packets is an *OSC Client* ; any application that
-receives OSC Packets is an *OSC Server* .
+The unit of transmission of OSC is an *OSC Packet*. Any application
+that sends OSC Packets is an *OSC Client*; any application that
+receives OSC Packets is an *OSC Server*.
 
 An OSC packet consists of its *contents* , a contiguous block of binary
 data, and its *size* , the number of 8-bit bytes that comprise the
@@ -61,13 +61,13 @@ contents of the first packet, followed by the size of the second packet,
 etc.
 
 The contents of an OSC packet must be either an *OSC Message* or an *OSC
-Bundle* . The first byte of the packet\'s contents unambiguously
-distinguishes between these two alternatives.\
+Bundle*. The first byte of the packet's contents unambiguously
+distinguishes between these two alternatives.
 
 ### OSC Messages
 
 An OSC message consists of an *OSC Address Pattern* followed by an *OSC
-Type Tag String* followed by zero or more *OSC Arguments* .
+Type Tag String* followed by zero or more *OSC Arguments*.
 
 Note: some older implementations of OSC may omit the OSC Type Tag
 string. Until all such implementations are updated, OSC implementations
@@ -76,12 +76,12 @@ should be robust in the case of a missing OSC Type Tag String.
 ### OSC Address Patterns
 
 An OSC Address Pattern is an OSC-string beginning with the character
-\'/\' (forward slash).
+'`/`' (forward slash).
 
 ### OSC Type Tag String
 
 An OSC Type Tag String is an OSC-string beginning with the character
-\',\' (comma) followed by a sequence of characters corresponding exactly
+'`,`' (comma) followed by a sequence of characters corresponding exactly
 to the sequence of OSC Arguments in the given message. Each character
 after the comma is called an *OSC Type Tag* and represents the type of
 the corresponding OSC Argument. (The requirement for OSC Type Tag
@@ -112,10 +112,10 @@ this table:
 
   ------------------ ------------------------------------------------------------------------------------------------------------------------
   **OSC Type Tag**   **Type of corresponding argument**
-  h                  64 bit big-endian two\'s complement integer
+  h                  64 bit big-endian two's complement integer
   t                  OSC-timetag
-  d                  64 bit (\"double\") IEEE 754 floating point number
-  S                  Alternate type represented as an OSC-string (for example, for systems that differentiate \"symbols\" from \"strings\")
+  d                  64 bit ("double") IEEE 754 floating point number
+  S                  Alternate type represented as an OSC-string (for example, for systems that differentiate "symbols" from "strings")
   c                  an ascii character, sent as 32 bits
   r                  32 bit RGBA color
   m                  4 byte MIDI message. Bytes from MSB to LSB are: port id, status byte, data1, data2
@@ -123,14 +123,14 @@ this table:
   F                  False. No bytes are allocated in the argument data.
   N                  Nil. No bytes are allocated in the argument data.
   I                  Infinitum. No bytes are allocated in the argument data.
-  \[                 Indicates the beginning of an array. The tags following are for data in the Array until a close brace tag is reached.
-  \]                 Indicates the end of an array.
+  [                  Indicates the beginning of an array. The tags following are for data in the Array until a close brace tag is reached.
+  ]                  Indicates the end of an array.
   ------------------ ------------------------------------------------------------------------------------------------------------------------
 
   :  OSC Type Tags that must be used for certain nonstandard argument
   types
 
-[OSC Type Tag String examples](spec-1_0-examples.html#typetagstrings) .
+[OSC Type Tag String examples](spec-1_0-examples.html#typetagstrings).
 
 ### OSC Arguments
 
@@ -139,12 +139,12 @@ the binary representations of each argument.
 
 ### OSC Bundles
 
-An OSC Bundle consists of the OSC-string \"\#bundle\" followed by an
-*OSC Time Tag* , followed by zero or more *OSC Bundle Elements* . The
+An OSC Bundle consists of the OSC-string "`#bundle`" followed by an
+*OSC Time Tag* , followed by zero or more *OSC Bundle Elements*. The
 OSC-timetag is a 64-bit fixed point time tag whose semantics are
-[described below](#timetags) .
+[described below](#timetags).
 
-An OSC Bundle Element consists of its *size* and its *contents* . The
+An OSC Bundle Element consists of its *size* and its *contents*. The
 size is an int32 representing the number of 8-bit bytes in the contents,
 and will always be a multiple of 4. The contents are either an OSC
 Message or an OSC Bundle.
@@ -160,17 +160,17 @@ size (in 8-bit bytes) of each part.
   ---------------------------------- ------------------------------------------------------------ --------------------------------------
   **Data**                           **Size**                                                     **Purpose**
 
-  OSC-string \"\#bundle\"            8 bytes                                                      How to know that this data is a bundle
+  OSC-string "`#bundle`"             8 bytes                                                      How to know that this data is a bundle
 
   OSC-timetag                        8 bytes                                                      Time tag that applies to the entire bundle
 
   Size of first bundle element       int32 = 4 bytes                                              
 
-  First bundle element\'s contents   As many bytes as given by \"size of first bundle element\"   First bundle element
+  First bundle element's contents    As many bytes as given by "size of first bundle element"     First bundle element
 
   Size of second bundle element      int32 = 4 bytes                                              
 
-  Second bundle element\'s contents  As many bytes as given by \"size of second bundle element\"  Second bundle element
+  Second bundle element's contents   As many bytes as given by "size of second bundle element"    Second bundle element
 
   etc.                                                                                            Addtional bundle elements
 
@@ -185,16 +185,16 @@ This section defines the semantics of OSC data.
 
 ### OSC Address Spaces and OSC Addresses
 
-Every OSC server has a set of *OSC Methods* . OSC Methods are the
+Every OSC server has a set of *OSC Methods*. OSC Methods are the
 potential destinations of OSC messages received by the OSC server and
 correspond to each of the points of control that the application makes
-available. \"Invoking\" an OSC method is analogous to a procedure call;
-it means supplying the method with arguments and causing the method\'s
+available. "Invoking" an OSC method is analogous to a procedure call;
+it means supplying the method with arguments and causing the method's
 effect to take place.
 
-An OSC Server\'s OSC Methods are arranged in a tree strcuture called an
-*OSC Address Space* . The leaves of this tree are the OSC Methods and
-the branch nodes are called *OSC Containers* . An OSC Server\'s OSC
+An OSC Server's OSC Methods are arranged in a tree strcuture called an
+*OSC Address Space*. The leaves of this tree are the OSC Methods and
+the branch nodes are called *OSC Containers*. An OSC Server's OSC
 Address Space can be dynamic; that is, its contents and shape can change
 over time.
 
@@ -204,14 +204,14 @@ other than the following:
 
   --------------- ------------------- --------------------------
   **character**   **name**            **ASCII code (decimal)**
-  \' \'           space               32
-  \#              number sign         35
-  \*              asterisk            42
+  ' '             space               
+  #               number sign         35
+  *               asterisk            42
   ,               comma               44
   /               forward slash       47
   ?               question mark       63
-  \[              open bracket        91
-  \]              close bracket       93
+  [               open bracket        91
+  ]               close bracket       93
   {               open curly brace    123
   }               close curly brace   125
   --------------- ------------------- --------------------------
@@ -221,8 +221,8 @@ other than the following:
 
 The *OSC Address* of an OSC Method is a symbolic name giving the full
 path to the OSC Method in the OSC Address Space, starting from the root
-of the tree. An OSC Method\'s OSC Address begins with the character
-\'/\' (forward slash), followed by the names of all the containers, in
+of the tree. An OSC Method's OSC Address begins with the character
+'`/`' (forward slash), followed by the names of all the containers, in
 order, along the path from the root of the tree to the OSC Method,
 separated by forward slash characters, followed by the name of the OSC
 Method. The syntax of OSC Addresses was chosen to match the syntax of
@@ -232,7 +232,7 @@ URLs. ([OSC Address Examples](spec-1_0-examples.html#OSCaddress))
 
 When an OSC server receives an OSC Message, it must invoke the
 appropriate OSC Methods in its OSC Address Space based on the OSC
-Message\'s OSC Address Pattern. This process is called *dispatching* the
+Message's OSC Address Pattern. This process is called *dispatching* the
 OSC Message to the OSC Methods that *match* its OSC Address Pattern. All
 the matching OSC Methods are invoked with the same argument data,
 namely, the OSC Arguments in the OSC Message.
@@ -243,7 +243,7 @@ substring after the last forward slash
 character. ([examples](spec-1_0-examples.html#addressparts))
 
 A received OSC Message must be disptched to every OSC method in the
-current OSC Address Space whose OSC Address matches the OSC Message\'s
+current OSC Address Space whose OSC Address matches the OSC Message's
 OSC Address Pattern. An OSC Address Pattern matches an OSC Address if
 
 1.  The OSC Address and the OSC Address Pattern contain the same number
@@ -257,12 +257,12 @@ consecutive substring of the OSC Address and every character in the OSC
 Address is matched by something in the OSC Address Pattern. These are
 the matching rules for characters in the OSC Address Pattern:
 
-1.  \'?\' in the OSC Address Pattern matches any single character
-2.  \'\*\' in the OSC Address Pattern matches any sequence of zero or
+1.  '`?`' in the OSC Address Pattern matches any single character
+2.  '`*`' in the OSC Address Pattern matches any sequence of zero or
     more characters
-3.  A string of characters in square brackets (e.g., \"\[string\]\") in
+3.  A string of characters in square brackets (e.g., "`[string]`") in
     the OSC Address Pattern matches any character in the string. Inside
-    square brackets, the minus sign (-) and exclamation point (!) have
+    square brackets, the minus sign (`-`) and exclamation point (`!`) have
     special meanings:
     -   two characters separated by a minus sign indicate the range of
         characters between the given two in ASCII collating sequence. (A
@@ -273,7 +273,7 @@ the matching rules for characters in the OSC Address Pattern:
         besides the first character after the open bracket has no
         special meaning.)
 4.  A comma-separated list of strings enclosed in curly braces (e.g.,
-    \"{foo,bar}\") in the OSC Address Pattern matches any of the strings
+    "`{foo,bar}`") in the OSC Address Pattern matches any of the strings
     in the list.
 5.  Any other character in an OSC Address Pattern can match only the
     same character.
@@ -287,8 +287,8 @@ synchronization.
 When a received OSC Packet contains only a single OSC Message, the OSC
 Server should invoke the correponding OSC Methods immediately, i.e., as
 soon as possible after receipt of the packet. Otherwise a received OSC
-Packet contains an OSC Bundle, in which case the OSC Bundle\'s OSC Time
-Tag determines when the OSC Bundle\'s OSC Messages\' corresponding OSC
+Packet contains an OSC Bundle, in which case the OSC Bundle's OSC Time
+Tag determines when the OSC Bundle's OSC Messages' corresponding OSC
 Methods should be invoked. If the time represented by the OSC Time Tag
 is before or equal to the current time, the OSC Server should invoke the
 methods immediately (unless the user has configured the OSC Server to
@@ -303,9 +303,9 @@ and the last 32 bits specify fractional parts of a second to a precision
 of about 200 picoseconds. This is the representation used by Internet
 NTP timestamps.The time tag value consisting of 63 zero bits followed by
 a one in the least signifigant bit is a special case meaning
-\"immediately.\"
+"immediately."
 
-OSC Messages in the same OSC Bundle are *atomic* ; their corresponding
+OSC Messages in the same OSC Bundle are *atomic*; their corresponding
 OSC Methods should be invoked in immediate succession as if no other
 processing took place between the OSC Method invocations.
 

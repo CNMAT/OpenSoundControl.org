@@ -1,8 +1,10 @@
 raw/
-toc.md
-toc.html
-index.md
-index.html
+/toc.md
+/toc.html
+/index.md
+/index.html
+.DS_Store
+
 
 # These may become problems but don't check them into the repo for now:
 # *.pdf

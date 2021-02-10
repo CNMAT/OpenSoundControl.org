@@ -50,5 +50,5 @@ cat *.html | pup '[class~="field-field-project-url"]'  | pandoc -f html -t markd
 
 echo
 echo here are all the Project OSC Documentation URLs
-cat *.html | pup '[class~="field-field-osc-documentation-referen"]'  | pandoc -f html -t markdown | grep -v ':::' | grep -v 'Project URL:' | egrep -v '^$'
+cat *.html | pup '[class~="field-field-osc-documentation-referen"]'  | pandoc -f html -t markdown | grep -v ':::' | grep -v 'OSC Documentation URL:' | egrep -v '^$'
 

@@ -1,86 +1,84 @@
+# Examples Supporting the OpenSoundControl 1.0 Spec
+
 version 1.0, March 29 2002, Matt Wright
 
-This document provides examples to support the [OpenSound\
-Control Specification](OSC-spec.html) .
+This document provides examples to support the [OpenSound Control
+Specification](OSC-spec.html).
 
-#### []{#OSCstrings} OSC-string examples
+## []{#OSCstrings} OSC-string examples
 
-The string \"OSC\" is represented as an OSC-string with these four\
+The string "OSC" is represented as an OSC-string with these four
 bytes:
 
   --- --- --- -----
   O   S   C   \\0
   --- --- --- -----
 
-The string \"data\" is represented as an OSC-string with these eight\
+The string "data" is represented as an OSC-string with these eight
 bytes:
 
   --- --- --- --- ----- ----- ----- -----
   d   a   t   a   \\0   \\0   \\0   \\0
   --- --- --- --- ----- ----- ----- -----
 
-#### []{#typetagstrings} OSC Type Tag String Examples
+## []{#typetagstrings} OSC Type Tag String Examples
 
   ----------------------------------- -----------------------------------
   **Argument types**                  **OSC Type Tag String**
 
-  One float32 argument                \",f\"
+  One float32 argument                ",f"
 
-  Two int32 arguments followed by one \",iisfff\"
+  Two int32 arguments followed by one ",iisfff"
   OSC-string argument followed by     
-  three\                              
+  three                              
   float32 arguments                   
 
-  No arguments                        \",\"
+  No arguments                        ","
 
-  An int32 argument followed by two   \",ibb\"
+  An int32 argument followed by two   ",ibb"
   OSC-blob arguments                  
   ----------------------------------- -----------------------------------
 
   :  Example OSC Type Tag Strings
 
-#### []{#OSCaddress} OSC Address Examples
+## []{#OSCaddress} OSC Address Examples
 
 Suppose a particular OSC Address Space includes an OSC Method with the
-name\
-\"frequency\". This method is contained in an OSC Container with the\
-name \"3\", which is contained in another OSC container named
-\"resonators\",\
-which is contained in the OSC container that is the root of the address
-space\
-tree. The method\'s OSC Address is \"/resonators/3/frequency\".
+name "frequency". This method is contained in an OSC Container with
+the name "3", which is contained in another OSC container named
+"resonators", which is contained in the OSC container that is the root
+of the address space tree. The method's OSC Address is
+"/resonators/3/frequency".
 
-The OSC Address \"/a/b/c/d/e\" means that:
+The OSC Address "/a/b/c/d/e" means that:
 
--   The root of the tree contains an OSC Container with the name \"a\",
--   that OSC Container contains an OSC Container with the name \"b\",
--   that OSC Container contains an OSC Container with the name \"c\",
--   that OSC Container contains an OSC Container with the name \"d\",\
+-   The root of the tree contains an OSC Container with the name "a",
+-   that OSC Container contains an OSC Container with the name "b",
+-   that OSC Container contains an OSC Container with the name "c",
+-   that OSC Container contains an OSC Container with the name "d",
     and
--   that OSC Container contains an OSC Method with the name \"e\".
+-   that OSC Container contains an OSC Method with the name "e".
 
-#### []{#addressparts} OSC Address Parts Examples
+## []{#addressparts} OSC Address Parts Examples
 
-There are three parts of the OSC Address \"/a/b/cde\": \"a\",\
-\"b\", and \"cde\". Note that the last part is the name of the\
+There are three parts of the OSC Address "/a/b/cde": "a",
+"b", and "cde". Note that the last part is the name of the
 OSC Method and the other parts are the names of the OSC Containers that
-(recursively)\
+(recursively)
 contain the method.
 
-There are three parts of the OSC Address pattern \"/?/b/\*c\": \"?\",\
-\"b\", and \"\*c\".
+There are three parts of the OSC Address pattern "/?/b/\*c": "?", "b",
+and "\*c".
 
-#### []{#argument} OSC Message Examples
+## []{#argument} OSC Message Examples
 
 In each of these examples, each byte of a message is printed first in
-hexadecimal,\
-followed by the corresponding ASCII character in parentheses.
+hexadecimal, followed by the corresponding ASCII character in
+parentheses.
 
-The OSC Message with the OSC Address Pattern
-\"/oscillator/4/frequency\"\
+The OSC Message with the OSC Address Pattern "/oscillator/4/frequency"
 and the floating point number 440.0 as the single argument would be
-represented\
-by the following 32-byte message:
+represented by the following 32-byte message:
 
       2f (/)  6f (o)  73 (s)  63 (c)
 
@@ -99,12 +97,11 @@ by the following 32-byte message:
       43 (C)  dc (Ü)  0 ()    0 ()
 
 The next example shows the 40 bytes in the representation of the OSC
-Message\
-with OSC Address Pattern \"/foo\" and 5 arguments:
+Message with OSC Address Pattern "/foo" and 5 arguments:
 
 1.  The int32 1000
 2.  The int32 -1
-3.  The string \"hello\"
+3.  The string "hello"
 4.  The float32 1.234
 5.  The float32 5.678
 
@@ -129,11 +126,10 @@ with OSC Address Pattern \"/foo\" and 5 arguments:
 
       40 (@)  b5 (µ)  b2 (”)  2d (-)
 
-#### []{#bundledispatchorder} Order of Invocation of OSC Methods matched by OSC Messages in an OSC Bundle
+## []{#bundledispatchorder} Order of Invocation of OSC Methods matched by OSC Messages in an OSC Bundle
 
-Suppose an OSC Servers\' OSC Address Space includes methods with the
-following\
-OSC Addresses:
+Suppose an OSC Servers' OSC Address Space includes methods with the
+following OSC Addresses:
 
 -   /first/this/one
 -   /second/1
@@ -142,29 +138,25 @@ OSC Addresses:
 -   /third/b
 -   /third/c
 
-Suppose an OSC Bundle is received that contains three OSC Messages, and
-that\
-the three OSC Messages have these OSC Address Patterns:
+Suppose an OSC Bundle is received that contains three OSC Messages,
+and that the three OSC Messages have these OSC Address Patterns:
 
 1.  /first/this/one
-2.  /second/\[1-2\]
-3.  /third/\*
+2.  /second/[1-2]
+3.  /third/*
 
 Six methods will be invoked in this order:
 
-\(1) First /first/this/one, since that OSC Address Pattern appeared first
-in\
-the OSC Bundle; then
+(1) First /first/this/one, since that OSC Address Pattern appeared
+first in the OSC Bundle; then
 
 (2-3) Either /second/1 followed /second/2 or /second/2 followed by
-/second/1;\
-then
+/second/1; then
 
 (3-6) /third/a, /third/b, and /third/c, in any order.
 
-There are twelve possible orders in which an OSC server may invoke these
-six\
-methods:
+There are twelve possible orders in which an OSC server may invoke
+these six methods:
 
 1.  /first/this/one, /second/1, /second/2, /third/a, /third/b, /third/c
 2.  /first/this/one, /second/1, /second/2, /third/a, /third/c, /third/b

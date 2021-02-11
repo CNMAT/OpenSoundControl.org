@@ -51,7 +51,7 @@ This repo contains
 [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) scripts to
 [build](build.sh) the website html with [pandoc](https://pandoc.org),
 [deploy](deploy.sh) to the webserver, and [build the overall table of
-contents](buildtoc.sh).
+contents](buildindex.sh).
 
 ## Values
 

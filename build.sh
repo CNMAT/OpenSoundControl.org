@@ -67,7 +67,7 @@ for m in *.md */*.md; do
     echo "<hr><P>This page of <a href=\"${homePrefix}README.html\">OpenSoundControl website</a> updated `date` by `whoami`.</P>" > $datefile;
 
 
-    echo infile $infile outfile $outfile nicetitle $nicetitle
+    # echo infile $infile outfile $outfile nicetitle $nicetitle
     
     if [[ $infile -nt $outfile ]] ; then
         echo "    " $infile to $outfile...; 

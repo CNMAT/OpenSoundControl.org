@@ -7,10 +7,12 @@ bare-bones implementation of [Matt Wright's CCRMA
 Documentation](https://ccrma.stanford.edu/docs/toc.html).
 
 
-Auto-generated [index](index.html) and [table of contents](toc.html)
-are coming soon.
+The auto-generated [index](index.html) and [table of
+contents](toc.html) are one of the best ways to find information on
+the site.
 
-To contribute, here are some forms:
+
+XXX To contribute, here are some forms:
 
 * Implementation
 * Best practice
@@ -83,6 +85,4 @@ Technical:
 * Simple, lightweight open-source toolchain; not tied to any "heavy"
   infrastructure such as Drupal.
 * Designed for long-term maintainability with potentially infrequent updates
-
-
-
+* Imposes some limits on markdown use to make the scripts easier to implement.

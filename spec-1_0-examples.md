@@ -2,8 +2,8 @@
 
 version 1.0, March 29 2002, Matt Wright
 
-This document provides examples to support the [OpenSound Control
-Specification](OSC-spec.html).
+This document provides examples to support the [OpenSound Control 1.0
+Specification](spec-1_0.html).
 
 ## []{#OSCstrings} OSC-string examples
 

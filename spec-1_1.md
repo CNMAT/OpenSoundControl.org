@@ -1,3 +1,5 @@
+# OpenSoundControl Specification 1.1 (?)
+
 The most accurate document reflecting the 1.1 vision is the [NIME 2009
 paper](files/2009-NIME-OSC-1.1.pdf)
 ([zenodo](https://zenodo.org/record/1177517)).

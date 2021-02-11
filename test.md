@@ -1,3 +1,5 @@
+# Every file in the site, even this test, needs to start with an H1 so the index will look nice
+
 NOTE: This issue doesn't appear in GitHub flavored markdown.  Try building this file to see what I mean.
 
 The string \"OSC\" is represented as an OSC-string with these four\

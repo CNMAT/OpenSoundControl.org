@@ -1,14 +1,14 @@
+# OpenSoundControl Specification 1.0
+
 Version 1.0, March 26 2002, Matt Wright
 
-Introduction
-------------
+## Introduction
 
 Open Sound Control (OSC) is an open, transport-independent,
 message-based protocol developed for communication among computers,
 sound synthesizers, and other multimedia devices.
 
-OSC Syntax
-----------
+## OSC Syntax
 
 This section defines the syntax of OSC data.
 
@@ -178,8 +178,7 @@ size (in 8-bit bytes) of each part.
 
   :  Parts of an OSC Bundle
 
-OSC Semantics
--------------
+## OSC Semantics
 
 This section defines the semantics of OSC data.
 

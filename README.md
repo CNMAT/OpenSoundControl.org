@@ -15,9 +15,11 @@ the site.
 XXX To contribute, here are some forms:
 
 * Implementation
+* Publication
 * Best practice
 * Project using OSC
 * Address space / schema that other people may like to copy or know about
+* Knowledge base item
 * ...
 
 Everything lives in this git repo:
@@ -63,7 +65,8 @@ User-facing:
 * Simple, clear documentation oriented towards both beginngers ("what
   is OSC? / "how do I use it?") and experts (implementors, developers, etc.)
 * Simple, clean, accessible web design, not flashy / graphics-rich
-* Clear and useful site navigation supporting discovery
+* Clear and useful site navigation supporting discovery of curated
+  useful information
 * Central location aspiring to link to "all" the world's information
   about OpenSoundControl
 * Mechanism for the OSC community to contribute site content so it stays
@@ -86,4 +89,5 @@ Technical:
 * Simple, lightweight open-source toolchain; not tied to any "heavy"
   infrastructure such as Drupal.
 * Designed for long-term maintainability with potentially infrequent updates
+* Designed to be easy to migrate site content to another platform in the future
 * Imposes some limits on markdown use to make the scripts easier to implement.

@@ -1,0 +1,313 @@
+These are the names of all the fields:
+Bundle Support:
+Features:
+OSC Documentation URL:
+Platform:
+Project Type:
+Project URL:
+Timetag Support:
+Transport Type:
+Type Support:
+
+these are the possible values for "Bundle Support"
+
+Bundle Support:
+Creates Bundles
+Reads Bundles
+Supports Nested Bundles
+
+these are the possible values for "Features"
+
+Bounded Latency
+Bundle Support
+Features:
+High Speed (\> 100 hz packet rate)
+Packet Construction (Server)
+Packet Parsing (Client)
+Stateless Interface (full state reported in every packet)
+Timetag Support
+Wildcard Matching Support
+
+these are the possible values for "Platform"
+
+Any / Platform Independent
+Linux
+Mac OSX
+Other
+Platform:
+Windows
+
+these are the possible values for "Project Type"
+
+Hardware
+Other
+Programming Language Library
+Project Type:
+Software Application
+
+these are the possible values for "Timetag Support"
+
+Generates \"IMMEDATE\" timestamp
+Generates timestamped sequenced data
+Performs scheduling on received timestamped data
+Timestamps are UTC-synchronized
+Timetag Support:
+
+these are the possible values for "Transport Type:"
+
+Bidirectional UDP (via sendto/recvfrom)
+HTTP
+None / Transport Independent
+Other
+Serial-SLIP
+TCP
+Transport Type:
+UDP
+
+these are the possible values for "Type Support]"
+
+F: false
+I: infinitum
+N: null
+S: symbol
+T: true
+Type Support:
+\[\]: array
+b: blob
+c: char
+d: double precision float
+f: float32
+h: int64
+i: int32
+m: MIDI message (char\*4)
+r: RGBA color (char\*4)
+s: string
+t: timetag
+
+here are all the Project URLs
+[AdLibitouch.com](http://www.adlibitouch.com/)
+[AdLibitouch.com](http://www.adlibitouch.com/)
+[elektronika](http://aestesis.eu/sub/elektronika.html)
+[Arduino to Max/MSP via
+OSC](http://liamtmlacey.blogspot.com/2011/03/arduino-to-maxmsp-via-osc-guide-and.html)
+<http://www.makesomecode.com/2009/12/30/arduino-osc-iphone-and-dmx/>
+[Bespoke OSC Library](http://www.bespokesoftware.org/osc/)
+[BluePD and
+BlueSense](http://www.bluemelon.org/index.php/Products/BM7505_BluePD_programmable_Pure_Data_router)
+<http://notam02.no/proj/bowsense>
+[Braun homepage](http://www.jamiebullock.com/software/)
+<http://chuck.cs.princeton.edu/>
+<http://www.cliki.net/OSC>
+[http://cnmat.berkeley.edu/publication/osc\_and\_gesture\_features\_cnmats\_connectivi\...](http://cnmat.berkeley.edu/publication/osc_and_gesture_features_cnmats_connectivity_processor)
+<http://www.csounds.com/>
+[DelphiOSC on
+github](https://web.archive.org/web/20200707023430/https://github.com/vvvv/DelphiOSCUtils)
+<http://www.cnmat.berkeley.edu/downloads>
+[http://diablu.jorgecardoso.org](http://diablu.jorgecardoso.org/)
+[Dimple project page](http://idmil.org/software/dimple)
+<http://dssi.sourceforge.net/>
+[erlang-osc](http://github.com/mujaheed/erlang-osc/tree/master)
+<http://recherche.ircam.fr/equipes/temps-reel/movement/hardware/index.htm>
+<http://thesundancekid.net/blog/fingerplay-midi/>
+<http://www.glui.de/>
+<http://iannix.la-kitchen.fr/>
+<http://impromptu.moso.com.au/>
+[J\# OSC (.NET
+2.0)](http://www.mech.upatras.gr/~robgroup/teams/logic/demos/osc/index.html)
+<http://www.ecs.soton.ac.uk/~njh/jackminimix/>
+[Jamoma](http://jamoma.org/)
+[JavaOSC](http://www.illposed.com/software/javaosc.html)
+<http://kwlive.dev.waag.org/live-input/hid2osc/doc/doxygen/html/index.html>
+<http://kwlive.dev.waag.org/>
+<http://www.la-kitchen.fr/kitchenlab/kitchenlab.html>
+<http://liblo.sourceforge.net/>
+[liboscparse](https://web.archive.org/web/20201128044755/https://github.com/lekernel/liboscparse)
+[Lily Home Page](http://www.lilyapp.org/)
+<http://www.liveapi.org/>
+[Sourceforge page](http://livegrabber.sourceforge.net/)
+[Logic Pro](http://www.apple.com/logicpro/)
+<http://www.ecs.soton.ac.uk/~njh/madjack/>
+<http://www.makingthings.com/>
+[https://sourceforge.net/p/oscmex](https://web.archive.org/web/20200707023510/https://sourceforge.net/p/oscmex)
+<http://www.meyersound.com/lcs/matrix3/>
+<http://cnmat.berkeley.edu/research/uosc>
+[Milkymist](http://www.milkymist.org/)
+<http://sourceforge.net/projects/mirage/>
+[The Missing Link](http://wifimidi.com/)
+[OrfWare](http://www.orfware.com/)
+[http://monome.org](http://monome.org/)
+<http://www.humatic.de/htools/MouseTrap.htm>
+<http://poly.share.dj/projects/#mrmr>
+[Music controller for the wiimote.
+(OSX)](http://code.google.com/p/musiccontroller/)
+[http://www.mxwendler.net](http://www.mxwendler.net/)
+[CPAN page](http://search.cpan.org/dist/Net-OpenSoundControl/)
+<http://www.sciss.de/netutil/>
+[Nyquist](http://www.cs.cmu.edu/~music/nyquist)
+[ofxOsc](http://www.frey.co.nz/projects/ofxosc)
+[ooscc](http://www.experimentalistsanonymous.com/ooscc)
+[http://opensoundcontrol.org/implementation/open-sound-control-php](implementation/open-sound-control-php)
+<http://osw.sourceforge.net/>
+<http://cnmat.berkeley.edu/downloads>
+[Lightjams - DMX Lighting Controller for Live
+Performances](http://www.lightjams.com/)
+[Clojure OSC
+Library](https://web.archive.org/web/20201128053655/https://github.com/overtone/osc-clj)
+<http://archive.cnmat.berkeley.edu/OpenSoundControl/Kit/>
+<http://www.ventuz.com/>
+[osc-ruby](http://github.com/aberant/osc-ruby)
+[OSC simpl ification for Unity
+3D](https://web.archive.org/web/20201028120730/https://assetstore.unity.com/packages/tools/input-management/osc-simpl-53710)
+[osc2midi](http://code.google.com/p/osc2midi/)
+<http://sourceforge.net/projects/oscal/>
+[Oscar v.1 Mac Os X](http://www.todo.to.it/blog/oscar/)
+<http://www.audiomulch.com/~rossb/code/oscgroups/>
+<http://www.lcscanada.com/oscjoy/index.html>
+[OSControl at SourceForge](http://sourceforge.net/projects/oscontrol/)
+[oscP5](http://www.sojamo.de/libraries/oscP5)
+<http://www.audiomulch.com/~rossb/code/oscpack/>
+<http://gruntthepeon.free.fr/oscpkt/>
+[OSCRemote on
+iTunes](http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=302073387&mt=8)
+[OSCseq.com](http://oscseq.com/)
+<http://www.osculator.net/>
+[OscVstBridge](http://oscvstbridge.sourceforge.net/)
+[OSC for pd](http://puredata.info/)
+[scosc](http://trac2.assembla.com/pkaudio/wiki/scosc)
+[SimpleOSC](http://www.ixi-audio.net/content/body_backyard_python.html)
+[TxOSC: OSC protocol for Twisted](http://bitbucket.org/arjan/txosc)
+[q3osc.org](http://www.q3osc.org/)
+[ROB - OSC Mobile Remote Control](http://robold.tim-schenk.de/)
+[Rosco - an arduino to OSC app for Mac OS
+X](http://www.sc-fa.com/blog/rosco/)
+[rosc](http://hans.fugal.net/src/rosc/)
+<http://github.com/maca/ruby-osc>
+[https://github.com/Sciss/ScalaOSC](https://web.archive.org/web/20200707023644/https://github.com/Sciss/ScalaOSC)
+[Serpent](https://web.archive.org/web/20201128043430/https://www.cs.cmu.edu/~music/aura/serpent-info.htm)
+<http://www.smartcontroller.com.au/smartController/smartController.html>
+<http://wiki.squeak.org/squeak/5836>
+<http://www.sciss.de/swingOSC/>
+[SynOSCopy \"SYN\" Namespace Project at
+Github](http://github.com/fabb/SynOSCopy)
+[TJShow.com](http://www.tjshow.com/)
+[http://www.derivative.ca](http://www.derivative.ca/)
+<http://hexler.net/touchosc>
+<http://www.ventuz.com/>
+[vvvv - a multipurpose toolkit](http://vvvv.org/)
+[http://recherche.ircam.fr/equipes/temps-reel/movement/flety/static.php?page=stat\...](http://recherche.ircam.fr/equipes/temps-reel/movement/flety/static.php?page=static050309-144808)
+<http://wosclib.sourceforge.net/>
+
+here are all the Project OSC Documentation URLs
+[http://www.Adlibitouch.com/esquema.html](http://www.adlibitouch.com/esquema.html)
+[http://www.Adlibitouch.com](http://www.adlibitouch.com/)
+[elektronika osc implementation](http://aestesis.org/wiki/index.php/Osc)
+<http://liamtmlacey.blogspot.com/2011/03/arduino-to-maxmsp-via-osc-guide-and.html>
+<http://www.makesomecode.com/2009/12/30/arduino-osc-iphone-and-dmx/>
+[Online Documentation](http://www.bespokesoftware.org/OSC/1.3.0.0/doc/)
+<http://sourceforge.net/projects/pure-data>
+<http://notam02.no/proj/bowsense>
+[Braun homepage](http://www.jamiebullock.com/software/)
+<http://chuck.cs.princeton.edu/doc/language/event.html>
+<http://fo.am/darcs/osc/README.txt>
+[http://cnmat.berkeley.edu/publication/osc\_and\_gesture\_features\_cnmats\_connectivi\...](http://cnmat.berkeley.edu/publication/osc_and_gesture_features_cnmats_connectivity_processor)
+<http://www.csounds.com/manual/html/OSCNetwork.html>
+[DelphiOSC docu in
+sourcefile](https://web.archive.org/web/20200707023430/https://github.com/vvvv/DelphiOSCUtils/blob/master/OSCUtils.pas)
+<http://www.cnmat.berkeley.edu/downloads>
+[http://diablu.jorgecardoso.eu/index.php?option=com\_content&task=blogsection&id=7\...](http://diablu.jorgecardoso.eu/index.php?option=com_content&task=blogsection&id=7&Itemid=38)
+[Dimple project page](http://idmil.org/software/dimple)
+<http://dssi.sourceforge.net/RFC.html>
+<http://wiki.github.com/mujaheed/erlang-osc>
+<http://recherche.ircam.fr/equipes/temps-reel/movement/hardware/EtherSense.pdf>
+<http://thesundancekid.net/blog/fingerplay-midi/>
+<http://gluion.pbwiki.com/>
+<http://iannix.svn.sourceforge.net/viewvc/iannix/README.txt?view=markup>
+<http://impromptu.moso.com.au/tutorials/midi_osc.html>
+[J\# OSC Documentation (same as JavaOSC
+documentation)](http://www.illposed.com/software/javaoscdoc/)
+<http://www.ecs.soton.ac.uk/~njh/jackminimix/>
+[Jamoma OSC
+namespace](http://groupware.bek.no/groups/jamoma/wiki/eed85/Name_Space.html)
+[JavaOSC Documentation](http://www.illposed.com/software/javaoscdoc/)
+<http://kwlive.dev.waag.org/live-input/hid2osc/doc/doxygen/html/index.html>
+<http://kwlive.dev.waag.org/realizer/doc/doxygen/html/kwlive.html#osc>
+<http://www.la-kitchen.fr/kitchenlab/kitchenlab.html>
+<http://liblo.sourceforge.net/docs/modules.html>
+[liboscparse](https://web.archive.org/web/20201128044755/https://github.com/lekernel/liboscparse)
+[Blog entry for Lily
+OSC](http://blog.lilyapp.org/2007/05/lily_osc_1.html)
+<http://liveapi.googlecode.com/svn/trunk/src/LiveOSC/OSCAPI.txt>
+[Sourceforge manual](http://livegrabber.sourceforge.net/)
+<http://support.apple.com/kb/TS2565>
+<http://users.ecs.soton.ac.uk/njh/madjack/>
+<http://www.makingthings.com/ref/firmware/html/group___o_s_c.html>
+[https://sourceforge.net/p/oscmex](https://web.archive.org/web/20200707023510/https://sourceforge.net/p/oscmex)
+<http://www.meyersound.com/pdf/products/lcs_series/CmdRef_20070905.pdf>
+<http://cnmat.berkeley.edu/library/uosc_project_documentation>
+[Flickernoise](http://www.milkymist.org/flickernoise.html)
+<http://sourceforge.net/projects/mirage/>
+[Missing Link Message Type
+Primer](http://wifimidi.com/phpBB3/viewtopic.php?f=4&t=5&p=5#p5)
+[Mocolo data transmission](http://www.orfware.com/index_mocolo_osc.html)
+<http://monome.org/data/app/monomeserial/osc>
+<http://www.humatic.de/webapps/htm/app/doc/MouseTrap.htm>
+<http://poly.share.dj/projects/#mrmr>
+<http://code.google.com/p/musiccontroller/wiki/OSCWiimote>
+<http://mxwendler.net/files/osc/osc_reference2.1.pdf>
+[Main documentation
+page](http://search.cpan.org/dist/Net-OpenSoundControl/lib/Net/OpenSoundControl.pm)
+<http://www.sciss.de/netutil/doc/api/index.html>
+[Open Sound Control and
+Nyquist](http://www.cs.cmu.edu/~rbd/doc/nyquist/part17.html)
+<http://www.frey.co.nz/projects/ofxosc>
+[ooscc -
+technical](http://www.experimentalistsanonymous.com/ooscc/technical.html)
+[http://opensoundcontrol.org/implementation/open-sound-control-php](implementation/open-sound-control-php)
+<http://osw.sourceforge.net/>
+<http://cnmat.berkeley.edu/patch/4059>
+[OSC and DMX Lighting](http://www.lightjams.com/osc.html)
+[README](https://web.archive.org/web/20201128053655/https://github.com/overtone/osc-clj/blob/master/README.md)
+[http://cnmat.berkeley.edu/publication/implementation\_and\_performance\_issues\_open\...](http://cnmat.berkeley.edu/publication/implementation_and_performance_issues_opensound_control)
+<http://www.ventuz.com/download/public/OSC/V1_4_1/Ventuz.OSC.chm>
+<http://github.com/aberant/osc-ruby>
+[Unity
+Store](https://web.archive.org/web/20201028120730/https://assetstore.unity.com/packages/tools/input-management/osc-simpl-53710)
+<http://code.google.com/p/osc2midi/>
+<http://sourceforge.net/docman/display_doc.php?docid=80824&group_id=212002>
+<http://www.todo.to.it/blog/oscar/>
+<http://www.audiomulch.com/~rossb/code/oscgroups/>
+<http://www.lcscanada.com/oscjoy/index.html>
+[Application including starting
+guide](http://sourceforge.net/projects/oscontrol/files/)
+[oscP5](http://www.sojamo.de/libraries/oscP5)
+<http://ross.smartelectronix.com/index.cgi/browser/oscpack/trunk/README>
+<http://gruntthepeon.free.fr/oscpkt/html/>
+[OSCRemote Documentation](http://www.nr37.nl/OSCRemote)
+[OSCseq manual](http://oscseq.com/manual/)
+<http://www.osculator.net/usersmanual>
+[http://oscvstbridge.sourceforge.net](http://oscvstbridge.sourceforge.net/)
+<http://puredata.info/Members/martinrp/OSCobjects/>
+<http://trac2.assembla.com/pkaudio/wiki/scosc>
+<http://www.ixi-audio.net/content/body_backyard_python.html>
+[README File](http://bitbucket.org/arjan/txosc/src)
+[q3osc CCRMA Wiki page](http://cm-wiki.stanford.edu/wiki/Q3osc)
+<http://robold.tim-schenk.de/rob-download-en/>
+<http://www.sc-fa.com/blog/rosco/>
+[README](http://hans.fugal.net/src/rosc/README)
+<http://github.com/maca/ruby-osc>
+[https://github.com/Sciss/ScalaOSC](https://web.archive.org/web/20200707023644/https://github.com/Sciss/ScalaOSC)
+[Serpent
+Documentation](https://web.archive.org/web/20201128043430/https://www.cs.cmu.edu/~music/cmsip/serpent/doc/serpent.htm)
+<http://www.smartcontroller.com.au/tutorials/smartControlManual.PDF>
+[http://map1.squeakfoundation.org/sm/accountbyid/13fa7a75-1e76-471e-8f42-b676f4d8\...](http://map1.squeakfoundation.org/sm/accountbyid/13fa7a75-1e76-471e-8f42-b676f4d8e373/package/61f807be-83a3-4944-bfa1-686ddac7153c)
+<http://www.sciss.de/swingOSC/OSC-Command-Reference.html>
+[SynOSCopy \"SYN\" Namespace Specification at
+Github](http://github.com/fabb/SynOSCopy/wiki)
+<http://www.tjshow.com/>
+<http://www.derivative.ca/wiki/index.php?title=OSC_In_DAT>
+<http://hexler.net/touchosc>
+<http://www.ventuz.com/download/public/OSC/Ventuz.OSC.chm>
+[OSC documentation on
+vvvv.org](http://www.vvvv.org/tiki-index.php?page=osc)
+[http://recherche.ircam.fr/equipes/temps-reel/movement/flety/images/Sell-Sheet-Wi\...](http://recherche.ircam.fr/equipes/temps-reel/movement/flety/images/Sell-Sheet-WiSeBox.pdf)
+<http://wosclib.sourceforge.net/doc/index.html>

@@ -16,7 +16,8 @@ XXX To contribute, here are some forms:
 
 * Implementation
 * Best practice
-* Project
+* Project using OSC
+* Address space / schema that other people may like to copy or know about
 * ...
 
 Everything lives in this git repo:

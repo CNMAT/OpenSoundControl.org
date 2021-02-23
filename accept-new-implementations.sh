@@ -39,7 +39,7 @@ fi
 
 tail $num_new "$googledownload"
 
-# Remove email field
+# Remove fields including timestamp, email...
 # Append to end of implementations
 # check for duplicates - if so suggest possible git checkout
 

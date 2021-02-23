@@ -20,8 +20,7 @@ these are the possible values for "Features"
 
 Bounded Latency
 Bundle Support
-Features:
-High Speed (\> 100 hz packet rate)
+High Speed (> 100 hz packet rate)
 Packet Construction (Server)
 Packet Parsing (Client)
 Stateless Interface (full state reported in every packet)
@@ -47,11 +46,11 @@ Software Application
 
 these are the possible values for "Timetag Support"
 
-Generates \"IMMEDATE\" timestamp
+Generates "immediate" timestamp
 Generates timestamped sequenced data
 Performs scheduling on received timestamped data
 Timestamps are UTC-synchronized
-Timetag Support:
+
 
 these are the possible values for "Transport Type:"
 
@@ -66,23 +65,22 @@ UDP
 
 these are the possible values for "Type Support]"
 
-F: false
-I: infinitum
-N: null
-S: symbol
-T: true
-Type Support:
-\[\]: array
 b: blob
 c: char
-d: double precision float
+d: float64
+F: false
 f: float32
 h: int64
+I: infinitum
 i: int32
-m: MIDI message (char\*4)
-r: RGBA color (char\*4)
+m: MIDI message
+N: null
+r: RGBA color
 s: string
+S: symbol
 t: timetag
+T: true
+[]: array
 
 here are all the Project URLs
 [AdLibitouch.com](http://www.adlibitouch.com/)

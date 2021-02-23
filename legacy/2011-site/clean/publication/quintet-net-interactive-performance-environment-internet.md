@@ -1,3 +1,5 @@
+## Quintet.Net: an interactive performance environment for the Internet
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

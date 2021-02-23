@@ -1,3 +1,5 @@
+## Dynamic, Distributed and Automated Music Applications in Open Sound World
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988
@@ -11,8 +13,8 @@ title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&rfr_id=
 | ]{.biblio-row-title}  |                       |                       |
 +-----------------------+-----------------------+-----------------------+
 | [ Authors             |                       | [Chaudhary,           |
-| ]{.biblio-row-title}  |                       | A](publications/autho |
-|                       |                       | r/Chaudhary)          |
+| ]{.biblio-row-title}  |                       | A](publicati          |
+|                       |                       | ons/author/Chaudhary) |
 +-----------------------+-----------------------+-----------------------+
 | [ Conference Name     |                       | OSC Conference 2004   |
 | ]{.biblio-row-title}  |                       |                       |
@@ -192,8 +194,8 @@ title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&rfr_id=
 |                       |                       | \[2\] Open Sound      |
 |                       |                       | World, software by    |
 |                       |                       | Amar Chaudhary et al. |
-|                       |                       | http://osw.sourceforg |
-|                       |                       | e.net\                |
+|                       |                       | http:/                |
+|                       |                       | /osw.sourceforge.net\ |
 |                       |                       | \[3\] Schmeder,       |
 |                       |                       | Andrew W.             |
 |                       |                       | Implementation of a   |
@@ -206,14 +208,14 @@ title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&rfr_id=
 | ]{.biblio-row-title}  |                       |                       |
 +-----------------------+-----------------------+-----------------------+
 | [ Export              |                       | [EndNote              |
-| ]{.biblio-row-title}  |                       | Tagged](publications/ |
-|                       |                       | export/tagged/175)    |
+| ]{.biblio-row-title}  |                       | Tagged](publicatio    |
+|                       |                       | ns/export/tagged/175) |
 |                       |                       | \|                    |
-|                       |                       | [XML](publications/ex |
-|                       |                       | port/xml/175)         |
+|                       |                       | [XML](publica         |
+|                       |                       | tions/export/xml/175) |
 |                       |                       | \|                    |
-|                       |                       | [BibTex](publications |
-|                       |                       | /export/bib/175)      |
+|                       |                       | [BibTex](publica      |
+|                       |                       | tions/export/bib/175) |
 +-----------------------+-----------------------+-----------------------+
 :::
 :::

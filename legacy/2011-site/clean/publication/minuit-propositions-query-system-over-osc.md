@@ -1,3 +1,5 @@
+## Minuit : Propositions for a query system over OSC
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

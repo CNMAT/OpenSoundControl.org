@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Real-time Distributed Media Applications in LANs with
 OSC](publication/real-time-distributed-media-applications-lans-osc)

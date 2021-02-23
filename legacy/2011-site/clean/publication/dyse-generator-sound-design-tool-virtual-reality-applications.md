@@ -1,3 +1,5 @@
+## DySE Generator: A sound design tool for virtual reality applications
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

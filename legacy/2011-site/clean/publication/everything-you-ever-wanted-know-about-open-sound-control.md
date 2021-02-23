@@ -1,3 +1,5 @@
+## Everything you ever wanted to know about Open Sound Control
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

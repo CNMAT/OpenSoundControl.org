@@ -1,3 +1,5 @@
+## Introduction to OSC
+
 ::: {.content}
 Open Sound Control (OSC) is a protocol for communication among
 computers, sound synthesizers, and other multimedia devices that is

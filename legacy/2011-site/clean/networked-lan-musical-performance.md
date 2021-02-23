@@ -1,3 +1,5 @@
+## Networked LAN Musical Performance
+
 ::: {.content}
 A group of musicians operate a group of computers that are connected on
 a LAN. Each computer is somewhat independent (e.g., it produces sound in

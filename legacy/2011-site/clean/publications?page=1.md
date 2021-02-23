@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Preparation for Interactive Live Computer Performance in
 Collaboration with a Symphony

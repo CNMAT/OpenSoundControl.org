@@ -1,3 +1,5 @@
+## DSSI (\"Disposable Soft Synth Interface\")
+
 ::: {.content}
 ::: {.field .field-type-text .field-field-project-type}
 ::: {.field-items}

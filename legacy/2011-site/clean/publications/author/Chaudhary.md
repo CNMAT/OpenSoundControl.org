@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Automated Testing of Open-Source Music Software with Open Sound World
 and Open Sound

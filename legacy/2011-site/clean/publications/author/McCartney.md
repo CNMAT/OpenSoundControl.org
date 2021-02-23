@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Use of Open Sound Control in SuperCollider
 Server](publication/use-open-sound-control-supercollider-server)

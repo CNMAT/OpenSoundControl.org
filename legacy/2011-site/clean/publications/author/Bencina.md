@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [TUIO: A protocol for table-top tangible user
 interfaces](publication/tuio-protocol-table-top-tangible-user-interfaces)

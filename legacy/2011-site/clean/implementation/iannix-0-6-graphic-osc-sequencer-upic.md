@@ -1,3 +1,5 @@
+## IanniX 0.6, a graphic OSC sequencer from the UPIC
+
 ::: {.content}
 ::: {.field .field-type-text .field-field-project-type}
 ::: {.field-items}

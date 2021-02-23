@@ -1,3 +1,5 @@
+## OscPkt
+
 ::: {.content}
 ::: {.field .field-type-text .field-field-project-type}
 ::: {.field-items}
@@ -50,11 +52,11 @@ allocates memory when building or reading messages.
 
 Note: You may have to make some changes to the UDP file to be able to
 use it with MinGW on Windows. Using line numbers from
-http://gruntthepeon.free.fr/oscpkt/html/udp\_8hh\_source.html (as of
-Dec. 2011), add \"\#define \_WIN32\_WINNT 0x501\" before line 26 and
-comment out lines 243-249, 254, 306-308, 310, and the last three error
-checks in lines 250-251. The modified file is also attached (change
-extension to .hh).
+http://gruntthepeon.free.fr/oscpkt/html/udp_8hh_source.html (as of Dec.
+2011), add \"\#define \_WIN32_WINNT 0x501\" before line 26 and comment
+out lines 243-249, 254, 306-308, 310, and the last three error checks in
+lines 250-251. The modified file is also attached (change extension to
+.hh).
 :::
 :::
 :::

@@ -1,3 +1,5 @@
+## Discovering OSC services with ZeroConf
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988
@@ -11,9 +13,9 @@ title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&rfr_id=
 | ]{.biblio-row-title}  |                       |                       |
 +-----------------------+-----------------------+-----------------------+
 | [ Authors             |                       | [Ramakrishnan,        |
-| ]{.biblio-row-title}  |                       | Chandrasekar](publica |
-|                       |                       | tions/author/Ramakris |
-|                       |                       | hnan)                 |
+| ]{.biblio-row-title}  |                       | Chand                 |
+|                       |                       | rasekar](publications |
+|                       |                       | /author/Ramakrishnan) |
 +-----------------------+-----------------------+-----------------------+
 | [ Conference Name     |                       | OSC Conference 2004   |
 | ]{.biblio-row-title}  |                       |                       |
@@ -69,14 +71,14 @@ title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&rfr_id=
 | ]{.biblio-row-title}  |                       |                       |
 +-----------------------+-----------------------+-----------------------+
 | [ Export              |                       | [EndNote              |
-| ]{.biblio-row-title}  |                       | Tagged](publications/ |
-|                       |                       | export/tagged/191)    |
+| ]{.biblio-row-title}  |                       | Tagged](publicatio    |
+|                       |                       | ns/export/tagged/191) |
 |                       |                       | \|                    |
-|                       |                       | [XML](publications/ex |
-|                       |                       | port/xml/191)         |
+|                       |                       | [XML](publica         |
+|                       |                       | tions/export/xml/191) |
 |                       |                       | \|                    |
-|                       |                       | [BibTex](publications |
-|                       |                       | /export/bib/191)      |
+|                       |                       | [BibTex](publica      |
+|                       |                       | tions/export/bib/191) |
 +-----------------------+-----------------------+-----------------------+
 :::
 

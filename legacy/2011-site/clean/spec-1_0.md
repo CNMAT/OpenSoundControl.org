@@ -1,15 +1,15 @@
+## The Open Sound Control 1.0 Specification
+
 ::: {.content}
 Version 1.0, March 26 2002, Matt Wright
 
-Introduction
-------------
+## Introduction
 
 Open Sound Control (OSC) is an open, transport-independent,
 message-based protocol developed for communication among computers,
 sound synthesizers, and other multimedia devices.
 
-OSC Syntax
-----------
+## OSC Syntax
 
 This section defines the syntax of OSC data.
 
@@ -30,7 +30,7 @@ All OSC data is composed of the following fundamental data types:
 :   A sequence of non-null ASCII characters followed by a null, followed
     by 0-3 additional null characters to make the total number of bits a
     multiple of 32. ( [OSC-string
-    examples](spec-1_0-examples.html#OSCstrings) ) In this document, example
+    examples](spec-1_0-examples#OSCstrings) ) In this document, example
     OSC-strings will be written without the null characters, surrounded
     by double quotes.
 
@@ -101,7 +101,7 @@ type of its corresponding OSC Argument:
   b                  OSC-blob
   ------------------ ------------------------------------
 
-  :  The meaning of each OSC Type Tag
+  : The meaning of each OSC Type Tag
 
 Some OSC applications communicate among instances of themselves with
 additional, nonstandard argument types beyond those specified above. OSC
@@ -128,10 +128,10 @@ this table:
   \]                 Indicates the end of an array.
   ------------------ ------------------------------------------------------------------------------------------------------------------------
 
-  :  OSC Type Tags that must be used for certain nonstandard argument
+  : OSC Type Tags that must be used for certain nonstandard argument
   types
 
-[OSC Type Tag String examples](spec-1_0-examples.html#typetagstrings) .
+[OSC Type Tag String examples](spec-1_0-examples#typetagstrings) .
 
 ### OSC Arguments
 
@@ -143,7 +143,7 @@ the binary representations of each argument.
 An OSC Bundle consists of the OSC-string \"\#bundle\" followed by an
 *OSC Time Tag* , followed by zero or more *OSC Bundle Elements* . The
 OSC-timetag is a 64-bit fixed point time tag whose semantics are
-[described below](#timetags) .
+[described below](node/3/#timetags) .
 
 An OSC Bundle Element consists of its *size* and its *contents* . The
 size is an int32 representing the number of 8-bit bytes in the contents,
@@ -155,53 +155,20 @@ Note this recursive definition: bundle may contain bundles.
 This table shows the parts of a two-or-more-element OSC Bundle and the
 size (in 8-bit bytes) of each part.
 
-Parts of an OSC Bundle
+  ----------------------------------- ----------------- -------------------------------------------------------------
+  **Data**                            **Size**          **Purpose**
+  OSC-string \"\#bundle\"             8 bytes           How to know that this data is a bundle
+  OSC-timetag                         8 bytes           Time tag that applies to the entire bundle
+  Size of first bundle element        int32 = 4 bytes   First bundle element
+  First bundle element\'s contents                      As many bytes as given by \"size of first bundle element\"
+  Size of second bundle element       int32 = 4 bytes   Second bundle element
+  Second bundle element\'s contents                     As many bytes as given by \"size of second bundle element\"
+  etc.                                                  Addtional bundle elements
+  ----------------------------------- ----------------- -------------------------------------------------------------
 
-**Data**
-:::
+  : Parts of an OSC Bundle
 
-**Size**
-
-**Purpose**
-
-OSC-string \"\#bundle\"
-
-8 bytes
-
-How to know that this data is a bundle
-
-OSC-timetag
-
-8 bytes
-
-Time tag that applies to the entire bundle
-
-Size of first bundle element
-
-int32 = 4 bytes
-
-First bundle element
-
-First bundle element\'s contents
-
-As many bytes as given by \"size of first bundle element\"
-
-Size of second bundle element
-
-int32 = 4 bytes
-
-Second bundle element
-
-Second bundle element\'s contents
-
-As many bytes as given by \"size of second bundle element\"
-
-etc.
-
-Addtional bundle elements
-
-OSC Semantics
--------------
+## OSC Semantics
 
 This section defines the semantics of OSC data.
 
@@ -238,7 +205,7 @@ other than the following:
   }               close curly brace   125
   --------------- ------------------- --------------------------
 
-  :  Printable ASCII characters not allowed in names of OSC Methods or
+  : Printable ASCII characters not allowed in names of OSC Methods or
   OSC Containers
 
 The *OSC Address* of an OSC Method is a symbolic name giving the full
@@ -248,7 +215,7 @@ of the tree. An OSC Method\'s OSC Address begins with the character
 order, along the path from the root of the tree to the OSC Method,
 separated by forward slash characters, followed by the name of the OSC
 Method. The syntax of OSC Addresses was chosen to match the syntax of
-URLs. ( [OSC Address Examples](spec-1_0-examples.html#OSCaddress) )
+URLs. ( [OSC Address Examples](spec-1_0-examples#OSCaddress) )
 
 ### OSC Message Dispatching and Pattern Matching
 
@@ -262,7 +229,7 @@ namely, the OSC Arguments in the OSC Message.
 The *parts* of an OSC Address or an OSC Address Pattern are the
 substrings between adjacent pairs of forward slash characters and the
 substring after the last forward slash character. (
-[examples](spec-1_0-examples.html#addressparts) )
+[examples](spec-1_0-examples#addressparts) )
 
 A received OSC Message must be disptched to every OSC method in the
 current OSC Address Space whose OSC Address matches the OSC Message\'s
@@ -344,4 +311,5 @@ enclosing bundle. The atomicity requirement for OSC Messages in the same
 OSC Bundle does not apply to OSC Bundles within an OSC Bundle.
 
 ::: {.book-navigation}
+:::
 :::

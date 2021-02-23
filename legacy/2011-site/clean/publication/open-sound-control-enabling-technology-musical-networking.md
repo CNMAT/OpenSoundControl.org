@@ -1,3 +1,5 @@
+## Open Sound Control: an enabling technology for musical networking
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

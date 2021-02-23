@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Best Practices for Open Sound
 Control](publication/best-practices-open-sound-control) ]{.biblio-title}

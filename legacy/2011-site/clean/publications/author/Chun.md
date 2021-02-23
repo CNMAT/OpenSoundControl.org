@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Bidirectional XML mapping](publication/bidirectional-xml-mapping)
 ]{.biblio-title} , [ [Chun, Ben](publications/author/Chun){.active}

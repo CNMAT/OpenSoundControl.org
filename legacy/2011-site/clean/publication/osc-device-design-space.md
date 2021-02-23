@@ -1,3 +1,5 @@
+## OSC Device Design Space
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988
@@ -11,8 +13,8 @@ title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&rfr_id=
 | ]{.biblio-row-title}  |                       |                       |
 +-----------------------+-----------------------+-----------------------+
 | [ Authors             |                       | [Freed,               |
-| ]{.biblio-row-title}  |                       | Adrian](publications/ |
-|                       |                       | author/Freed)         |
+| ]{.biblio-row-title}  |                       | Adrian](publi         |
+|                       |                       | cations/author/Freed) |
 +-----------------------+-----------------------+-----------------------+
 | [ Conference Name     |                       | OSC Conference 2004   |
 | ]{.biblio-row-title}  |                       |                       |
@@ -104,14 +106,14 @@ title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&rfr_id=
 | ]{.biblio-row-title}  |                       |                       |
 +-----------------------+-----------------------+-----------------------+
 | [ Export              |                       | [EndNote              |
-| ]{.biblio-row-title}  |                       | Tagged](publications/ |
-|                       |                       | export/tagged/178)    |
+| ]{.biblio-row-title}  |                       | Tagged](publicatio    |
+|                       |                       | ns/export/tagged/178) |
 |                       |                       | \|                    |
-|                       |                       | [XML](publications/ex |
-|                       |                       | port/xml/178)         |
+|                       |                       | [XML](publica         |
+|                       |                       | tions/export/xml/178) |
 |                       |                       | \|                    |
-|                       |                       | [BibTex](publications |
-|                       |                       | /export/bib/178)      |
+|                       |                       | [BibTex](publica      |
+|                       |                       | tions/export/bib/178) |
 +-----------------------+-----------------------+-----------------------+
 :::
 

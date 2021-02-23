@@ -1,3 +1,5 @@
+## EtherSense, an OSC-based sensor platform
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

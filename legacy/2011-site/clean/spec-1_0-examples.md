@@ -1,3 +1,5 @@
+## OpenSound Control Spec Examples
+
 ::: {.content}
 version 1.0, March 29 2002, Matt Wright
 
@@ -38,7 +40,7 @@ bytes:
   OSC-blob arguments                  
   ----------------------------------- -----------------------------------
 
-  :  Example OSC Type Tag Strings
+  : Example OSC Type Tag Strings
 
 #### []{#OSCaddress} OSC Address Examples
 
@@ -117,8 +119,9 @@ with OSC Address Pattern \"/foo\" and 5 arguments:
 4.  The float32 1.234
 5.  The float32 5.678
 
+```{=html}
 <!-- -->
-
+```
       2f (/)  66 (f)  6f (o)  6f (o)
       
 
@@ -172,8 +175,8 @@ the three OSC Messages have these OSC Address Patterns:
 
 Six methods will be invoked in this order:
 
-\(1) First /first/this/one, since that OSC Address Pattern appeared first
-in\
+\(1\) First /first/this/one, since that OSC Address Pattern appeared
+first in\
 the OSC Bundle; then
 
 (2-3) Either /second/1 followed /second/2 or /second/2 followed by

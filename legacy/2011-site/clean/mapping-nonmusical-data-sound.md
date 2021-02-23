@@ -1,3 +1,5 @@
+## Mapping nonmusical data to sound
+
 ::: {.content}
 This is almost the same as the \"Sensor/Gesture-Based Electronic Musical
 Instruments\" application area above, except that the intended user

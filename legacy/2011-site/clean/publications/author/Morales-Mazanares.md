@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Combining Audio And Gestures For A Real-Time
 Improviser](publication/combining-audio-and-gestures-real-time-improviser)

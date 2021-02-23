@@ -1,3 +1,5 @@
+## Effects of Latency on Networked Musical Performance
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

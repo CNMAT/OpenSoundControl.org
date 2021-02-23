@@ -1,3 +1,5 @@
+## Matrix3 Audio Show Control System LX-300 Digital Mixer
+
 ::: {.content}
 ::: {.field .field-type-text .field-field-project-type}
 ::: {.field-items}

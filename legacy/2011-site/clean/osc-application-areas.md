@@ -1,3 +1,5 @@
+## OSC Application Areas
+
 ::: {.content}
 This document compiled by Matt Wright and Adrian Freed lists some of the
 ways in which OSC has been used, organized into \"application area\"

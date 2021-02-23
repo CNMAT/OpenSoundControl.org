@@ -1,3 +1,5 @@
+## OSC and Gesture features of CNMAT\'s Connectivity Processor
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

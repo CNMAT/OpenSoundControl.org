@@ -100,7 +100,10 @@ if (( $num_lines == $num_badlines )); then
      echo $in sucks\; output nothing
     donothing=1
 else    
-    cat $outTooBig | ghead -n -$num_badlines > $out
+    ## Start with the first <h2> which is the title of this page (implementation etc.)
+    cat $in | pup 'h2' | head -3 > $out
+    ## Then do the content we actually want
+    cat $outTooBig | ghead -n -$num_badlines >> $out
 fi
 
 # didn't work: find the part we don't want and subtract it out with diff 

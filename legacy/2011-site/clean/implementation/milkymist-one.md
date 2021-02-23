@@ -1,3 +1,5 @@
+## Milkymist One: open hardware interactive VJ station
+
 ::: {.content}
 ::: {.field .field-type-text .field-field-project-type}
 ::: {.field-items}

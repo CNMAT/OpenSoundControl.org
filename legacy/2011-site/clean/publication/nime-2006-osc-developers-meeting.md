@@ -1,18 +1,20 @@
+## NIME 2006 OSC Developers Meeting
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988
 title="ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&rfr_id=info%3Asid%2Fopensoundcontrol.org&rft.title=NIME+2006+OSC+Developers+Meeting&rft.date=2006&rft.aulast=Wright&rft.aufirst=Matt&rft.au=Muller%2C+R%C3%A9my"}
 
-  ---------------------------------------------- -- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------- -- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
          [ Publication Type ]{.biblio-row-title}    Conference Paper
       [ Year of Publication ]{.biblio-row-title}    2006
                   [ Authors ]{.biblio-row-title}    [Wright, Matt](publications/author/Wright) ; [Muller, RÃ©my](publications/author/Muller)
           [ Conference Name ]{.biblio-row-title}    NIME 2006
     [ Conference Start Date ]{.biblio-row-title}    08/06/2006
-                 [ Abstract ]{.biblio-row-title}    Remy Muller (from IRCAM) and I organized an OSC Developers\' Meeting at the 2006 NIME conference (http://nime06.ircam.fr). The meeting was organized at the last minute and I profoundly apologize that nobody remembered to send out an invitation to the osc\_dev list. Nevertheless, there were about 20 OSC developers in attendance.
+                 [ Abstract ]{.biblio-row-title}    Remy Muller (from IRCAM) and I organized an OSC Developers\' Meeting at the 2006 NIME conference (http://nime06.ircam.fr). The meeting was organized at the last minute and I profoundly apologize that nobody remembered to send out an invitation to the osc_dev list. Nevertheless, there were about 20 OSC developers in attendance.
                           [ ]{.biblio-row-title}    
                    [ Export ]{.biblio-row-title}    [EndNote Tagged](publications/export/tagged/187) \| [XML](publications/export/xml/187) \| [BibTex](publications/export/bib/187)
-  ---------------------------------------------- -- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------- -- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 :::
 
 Full-Text
@@ -22,7 +24,7 @@ Full-Text
 Remy Muller (from IRCAM) and I organized an OSC Developers\' Meeting at
 the 2006 NIME conference (http://nime06.ircam.fr). The meeting was
 organized at the last minute and I profoundly apologize that nobody
-remembered to send out an invitation to the osc\_dev list. Nevertheless,
+remembered to send out an invitation to the osc_dev list. Nevertheless,
 there were about 20 OSC developers in attendance.
 
 Here are my notes and recollections from the meeting, organized by the
@@ -35,14 +37,12 @@ forward on each topic.
 
 I\'m sorry to begin these notes with three apologies. ;-)
 
-Finalize agenda
----------------
+## Finalize agenda
 
 Everybody seemed happy with my proposed agenda, so we went with it
 as-is.
 
-http://www.opensoundcontrol.org
--------------------------------
+## http://www.opensoundcontrol.org
 
 I showed off the new OSC web site (via video projection of my laptop). I
 exhorted OSC developers to get accounts on the new web site, explaining
@@ -76,8 +76,7 @@ OSC\
 Action items: redo the front page, update and improve the site in
 general.
 
-Standardized Address spaces and schemas
----------------------------------------
+## Standardized Address spaces and schemas
 
 I proposed http://www.opensoundcontrol.org/schemas as a good location
 for people to post descriptions of OSC schemas that they use, and
@@ -132,8 +131,7 @@ Templates\", decide about JazzMutant\'s proposed framework for naming
 these, and form a working group to start the process of standardizing
 specific ones.
 
-Discovery of schemas and address spaces
----------------------------------------
+## Discovery of schemas and address spaces
 
 I briefly reviewed the history of the desire for an address space
 discovery query mechanism, and then we all read a new proposal for this
@@ -161,7 +159,7 @@ non-serious suggestion.) The JazzMutant people showed us the XML
 language that they use internally (by sending it over OSC) to describe
 the layout of buttons, sliders, and other graphical elements on the
 Lemur, examples of which can be downloaded from
-http://www.jazzmutant.com/support\_download.php That particular XML
+http://www.jazzmutant.com/support_download.php That particular XML
 language, of course, is specific to their product, but the examples show
 that XML can solve this type of problem. It was pointed out that it
 would be nice for the UI description to be alongside parameter units,
@@ -170,8 +168,7 @@ ranges, etc
 Action items: specify a particular set of widgets, decide about XML, and
 design the query language.
 
-Discovery via ZeroConf
-----------------------
+## Discovery via ZeroConf
 
 I began by talking through http://www.opensoundcontrol.org/discovery
 
@@ -192,8 +189,7 @@ it easier for OSC developers to add ZeroConf to their software, add
 ZeroConf to more software, consider potential security issues. Consult
 with Ross Bencina about OSCgroups in this context.
 
-Queries for current state, etc.
--------------------------------
+## Queries for current state, etc.
 
 http://www.opensoundcontrol.org/queries\
 At this point we had already covered queries related to OSC Schema
@@ -208,8 +204,7 @@ developers implement them.
 \[Slightly past the 1-hour mark we took a short break. Matt poured
 Glenfidditch for all who were so inclined.\]
 
-Binary File Format
-------------------
+## Binary File Format
 
 There is a desire for a standard way to put OSC messages in a file, by
 analogy with MIDI files. I pointed out three obvious facts:
@@ -240,8 +235,7 @@ analogous to the type 0/1 MIDI file distinction.
 Action item: form a working group to resolve the questions. Remy
 volunteered to be a part of this.
 
-Vision for how unsophisticated users will have as-easy-as-possible mapping interfaces
--------------------------------------------------------------------------------------
+## Vision for how unsophisticated users will have as-easy-as-possible mapping interfaces
 
 Guillaume from JazzMutant said that OSC Schema discovery combined with
 Template/Class standardization would enable this.
@@ -272,8 +266,7 @@ control the given mapping destination.
 The importance of allowing users to have multiple different views on a
 single namespace was emphasized.
 
-More efficient representation for type tag strings
---------------------------------------------------
+## More efficient representation for type tag strings
 
 JazzMutant proposed \",f\[16\]\" as an abbreviation for
 \",ffffffffffffffff\", plus a representation along the lines of C\'s
@@ -297,8 +290,7 @@ new system, the two can coexist as long as OSC Clients never send
 new-style type tag strings, so people can implement this and measure the
 change in performance on real systems
 
-Proposal for super-efficient representation and recognition of address+type tag string
---------------------------------------------------------------------------------------
+## Proposal for super-efficient representation and recognition of address+type tag string
 
 We reviewed the non-backwards-compatible proposal to compute a hash
 function on an OSC address and type tag string, e.g., a 32-bit or 64-bit
@@ -329,8 +321,7 @@ matching; consider how it will coexist peacefully with standard OSC,
 especially how clients would discover whether servers could accept these
 messages.
 
-International Characters
-------------------------
+## International Characters
 
 Some people expressed a desire to allow international characters (e.g.,
 European vowels) as both OSC String arguments and in OSC addresses. The
@@ -340,8 +331,7 @@ wanted to keep things to just ASCII, others wanted to be able to present
 non-ASCII characters in user-visible address spaces. Nothing was
 resolved on this question.
 
-OSC working groups
-------------------
+## OSC working groups
 
 I started by reviewing the call to form working groups that we made at
 the 2004 OSC conference:

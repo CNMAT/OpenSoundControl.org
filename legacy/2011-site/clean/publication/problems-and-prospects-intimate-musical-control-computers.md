@@ -1,3 +1,5 @@
+## Problems and Prospects for Intimate Musical Control of Computers
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

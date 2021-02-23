@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Quintet.Net: an interactive performance environment for the
 Internet](publication/quintet-net-interactive-performance-environment-internet)

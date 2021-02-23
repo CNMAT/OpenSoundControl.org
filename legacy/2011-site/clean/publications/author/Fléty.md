@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [EtherSense, an OSC-based sensor
 platform](publication/ethersense-osc-based-sensor-platform)

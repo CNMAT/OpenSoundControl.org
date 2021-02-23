@@ -1,3 +1,5 @@
+## TxOSC : OSC for Twisted in Python
+
 ::: {.content}
 ::: {.field .field-type-text .field-field-project-type}
 ::: {.field-items}
@@ -38,8 +40,7 @@ OSC Documentation URL:
 ::: {.field .field-type-text .field-field-description}
 ::: {.field-items}
 ::: {.field-item}
-Open Sound Control (OSC) protocol for Twisted
-=============================================
+# Open Sound Control (OSC) protocol for Twisted
 
 This library implements OSC version 1.1 over both UDP and TCP for the
 Twisted Python framework.
@@ -56,16 +57,14 @@ and receiver classes that are implemented with the tools provided by
 Twisted. The developers of txosc are open for some Python developer to
 help with the non-Twisted part.
 
-Installing
-==========
+# Installing
 
 -   Get it from PyPI: http://pypi.python.org/pypi/txosc
 -   Use the Ubuntu package (soon in Debian unstable):
     https://launchpad.net/\~sat-metalab/+archive/metalab/+packages
 -   Get the tarball: http://bitbucket.org/arjan/txosc/downloads
 
-Authors
-=======
+# Authors
 
 Arjan Scherpenisse and Alexandre Quessy.
 :::

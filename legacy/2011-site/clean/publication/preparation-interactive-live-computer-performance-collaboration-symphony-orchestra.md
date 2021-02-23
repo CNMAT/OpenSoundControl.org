@@ -1,3 +1,5 @@
+## Preparation for Interactive Live Computer Performance in Collaboration with a Symphony Orchestra
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

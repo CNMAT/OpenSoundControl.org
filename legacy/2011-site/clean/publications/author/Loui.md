@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Music Perception and Cognition Experiments in a Classroom Setting:
 Temporally Precise Hardware and

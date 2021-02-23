@@ -1,3 +1,5 @@
+## Comparing Musical Control Structures and Signal Processing Strategies for the Augmented Cello and Guitar
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

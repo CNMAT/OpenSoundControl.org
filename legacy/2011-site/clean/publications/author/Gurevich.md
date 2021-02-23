@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Effects of Latency on Networked Musical
 Performance](publication/effects-latency-networked-musical-performance)

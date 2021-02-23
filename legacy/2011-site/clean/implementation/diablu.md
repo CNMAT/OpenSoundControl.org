@@ -1,3 +1,5 @@
+## DiABlu
+
 ::: {.content}
 ::: {.field .field-type-text .field-field-project-type}
 ::: {.field-items}
@@ -30,7 +32,7 @@ Project URL:
 OSC Documentation URL:
 :::
 
-[http://diablu.jorgecardoso.eu/index.php?option=com\_content&task=blogsection&id=7\...](http://diablu.jorgecardoso.eu/index.php?option=com_content&task=blogsection&id=7&Itemid=38)
+[http://diablu.jorgecardoso.eu/index.php?option=com_content&task=blogsection&id=7\...](http://diablu.jorgecardoso.eu/index.php?option=com_content&task=blogsection&id=7&Itemid=38)
 :::
 :::
 :::

@@ -1,3 +1,5 @@
+## Clock Synchronization for Interactive Music Systems
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

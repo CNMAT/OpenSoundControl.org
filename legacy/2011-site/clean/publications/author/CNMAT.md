@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Proceedings of The Open Sound Control Conference
 2004](publication/proceedings-open-sound-control-conference-2004)

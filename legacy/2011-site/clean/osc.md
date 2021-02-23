@@ -1,3 +1,5 @@
+## OSC
+
 ::: {.content}
 ::: {.centerize}
 ![OSC](/web/20200428220749im_/http://opensoundcontrol.org/images/osc_logo_revised2.png)

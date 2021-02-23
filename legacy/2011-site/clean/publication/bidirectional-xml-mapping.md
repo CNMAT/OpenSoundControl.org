@@ -1,3 +1,5 @@
+## Bidirectional XML mapping
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

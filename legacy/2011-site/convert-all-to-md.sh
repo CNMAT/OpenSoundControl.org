@@ -21,8 +21,8 @@ for f in `find $dir -type f -name \*.html ! -size 0`; do
         exit -1;
     fi
 
-    echo pandoc $f -o $fmd
-    pandoc $f -o $fmd
+    echo pandoc $f -o $fmd  --markdown-headings=atx
+    pandoc $f  -o $fmd --markdown-headings=atx
 
 done
 

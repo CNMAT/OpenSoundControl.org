@@ -1,3 +1,5 @@
+## Proceedings of the 2004 Open Sound Control Conference
+
 ::: {.content}
 Open Sound Control Conferences bring together OSC developers,
 practicioners, researchers and industry representatives to focus on new
@@ -24,8 +26,7 @@ for making this event possible.
 
 ------------------------------------------------------------------------
 
-Proceedings
------------
+## Proceedings
 
 ::: {.schedule}
 8:30 - 9:00 am - Registration

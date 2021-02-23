@@ -1,3 +1,5 @@
+## micro-OSC: The Open Sound Control Reference Implementation for Embedded Devices
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Discovering OSC services with
 ZeroConf](publication/discovering-osc-services-zeroconf)

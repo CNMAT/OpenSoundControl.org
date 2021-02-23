@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Setting up OSC sessions using Voice-over-IP
 protocols](publication/setting-osc-sessions-using-voice-over-ip-protocols)

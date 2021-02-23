@@ -1,3 +1,5 @@
+## Intimate musical control of computers with a variety of controllers and gesture mapping metaphors
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [An OSC Driver Framework for Gesture
 Sensors](publication/osc-driver-framework-gesture-sensors)

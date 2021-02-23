@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [DySE Generator: A sound design tool for virtual reality
 applications](publication/dyse-generator-sound-design-tool-virtual-reality-applications)

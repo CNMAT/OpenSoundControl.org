@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [SonART - a new multimedia environment for networked
 collaboration](publication/sonart-new-multimedia-environment-networked-collaboration)

@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Comparing Musical Control Structures and Signal Processing Strategies
 for the Augmented Cello and

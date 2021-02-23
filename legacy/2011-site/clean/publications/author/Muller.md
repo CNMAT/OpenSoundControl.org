@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [NIME 2006 OSC Developers
 Meeting](publication/nime-2006-osc-developers-meeting) ]{.biblio-title}

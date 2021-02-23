@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [La Kitchen\'s \"Toaster\" and \"Kroonde\" wired and wireless
 Data-Acquisition

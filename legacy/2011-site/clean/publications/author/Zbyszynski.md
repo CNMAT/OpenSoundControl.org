@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Ten Years of Tablet Musical Interfaces at
 CNMAT](publication/ten-years-tablet-musical-interfaces-cnmat)

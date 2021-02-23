@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Clock Synchronization for Interactive Music
 Systems](publication/clock-synchronization-interactive-music-systems)

@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [OSC and Gesture features of CNMAT\'s Connectivity
 Processor](publication/osc-and-gesture-features-cnmats-connectivity-processor)

@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Improving the Efficiency of Open Sound Control with Compressed
 Address

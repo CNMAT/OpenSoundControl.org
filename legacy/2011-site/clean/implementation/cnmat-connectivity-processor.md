@@ -1,3 +1,5 @@
+## CNMAT Connectivity Processor
+
 ::: {.content}
 ::: {.field .field-type-text .field-field-project-type}
 ::: {.field-items}
@@ -18,7 +20,7 @@ Hardware
 Project URL:
 :::
 
-[http://cnmat.berkeley.edu/publication/osc\_and\_gesture\_features\_cnmats\_connectivi\...](http://cnmat.berkeley.edu/publication/osc_and_gesture_features_cnmats_connectivity_processor)
+[http://cnmat.berkeley.edu/publication/osc_and_gesture_features_cnmats_connectivi\...](http://cnmat.berkeley.edu/publication/osc_and_gesture_features_cnmats_connectivity_processor)
 :::
 :::
 :::
@@ -30,7 +32,7 @@ Project URL:
 OSC Documentation URL:
 :::
 
-[http://cnmat.berkeley.edu/publication/osc\_and\_gesture\_features\_cnmats\_connectivi\...](http://cnmat.berkeley.edu/publication/osc_and_gesture_features_cnmats_connectivity_processor)
+[http://cnmat.berkeley.edu/publication/osc_and_gesture_features_cnmats_connectivi\...](http://cnmat.berkeley.edu/publication/osc_and_gesture_features_cnmats_connectivity_processor)
 :::
 :::
 :::

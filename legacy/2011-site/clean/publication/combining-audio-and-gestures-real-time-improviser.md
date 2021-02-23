@@ -1,3 +1,5 @@
+## Combining Audio And Gestures For A Real-Time Improviser
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

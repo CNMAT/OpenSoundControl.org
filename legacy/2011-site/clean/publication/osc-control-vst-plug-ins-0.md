@@ -1,3 +1,5 @@
+## OSC Control of VST Plug-ins
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

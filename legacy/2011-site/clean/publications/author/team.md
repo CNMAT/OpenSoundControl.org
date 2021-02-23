@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Minuit : Propositions for a query system over
 OSC](publication/minuit-propositions-query-system-over-osc)

@@ -1,3 +1,5 @@
+## Multiple-User Shared Musical Control
+
 ::: {.content}
 A group of human players (not necessarily each skilled musicians) each
 interact with an interface (e.g., via a web browser) in real-time to

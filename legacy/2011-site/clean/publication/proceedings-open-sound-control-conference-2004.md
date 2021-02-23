@@ -1,3 +1,5 @@
+## Proceedings of The Open Sound Control Conference 2004
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

@@ -1,3 +1,5 @@
+## Sensor/Gesture-Based Electronic Musical Instruments
+
 ::: {.content}
 A human musician interacts with sensor(s) that detect physical activity
 such as motion, acceleration, pressure, displacement, flexion,

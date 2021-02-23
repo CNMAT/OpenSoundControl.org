@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [Keynote address: OSC and Digital Lifestyle
 Aggregation](publication/keynote-address-osc-and-digital-lifestyle-aggregation)

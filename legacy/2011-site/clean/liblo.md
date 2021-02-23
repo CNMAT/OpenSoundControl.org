@@ -1,5 +1,7 @@
+## Liblo
+
 ::: {.content}
-Nicholas J Humfrey said (on osc\_dev):
+Nicholas J Humfrey said (on osc_dev):
 
 \"Liblo, the Lite OSC library, is an implementation of the Open Sound\
 Control protocol for POSIX systems\*. It is written in ANSI C99 and\

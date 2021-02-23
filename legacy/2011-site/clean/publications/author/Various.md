@@ -1,3 +1,5 @@
+## Publications {#publications .with-tabs}
+
 ::: {.biblio-entry}
 [ [OSC Conference 2004 Poster
 Session](publication/osc-conference-2004-poster-session)

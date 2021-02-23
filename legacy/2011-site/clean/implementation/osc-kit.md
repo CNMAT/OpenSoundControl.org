@@ -1,3 +1,5 @@
+## OSC-Kit
+
 ::: {.content}
 ::: {.field .field-type-text .field-field-project-type}
 ::: {.field-items}
@@ -30,7 +32,7 @@ Project URL:
 OSC Documentation URL:
 :::
 
-[http://cnmat.berkeley.edu/publication/implementation\_and\_performance\_issues\_open\...](http://cnmat.berkeley.edu/publication/implementation_and_performance_issues_opensound_control)
+[http://cnmat.berkeley.edu/publication/implementation_and_performance_issues_open\...](http://cnmat.berkeley.edu/publication/implementation_and_performance_issues_opensound_control)
 :::
 :::
 :::

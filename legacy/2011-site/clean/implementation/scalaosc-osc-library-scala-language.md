@@ -1,3 +1,5 @@
+## ScalaOSC - OSC Library for the Scala language
+
 ::: {.content}
 ::: {.field .field-type-text .field-field-project-type}
 ::: {.field-items}

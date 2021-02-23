@@ -1,3 +1,5 @@
+## La Kitchen\'s \"Toaster\" and \"Kroonde\" wired and wireless Data-Acquisition Systems
+
 ::: {.content}
 ::: {#biblio-node}
 [ ]{.Z3988

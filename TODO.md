@@ -2,17 +2,11 @@
 
 ## Admin
 
-Copyright structure?  CC-BY?
+Clarify the site's CC-BY status on the site and in the forms
 
-What if people want to help maintain the site?
-
-When do we do the reveal of the new site and the charm offensive to
-get people to contribute fresh info?
 
 
 ## Site layout
-
-Graphical elements?
 
 "Finalize" navigation
 
@@ -26,28 +20,38 @@ Home page?  Containing what?
 
 ## Implementations
 
-Define the initial format of what an "implementation" consists of for
-the new site, i.e., the submission form's questions and the
-columns/fields of the TSV of "all officially known implementations".
+### Hacking
 
-- URL: opensoundcontrol.org/implementations/FOO.html
-- publications
-- license
-- notes
-- status (as of DATE the project was: alpha, beta, maintained, legacy, defunct)
-- images (links? Does the site scrape)
-- superseded by another product/implementation...
-- is this submission an updated version of the information for this implementation?
-
-Convert legacy implementation "source" to TSV tabular form
-
-- will somebody manually check up on each of these?
-- write script for this
+Scrape the descriptions of the old implementations
 
 finish buildimplementations.sh
 
-Do we need a separate index of implementations?
+- Highlight defunct / superseded status
 
+
+finish accept-new-implementations.sh
+
+- When people submit images, do we get our own local copies of the
+  images and serve those, or do we link to the URL they give?
+
+
+Finalize the initial format of what an "implementation" consists of for
+the new site, i.e., the submission form's questions and the
+columns/fields of the TSV of "all officially known implementations".
+
+- keep timestamp
+
+
+### Research
+
+manually check up on each legacy implementation
+
+ - for the external links, which ones still work?
+ - For the ones that don't, is it relatively easy to find a new URL for the project?
+ - For the ones that seem to be dead projects, can we confirm the
+   death and the date, and can we find something that's superseded it?
+ - are there any publications?
+ 
 Find publications for legacy implementations.
 
 
@@ -61,15 +65,18 @@ What other kinds of community contributions does the new site solicit?
 
 ## Legacy content
 
- - for the internal links (within the old opensoundcontrol.org site), are there any legacy files not yet captured by this process that we need to add?
-
- - for the external links, which ones still work?  For the ones that don't, is it relatively easy to find a new URL for the project?  For the ones that seem to be dead projects, can we confirm the death and do we want to document the past existence of the thing (in a way that clearly indicates it’s currently defunct)?
+Browse the old site on archive.org and make sure we're not missing any important legacy files
 
 
-Top-level:
+
+### Editorial 
+
+Which of the "clean" scraped files should be kept for the new site?
+What needs to be updated or discarded?
+
+Here's what we have from the top-level folder of the legacy site:
 
 ````
-MUS-C02SX1BYGTF1:clean matt$ ls -1 *.md
 2004-osc-conference.md
 cnmat-software-library-downloads.md
 guide-osc-libraries.md
@@ -99,11 +106,25 @@ wrapping-other-protocols-inside-osc.md
 ````
 
 
-
-
 re-implement the Drupal "book" structure of the legacy "developer resources"?
     https://web.archive.org/web/20200706171742/http://opensoundcontrol.org/resources
     
+
+
+
+# Charm offensive
+
+Reveal the new site and ask people to contribute fresh info
+
+Prerequisites: 
+
+* decently working site
+* working submission mechanisms
+* Editor team belief in ability to accept pull requests
+* scraped email addresses from old osc-dev list
+* Gather other ideas about email lists, social media etc.
+
+
 
 
 # Done
@@ -116,3 +137,15 @@ remove \" and \' from source markdown?
 
 update buildindex script
 
+
+- URL: opensoundcontrol.org/implementations/FOO.html
+- publications
+- license
+- notes
+- status (as of DATE the project was: alpha, beta, maintained, legacy, defunct)
+- images (links? Does the site scrape)
+- superseded by another product/implementation...
+- is this submission an updated version of the information for this implementation?
+
+Convert legacy implementation "source" to TSV tabular form
+- write script for this

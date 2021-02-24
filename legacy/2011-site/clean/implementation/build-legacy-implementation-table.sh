@@ -11,7 +11,6 @@ echo -e "Your Name\tYour personal website\tName\tUpdate?\tURL\tURL of implementa
 
 
 for m in *.md ; do
-    echo -n $m
     h=`basename $m md`html
 
 
@@ -19,6 +18,17 @@ for m in *.md ; do
 
     # First line of markdown will start with "## " and then the name 
     NAME=`head -1 $m | cut -c 4-99999`
+
+    
+
+    # We want the possibly multi-paragraph description all on one
+    # line, so insert <p> for paragraph breaks then convert all
+    # newlines to spaces.
+    DESCRIPTION=`cat $h | pup '[class~="field-field-description"]' | pandoc -f html -t markdown | grep -v ':::' | sed 's/^[[:blank:]]*$/ <p> /g' | tr '\n' ' ' `
+    
+
+
+
 
     URLBIG=`cat $h | pup '[class~="field-field-project-url"]'  | pandoc -f html -t markdown | grep -v ':::' | grep -v 'Project URL:' | egrep -v '^$' | tr '\n' ' ' `
 
@@ -31,9 +41,8 @@ for m in *.md ; do
         URL=`echo "$URLBIG" | awk -F '[<>]' '{print $2}'`
     fi
     
+    # echo -n \|${URL}\|
 
-
-    # echo -n \|${URL}\
     # Not sure whether to strip out the archive.org memory from any URLs, like so:
     # echo $URL | sed 's|https://web.archive.org/web/[0-9]*/http://|http://|g'
 

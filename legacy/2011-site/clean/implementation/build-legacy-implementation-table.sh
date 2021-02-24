@@ -32,7 +32,10 @@ for m in *.md ; do
     fi
     
 
-    echo \|${URL}\|
+
+    # echo -n \|${URL}\
+    # Not sure whether to strip out the archive.org memory from any URLs, like so:
+    # echo $URL | sed 's|https://web.archive.org/web/[0-9]*/http://|http://|g'
 
      DOCURLBIG=`cat $h | pup '[class~="field-field-osc-documentation-referen"]'  | pandoc -f html -t markdown | grep -v ':::' | grep -v 'OSC Documentation URL:' | egrep -v '^$' | tr '\n' ' ' `
     

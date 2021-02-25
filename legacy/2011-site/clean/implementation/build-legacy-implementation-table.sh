@@ -7,7 +7,7 @@ if [ -f $tsv ]; then
 fi
 
 # First the header line naming all the fields
-echo -e "Your Name\tYour personal website\tName\tUpdate?\tURL\tURL of implementation's OSC documentation\tProject Type\tDescription\tPlatform\tFeatures \tType Support\tBundle Support\tTimetag Support\tTransport Type\tPublications\tImages\tStatus\tStatus Date\tSuperseded?\tNotes" > $tsv
+echo -e "Timestamp\tYour Name\tYour personal website\tName\tUpdate?\tURL\tURL of implementation's OSC documentation\tProject Type\tDescription\tPlatform\tFeatures \tType Support\tBundle Support\tTimetag Support\tTransport Type\tPublications\tImages\tStatus\tStatus Date\tSuperseded?\tNotes" > $tsv
 
 
 for m in *.md ; do
@@ -19,16 +19,13 @@ for m in *.md ; do
     # First line of markdown will start with "## " and then the name 
     NAME=`head -1 $m | cut -c 4-99999`
 
-    
+    echo $h "==>" $NAME
 
     # We want the possibly multi-paragraph description all on one
     # line, so insert <p> for paragraph breaks then convert all
     # newlines to spaces.
     DESCRIPTION=`cat $h | pup '[class~="field-field-description"]' | pandoc -f html -t markdown | grep -v ':::' | sed 's/^[[:blank:]]*$/ <p> /g' | tr '\n' ' ' `
     
-
-
-
 
     URLBIG=`cat $h | pup '[class~="field-field-project-url"]'  | pandoc -f html -t markdown | grep -v ':::' | grep -v 'Project URL:' | egrep -v '^$' | tr '\n' ' ' `
 
@@ -86,7 +83,9 @@ for m in *.md ; do
 
      # Now write all this implementation's data as a row of $tsv
 
-     echo -e "Legacy\thttps://web.archive.org\t${NAME}\tNo\t${URL}\t${DOCURL}\t${PROJECT_TYPE}\t${DESCRIPTION}\t${PLATFORM}\t${FEATURES}\t${TYPES}\t${BUNDLE}\t${TIMETAG}\t${TRANSPORT}\t\t\tUnknown\tFeb 23, 2021\tUnknown\t"  >> $tsv
+     rightnow=`date "+%m/%d/%Y %H:%M:%S"`
+
+     echo -e "${rightnow}\tLegacy\thttps://web.archive.org\t${NAME}\tNo\t${URL}\t${DOCURL}\t${PROJECT_TYPE}\t${DESCRIPTION}\t${PLATFORM}\t${FEATURES}\t${TYPES}\t${BUNDLE}\t${TIMETAG}\t${TRANSPORT}\t\t\tUnknown\tFeb 23, 2021\tUnknown\t"  >> $tsv
 
 done
 

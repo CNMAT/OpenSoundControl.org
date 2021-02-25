@@ -4,6 +4,7 @@
 
 Clarify the site's CC-BY status on the site and in the forms
 
+Test of putting a <p> in the middle of a markdown paragraph
 
 
 ## Site layout
@@ -22,24 +23,15 @@ Home page?  Containing what?
 
 ### Hacking
 
-Scrape the descriptions of the old implementations
-
-finish buildimplementations.sh
-
-- Highlight defunct / superseded status
-
-
 finish accept-new-implementations.sh
 
 - When people submit images, do we get our own local copies of the
   images and serve those, or do we link to the URL they give?
 
-
 Finalize the initial format of what an "implementation" consists of for
 the new site, i.e., the submission form's questions and the
 columns/fields of the TSV of "all officially known implementations".
 
-- keep timestamp
 
 
 ### Research
@@ -149,3 +141,10 @@ update buildindex script
 
 Convert legacy implementation "source" to TSV tabular form
 - write script for this
+
+Scrape the descriptions of the old implementations
+
+
+finish buildimplementations.sh
+
+- Highlight defunct / superseded status

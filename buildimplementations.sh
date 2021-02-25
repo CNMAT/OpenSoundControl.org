@@ -44,7 +44,9 @@ rm -f ${impl_dir}/*.{md,html}
 
 # awk 1 is to add an extra newline at the end if necessary
 
-tail +2 $tsv | awk 1 |
+tail +2 $tsv | \
+#    head -10 | \
+    awk 1 | \
     while read line; do
         # First parse all the TSV fields into bash variables
 
@@ -76,16 +78,124 @@ tail +2 $tsv | awk 1 |
         
         # Omit anything in parentheses
         # Omit anything after a comma or colon that is followed by a space
-        # Omit all punctuation characters 
+        # Omit all punctuation characters
+        # Remove trailing whitespace
+        # Convert spaces to '-'
+        # Convert repeated '--' to just one
+        FILENAME=`echo $NAME | sed 's/(.*)//g' | sed 's/[,:][ ].*//g' | tr '-' ' ' | tr  -d '[:punct:]' | sed 's/[ ]*$//g' | tr ' ' '-' | tr -s '-'`
 
-        echo $NAME
-        echo -n "    "
-        echo $NAME | sed 's/(.*)//g' | sed 's/[,:] .*//g' | tr '-' ' ' | tr  -d '[:punct:]' | sed 's/[ ]*$//g' | tr ' ' '-' | tr -s '-'
+
+        if [ "$FILENAME" == "Arduino" ] ; then
+            # Kludge for now based on problematic legacy content - should be fixed better.
+            echo skip Arduino
+            continue;
+        fi
+
+        FILENAME=${impl_dir}/${FILENAME}.md
+
+        echo $NAME '==>' $FILENAME
+
+        if [ -f $FILENAME ]; then
+            # Not good; we deleted all markdown files at the beginning of this script,
+            # so this must mean:
+            echo At least two implementations want to have the same filename $FILENAME
+            echo Abort.
+            exit -4;
+        fi
 
 
+        # Now we actually write the markdown file for this implementation...
 
+        echo "# ${NAME}" > $FILENAME
+        echo "" >> $FILENAME
+
+        if [ ! -z "$SUPERSEDED" ]  ; then
+            echo "**This implementation has been superseded by another!**" >> $FILENAME
+            echo $SUPERSEDED  >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+        echo "**status**: $STATUS (as of $STATUSDATE)" >> $FILENAME
+        echo "" >> $FILENAME
+
+
+        if [ ! -z "$TYPE" ] ; then
+            echo "**Project Type**: $TYPE" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+        if [ ! -z "$URL" ] ; then
+            echo "**Project URL**: <$URL>" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+        if [ ! -z "$URL_OSC_PART" ] ; then
+            echo "**OSC Documentation URL**: <$URL_OSC_PART>" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+
+        if [ ! -z "$DESCRIPTION" ] ; then
+            echo "## Description" >> $FILENAME
+            echo "" >> $FILENAME
+            echo "$DESCRIPTION" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+        if [ ! -z "$PLATFORM" ] || [ ! -z "$FEATURES" ] || [ ! -z "$TYPES" ] || [ ! -z "$BUNDLE" ] || [ ! -z "$TIMETAG" ] || [ ! -z "$TRANSPORT" ] ; then
+            echo "## Implementation Details" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+        if [ ! -z "$PLATFORM" ] ; then
+            echo "**Platform(s)**: ${PLATFORM}" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+        if [ ! -z "$FEATURES" ] ; then
+            echo "**Features**: ${FEATURES}" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+        if [ ! -z "$TYPES" ] ; then
+            echo "**Supported OSC types**: ${TYPES}" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+        if [ ! -z "$BUNDLE" ] ; then
+            echo "**Bundle support**: ${BUNDLE}" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+        if [ ! -z "$TIMETAG" ] ; then
+            echo "**Timetag support**: ${TIMETAG}" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+        if [ ! -z "$PUBLICATIONS" ] ; then
+            echo "## Publications " >> $FILENAME
+            echo "" >> $FILENAME
+            echo "$PUBLICATIONS" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+
+        if [ ! -z "$IMAGES" ] ; then
+            echo "## Images " >> $FILENAME
+            echo "" >> $FILENAME
+            echo "$IMAGES" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+        if [ -z "$SUBMITTER_WEBSITE" ] ; then
+            FULLSUBMITTER="$SUBMITTER_NAME"
+        else
+            FULLSUBMITTER="[$SUBMITTER_NAME]($SUBMITTER_WEBSITE)"
+        fi
+
+        echo "---" >> $FILENAME
+        echo "Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by $FULLSUBMITTER at $TIMESTAMP" >> $FILENAME
 done
 
-
-
 echo have a nice day
+exit 0

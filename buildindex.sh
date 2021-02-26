@@ -42,7 +42,7 @@ for d in . $dirs; do
         echo "## $d";
     fi
 
-   for m in $d/*.md; do
+   for m in `ls -1 $d/*.md | sort -f` ; do
 
        mhtml=`echo "$m" | rev | cut -c 3- | rev`html;
         if [ "$d" == "." ]; then

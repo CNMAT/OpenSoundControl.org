@@ -5,6 +5,7 @@ raw/
 /index.html
 .DS_Store
 /Implementations (Responses) - Form Responses 1.tsv
+contributors.md
 
 
 # These may become problems but don't check them into the repo for now:

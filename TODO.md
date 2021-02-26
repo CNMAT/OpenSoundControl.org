@@ -1,10 +1,6 @@
 # To Do
 
-## Admin
-
-Clarify the site's CC-BY status on the site and in the forms
-
-Test of putting a <p> in the middle of a markdown paragraph
+Remove implementations/*.md from repo and add to .gitignore
 
 
 ## Site layout
@@ -148,3 +144,8 @@ Scrape the descriptions of the old implementations
 finish buildimplementations.sh
 
 - Highlight defunct / superseded status
+
+
+
+Clarify the site's CC-BY status on the site and in the forms
+

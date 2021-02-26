@@ -43,5 +43,6 @@ tail $num_new "$googledownload"
 # Append to end of implementations
 # check for duplicates - if so suggest possible git checkout
 
+# Check if any of the submitters are new site contributors and if so add them to the list.
 
 exit 0

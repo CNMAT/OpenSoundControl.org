@@ -1,12 +1,19 @@
-echo Building MD for implementations
-
 tsv=implementations.tsv
+oldest_imp=`ls -t implementations/*.md | tail -1`
 
 if [ ! -f $tsv ]; then
     echo $tsv not found\!
     echo Can\'t build implementations\; exiting
     exit -1
 fi
+
+if [[  $oldest_imp  -nt $tsv ]] ; then
+    echo All files in implementations/\*.md are newer than $tsv
+    echo So we don\'t need to build implementations.
+    exit 0;
+fi
+
+echo Building MD for implementations...
 
 # expectedFieldsFile=implementations-google-column-names.tsv
 expectedFieldsFile=implementations-fields.tsv
@@ -17,6 +24,8 @@ if [ ! -f $expectedFieldsFile ]; then
     echo Can\'t build implementations\; exiting
     exit -2
 fi
+
+
 
 
 # First confirm assumptions about fields

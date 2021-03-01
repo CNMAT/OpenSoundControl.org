@@ -1,20 +1,5 @@
 
-
-if [[ contributors.txt -nt contributors.md ]] ; then
-    echo Updating contributors.md
-    rm -f contributors.md
-    cat << EOF > contributors.md
-# Website Contributors
-
-Here is a full list of all current contributors to the
-OpenSoundControl.org website, alphabetically by first name, some with
-personal website links:
-
-EOF
-    # Generate a sorted, no-blank-lines-containing, comma-separated list of the contributors:
-    sort -df contributors.txt | sed '/^[[:space:]]*$/d' | sed '$ ! s/$/,/g' >>  contributors.md
-fi
-
+./build-contributors.sh
 
 echo making html...
 
@@ -108,9 +93,9 @@ if  $mightNeedNewToC  ; then
         echo " " \(by passing any argument to this script\).
     else 
         echo Remaking toplevel index...
-        ./buildindex.sh > index.md
+        ./build-index.sh > index.md
         echo Remaking table of contents...
-        ./buildindex.sh toc > toc.md
+        ./build-index.sh toc > toc.md
         echo Recursively calling build.sh to make toc.html from new toc.md
         echo and to make index.html from new index.md
         ./build.sh

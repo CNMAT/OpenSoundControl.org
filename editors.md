@@ -9,12 +9,14 @@ OpenSoundControl.org.
 The website's information is structured as follows:
 
 - Git repository containing "the real content" (and its history).  For
-  now this is hosted by github.com and the expectation is that each 
-  editor will make a local clone to use as a working directory.
+  now this is hosted by github.com and the expectation is that each
+  editor will make a local clone to use as a working directory. This
+  is world-readable.
 - Various online forms where anyone on the Internet can submit
   contributions to the site.  For now these are Google Forms, each
   with a corresponding/resulting (editable) Google Sheet containing
-  all the submitted "form responses".
+  all the submitted "form responses".  These are readable only by
+  site editors (because they contain submitters' email addresses).
 - The storage of the web server that actually serves these files to
   the public.
   

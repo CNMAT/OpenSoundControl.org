@@ -1,6 +1,7 @@
 googledownload="Implementations (Responses) - Form Responses 1.tsv"
 
-if [ $# -eq 1 ] ; then
+# Make sure there's exactly one argument and that it's an integer:
+if [ $# -eq 1 ] && [ "$1" -eq "$1" ] 2>/dev/null; then
     num_new=$1
     echo Accepting $num_new implementations from "$googledownload"
 else

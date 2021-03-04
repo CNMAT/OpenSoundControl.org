@@ -1,6 +1,13 @@
 # To Do
 
-Remove implementations/*.md from repo and add to .gitignore
+
+## Site workflow
+
+Should implementations/*.md be in the repo?
+
+- When people submit images, do we get our own local copies of the
+  images and serve those, or do we link to the URL they give?
+
 
 
 ## Site layout
@@ -8,6 +15,8 @@ Remove implementations/*.md from repo and add to .gitignore
 "Finalize" navigation
 
 directory structure of deployed site (/img, /files etc)
+
+Do we like subheadings within each implementation page?  And how that looks in the TOC?
 
 Decide whether to serve the legacy site at http://opensoundcontrol.org/legacy/2011-site 
 
@@ -21,13 +30,11 @@ Home page?  Containing what?
 
 finish accept-new-implementations.sh
 
-- When people submit images, do we get our own local copies of the
-  images and serve those, or do we link to the URL they give?
-
 Finalize the initial format of what an "implementation" consists of for
 the new site, i.e., the submission form's questions and the
 columns/fields of the TSV of "all officially known implementations".
 
+refactor everything about build
 
 
 ### Research
@@ -111,6 +118,11 @@ Prerequisites:
 * Editor team belief in ability to accept pull requests
 * scraped email addresses from old osc-dev list
 * Gather other ideas about email lists, social media etc.
+
+
+## Reach out to
+
+<https://x-io.co.uk/contact/>
 
 
 

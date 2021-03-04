@@ -1,9 +1,12 @@
 # To Do
 
+## Bugfix
+
+"contents of this file: links to each section" is broken for the spec;
+check punctuation rules
+
 
 ## Site workflow
-
-Should implementations/*.md be in the repo?
 
 - When people submit images, do we get our own local copies of the
   images and serve those, or do we link to the URL they give?

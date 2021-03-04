@@ -79,7 +79,10 @@ contents](toc.html):
 * every file must contain at least one top-level (`#` i.e., HTML `<H1>`)
 * the "nesting structure" of the headings must be "well formed", e.g.,
 you can't go from `#` (H1) to `###` (H3) without `##` (H2) in between.
-
+* Can't use [pandoc metadata
+  blocks](https://pandoc.org/MANUAL.html#metadata-blocks) for pages'
+  title, author, and date, because that would mess up the incredibly
+  simple [navigation menu](navigation-menu.md) system.
   
 ## Values
 

@@ -8,16 +8,13 @@ check punctuation rules
 
 ## Site workflow
 
-- When people submit images, do we get our own local copies of the
-  images and serve those, or do we link to the URL they give?
-
 
 
 ## Site layout
 
 "Finalize" navigation
 
-directory structure of deployed site (/img, /files etc)
+directory structure of deployed site (/img, /files, /publications etc)
 
 Do we like subheadings within each implementation page?  And how that looks in the TOC?
 
@@ -32,6 +29,9 @@ Home page?  Containing what?
 ### Hacking
 
 finish accept-new-implementations.sh
+- Local Download of publications-that-are-downloads and images, then
+  rewrite those URLs to be served locally
+
 
 Finalize the initial format of what an "implementation" consists of for
 the new site, i.e., the submission form's questions and the

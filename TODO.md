@@ -1,12 +1,9 @@
-# To Do
+# Site Implementation To Do list
 
 ## Bugfix
 
 "contents of this file: links to each section" is broken for the spec;
 check punctuation rules
-
-
-## Site workflow
 
 
 
@@ -21,6 +18,7 @@ Do we like subheadings within each implementation page?  And how that looks in t
 Decide whether to serve the legacy site at http://opensoundcontrol.org/legacy/2011-site 
 
 Home page?  Containing what?
+
 
 
 
@@ -52,6 +50,7 @@ manually check up on each legacy implementation
  
 Find publications for legacy implementations.
 
+Are we missing any super old implementations from <http://cnmat.org/OpenSoundControl/> ?
 
 
 ## Other site contributions
@@ -59,7 +58,11 @@ Find publications for legacy implementations.
 What other kinds of community contributions does the new site solicit?
 (List in [README](README.html))
 
+### Publications
 
+Should there be a publications submission?
+
+Figure out format for source list of publications, gleaned from
 
 ## Legacy content
 
@@ -108,6 +111,16 @@ re-implement the Drupal "book" structure of the legacy "developer resources"?
     https://web.archive.org/web/20200706171742/http://opensoundcontrol.org/resources
     
 
+## sendOSC and dumpOSC
+
+Are these already on github?
+
+Need binary downloads
+
+Old web pages:
+
+<http://cnmat.org/OpenSoundControl/dumpOSC.html>
+<http://cnmat.org/OpenSoundControl/clients/sendOSC.html>
 
 
 # Charm offensive

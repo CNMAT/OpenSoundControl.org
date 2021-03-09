@@ -4,7 +4,7 @@
 
 
 **tl;dr** Matt likes "OpenSoundControl" but there could be spaces
-anywhere.
+in either or both word breaks.
 
 What has been and should be the
 [orthography](https://en.wikipedia.org/wiki/Orthography) of the

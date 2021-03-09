@@ -110,22 +110,38 @@ contains any unrecognized OSC Type Tags. An application that does use
 any additional argument types must encode them with the OSC Type Tags in
 this table:
 
-  ------------------ ------------------------------------------------------------------------------------------------------------------------
-  **OSC Type Tag**   **Type of corresponding argument**
+--------------------------------------------------------------------------------
+ **OSC Type Tag** **Type of corresponding argument**
+----------------- --------------------------------------------------------------
   h                  64 bit big-endian two's complement integer
+
   t                  OSC-timetag
+
   d                  64 bit ("double") IEEE 754 floating point number
-  S                  Alternate type represented as an OSC-string (for example, for systems that differentiate "symbols" from "strings")
+  
+  S                  Alternate type represented as an OSC-string (for example, 
+                     for systems that differentiate "symbols" from "strings")
+
   c                  an ascii character, sent as 32 bits
+
   r                  32 bit RGBA color
-  m                  4 byte MIDI message. Bytes from MSB to LSB are: port id, status byte, data1, data2
+
+  m                  4 byte MIDI message. Bytes from MSB to LSB are: port id, 
+                     status byte, data1, data2
+
   T                  True. No bytes are allocated in the argument data.
+
   F                  False. No bytes are allocated in the argument data.
+
   N                  Nil. No bytes are allocated in the argument data.
+
   I                  Infinitum. No bytes are allocated in the argument data.
-  [                  Indicates the beginning of an array. The tags following are for data in the Array until a close brace tag is reached.
+
+  [                  Indicates the beginning of an array. The tags following
+                     are for data in the Array until a close brace tag is reached.
+
   ]                  Indicates the end of an array.
-  ------------------ ------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
 
   :  OSC Type Tags that must be used for certain nonstandard argument
   types

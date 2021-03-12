@@ -15,7 +15,10 @@ directory structure of deployed site (/img, /files, /publications etc)
 
 Do we like subheadings within each implementation page?  And how that looks in the TOC?
 
-Decide whether to serve the legacy site at http://opensoundcontrol.org/legacy/2011-site 
+Decide whether to serve the legacy site at
+http://opensoundcontrol.org/legacy/2011-site and if so how to make it
+visibly obvious that this is legacy content (e.g., big scary red
+preamble).
 
 Home page?  Containing what?
 
@@ -52,6 +55,19 @@ Find publications for legacy implementations.
 
 Are we missing any super old implementations from <http://cnmat.org/OpenSoundControl/> ?
 
+Enter other known implementations:
+
+* MOTU AVB audio interfaces
+* [x-osc](https://x-io.co.uk/x-osc)
+* [wekinator](http://www.wekinator.org)
+
+
+Find easily findable implementations:
+
+* Search the iOS App Store
+* Search for Android apps
+
+
 
 ## Other site contributions
 
@@ -68,6 +84,9 @@ Figure out format for source list of publications, gleaned from
 
 Browse the old site on archive.org and make sure we're not missing any important legacy files
 
+Absorb old  “application areas” content into a new introduction to OSC?
+
+link to the old OSC-dev archives
 
 
 ### Editorial 

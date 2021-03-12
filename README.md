@@ -21,6 +21,7 @@ XXX To contribute, here are some forms:
 * Project using OSC
 * Address space / schema that other people may like to copy or know about
 * Knowledge base item
+* Simple boilerplate template code that can be a starting point for OSC sending/receiving in various languages
 * ...
 
 Site editors will manually review form submissions and approve all
@@ -106,6 +107,7 @@ Here are some of the values and goals embodied in this project:
   [stackoverflow](https://stackoverflow.com/search?q=opensoundcontrol).
   (If something like this takes off, we would link to it from this
   site.)
+* Not a tech support help desk; more of an unstaffed reference library
 * Slow publication cycle, easy to maintain (by volunteers hoping to
   spend ~1-2 hours/month)
 

@@ -50,11 +50,14 @@ for m in *.md */*.md; do
 
 
     # Generate the link back to this file's entry in the table of contents
+    # To preserve underscores while deleting all other punctuation we kludgily convert them to vertical tabs temporarily
     linktarget=`echo $bn | \
             tr '[:upper:]' '[:lower:]' | \
+            tr '_' '\v' | \
             tr '-' ' ' | \
             tr  -d '[:punct:]' | \
             tr ' ' '-' | \
+            tr '\v' '_' | \
             tr -s '-'`;
 
     toclink="${homePrefix}toc.html#${linktarget}"

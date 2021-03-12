@@ -1,9 +1,8 @@
 # Site Implementation To Do list
 
-## Bugfix
+## Code improvements
 
-"contents of this file: links to each section" is broken for the spec;
-check punctuation rules
+Factor out the rules for converting filenames and section titles into anchor names
 
 
 

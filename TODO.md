@@ -1,5 +1,6 @@
 # Site Implementation To Do list
 
+
 ## Code improvements
 
 Factor out the rules for converting filenames and section titles into anchor names.
@@ -29,6 +30,13 @@ Figure out what fields to ask for
 
 Do the whole Google Form / TSV / build-pubs.sh thing like for implementations
 
+**How do we know the URL of a submitted publication so that the implementation, etc., can link to it?**
+
+- DOI? 
+- Simple rule to turn title into markdown file? 
+
+
+
 
 
 ## Implementations
@@ -40,8 +48,10 @@ Factor out publications to a separate submission type
 ### Hacking
 
 finish accept-new-implementations.sh
-- Local Download of publications-that-are-downloads and images, then
-  rewrite those URLs to be served locally
+
+- Local download of publications-that-are-downloads and images
+- rewrite those URLs to be served locally
+- document editors workflow
 
 
 Finalize the initial format of what an "implementation" consists of for
@@ -104,7 +114,7 @@ link to the old OSC-dev archives
 Which of the "clean" scraped files should be kept for the new site?
 What needs to be updated or discarded?
 
-Here's what we have from the top-level folder of the legacy site:
+Here's what we have from the top-level folder of the legacy site that's not yet on the new site:
 
 ````
 2004-osc-conference.md
@@ -121,13 +131,9 @@ osc-application-areas.md
 osc-kit-0.md
 osc.md
 oscpack.md
-publications?page=1.md
 references.md
 resources.md
 sensor-gesture-based-electronic-musical-instruments.md
-spec-1_0-examples.md
-spec-1_0.md
-spec-1_1.md
 virtual-reality.md
 wan-performance-and-telepresence.md
 web-interfaces.md

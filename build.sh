@@ -99,12 +99,12 @@ if  $mightNeedNewToC  ; then
         echo -n "    " You might want to rebuild the table of contents
         echo " " \(by passing any argument to this script\).
     else 
-        echo Remaking toplevel index...
-        ./build-index.sh > index.md
+        echo Remaking toplevel page list...
+        ./build-index.sh > page-list.md
         echo Remaking table of contents...
         ./build-index.sh toc > toc.md
         echo Recursively calling build.sh to make toc.html from new toc.md
-        echo and to make index.html from new index.md
+        echo and to make page-list.html from new page-list.md
         ./build.sh
     fi
 fi

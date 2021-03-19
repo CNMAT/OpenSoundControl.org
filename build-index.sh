@@ -4,7 +4,7 @@ then
     # >&2 echo Building Table of Contents...
 else
     buildtoc=false;
-    # >&2 echo Building Index...
+    # >&2 echo Building Page List...
 fi
 
 
@@ -14,9 +14,9 @@ if $buildtoc; then
     echo
     echo "OpenSoundControl.org table of contents (listing every section of every page),"
 else
-    echo "# OpenSoundControl.org Toplevel Index"
+    echo "# OpenSoundControl.org Page List"
     echo
-    echo "OpenSoundControl.org index (listing each file),"
+    echo "OpenSoundControl.org page list (listing every page on the site),"
 fi
 echo "generated `date` by `whoami`"
 
@@ -24,8 +24,7 @@ tmpfile=/tmp/osc-org-index.txt
 
 
 # Find all immediate subfolders (should be recursive!) containing at least one .md file
-# Exclude "historical" from the index
-dirs=`ls -1 */*.md | awk -F / '{print $1}' | sort | grep -v historical | uniq`
+dirs=`ls -1 */*.md | awk -F / '{print $1}' | sort -df | uniq`
 
 # Better way, to recursively find every dir that contains any .md file:
 # dirs=`find . -name '*.md' -exec dirname {} \; | sort -u`
@@ -50,7 +49,7 @@ for d in . $dirs; do
         fi
         base=`basename $m .md`;
 
-        if [ "$base" == "navigation-menu" ] || [ "$base" == "index" ] || [ "$base" == "toc" ]
+        if [ "$base" == "navigation-menu" ] || [ "$base" == "page-list" ] || [ "$base" == "toc" ]
         then
             # This file shouldn't be indexed
             continue;

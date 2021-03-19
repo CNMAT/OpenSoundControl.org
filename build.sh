@@ -49,6 +49,10 @@ for m in *.md */*.md; do
     #fi
 
 
+    # XXX: maybe instead of reimplementing pandoc's rules for link targets, it might be smarter
+    # to just call pandoc, e.g.,
+    #       echo "# I am_heading 1" | pandoc -f markdown -t html | awk -F \" '{print $2}'
+
     # Generate the link back to this file's entry in the table of contents
     # To preserve underscores while deleting all other punctuation we kludgily convert them to vertical tabs temporarily
     linktarget=`echo $bn | \

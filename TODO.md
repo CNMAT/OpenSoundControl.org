@@ -2,7 +2,8 @@
 
 ## Code improvements
 
-Factor out the rules for converting filenames and section titles into anchor names
+Factor out the rules for converting filenames and section titles into anchor names.
+(put the function definition in a file that build.sh and build-index.sh will source)
 
 
 
@@ -22,9 +23,19 @@ preamble).
 Home page?  Containing what?
 
 
+## Publications
+
+Figure out what fields to ask for
+
+Do the whole Google Form / TSV / build-pubs.sh thing like for implementations
+
 
 
 ## Implementations
+
+### Workflow Design
+
+Factor out publications to a separate submission type
 
 ### Hacking
 

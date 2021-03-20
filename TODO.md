@@ -1,5 +1,14 @@
 # Site Implementation To Do list
 
+## Matt Urgent
+
+- make a site page defining “status”
+- make the publications form and the whole mechanism around it.  DOI optional.
+- make a site page explaining the rule for publication filenames
+- finish accept-new-implementations.sh
+- fix build-implementations.sh now that we have two new columns
+
+
 
 ## Code improvements
 

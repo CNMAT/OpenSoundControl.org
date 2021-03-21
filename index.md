@@ -10,15 +10,13 @@ artworks that make use of OSC. Please let us know how you are using OSC
 by creating an implementation page for your project [here](https://docs.google.com/forms/d/e/1FAIpQLSdnHHNzoZ2Qf_gFabpeuNDfAGOWCNMEknDKnDnexRLiUYv7bg/viewform).
 
 #### What is OSC? ####
-OpenSoundControl (OSC) is a multi-paradigmatic data transport protocol 
-for connecting applications and hardware. OSC was developed by researchers 
-Matt Wright and Adrian Freed during their time at the Center for New Music 
-& Audio Technologies ([CNMAT](https://cnmat.berkeley.edu)). OSC was originally designed as a highly accurate, 
-low latency, flexible method of communication for use in realtime musical 
-performance, but has since proven utility across a wide variety of domains. Originally 
-intended as a more flexible alternative to the MIDI specification, OSC clears away 
-the ideological constraints inherent to MIDI in favor of a user-defined address space 
-that can accommodate arbitrary control parameters over a standard networking hardware.
+OpenSoundControl (OSC) is a multi-paradigmatic data transport specification 
+for datagram communication beteen applications and hardware. OSC was developed by researchers 
+[Matt Wright](https://music.stanford.edu/people/matt-wright) and [Adrian Freed](http://www.adrianfreed.com/) during their time at the Center for New Music & Audio Technologies ([CNMAT](https://cnmat.berkeley.edu)) and was originally designed as a highly accurate, 
+low latency, lightweight, and flexible method of communication for use in realtime musical 
+performance. OSC has since found utility across a wide variety of domains as a preferred method of interfacing computers and hardware. Originally intended as a more flexible alternative to the MIDI specification, OSC clears away many of 
+the ideological and hardware constraints inherent to MIDI in favor of an address space model
+that can accommodate arbitrary, user-defined parametric control over standard networking hardware.
 
 ~/OSC/is/Open : "OSC's address space is entirely user-defined, 
 thereby allowing it to be both lightweight and endlessly customizable and

@@ -10,7 +10,7 @@ attribute the work and add no restrictions.
 
 Please [attribute][attrib] content from this site like this: 
 
-Title: *Can be the name of one page, of a section of the [index](index.html), etc.*  
+Title: *Can be the name of one page, of any section (from the [table of contents](toc.html)), etc.*  
 Author: [Contributors to opensoundcontrol.org][contrib]  
 Source: *Name of and link to one or more pages on the site*  
 License: [CC BY 4.0][ccby]  

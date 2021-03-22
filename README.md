@@ -6,7 +6,7 @@ content (especially including the 1.0 Specification) with the
 bare-bones implementation of [Matt Wright's CCRMA
 Documentation](https://ccrma.stanford.edu/docs/toc.html).
 
-The auto-generated [index](index.html) and [table of
+The auto-generated [list of pages](page-list.html) and [table of
 contents](toc.html) are one of the best ways to find information on
 the site.
 

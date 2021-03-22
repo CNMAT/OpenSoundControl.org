@@ -11,25 +11,27 @@ by creating an implementation page for your project [here](https://docs.google.c
 
 #### What is OSC? ####
 OpenSoundControl (OSC) is a multi-paradigmatic data transport specification 
-for datagram communication beteen applications and hardware. OSC was developed by researchers 
-[Matt Wright](https://music.stanford.edu/people/matt-wright) and [Adrian Freed](http://www.adrianfreed.com/) during their time at the Center for New Music & Audio Technologies ([CNMAT](https://cnmat.berkeley.edu)) and was originally designed as a highly accurate, 
+for datagram communication among applications and hardware. OSC was developed by researchers 
+[Matt Wright](https://music.stanford.edu/people/matt-wright) and [Adrian Freed](http://www.adrianfreed.com/) during their time at the Center for New Music & Audio Technologies ([CNMAT](https://cnmat.berkeley.edu)). OSC was originally designed as a highly accurate, 
 low latency, lightweight, and flexible method of communication for use in realtime musical 
-performance. OSC has since found utility across a wide variety of domains as a preferred method of interfacing computers and hardware. Originally intended as a more flexible alternative to the MIDI specification, OSC clears away many of 
-the ideological and hardware constraints inherent to MIDI in favor of an address space model
-that can accommodate arbitrary, user-defined parametric control over standard networking hardware.
+performance. Wright proposed OSC in 1997 as “a new protocol for communication among
+computers, sound synthesizers, and other multimedia devices that is optimized for modern networking technology" [[1]](https://ccrma.stanford.edu/~matt/OSC/files/2009-NIME-OSC-1.1.pdf). 
 
-~/OSC/is/Open : "OSC's address space is entirely user-defined, 
+Originally intended as a more flexible alternative MIDI, OSC clears away many of the ideological and hardware constraints inherent to MIDI in favor of a open-ended, user-defined address-space model
+that can accommodate arbitrary parametric control over standard networking hardware. The OSC [Specification 1.0](https://ccrma.stanford.edu/~matt/OSC/spec-1_0.html) was formalized and published in 2002.  The 2009 [Specification 1.1](https://ccrma.stanford.edu/~matt/OSC/files/2009-NIME-OSC-1.1.pdf) update added support for new features and data types.  In the years since, OSC has found application in a wide variety of domains beyond musical contexts.  Its timing accuracy and flexibility make it a ready solution for any application that requires time-sensitive communication between software and hardware endpoints.
+
+**/OSC/is/Open :** "OSC's address space is entirely user-defined, 
 thereby allowing it to be both lightweight and endlessly customizable and
-extensible to the user's specific needs.  OSC Messages are differentiated 
+extensible to the user's specific needs.  OSC messages are differentiated 
 from one another by a URI-style symbolic naming scheme allowing for 
-hierarchical organization of the address space."
+hierarchical organization of the address space.  In fact, the whole of this paragraph is a valid OSC message."
 
-~/OSC/is/Accurate : "Open Sound Control messages support a wide variety of
+**/OSC/is/Accurate :** "Open Sound Control messages support a wide variety of
 symbolic and high-resolution data types. OSC messages can embed high
 resolution time tags for accurate temporal coordination and can be assembled 
 into 'bundles' to ensure simultaneous delivery and execution."
 
-~/OSC/is/Flexible: "Open Sound Control includes a pattern matching language
+**/OSC/is/Flexible :** "Open Sound Control includes a pattern matching language
 to specify multiple recipients of a single message.  It is designed for maximum
 interoperability and thus provides a ready solution for communicating between 
 applications and devices, both locally and over a network."

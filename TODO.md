@@ -2,7 +2,6 @@
 
 ## Matt Urgent
 
-- make a site page defining “status”
 - make the publications form and the whole mechanism around it.  DOI optional.
 - make a site page explaining the rule for publication filenames
 - finish accept-new-implementations.sh
@@ -221,3 +220,4 @@ finish buildimplementations.sh
 
 Clarify the site's CC-BY status on the site and in the forms
 
+make a site page defining “status”

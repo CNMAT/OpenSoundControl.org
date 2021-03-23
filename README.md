@@ -13,30 +13,8 @@ the site.
 
 ## How to Contribute
 
-XXX To contribute, here are some forms:
+Please see the [page about how to contribute to the site](contribute.html).
 
-* [Implementation](https://forms.gle/fPnM82RxS1hBNPua8)
-* Publication
-* Best practice
-* Project using OSC
-* Address space / schema that other people may like to copy or know about
-* Knowledge base item
-* Simple boilerplate template code that can be a starting point for OSC sending/receiving in various languages
-* ...
-
-Site editors will manually review form submissions and approve all
-legitimate additions to the site. 
-
-All site content lives in this git repo:
-<https://github.com/CNMAT/OpenSoundControl.org>
-
-If you are comfortable using git then feel free to
-[fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
-the repository and make [pull
-requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
-with your proposed contributions to the site. (Don't forget to add
-yourself to contributors.txt so you'll appear in the [site's list of
-contributors](contributors.html).)
 
 ## Site Implementation
 

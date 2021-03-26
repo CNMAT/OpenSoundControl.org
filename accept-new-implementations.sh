@@ -1,4 +1,5 @@
 googledownload="Implementations (Responses) - Form Responses 1.tsv"
+tsv=implementations.tsv
 
 # Make sure there's exactly one argument and that it's an integer:
 if [ $# -eq 1 ] && [ "$1" -eq "$1" ] 2>/dev/null; then
@@ -37,13 +38,42 @@ if (( $numlines < 1 + $num_new )); then
     exit -3;
 fi
 
-
-tail $num_new "$googledownload"
-
 # Remove fields including timestamp, email...
 # Append to end of implementations
-# check for duplicates - if so suggest possible git checkout
+tail -$num_new "$googledownload" | cut -f 1-3,5-21,23-24 >> $tsv
+
+
+# echo check for duplicates.  Field 4 is \"Name\"
+duplicates=`cut -f 4 $tsv | sort | uniq -d`
+
+if [ ! -z "$duplicates" ] ; then
+    echo Uh oh - there now appear to be multiple rows with the same name:
+    echo "$duplicates"
+    echo For each you probably want to choose the better one or merge the two.
+    echo If you regret having accepted these new implementations you could undo with:
+    echo "      " git checkout implementations.tsv
+fi
+
 
 # Check if any of the submitters are new site contributors and if so add them to the list.
+
+contributors=contributors.txt
+new=/tmp/newcontribs
+
+tail +2 $tsv | cut -f 2,3 |\
+    awk  -F'\t' '{if (length($2)==0) print $1; else printf("[%s](%s)\n",$1,$2);}' | \
+    sort | uniq > $new
+
+newbies=`comm -13 $contributors $new`
+
+if [ ! -z "$newbies" ] ; then
+    echo Adding new contributors to $contributors
+    echo "$newbies" >> $contributors
+    echo "$newbies"
+fi
+rm $new 
+
+
+echo XXX Need to download any images...
 
 exit 0

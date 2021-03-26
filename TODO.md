@@ -4,19 +4,36 @@
 
 - make the publications form and the whole mechanism around it.  DOI optional.
 - make a site page explaining the rule for publication filenames
-- finish accept-new-implementations.sh
-- fix build-implementations.sh now that we have two new columns
+- Make accept-new-implementations handle image downloads
+
+### Publications
+
+Do the whole Google Form / TSV / build legacy table / build-pubs.sh thing like for implementations
+
+How do we know the URL of a submitted publication so that the implementation, etc., can link to it?
+- Simple rule to turn title into markdown file? 
+
+
+### Other site contributions
+
+What other kinds of community contributions does the new site solicit?
+(List in [contribute](contribute.html))
+
+
+### Implementations Hacking
+
+finish accept-new-implementations.sh
+
+- Local download of publications-that-are-downloads and images
+- rewrite those URLs to be served locally
+- document editors workflow
 
 
 
-## Code improvements
 
-Factor out the rules for converting filenames and section titles into anchor names.
-(put the function definition in a file that build.sh and build-index.sh will source)
+## Final confirmations
 
-
-
-## Site layout
+### Site layout
 
 "Finalize" navigation
 
@@ -27,88 +44,12 @@ Do we like subheadings within each implementation page?  And how that looks in t
 Decide whether to serve the legacy site at
 http://opensoundcontrol.org/legacy/2011-site and if so how to make it
 visibly obvious that this is legacy content (e.g., big scary red
-preamble).
-
-Home page?  Containing what?
-
-
-## Publications
-
-Figure out what fields to ask for
-
-Do the whole Google Form / TSV / build-pubs.sh thing like for implementations
-
-**How do we know the URL of a submitted publication so that the implementation, etc., can link to it?**
-
-- DOI? 
-- Simple rule to turn title into markdown file? 
+preamble)
 
 
 
 
-
-## Implementations
-
-### Workflow Design
-
-Factor out publications to a separate submission type
-
-### Hacking
-
-finish accept-new-implementations.sh
-
-- Local download of publications-that-are-downloads and images
-- rewrite those URLs to be served locally
-- document editors workflow
-
-
-Finalize the initial format of what an "implementation" consists of for
-the new site, i.e., the submission form's questions and the
-columns/fields of the TSV of "all officially known implementations".
-
-refactor everything about build
-
-
-### Research
-
-manually check up on each legacy implementation
-
- - for the external links, which ones still work?
- - For the ones that don't, is it relatively easy to find a new URL for the project?
- - For the ones that seem to be dead projects, can we confirm the
-   death and the date, and can we find something that's superseded it?
- - are there any publications?
- 
-Find publications for legacy implementations.
-
-Are we missing any super old implementations from <http://cnmat.org/OpenSoundControl/> ?
-
-Enter other known implementations:
-
-* MOTU AVB audio interfaces
-* [x-osc](https://x-io.co.uk/x-osc)
-* [wekinator](http://www.wekinator.org)
-
-
-Find easily findable implementations:
-
-* Search the iOS App Store
-* Search for Android apps
-
-
-
-## Other site contributions
-
-What other kinds of community contributions does the new site solicit?
-(List in [README](README.html))
-
-### Publications
-
-Should there be a publications submission?
-
-Figure out format for source list of publications, gleaned from
-
-## Legacy content
+### Legacy content
 
 Browse the old site on archive.org and make sure we're not missing any important legacy files
 
@@ -117,7 +58,16 @@ Absorb old  “application areas” content into a new introduction to OSC?
 link to the old OSC-dev archives
 
 
-### Editorial 
+legacy/2011-site/clean/files/Everything-About-OSC.mov
+
+#### Represent the 2004 OSC Conference
+
+e.g., the posters in legacy/2011-site/clean/files/wright-posters.pdf
+
+
+
+
+#### Editorial 
 
 Which of the "clean" scraped files should be kept for the new site?
 What needs to be updated or discarded?
@@ -152,6 +102,37 @@ wrapping-other-protocols-inside-osc.md
 
 re-implement the Drupal "book" structure of the legacy "developer resources"?
     https://web.archive.org/web/20200706171742/http://opensoundcontrol.org/resources
+
+
+
+#### Legacy Implementation Research
+
+manually check up on each legacy implementation
+
+ - for the external links, which ones still work?
+ - For the ones that don't, is it relatively easy to find a new URL for the project?
+ - For the ones that seem to be dead projects, can we confirm the
+   death and the date, and can we find something that's superseded it?
+ - are there any publications?
+ 
+Find publications for legacy implementations.
+
+Are we missing any super old implementations from <http://cnmat.org/OpenSoundControl/> ?
+
+Enter other known implementations:
+
+* MOTU AVB audio interfaces
+* [x-osc](https://x-io.co.uk/x-osc)
+* [wekinator](http://www.wekinator.org)
+
+
+Find easily findable implementations:
+
+* Search the iOS App Store
+* Search for Android apps
+
+
+
     
 
 ## sendOSC and dumpOSC
@@ -166,7 +147,19 @@ Old web pages:
 <http://cnmat.org/OpenSoundControl/clients/sendOSC.html>
 
 
-# Charm offensive
+
+## Code improvements
+
+Factor out the rules for converting filenames and section titles into
+anchor names.  Maybe replace all of it with calls to pandoc.  (Put the
+function definition in a file that build.sh and build-index.sh will
+source)
+
+refactor everything about build
+
+
+
+## Charm offensive
 
 Reveal the new site and ask people to contribute fresh info
 
@@ -179,14 +172,14 @@ Prerequisites:
 * Gather other ideas about email lists, social media etc.
 
 
-## Reach out to
+### Reach out to
 
 <https://x-io.co.uk/contact/>
 
 
 
 
-# Done
+## Done
 
 put in some initial minor site content in .md
 
@@ -221,3 +214,16 @@ finish buildimplementations.sh
 Clarify the site's CC-BY status on the site and in the forms
 
 make a site page defining “status”
+
+
+finish accept-new-implementations.sh
+
+fix build-implementations.sh now that we have two new columns
+
+Initial home page
+
+Factor out publications to a separate submission type
+
+Finalize the initial format of what an "implementation" consists of for
+the new site, i.e., the submission form's questions and the
+columns/fields of the TSV of "all officially known implementations".

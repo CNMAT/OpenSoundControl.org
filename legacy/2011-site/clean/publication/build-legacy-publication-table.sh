@@ -41,10 +41,10 @@ for m in [abc]*.md ; do
     #        fi
     #    done 
 
+
     # so do it the hard way
 
     AUTHORSBIG=`fgrep "[ Authors ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
-    echo AUTHORSBIG $AUTHORSBIG
 
     # Each author's name is a link with [name](URL) syntax.  First
     # discard the part (in parentheses) then extract what's [in
@@ -57,23 +57,37 @@ for m in [abc]*.md ; do
     # Now turn "LAST1, FIRST1 ; LAST2, FIRST2" into "FIRST1 LAST1, FIRST2 LAST2"
     AUTHORS=`echo "$AUTHORS_NO_URLS" | sed 's/[ ]*\([^ ,;][^ ,;]*\)[ ]*,[ ]*\([^ ,;][^ ,;]*\)[ ]*/\2 \1/g' | tr ';' ',' | sed 's/,/, /g'`
 
+    # echo FIRST_AUTHOR_LAST_NAME $FIRST_AUTHOR_LAST_NAME AUTHORS $AUTHORS
 
-    echo FIRST_AUTHOR_LAST_NAME $FIRST_AUTHOR_LAST_NAME AUTHORS $AUTHORS
-#    echo URL $URL
+    YEAR=`fgrep "[ Year of Publication ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
 
-    if [ ! -z "$URL" ]
-       then
-           URLBIG=$URL
-           if [[ "$URLBIG" == *"["* ]] ; then
-               # Assume URL appears with [text](URL) syntax. First discard the part [in brackets]
-               # then extract what's (in parentheses)
-               URL=`echo "$URLBIG" | sed 's/\[.*\]//g' | awk -F '[()]' '{print $2}'`
-           else
-               # Let's hope it's <URL> syntax
-               URL=`echo "$URLBIG" | awk -F '[<>]' '{print $2}'`
-           fi
-           echo URLBIG: $URLBIG URL: $URL
+
+    URLBIG=`fgrep "[ URL ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
+
+    if [ ! -z "$URLBIG" ]
+    then
+        if [[ "$URLBIG" == *"["* ]] ; then
+            # Assume URL appears with [text](URL) syntax. First discard the part [in brackets]
+            # then extract what's (in parentheses)
+            URL=`echo "$URLBIG" | sed 's/\[.*\]//g' | awk -F '[()]' '{print $2}'`
+        else
+            # Let's hope it's <URL> syntax
+            URL=`echo "$URLBIG" | awk -F '[<>]' '{print $2}'`
+        fi
+        # echo URLBIG: $URLBIG URL: $URL
     fi
+
+    ABSTRACT=`fgrep "[ Abstract ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
+    echo ABSTRACT $ABSTRACT
+
+
+    # Publication details is the hairy part because of the different types
+
+    JOURNAL=`fgrep "[ Journal Title ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
+
+    # if [ ! -z "$JOURNAL" ] then
+       
+    PUB_DETAILS="XXX"
 
 
     echo -e "${rightnow}\t" >> $tsv

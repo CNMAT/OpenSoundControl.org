@@ -120,11 +120,6 @@ for m in *.md ; do
         #egrep '(files/.*\.mov)' $m
     fi
     
-    if [[ "$PUB_TYPE" == "Thesis" ]] ; then
-        # Hi Amanda!!!
-        PUB_DETAILS="PhD Dissertation, UC Berkeley Computer Science"
-    fi
-
     #echo ========\>   $PUB_DETAILS
 
 

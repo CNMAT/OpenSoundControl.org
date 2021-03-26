@@ -9,10 +9,10 @@ fi
 # First the header line naming all the fields
 
 
-echo -e "Timestamp\tYour Name\tYour personal website\tTitle\tAuthors\tFirst author's last name\tYear\tURL\tDownload URL\tPublication Details\tPages\tAbstract\tDOI\tContext\tNotes" > $tsv
+echo -e "Timestamp\tYour Name\tYour personal website\tTitle\tAuthors\tFirst author's last name\tYear\tURL\tDownload URL\tPublication Details\tPages\tAbstract\tDOI\tContext" > $tsv
 
 
-for m in [abc]*.md ; do
+for m in *.md ; do
     echo parsing $m
 
     h=`basename $m md`html
@@ -43,6 +43,9 @@ for m in [abc]*.md ; do
 
 
     # so do it the hard way
+
+    PUB_TYPE=`fgrep "[ Publication Type ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g' `
+    # echo PUB_TYPE $PUB_TYPE
 
     AUTHORSBIG=`fgrep "[ Authors ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
 
@@ -78,98 +81,63 @@ for m in [abc]*.md ; do
     fi
 
     ABSTRACT=`fgrep "[ Abstract ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
-    echo ABSTRACT $ABSTRACT
+    # echo ABSTRACT $ABSTRACT
 
+    # not sure why these were considered separate in the old site
+    PAGES=`fgrep "[ Pages ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
+    PAGINATION=`fgrep "[ Pagination ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
+
+    if [ -z "$PAGES" ]; then
+        # in this dataset it's always one or the other
+        PAGES="$PAGINATION"
+    fi
 
     # Publication details is the hairy part because of the different types
-
+    # initialize and hope we overwrite:
+    PUB_DETAILS="XXX unknown publication type"
+    # catches "software", "thesis"...
+    PUB_DETAILS="$PUB_TYPE PUBLICATION"
+    
     JOURNAL=`fgrep "[ Journal Title ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
+    if [ ! -z "$JOURNAL" ] ; then
+       JOURNAL_DATE=`fgrep "[ Journal Date ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
+       VOLUME=`fgrep "[ Volume ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
+       ISSUE=`fgrep "[ Issue ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
+       PUB_DETAILS="$JOURNAL ${VOLUME}:${ISSUE}"
+    fi
 
-    # if [ ! -z "$JOURNAL" ] then
-       
-    PUB_DETAILS="XXX"
+    CONFERENCE=`fgrep "[ Conference Name ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
+    if [ ! -z "$CONFERENCE" ] ; then
+        # discard conference date, location
+        PUB_DETAILS="$CONFERENCE"
+    else
+        # hope this prints nothing
+        grep Conference $m
+    fi
 
-
-    echo -e "${rightnow}\t" >> $tsv
+    if [[ "$PUB_TYPE" == "Report" ]] ; then
+        PUB_DETAILS="Report"
+        #egrep '(files/.*\.mov)' $m
+    fi
     
-    # Implementations:
-    #      echo -e "${rightnow}\tLegacy\thttps://web.archive.org\t${NAME}\tNo\t${URL}\t${DOCURL}\t${PROJECT_TYPE}\t${DESCRIPTION}\t${PLATFORM}\t${FEATURES}\t${TYPES}\t${BUNDLE}\t${TIMETAG}\t${TRANSPORT}\t\t\tUnknown\tFeb 23, 2021\tUnknown\t"  >> $tsv
+    if [[ "$PUB_TYPE" == "Thesis" ]] ; then
+        # Hi Amanda!!!
+        PUB_DETAILS="PhD Dissertation, UC Berkeley Computer Science"
+    fi
+
+    #echo ========\>   $PUB_DETAILS
+
+
+    # Now write all this publication's data as a row of $tsv
     
+    rightnow=`date "+%m/%d/%Y %H:%M:%S"`
+    # echo -e "${rightnow}\t" >> $tsv
+
+    echo -e "${rightnow}\tLegacy\thttps://web.archive.org\t${TITLE}\t${AUTHORS}\t${FIRST_AUTHOR_LAST_NAME}\t${YEAR}\t${URL}\t\t${PUB_DETAILS}\t${PAGES}\t${ABSTRACT}\t\tThis was a featured publication on the legacy (pre-2011) opensoundcontrol.org website, ported to the new site by Matt Wright in early 2021" >> $tsv 
 done
 
 echo $tsv is now ready\!
 
+echo fix PUBLICATION by hand
+echo minuit needs "https://web.archive.org/web/20110122065602/http://www.plateforme-virage.org/?p=1444"
 
-exit 0
-
-
-    
-    # We want the possibly multi-paragraph description all on one
-    # line, so insert <p> for paragraph breaks then convert all
-    # newlines to spaces.
-    DESCRIPTION=`cat $h | pup '[class~="field-field-description"]' | pandoc -f html -t markdown | grep -v ':::' | sed 's/^[[:blank:]]*$/ <p> /g' | tr '\n' ' ' `
-    
-
-    URLBIG=`cat $h | pup '[class~="field-field-project-url"]'  | pandoc -f html -t markdown | grep -v ':::' | grep -v 'Project URL:' | egrep -v '^$' | tr '\n' ' ' `
-
-    if [[ "$URLBIG" == *"["* ]] ; then
-        # Assume URL appears with [text](URL) syntax. First discard the part [in brackets]
-        # then extract what's (in parentheses)
-        URL=`echo "$URLBIG" | sed 's/\[.*\]//g' | awk -F '[()]' '{print $2}'`
-    else
-        # Let's hope it's <URL> syntax
-        URL=`echo "$URLBIG" | awk -F '[<>]' '{print $2}'`
-    fi
-    
-    # echo -n \|${URL}\|
-
-    # Not sure whether to strip out the archive.org memory from any URLs, like so:
-    # echo $URL | sed 's|https://web.archive.org/web/[0-9]*/http://|http://|g'
-
-     DOCURLBIG=`cat $h | pup '[class~="field-field-osc-documentation-referen"]'  | pandoc -f html -t markdown | grep -v ':::' | grep -v 'OSC Documentation URL:' | egrep -v '^$' | tr '\n' ' ' `
-    
-
-     if [[ "DOC$URLBIG" == *"["* ]] ; then
-        # URL appears with [text](URL) syntax
-        DOCURL=`echo "$DOCURLBIG" | sed 's/\[.*\]//g' | awk -F '[()]' '{print $2}'`
-    else
-        # Let's hope it's <URL> syntax
-        DOCURL=`echo "$DOCURLBIG" | awk -F '[<>]' '{print $2}'`
-    fi
-
-
-     PROJECT_TYPE=`cat $h | pup '[class~="field-field-project-type"]' | pandoc -f html -t markdown | grep -v ':::' | grep -v "Project Type:" | egrep -v '^$' `
-
-
-
-     PLATFORM=`cat $h |  pup '[class~="field-field-platform"]' | pandoc -f html -t markdown | grep -v ':::' | grep -v "Platform:" | egrep -v '^$' | sed 's/Mac OSX/Macintosh/g' | tr '\n' ','  | awk 1 | sed 's/,$//g' | sed 's/,/, /g' `
-     
-
-
-     FEATURES=`cat $h |  pup '[class~="field-field-features"]' | pandoc -f html -t markdown | grep -v ':::' | grep -v "Features:" | egrep -v '^$' | awk -F '(' '{print $1}' | sed 's/[ ]*$//g' | tr '\n' ','  | awk 1 | sed 's/,$//g' | sed 's/,/, /g' `
-
-
-    
-     TYPES=`cat $h | pup '[class~="field-field-type-support"]' | pandoc -f html -t markdown | grep -v ':::' | grep -v "Type Support:" | egrep -v '^$' | awk -F '(' '{print $1}' | sed 's/double precision float/float64/g' | sed 's/\\\\//g' | sed 's/[ ]*$//g' | tr '\n' ','  | awk 1 | sed 's/,$//g' | sed 's/,/, /g' `
-
-
-     BUNDLE=`cat $h | pup '[class~="field-field-bundle-support"]' | pandoc -f html -t markdown | grep -v ':::' | grep -v "Bundle Support:" | egrep -v '^$' | tr '\n' ','  | awk 1 | sed 's/,$//g' | sed 's/,/, /g' `
-
-
-     TIMETAG=`cat $h | pup '[class~="field-field-timetag-support"]' | pandoc -f html -t markdown | grep -v ':::' | grep -v "Timetag Support:" | egrep -v '^$' | sed 's/\\\\//g' | sed 's/IMMEDATE/immedate/g' | tr '\n' ','  | awk 1 | sed 's/,$//g' | sed 's/,/, /g' `
-
-
-     
-     TRANSPORT=`cat $h  | pup '[class~="field-field-transport-type"]' | pandoc -f html -t markdown | grep -v ':::' | grep -v "Transport Type:" | egrep -v '^$' | tr '\n' ','  | awk 1 | sed 's/,$//g' | sed 's/,/, /g' `
-
-
-
-     # Now write all this implementation's data as a row of $tsv
-
-     rightnow=`date "+%m/%d/%Y %H:%M:%S"`
-
-     echo -e "${rightnow}\tLegacy\thttps://web.archive.org\t${NAME}\tNo\t${URL}\t${DOCURL}\t${PROJECT_TYPE}\t${DESCRIPTION}\t${PLATFORM}\t${FEATURES}\t${TYPES}\t${BUNDLE}\t${TIMETAG}\t${TRANSPORT}\t\t\tUnknown\tFeb 23, 2021\tUnknown\t"  >> $tsv
-
-done
-
-echo $tsv is now ready\!

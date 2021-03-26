@@ -15,7 +15,6 @@ fi
 
 echo Building MD for implementations...
 
-# expectedFieldsFile=implementations-google-column-names.tsv
 expectedFieldsFile=implementations-fields.tsv
 
 
@@ -24,8 +23,6 @@ if [ ! -f $expectedFieldsFile ]; then
     echo Can\'t build implementations\; exiting
     exit -2
 fi
-
-
 
 
 # First confirm assumptions about fields
@@ -63,7 +60,7 @@ tail +2 $tsv | \
         SUBMITTER_NAME=$(echo "$line" | cut -f2)
         SUBMITTER_WEBSITE=$(echo "$line" | cut -f3)
         NAME=$(echo "$line" | cut -f4)
-        # at this point we don't care about "Update?"
+        UPDATE=$(echo "$line" | cut -f5)
         URL=$(echo "$line" | cut -f6)
         URL_OSC_PART=$(echo "$line" | cut -f7)
         TYPE=$(echo "$line" | cut -f8)
@@ -79,8 +76,8 @@ tail +2 $tsv | \
         STATUS=$(echo "$line" | cut -f18)
         STATUSDATE=$(echo "$line" | cut -f19)
         SUPERSEDED=$(echo "$line" | cut -f20)
-        # Also we ignore "notes"
-
+        VIDEOS=$(echo "$line" | cut -f21)
+        STATUSDETAILS=$(echo "$line" | cut -f22)
 
         
         # Determine this filename based on the name, using these rules:
@@ -124,9 +121,13 @@ tail +2 $tsv | \
             echo "" >> $FILENAME
         fi
 
-        echo "**status**: $STATUS (as of $STATUSDATE)" >> $FILENAME
+        echo "**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: $STATUS (as of $STATUSDATE)" >> $FILENAME
         echo "" >> $FILENAME
-
+        if  [ ! -z "$STATUSDETAILS" ] ; then
+            echo "**Status details**: " >> $FILENAME
+            echo "$STATUSDETAILS" >> $FILENAME
+            echo "" >> $FILENAME            
+        fi
 
         if [ ! -z "$TYPE" ] ; then
             echo "**Project Type**: $TYPE" >> $FILENAME
@@ -196,14 +197,28 @@ tail +2 $tsv | \
             echo "" >> $FILENAME
         fi
 
+        if [ ! -z "$VIDEOS" ] ; then
+            echo "## Videos " >> $FILENAME
+            echo "" >> $FILENAME
+            echo "$VIDEOS" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+                
         if [ -z "$SUBMITTER_WEBSITE" ] ; then
             FULLSUBMITTER="$SUBMITTER_NAME"
         else
             FULLSUBMITTER="[$SUBMITTER_NAME]($SUBMITTER_WEBSITE)"
         fi
 
+        if [ -z "$UPDATE" ] ; then
+            MAYBEUPDATE="as an update "
+        fi
+        
+
+
         echo "---" >> $FILENAME
-        echo "Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by $FULLSUBMITTER at $TIMESTAMP" >> $FILENAME
+        echo "Submitted "$MAYBEUPDATE"to [opensoundcontrol.org](https://opensoundcontrol.org) by $FULLSUBMITTER at $TIMESTAMP" >> $FILENAME
 done
 
 echo have a nice day

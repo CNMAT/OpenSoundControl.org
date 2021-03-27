@@ -13,6 +13,8 @@ Do the whole Google Form / TSV / build legacy table / build-pubs.sh thing like f
 How do we know the URL of a submitted publication so that the implementation, etc., can link to it?
 - Simple rule to turn title into markdown file? 
 
+- Local download of publications-that-are-downloads- 
+
 
 ### Other site contributions
 
@@ -24,7 +26,7 @@ What other kinds of community contributions does the new site solicit?
 
 finish accept-new-implementations.sh
 
-- Local download of publications-that-are-downloads and images
+- Local download of images
 - rewrite those URLs to be served locally
 - document editors workflow
 

@@ -80,6 +80,10 @@ for m in *.md ; do
         # echo URLBIG: $URLBIG URL: $URL
     fi
 
+    # The old site had file "attachments" that we successfully scraped
+    DOWNLOAD_URL=`fgrep  '](files/' $m | awk -F'[()]' '{print $2}'`
+
+
     ABSTRACT=`fgrep "[ Abstract ]{.biblio-row-title}" $m | awk -F \} '{print $2}' | sed 's/^ *//g'`
     # echo ABSTRACT $ABSTRACT
 
@@ -128,7 +132,7 @@ for m in *.md ; do
     rightnow=`date "+%m/%d/%Y %H:%M:%S"`
     # echo -e "${rightnow}\t" >> $tsv
 
-    echo -e "${rightnow}\tLegacy\thttps://web.archive.org\t${TITLE}\t${AUTHORS}\t${FIRST_AUTHOR_LAST_NAME}\t${YEAR}\t${URL}\t\t${PUB_DETAILS}\t${PAGES}\t${ABSTRACT}\t\tThis was a featured publication on the legacy (pre-2011) opensoundcontrol.org website, ported to the new site by Matt Wright in early 2021" >> $tsv 
+    echo -e "${rightnow}\tLegacy\thttps://web.archive.org\t${TITLE}\t${AUTHORS}\t${FIRST_AUTHOR_LAST_NAME}\t${YEAR}\t${URL}\t${DOWNLOAD_URL}\t${PUB_DETAILS}\t${PAGES}\t${ABSTRACT}\t\tThis was a featured publication on the legacy (pre-2011) opensoundcontrol.org website, ported to the new site by Matt Wright in early 2021" >> $tsv 
 done
 
 echo $tsv is now ready\!

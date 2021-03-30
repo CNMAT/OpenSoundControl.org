@@ -1,25 +1,34 @@
+
+
+
 # Site Implementation To Do list
 
 ## Matt Urgent
 
 - make the publications form and the whole mechanism around it.  DOI optional.
-- make a site page explaining the rule for publication filenames
 - Make accept-new-implementations handle image downloads
 
 ### Publications
 
 Do the whole Google Form / TSV / build legacy table / build-pubs.sh thing like for implementations
 
-How do we know the URL of a submitted publication so that the implementation, etc., can link to it?
-- Simple rule to turn title into markdown file? 
+- still need accept-new-publications.sh
 
-- Local download of publications-that-are-downloads- 
+- Local download of publications-that-are-downloads
 
 
 ### Other site contributions
 
 What other kinds of community contributions does the new site solicit?
 (List in [contribute](contribute.html))
+
+For each, need to:
+
+- decide the fields
+- make the Google form
+- make the accept script
+- make the build script
+- test
 
 
 ### Implementations Hacking
@@ -28,7 +37,7 @@ finish accept-new-implementations.sh
 
 - Local download of images
 - rewrite those URLs to be served locally
-- document editors workflow
+- document editor's workflow
 
 
 
@@ -229,3 +238,9 @@ Factor out publications to a separate submission type
 Finalize the initial format of what an "implementation" consists of for
 the new site, i.e., the submission form's questions and the
 columns/fields of the TSV of "all officially known implementations".
+
+How do we know the URL of a submitted publication so that the implementation, etc., can link to it?
+- Simple rule to turn title into markdown file? 
+
+
+make a site [page explaining the rule for publication filenames](publication-filename-rules.html).

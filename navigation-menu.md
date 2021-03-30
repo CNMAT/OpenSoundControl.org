@@ -1,13 +1,13 @@
 <p align="justify">
 <small>
-[OpenSoundControl.org](/~matt/OSC):  &nbsp;
-[/page-list](/~matt/OSC/page-list.html) &nbsp;
-[/toc](/~matt/OSC/toc.html) &nbsp;
-[/spec/1.0](/~matt/OSC/spec-1_0.html) &nbsp;
-[/spec/1.1](/~matt/OSC/spec-1_1.html) &nbsp;
-[/implementations](/~matt/OSC/page-list.html#implementations) &nbsp;
-[/publications](/~matt/OSC/page-list.html#publications) &nbsp;
-[/about](/~matt/OSC/README.html)
+[OpenSoundControl.org](/):  &nbsp;
+[/page-list](/page-list.html) &nbsp;
+[/toc](/toc.html) &nbsp;
+[/spec/1.0](/spec-1_0.html) &nbsp;
+[/spec/1.1](/spec-1_1.html) &nbsp;
+[/implementations](/page-list.html#implementations) &nbsp;
+[/publications](/page-list.html#publications) &nbsp;
+[/about](/README.html)
 </small>
 </p>
 ---

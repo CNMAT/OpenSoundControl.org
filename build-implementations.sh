@@ -121,7 +121,7 @@ tail +2 $tsv | \
             echo "" >> $FILENAME
         fi
 
-        echo "**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: $STATUS (as of $STATUSDATE)" >> $FILENAME
+        echo "**[status](../implementation-status.html)**: $STATUS (as of $STATUSDATE)" >> $FILENAME
         echo "" >> $FILENAME
         if  [ ! -z "$STATUSDETAILS" ] ; then
             echo "**Status details**: " >> $FILENAME

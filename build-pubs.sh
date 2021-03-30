@@ -121,7 +121,9 @@ tail +2 $tsv | \
 
 
         if [ ! -z "$DOWNLOAD_URL" ] ; then
-            echo "**Download**: [$DOWNLOAD_URL](https://ccrma.stanford.edu/~matt/OSC/${DOWNLOAD_URL})" >> $FILENAME
+            # Here's where we assume the DOWNLOAD_URL is absolute within the site and
+            # that this file will live in a subdirectory like /publications
+            echo "**Download**: [$DOWNLOAD_URL](../${DOWNLOAD_URL})" >> $FILENAME
             echo "" >> $FILENAME
         fi
 

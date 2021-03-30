@@ -39,7 +39,7 @@ contributors][contrib].
 
 OSC is "open". Nobody has to pay a fee or get permission to use OSC.
 All of the information you need to know about OSC, including the [1.0
-Spec](/spec-1_0.html), is freely available on this site under [CC BY
+Spec](spec-1_0.html), is freely available on this site under [CC BY
 4.0][ccby]
 
 ## License of Specific OSC Implementations

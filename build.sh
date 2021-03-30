@@ -11,11 +11,12 @@ mightNeedNewToC=false;
 for m in *.md */*.md; do
     # echo check $m ;
 
-    bn=`basename $m .md`; 
-    if [ "$bn" == "navigation-menu" ]
+    bn=`basename $m .md`;
+    if [ "${bn:0:15}" == "navigation-menu" ]
     then
-       # This one MD file is inserted on every call to pandoc
-       # and should not on its own be converted to html
+       # These MD files are inserted on every call to pandoc
+        # and should not on their own be converted to html
+        #echo ignore $bn
        continue
     fi
 
@@ -30,11 +31,14 @@ for m in *.md */*.md; do
     if [[ $thisDir == "." ]]; then
         # this is a top-level .md file like toc.md or README.md
         homePrefix="";
+        navmenu="navigation-menu0.md"
     else
         # XXX should really do this right for arbitrary nesting: count
         # the number of "/" characters, etc.  For now assume just one level.
-        homePrefix="../";        
+        homePrefix="../";
+        navmenu="../navigation-menu1.md"
     fi
+    # echo navmenu is $navmenu
 
     pushd `dirname $m` > /dev/null
     outfile=$bn.html
@@ -81,7 +85,7 @@ for m in *.md */*.md; do
     
     if [[ $infile -nt $outfile ]] ; then
         echo "    " $infile to $outfile...; 
-        pandoc "${homePrefix}navigation-menu.md" $toclinkfile $infile \
+        pandoc $navmenu $toclinkfile $infile \
             -o $outfile --css "${homePrefix}css/pandoc.css" \
             --metadata pagetitle="$nicetitle" \
             --metadata date="`date -u '+%Y-%m-%d'`" -A $datefile -s;

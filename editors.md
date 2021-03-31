@@ -58,7 +58,7 @@ For example, for implementations.
 
 3. "Publish" the new submissions:
 
-    * Run the script `buildimplementations.sh` to (re)make every
+    * Run the script `build-implementations.sh` to (re)make every
       `implementations/*.md` automatically from `implementations.tsv`.
     * Now is another good moment to `git diff` and confirm the changes
       are desired. (In fact, this is the reason we store these derived

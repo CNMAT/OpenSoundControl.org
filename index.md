@@ -25,16 +25,14 @@ communication for use in realtime musical performance. Wright proposed
 OSC in 1997 as “a new protocol for communication among computers,
 sound synthesizers, and other multimedia devices that is optimized for
 modern networking technology"
-[[1]](https://ccrma.stanford.edu/~matt/OSC/files/2009-NIME-OSC-1.1.pdf).
+[[1]](files/2009-NIME-OSC-1.1.pdf).
 
 Originally intended as a more flexible alternative MIDI, OSC clears
 away many of the ideological and hardware constraints inherent to MIDI
 in favor of a open-ended, user-defined address-space model that can
 accommodate arbitrary parametric control over standard networking
-hardware. The OSC [Specification
-1.0](https://ccrma.stanford.edu/~matt/OSC/spec-1_0.html) was
-formalized and published in 2002.  The 2009 [Specification
-1.1](https://ccrma.stanford.edu/~matt/OSC/files/2009-NIME-OSC-1.1.pdf)
+hardware. The OSC [Specification 1.0](spec-1_0.html) was
+formalized and published in 2002.  The 2009 [Specification 1.1](files/2009-NIME-OSC-1.1.pdf)
 update added support for new features and data types.  In the years
 since, OSC has found application in a wide variety of domains beyond
 musical contexts.  Its timing accuracy and flexibility make it a ready
@@ -63,11 +61,11 @@ locally and over a network."
 ## How to use this site...
 
 * For a more detailed explanation of how OSC works, please see the
-  specifications: [Spec_1.0](file:///~matt/OSC/spec-1_0.html) &
-  [Spec_1.1](file:///~matt/OSC/spec-1_1.html)
+  specifications: [Spec_1.0](spec-1_0.html) &
+  [Spec_1.1](spec-1_1.html)
 
 * Browse the
-  [implementations](file:///~matt/OSC/page-list.html#implementations)
+  [implementations](page-list.html#implementations)
   to discover the many ways in which OSC is used in artistic and
   commercial projects.
 

@@ -47,6 +47,7 @@ finish accept-new-implementations.sh
 ### Site layout
 
 "Finalize" navigation
+- assign relative links to /spec_1.1, /implementations, /about
 
 directory structure of deployed site (/img, /files, /publications etc)
 

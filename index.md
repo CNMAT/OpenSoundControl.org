@@ -8,7 +8,7 @@ community.  This site is meant as an open forum for sharing and
 showcasing all things OSC. Users are encouraged to contribute by
 sharing links to documentation of projects and artworks that make use
 of OSC. Please let us know how you are using OSC by creating an
-implementation page for your project
+[implementation](page-list.html#implementations) page for your project
 [here](https://docs.google.com/forms/d/e/1FAIpQLSdnHHNzoZ2Qf_gFabpeuNDfAGOWCNMEknDKnDnexRLiUYv7bg/viewform).
 
 ## What is OSC?

@@ -133,9 +133,20 @@ Are we missing any super old implementations from <http://cnmat.org/OpenSoundCon
 
 Enter other known implementations:
 
-* MOTU AVB audio interfaces
+* [MOTU AVB audio interfaces](https://motu.com/en-us/)
+* [QLab](https://qlab.app/)
+* [ETC Lighting](https://www.etcconnect.com/Products/Consoles/Eos-Family/Eos-Ti/Features.aspx)
+* [Meyer Sound D-Mitri](https://meyersound.com/product/d-mitri/)
+* [osc-node](https://githu]b.com/marsvaardig/osc-node)
 * [x-osc](https://x-io.co.uk/x-osc)
 * [wekinator](http://www.wekinator.org)
+* [python-Osc](https://pypi.org/project/python-osc/)
+* [oscPy](https://pypi.org/project/oscpy/)
+* [sensors2osc](https://sensors2.org/osc/)
+* [atemOSC - OSC bridge fro Blackmagic Design video switchers](https://github.com/SteffeyDev/atemOSC)
+* [qualisys](https://www.qualisys.com/software/open-sound-control/)
+* [lightform](https://lightform.com/blog/lightform-osc-interactivity)
+* 
 
 
 Find easily findable implementations:

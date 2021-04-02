@@ -1,6 +1,6 @@
 # OpenSoundControl.org
 
-Welcome to the OpenSoundControl website!  This site documents the
+Welcome to the OpenSoundControl website.  This site documents the
 OpenSoundControl (OSC) specification(s), collects links to related
 publications, and highights a number of hardware and software
 implementations of OSC brought to us by members of our user/developer

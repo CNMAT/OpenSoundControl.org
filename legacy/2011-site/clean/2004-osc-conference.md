@@ -34,7 +34,7 @@ for making this event possible.
 9:00 - 9:10 am - Welcome and overview of conference: David Wessel
 
 9:10 - 9:25 am - *[Brief overview of OSC and its application
-areas](publication/brief-overview-osc-and-its-application-areas "reference on Brief overview of OSC and its application areas")*
+areas](publications/2004-Brief-Overview-of-OSC-and-its-Application-Areas.html)*
 , [Matt Wright](http://www.cnmat.berkeley.edu/~matt) , Center for New
 Music and Audio Technologies (CNMAT), UC Berkeley
 

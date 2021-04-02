@@ -68,7 +68,7 @@ locally and over a network."
   to discover the many ways in which OSC is used in artistic and
   commercial projects.
 
-* Keep in touch by joining our mailing list or [submitting information
+* Keep in touch by [submitting information
   about your own
   project](https://docs.google.com/forms/d/e/1FAIpQLSdnHHNzoZ2Qf_gFabpeuNDfAGOWCNMEknDKnDnexRLiUYv7bg/viewform)
 

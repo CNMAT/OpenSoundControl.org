@@ -5,6 +5,9 @@
 
 ## Matt Urgent
 
+- Make a general "blob" / "other" formn for site contributions
+
+
 - make the publications form and the whole mechanism around it.  DOI optional.
 - Make accept-new-implementations handle image downloads
 

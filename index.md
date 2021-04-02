@@ -70,5 +70,5 @@ locally and over a network."
 
 * Keep in touch by [submitting information
   about your own
-  project](https://docs.google.com/forms/d/e/1FAIpQLSdnHHNzoZ2Qf_gFabpeuNDfAGOWCNMEknDKnDnexRLiUYv7bg/viewform)
+  project](https://docs.google.com/forms/d/e/1FAIpQLSdnHHNzoZ2Qf_gFabpeuNDfAGOWCNMEknDKnDnexRLiUYv7bg/viewform).
 

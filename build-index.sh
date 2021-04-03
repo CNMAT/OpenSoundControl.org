@@ -49,7 +49,7 @@ for d in . $dirs; do
         fi
         base=`basename $m .md`;
 
-        if [ "$base" == "navigation-menu" ] || [ "$base" == "page-list" ] || [ "$base" == "toc" ]
+        if [ "${base:0:15}" == "navigation-menu" ] || [ "$base" == "page-list" ] || [ "$base" == "toc" ]
         then
             # This file shouldn't be indexed
             continue;

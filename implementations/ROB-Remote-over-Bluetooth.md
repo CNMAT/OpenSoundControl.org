@@ -1,9 +1,6 @@
 # ROB - Remote over Bluetooth
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Defunct (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Defunct (as of 15-Mar-21)
 
 **Status details**: 
 Website http://robold.tim-schenk.de/ is live but has no contact. Archive.org has last snapshot with content in 2011.  https://web.archive.org/web/20110226111111/http://robold.tim-schenk.de/

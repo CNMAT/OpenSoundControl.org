@@ -1,9 +1,6 @@
 # OSC-Kit
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Active/Legacy (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Active/Legacy (as of 15-Mar-21)
 
 **Status details**: 
 This is now linked from the cnmat.berkeley.edu/downloads page and points to https://github.com/CNMAT/OSC

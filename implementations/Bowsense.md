@@ -1,9 +1,6 @@
 # Bowsense
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: active (as of 12-Mar-21)
+**[status](../implementation-status.html)**: active (as of 12-Mar-21)
 
 **Status details**: 
 it's unclear to me at this time what the exact implementation of osc is, but the website is active and maintained

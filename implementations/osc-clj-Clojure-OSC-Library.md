@@ -1,9 +1,6 @@
 # osc-clj - Clojure OSC Library
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Active/Legacy (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Active/Legacy (as of 15-Mar-21)
 
 **Status details**: 
 This project is still live/accessible at https://github.com/rosejn/osc-clj with a stable release from 2013

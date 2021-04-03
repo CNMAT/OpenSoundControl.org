@@ -1,9 +1,6 @@
 # ooscc - open open sound control controller
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Active/Legacy (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Active/Legacy (as of 15-Mar-21)
 
 **Status details**: 
 Documentation is still active.

@@ -1,9 +1,6 @@
 # KWlive hid2osc
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: defunct (as of 19-Mar-21)
+**[status](../implementation-status.html)**: defunct (as of 19-Mar-21)
 
 **Status details**: 
 unable to get anything on either URL, and search returns no results. wayback machine gives no results.

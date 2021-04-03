@@ -1,9 +1,6 @@
 # BluePD
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Unknown (as of 23-Feb-21)
+**[status](../implementation-status.html)**: Unknown (as of 23-Feb-21)
 
 **Status details**: 
 same as above. Link says coming soon but no updates there, or when searching for bluemelon.org. Archive shows last crawl was 2020.

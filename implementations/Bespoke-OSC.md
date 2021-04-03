@@ -1,9 +1,6 @@
 # Bespoke OSC (.NET 3.5)
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: alpha / experimental (as of 12-Mar-21)
+**[status](../implementation-status.html)**: alpha / experimental (as of 12-Mar-21)
 
 **Status details**: 
 though the project seems old (2012 was most recent revision) the site seems kept up to date. Unable to find an email for Paul even through research gate website.

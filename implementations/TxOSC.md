@@ -1,9 +1,6 @@
 # TxOSC : OSC for Twisted in Python
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Defunct (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Defunct (as of 15-Mar-21)
 
 **Status details**: 
 Bitbucket repo is dead and not captured by Archive.org

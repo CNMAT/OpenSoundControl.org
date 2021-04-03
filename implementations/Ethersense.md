@@ -1,9 +1,9 @@
 # Ethersense
 
 **This implementation has been superseded by another!**
-github here-https://github.com/krejov100/EtherSense
+https://github.com/krejov100/EtherSense
 
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: active at different link (as of 19-Mar-21)
+**[status](../implementation-status.html)**: active at different link (as of 19-Mar-21)
 
 **Status details**: 
 The link in column G works, but further links on that page do not. I was able to find a github page for ethersense here: https://github.com/krejov100/EtherSense

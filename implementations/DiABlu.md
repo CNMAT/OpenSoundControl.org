@@ -1,9 +1,6 @@
 # DiABlu
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: active (as of 19-Mar-21)
+**[status](../implementation-status.html)**: active (as of 19-Mar-21)
 
 **Status details**: 
 active. website is updated as of 2021

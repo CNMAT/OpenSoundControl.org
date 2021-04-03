@@ -3,7 +3,7 @@
 **This implementation has been superseded by another!**
 Yes. Superseded by D-Mitri: https://meyersound.com/product/d-mitri/
 
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Legacy/Superseded (as of 10-Mar-21)
+**[status](../implementation-status.html)**: Legacy/Superseded (as of 10-Mar-21)
 
 **Status details**: 
 This product is no longer made, but MeyerSound has a current product with substantially identical functionality, that still supports OSC.

@@ -1,9 +1,6 @@
 # Csound
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: active (as of 12-Mar-21)
+**[status](../implementation-status.html)**: active (as of 12-Mar-21)
 
 **Status details**: 
 site lists 2005 as date-but links work and information seems relevant

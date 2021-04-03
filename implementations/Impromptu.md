@@ -1,9 +1,6 @@
 # Impromptu
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: alpha / experimental (as of 19-Mar-21)
+**[status](../implementation-status.html)**: alpha / experimental (as of 19-Mar-21)
 
 **Status details**: 
 legacy- not sure what year. only has downloads for Mac OS 10.5/ 10.6, so seems older

@@ -3,7 +3,7 @@
 **This implementation has been superseded by another!**
 No
 
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Active/Legacy (as of 11-Mar-21)
+**[status](../implementation-status.html)**: Active/Legacy (as of 11-Mar-21)
 
 **Status details**: 
 Appears to still be active, but not updated since 2005.  Uli Franke has no contact info listed.

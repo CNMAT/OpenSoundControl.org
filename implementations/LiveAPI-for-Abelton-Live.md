@@ -1,9 +1,6 @@
 # LiveAPI for Abelton Live
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: legacy/defunct (as of 19-Mar-21)
+**[status](../implementation-status.html)**: legacy/defunct (as of 19-Mar-21)
 
 **Status details**: 
 The URL in column G seems like its been taken over by another site/company, and the URL in H is no good. 

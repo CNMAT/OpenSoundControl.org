@@ -1,9 +1,6 @@
 # OscVstBridge
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Legacy?? (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Legacy?? (as of 15-Mar-21)
 
 **Status details**: 
 Site dates from 2009. 

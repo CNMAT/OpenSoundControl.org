@@ -1,9 +1,6 @@
 # IanniX 0.6, a graphic OSC sequencer from the UPIC
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: active at different link (as of 19-Mar-21)
+**[status](../implementation-status.html)**: active at different link (as of 19-Mar-21)
 
 **Status details**: 
 Active at this link, using OSC https://www.iannix.org/en/whatisiannix/

@@ -1,9 +1,6 @@
 # SynOSCopy "SYN" Namespace
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Legacy (as of 11-Feb-21)
+**[status](../implementation-status.html)**: Legacy (as of 11-Feb-21)
 
 **Status details**: 
 Hasn't been updated since 2010, issue filed in 2019 has gone unanswered.  https://github.com/fabb is sole contributor and owner of repo.

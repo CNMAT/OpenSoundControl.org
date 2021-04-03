@@ -1,9 +1,6 @@
 # aestesis elektronika (RT modular video software)
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Unknown/Legacy (as of 23-Feb-21)
+**[status](../implementation-status.html)**: Unknown/Legacy (as of 23-Feb-21)
 
 **Status details**: 
 This one appears to be functional at the following link: http://aestesis.eu/elektronika/ 

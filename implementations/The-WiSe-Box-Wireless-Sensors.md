@@ -1,9 +1,6 @@
 # The WiSe Box - Wireless Sensors
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Defunct (as of 11-Mar-21)
+**[status](../implementation-status.html)**: Defunct (as of 11-Mar-21)
 
 **Status details**: 
 Last archive.org mirror dates to 2011: https://web.archive.org/web/20090607070454/http://recherche.ircam.fr/equipes/temps-reel/movement/flety/static.php?page=static050309-144808

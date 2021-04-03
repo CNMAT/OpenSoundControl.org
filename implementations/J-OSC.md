@@ -1,9 +1,6 @@
 # J# OSC (.NET 2.0)
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: alpha / experimental (as of 19-Mar-21)
+**[status](../implementation-status.html)**: alpha / experimental (as of 19-Mar-21)
 
 **Status details**: 
 The second link in column H works. The one in column G is no good. This project is over 10 years old-legacy. I found the developer but no email

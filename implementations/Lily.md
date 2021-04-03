@@ -1,9 +1,6 @@
 # Lily
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Unknown/defunct (as of 19-Mar-21)
+**[status](../implementation-status.html)**: Unknown/defunct (as of 19-Mar-21)
 
 **Status details**: 
 unable to reach lilyapp.org as well as both of these links. Seems like the server for their site is down. 

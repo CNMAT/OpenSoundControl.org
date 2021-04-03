@@ -1,9 +1,6 @@
 # Milkymist One: open hardware interactive VJ station
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Unknown (as of 23-Feb-21)
+**[status](../implementation-status.html)**: Unknown (as of 23-Feb-21)
 
 **Status details**: 
 Snapshot 2018: https://web.archive.org/web/20180203110749/http://www.milkymist.org/

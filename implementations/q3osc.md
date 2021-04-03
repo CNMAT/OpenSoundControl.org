@@ -1,9 +1,6 @@
 # q3osc
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Defunct (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Defunct (as of 15-Mar-21)
 
 **Status details**: 
 This is a CCRMA project but its site died in 2014 https://web.archive.org/web/20140209134709/http://www.q3osc.org/

@@ -1,9 +1,6 @@
 # ofxOsc
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Defunct (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Defunct (as of 15-Mar-21)
 
 **Status details**: 
 Last snapshot from 2008: https://web.archive.org/web/20081014184929/http://www.frey.co.nz/projects/ofxosc/

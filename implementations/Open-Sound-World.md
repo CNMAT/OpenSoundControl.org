@@ -1,9 +1,6 @@
 # Open Sound World
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Legacy?? (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Legacy?? (as of 15-Mar-21)
 
 **Status details**: 
 Whoa.  What is this?!  Apparently a software package from CNMAT that I've never heard of by Amar Chaudhary.  Legacy?  

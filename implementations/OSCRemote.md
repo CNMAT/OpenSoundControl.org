@@ -1,9 +1,6 @@
 # OSCRemote
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Defunct (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Defunct (as of 15-Mar-21)
 
 **Status details**: 
 App no longer available. No snapshot on Archive.org.

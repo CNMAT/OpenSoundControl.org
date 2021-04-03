@@ -3,7 +3,7 @@
 **This implementation has been superseded by another!**
 Yes. Superseded by odot: https://github.com/CNMAT/CNMAT-odot
 
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Defunct/Legacy (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Defunct/Legacy (as of 15-Mar-21)
 
 **Status details**: 
 

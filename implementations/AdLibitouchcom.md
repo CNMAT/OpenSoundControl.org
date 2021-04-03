@@ -1,9 +1,6 @@
 # AdLibitouch.com
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Defunct (as of 10-Mar-21)
+**[status](../implementation-status.html)**: Defunct (as of 10-Mar-21)
 
 **Status details**: 
 This appears to be dead since at least 2011; there is a sourceforge site for the project: https://sourceforge.net/projects/adlibitouch/; Wayback machine link: https://web.archive.org/web/20110202093441/http://adlibitouch.com/

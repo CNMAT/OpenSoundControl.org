@@ -3,7 +3,7 @@
 **This implementation has been superseded by another!**
 No
 
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Active (as of 11-Mar-21)
+**[status](../implementation-status.html)**: Active (as of 11-Mar-21)
 
 **Status details**: 
 I have reached out through their webform for appropriate contact info.

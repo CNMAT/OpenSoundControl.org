@@ -1,9 +1,6 @@
 # mrmr
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: defunct (as of 15-Mar-21)
+**[status](../implementation-status.html)**: defunct (as of 15-Mar-21)
 
 **Status details**: 
 Last snapsshot 2011

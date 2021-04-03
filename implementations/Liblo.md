@@ -1,9 +1,6 @@
 # Liblo: Lightweight OSC API
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: active (as of 19-Feb-21)
+**[status](../implementation-status.html)**: active (as of 19-Feb-21)
 
 **Status details**: 
 latest release is from 2019. maintained by stefan sinclair.

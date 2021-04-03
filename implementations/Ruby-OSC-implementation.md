@@ -1,9 +1,6 @@
 # Ruby OSC implementation
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Legacy (as of 11-Mar-21)
+**[status](../implementation-status.html)**: Legacy (as of 11-Mar-21)
 
 **Status details**: 
 Forked to Github repo. No commits since 2009.

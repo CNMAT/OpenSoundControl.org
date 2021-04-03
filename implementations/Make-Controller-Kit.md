@@ -1,9 +1,6 @@
 # Make Controller Kit
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: legacy/at different link (as of 19-Mar-21)
+**[status](../implementation-status.html)**: legacy/at different link (as of 19-Mar-21)
 
 **Status details**: 
 https://makezine.com/2006/05/11/make-controller-kit/ current site-unclear if using OSC

@@ -1,9 +1,6 @@
 # CNMAT Connectivity Processor
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: active at different link (as of 12-Mar-21)
+**[status](../implementation-status.html)**: active at different link (as of 12-Mar-21)
 
 **Status details**: 
 I believe this is active on this link instead:https://www.cnmat.berkeley.edu/publications/composability-musical-gesture-signal-processing-using-new-osc-based-object-and

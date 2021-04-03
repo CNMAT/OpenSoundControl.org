@@ -1,9 +1,6 @@
 # Oscar
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Defunct (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Defunct (as of 15-Mar-21)
 
 **Status details**: 
 Last snapshot 2013: https://web.archive.org/web/20130103221756/http://www.todo.to.it/blog/oscar/

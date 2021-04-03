@@ -1,9 +1,6 @@
 # Braun
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: active (as of 12-Mar-21)
+**[status](../implementation-status.html)**: active (as of 12-Mar-21)
 
 **Status details**: 
 this link did not work, however Jamie Bullock is active using this site:https://www.jamiebullock.com/ and says to contact by sending a direct message on twitter @jamiebullock

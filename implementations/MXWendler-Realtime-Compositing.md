@@ -1,9 +1,6 @@
 # MXWendler Realtime Compositing
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Defunct (as of 23-Feb-21)
+**[status](../implementation-status.html)**: Defunct (as of 23-Feb-21)
 
 **Status details**: 
 No snapshot on Archive.org

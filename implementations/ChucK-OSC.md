@@ -1,9 +1,6 @@
 # ChucK => OSC
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: active (as of 12-Mar-21)
+**[status](../implementation-status.html)**: active (as of 12-Mar-21)
 
 **Status details**: 
 unclear when the last update was, but the site says 2002-present and all links on it work. 

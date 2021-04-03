@@ -1,9 +1,6 @@
 # Python - Simple OSC
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Active/Legacy (as of 15-Mar-21)
+**[status](../implementation-status.html)**: Active/Legacy (as of 15-Mar-21)
 
 **Status details**: 
 Still kicking.  One of at least 3 known python implementations: https://stackoverflow.com/questions/22135511/a-plethora-of-python-osc-modules-which-one-to-use

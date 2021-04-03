@@ -1,9 +1,6 @@
 # The Missing Link OSC/MIDI Translator
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: defunct (as of 15-Mar-21)
+**[status](../implementation-status.html)**: defunct (as of 15-Mar-21)
 
 **Status details**: 
 Snapshot from 2011: https://web.archive.org/web/20120203143655/http://wifimidi.com/

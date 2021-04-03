@@ -1,9 +1,6 @@
 # SwingOSC Java Server
 
-**This implementation has been superseded by another!**
-Unknown
-
-**[status](https://ccrma.stanford.edu/~matt/OSC/implementation-status.html)**: Active/Legacy (as of 11-Feb-21)
+**[status](../implementation-status.html)**: Active/Legacy (as of 11-Feb-21)
 
 **Status details**: 
 Still available on sourceforge and github.  Most recent issue response is from 2016.

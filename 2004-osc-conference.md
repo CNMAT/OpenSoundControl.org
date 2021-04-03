@@ -1,9 +1,9 @@
-## Proceedings of the 2004 Open Sound Control Conference
+# Proceedings of the 2004 Open Sound Control Conference
 
-::: {.content}
-Open Sound Control Conferences bring together OSC developers,
-practicioners, researchers and industry representatives to focus on new
-work on the protocol and related research in areas in multimedia.
+The 2004 Open Sound Control Conference brought together OSC
+developers, practicioners, researchers and industry representatives to
+focus on new work on the protocol and related research in areas in
+multimedia.
 
 Topics and themes include:
 
@@ -15,12 +15,12 @@ Topics and themes include:
 -   Musical applications and related concerns
 -   Related research topics
 
-Friday July 30 2004, 9am - 5pm\
-Hewlett Packard Auditorium (Room \#306, Soda Hall)\
+Friday July 30 2004, 9am - 5pm  
+Hewlett Packard Auditorium (Room \#306, Soda Hall)  
 on the UC Berkley campus
 
 Presented by the [UC Berkeley Center for New Music and Audio Technology
-(CNMAT)](http://cnmat.berkeley.edu/) .\
+(CNMAT)](http://cnmat.berkeley.edu/).
 Thanks to the [UC Discovery Grant Program](http://ucdiscoverygrant.org/)
 for making this event possible.
 
@@ -28,7 +28,6 @@ for making this event possible.
 
 ## Proceedings
 
-::: {.schedule}
 8:30 - 9:00 am - Registration
 
 9:00 - 9:10 am - Welcome and overview of conference: David Wessel
@@ -160,8 +159,3 @@ OSC](publication/future-directions-osc "reference on Conference wrap-up and futu
 , [David Wessel](http://www.cnmat.berkeley.edu/~wessel) , Director, and
 [Matt Wright](http://www.cnmat.berkeley.edu/~matt) , Musical Systems
 Designer, CNMAT
-:::
-
-::: {.book-navigation}
-:::
-:::

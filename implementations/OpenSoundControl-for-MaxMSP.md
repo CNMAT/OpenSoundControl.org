@@ -6,7 +6,7 @@ Yes. Superseded by odot: https://github.com/CNMAT/CNMAT-odot
 **[status](../implementation-status.html)**: Defunct/Legacy (as of 15-Mar-21)
 
 **Status details**: 
-
+Though parts of this library are deprecated and none is needed if you instead use odot, the still-often-useful core OSC-route and OpenSoundControl objects are still available via the Max Package Manager as part of "CNMAT Externals"
 
 **Project Type**: Programming Language Library
 

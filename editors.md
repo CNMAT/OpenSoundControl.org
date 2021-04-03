@@ -27,13 +27,13 @@ The website's information is structured as follows:
 1. Follow [these general
    instructions](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository),
    keeping these opensoundcontrol.org-specific details in mind:
-  - add your commit to the current branch / Commit directly to the
-    `main` branch
-  - The GitHub preview of this page doesn't have the navigation
-    elements added by the build script or have the same formatting.
-  - Some more obscure markdown features differ between GitHub's and
-    pandoc's flavors of markdown.  For the real site, pandoc wins (but 
-    try to avoid those features at all if possible).
+    - add your commit to the current branch / Commit directly to the
+      `main` branch
+    - The GitHub preview of this page doesn't have the navigation
+      elements added by the build script or have the same formatting.
+    - Some more obscure markdown features differ between GitHub's and
+      pandoc's flavors of markdown.  For the real site, pandoc wins
+      (but try to avoid those features at all if possible).
 1. Now somebody has to pull, build, and deploy
 
 ## Accepting Content from Form Submissions

@@ -62,6 +62,9 @@ you can't go from `#` (H1) to `###` (H3) without `##` (H2) in between.
   blocks](https://pandoc.org/MANUAL.html#metadata-blocks) for pages'
   title, author, and date, because that would mess up the incredibly
   simple [navigation menu](navigation-menu.md) system.
+* All within-site links must be relative URLs (starting neither with
+  "http" nor with "/" but rather just the name of the html file with 
+  maybe a "../").
   
 ## Values
 
@@ -78,6 +81,8 @@ Here are some of the values and goals embodied in this project:
   about OpenSoundControl
 * Mechanism for the OSC community to [contribute](#how-to-contribute)
   site content so it stays up do date.
+* Weak preference for the [serial
+  comma](https://en.wikipedia.org/wiki/Serial_comma)
 * The site is for publication, not discussion. In other words, it's a
   long-term site containing curated information intended to be useful
   in the future, not a discusison forum such as slack / twitter /
@@ -94,8 +99,11 @@ Here are some of the values and goals embodied in this project:
 
 * Source content stored in simple files, not some software's internal
   database
+* Never have email addresses on the site or in the site's back-end repo
 * Simple, lightweight open-source toolchain; not tied to any "heavy"
   infrastructure such as Drupal.
+* Source data (in .TSV and .md files) automatically become the site's
+  html files; html is built locally and not committed to the repo
 * Designed for long-term maintainability with potentially infrequent updates
 * Designed to be easy to migrate site content to another platform in the future
 * Imposes some limits on markdown use to make the scripts easier to

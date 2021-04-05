@@ -13,6 +13,7 @@ Active
 
 ## Description
 
+[](files/MOTU_logo.png)
 MOTU is a company that produces audio/MIDI interfaces.  MOTU pro audio audio interfaces can be remotely controlled from a hardware controller or software interface using either OSC or HTTP. Each protocol provides an extensive set of commands that allow control over almost every aspect of the hardware.  
 
 ## Implementation Details

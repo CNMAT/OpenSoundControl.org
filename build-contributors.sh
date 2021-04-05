@@ -10,6 +10,6 @@ personal website links:
 
 EOF
     # Generate a sorted, no-blank-lines-containing, comma-separated list of the contributors:
-    sort -df contributors.txt | sed '/^[[:space:]]*$/d' | sed '$ ! s/$/,/g' >>  contributors.md
+    sort -df contributors.txt | uniq | sed '/^[[:space:]]*$/d' | sed '$ ! s/$/,/g' >>  contributors.md
 fi
 

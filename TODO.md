@@ -5,6 +5,8 @@
 
 ## Matt Urgent
 
+leave out "status details" label if contents are empty
+
 - Make a general "blob" / "other" formn for site contributions
 
 
@@ -175,6 +177,10 @@ Old web pages:
 
 
 ## Code improvements
+
+Make the one build script build everything (calling build-implementations etc as needed)
+
+
 
 Factor out the rules for converting filenames and section titles into
 anchor names.  Maybe replace all of it with calls to pandoc.  (Put the

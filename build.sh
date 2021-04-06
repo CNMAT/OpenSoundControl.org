@@ -98,6 +98,16 @@ for m in *.md */*.md; do
     fi
 done
 
+if [ ! -f page-list.md ] ; then
+    echo page-list.md does not exist.
+    mightNeedNewToC=true;
+fi
+
+if [ ! -f toc.md ] ; then
+    echo toc.md does not exist.
+    mightNeedNewToC=true;
+fi
+
 if  $mightNeedNewToC  ; then
     if [ $# -eq 0 ] ; then
         echo -n "    " You might want to rebuild the table of contents

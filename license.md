@@ -47,4 +47,4 @@ Spec](spec-1_0.html), is freely available on this site under [CC BY
 Nothing on this page has anything to do with the license of any
 particular implementation of OSC such as a software library. A wide
 variety exists.  You have to check the [page of each specific
-implementation](index.html#implementations) you're interested in.
+implementation](page-list.html#implementations) you're interested in.

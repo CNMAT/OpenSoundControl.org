@@ -104,8 +104,10 @@ for d in . $dirs; do
                     printf "%s* [%s](%s#%s)\n" "$mdListIndentation" "$text" "$mhtml" "$link";
                 done < $tmpfile;
             else
+                # printf instead of echo because https://apple.stackexchange.com/questions/173836/why-echo-n-doesnt-work-in-this-script-on-mac-terminal
+
                 # Index has one line per .md file
-                echo -n "${thisFileWithLink}:  "
+                printf "${thisFileWithLink}:  "
             
                 while IFS= read -r line || [[ -n $line ]]; do
                     text=`echo $line | tr -d \# | cut -c2-` ;

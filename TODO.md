@@ -5,6 +5,7 @@
 
 - Make a general "blob" / "other" form for site contributions
 
+Why doesn't build script re-build missing page-list.md
 
 what happened to the posters in legacy/2011-site/clean/files/wright-posters.pdf
 

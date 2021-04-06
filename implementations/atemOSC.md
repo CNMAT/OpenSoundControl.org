@@ -27,7 +27,7 @@ atemOSC is a bridge application that enables communication with Blackmagic Desig
 
 ## Images 
 
-https://petersteffey.ninja/images/atemosc.png
+<https://petersteffey.ninja/images/atemosc.png>
 
 ---
 Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (Admin)](https://github.com/SteffeyDev/atemOSC) at 4/3/2021 21:14:29

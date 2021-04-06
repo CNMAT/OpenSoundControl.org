@@ -29,7 +29,7 @@ ETC consoles are the industry standard in theater lighting.  These consoles supp
 
 ## Images 
 
-https://www.etcconnect.com/Content/Images/logo-header.png
+<https://www.etcconnect.com/Content/Images/logo-header.png>
 
 ---
 Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (admin)](https://www.etcconnect.com/) at 4/3/2021 14:45:05

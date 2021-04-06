@@ -27,7 +27,7 @@ QLab is a popular show control software popular among theater technologists.  It
 
 ## Images 
 
-https://qlab.app/static/qlab-icon-e90056ea671b2707ce8a4ba76afc1b3b.png
+<https://qlab.app/static/qlab-icon-e90056ea671b2707ce8a4ba76afc1b3b.png>
 
 ---
 Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (admin)](https://qlab.app/) at 4/2/2021 23:46:47

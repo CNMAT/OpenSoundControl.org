@@ -27,7 +27,7 @@ The Wekinator allows users to build new interactive systems by demonstrating hum
 
 ## Images 
 
-http://www.wekinator.org/wp-content/uploads/2015/08/wekinator31.jpg
+<http://www.wekinator.org/wp-content/uploads/2015/08/wekinator31.jpg>
 
 ---
 Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (Admin)](http://www.wekinator.org/) at 4/3/2021 20:28:20

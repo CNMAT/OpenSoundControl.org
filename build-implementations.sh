@@ -191,9 +191,23 @@ tail +2 $tsv | \
 
 
         if [ ! -z "$IMAGES" ] ; then
+            # XXX This needs to be much much smarter, like to handle
+            # multiple images
+
+            *[^[:alnum:]]* 
+                             
+            if [[ $IMAGES == *[\(\)\<\>]* ]]
+            then
+                # assume it's proper markdown
+                sayimages="$IMAGES"
+            else
+                # assume it's a single URL
+                sayimages="<$IMAGES>"
+            fi
+            
             echo "## Images " >> $FILENAME
             echo "" >> $FILENAME
-            echo "$IMAGES" >> $FILENAME
+            echo "$sayimages" >> $FILENAME
             echo "" >> $FILENAME
         fi
 

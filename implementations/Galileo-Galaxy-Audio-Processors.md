@@ -27,7 +27,7 @@ Meyer Sound Galileo Galaxy Processors are AVB networkable audio processors for t
 
 ## Images 
 
-https://meyersound.com/wp-content/uploads/2016/10/galileo_galaxy_main.png
+<https://meyersound.com/wp-content/uploads/2016/10/galileo_galaxy_main.png>
 
 ---
 Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (Admin)](http://www.meyersound.com) at 4/3/2021 15:32:12

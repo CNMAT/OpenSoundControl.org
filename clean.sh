@@ -1,1 +1,1 @@
-rm -f toc.* index.html *.html */*.html
+rm -f toc.* page-list.* *.html */*.html

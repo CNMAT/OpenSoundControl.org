@@ -56,6 +56,9 @@ In addition to **status** there are
 Status Date
 : The date the status was last updated
 
+Status Notes
+: Any additional notes that might add detail and/or clarity
+
 Superseded?
 : Blank if this implementation is still a good way to do something, or
   the URL (preferably on this site) of another implementation with

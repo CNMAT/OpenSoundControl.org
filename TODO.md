@@ -1,128 +1,16 @@
 
-
-
 # Site Implementation To Do list
 
 ## Matt Urgent
 
-leave out "status details" label if contents are empty
-
-- Make a general "blob" / "other" formn for site contributions
+- Make a general "blob" / "other" form for site contributions
 
 
-- make the publications form and the whole mechanism around it.  DOI optional.
-- Make accept-new-implementations handle image downloads
-
-### Publications
-
-Do the whole Google Form / TSV / build legacy table / build-pubs.sh thing like for implementations
-
-- still need accept-new-publications.sh
-
-- Local download of publications-that-are-downloads
-
-
-### Other site contributions
-
-What other kinds of community contributions does the new site solicit?
-(List in [contribute](contribute.html))
-
-For each, need to:
-
-- decide the fields
-- make the Google form
-- make the accept script
-- make the build script
-- test
-
-
-### Implementations Hacking
-
-finish accept-new-implementations.sh
-
-- Local download of images
-- rewrite those URLs to be served locally
-- document editor's workflow
+what happened to the posters in legacy/2011-site/clean/files/wright-posters.pdf
 
 
 
-
-## Final confirmations
-
-### Site layout
-
-"Finalize" navigation
-- assign relative links to /spec_1.1, /implementations, /about
-
-directory structure of deployed site (/img, /files, /publications etc)
-
-Do we like subheadings within each implementation page?  And how that looks in the TOC?
-
-Decide whether to serve the legacy site at
-http://opensoundcontrol.org/legacy/2011-site and if so how to make it
-visibly obvious that this is legacy content (e.g., big scary red
-preamble)
-
-
-
-
-### Legacy content
-
-Browse the old site on archive.org and make sure we're not missing any important legacy files
-
-Absorb old  “application areas” content into a new introduction to OSC?
-
-link to the old OSC-dev archives
-
-
-legacy/2011-site/clean/files/Everything-About-OSC.mov
-
-#### Represent the 2004 OSC Conference
-
-e.g., the posters in legacy/2011-site/clean/files/wright-posters.pdf
-
-
-
-
-#### Editorial 
-
-Which of the "clean" scraped files should be kept for the new site?
-What needs to be updated or discarded?
-
-Here's what we have from the top-level folder of the legacy site that's not yet on the new site:
-
-````
-2004-osc-conference.md
-cnmat-software-library-downloads.md
-guide-osc-libraries.md
-implementations.md
-introduction-osc.md
-liblo.md
-mailing-list-archives.md
-mapping-nonmusical-data-sound.md
-multiple-user-shared-musical-control.md
-networked-lan-musical-performance.md
-osc-application-areas.md
-osc-kit-0.md
-osc.md
-oscpack.md
-references.md
-resources.md
-sensor-gesture-based-electronic-musical-instruments.md
-virtual-reality.md
-wan-performance-and-telepresence.md
-web-interfaces.md
-wosclib.md
-wrapping-other-protocols-inside-osc.md
-````
-
-
-re-implement the Drupal "book" structure of the legacy "developer resources"?
-    https://web.archive.org/web/20200706171742/http://opensoundcontrol.org/resources
-
-
-
-#### Legacy Implementation Research
+## Legacy Implementation Research
 
 manually check up on each legacy implementation
 
@@ -159,10 +47,6 @@ Find easily findable implementations:
 * Search the iOS App Store
 * Search for Android apps
 
-
-
-    
-
 ## sendOSC and dumpOSC
 
 Are these already on github?
@@ -173,21 +57,6 @@ Old web pages:
 
 <http://cnmat.org/OpenSoundControl/dumpOSC.html>
 <http://cnmat.org/OpenSoundControl/clients/sendOSC.html>
-
-
-
-## Code improvements
-
-Make the one build script build everything (calling build-implementations etc as needed)
-
-
-
-Factor out the rules for converting filenames and section titles into
-anchor names.  Maybe replace all of it with calls to pandoc.  (Put the
-function definition in a file that build.sh and build-index.sh will
-source)
-
-refactor everything about build
 
 
 
@@ -208,6 +77,97 @@ Prerequisites:
 
 <https://x-io.co.uk/contact/>
 
+
+
+## Future improvements
+
+
+### Code improvements
+
+- leave out "status details" label if contents are empty
+
+- Make accept-new-implementations handle image downloads
+
+- still need accept-new-publications.sh
+
+- Local download of publications-that-are-downloasd
+  - rewrite those URLs to be served locally
+  - document editor's workflow for this (when to commit the downloaded files etc)
+
+
+- Make the one build script build everything (calling
+  build-implementations etc as needed)
+
+- Factor out the rules for converting filenames and section titles
+into anchor names.  Maybe replace all of it with calls to pandoc.
+(Put the function definition in a file that build.sh and
+build-index.sh will source)
+
+- refactor everything about build?
+
+
+### Other site contributions
+
+What other kinds of community contributions does the new site solicit?
+(List in [contribute](contribute.html))
+
+For each, need to:
+
+- decide the fields
+- make the Google form
+- make the accept script
+- make the build script
+- test
+
+
+### Legacy content
+
+Absorb old  “application areas” content into a new introduction to OSC?
+
+
+Decide whether to serve the legacy site at
+http://opensoundcontrol.org/legacy/2011-site and if so how to make it
+visibly obvious that this is legacy content (e.g., big scary red
+preamble)
+
+link to the old OSC-dev archives (again with a scary preamble)
+
+What to do with files like legacy/2011-site/clean/files/Everything-About-OSC.mov
+
+#### Legacy content editorial 
+
+Which of the "clean" scraped files should be kept for the new site?
+What needs to be updated or discarded?
+
+Here's what we have from the top-level folder of the legacy site that's not yet on the new site:
+
+````
+2004-osc-conference.md
+cnmat-software-library-downloads.md
+guide-osc-libraries.md
+implementations.md
+introduction-osc.md
+liblo.md
+mailing-list-archives.md
+mapping-nonmusical-data-sound.md
+multiple-user-shared-musical-control.md
+networked-lan-musical-performance.md
+osc-application-areas.md
+osc-kit-0.md
+osc.md
+oscpack.md
+references.md
+resources.md
+sensor-gesture-based-electronic-musical-instruments.md
+virtual-reality.md
+wan-performance-and-telepresence.md
+web-interfaces.md
+wosclib.md
+wrapping-other-protocols-inside-osc.md
+````
+
+re-implement the Drupal "book" structure of the legacy "developer resources"?
+    https://web.archive.org/web/20200706171742/http://opensoundcontrol.org/resources
 
 
 

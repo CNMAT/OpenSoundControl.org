@@ -1,30 +1,35 @@
 # OpenSoundControl.org
 
 Welcome to the OpenSoundControl website.  This site documents the
-OpenSoundControl (OSC) specification(s), collects links to related
-publications, and highights a number of hardware and software
-implementations of OSC brought to us by members of our user/developer
-community.  This site is for publishing, sharing, and showcasing all things 
-OSC. Users are encouraged to contribute by sharing links to documentation of 
-projects and artworks that make use of OSC. Please let us know how you are using OSC by creating an
-[implementation](page-list.html#implementations) page for your project
-[here](https://docs.google.com/forms/d/e/1FAIpQLSdnHHNzoZ2Qf_gFabpeuNDfAGOWCNMEknDKnDnexRLiUYv7bg/viewform).
+OpenSoundControl (OSC)
+[specification](spec-1_0.html)([s](spec-1_1.html)), collects links to
+related [publications](page-list.html#publications), and highights a
+number of hardware and software
+[implementations](page-list.html#implementations) of OSC brought to us
+by members of our user/developer community.  This site is for
+publishing, sharing, and showcasing all things OSC; we encourage
+[contributions](contribute.html) which the [editors](editors.html)
+will review and incorporate. You might start with the [list of
+pages](page-list.html), site-wide [table of contents](toc.html)
+(listing all the sections of every page), or more info
+[about](README.html) the site.  All site content is covered by the
+CC-BY [license](license.html).
+
 
 ## What is OSC?
 
 OpenSoundControl (OSC) is a multi-paradigmatic data transport
 specification for datagram communication among applications and
 hardware. OSC was developed by researchers [Matt
-Wright](https://music.stanford.edu/people/matt-wright) and [Adrian
+Wright](https://ccrma.stanford.edu/matt-wright) and [Adrian
 Freed](http://www.adrianfreed.com/) during their time at the Center
 for New Music & Audio Technologies
 ([CNMAT](https://cnmat.berkeley.edu)). OSC was originally designed as
 a highly accurate, low latency, lightweight, and flexible method of
-communication for use in realtime musical performance. Wright proposed
-OSC in 1997 as “a new protocol for communication among computers,
+communication for use in realtime musical performance.  They proposed
+OSC in 1997 as "[a new protocol for communication among computers,
 sound synthesizers, and other multimedia devices that is optimized for
-modern networking technology"
-[[1]](files/2009-NIME-OSC-1.1.pdf).
+modern networking technology](files/1997-ICMC-OSC.pdf)".
 
 Originally intended as a more flexible alternative MIDI, OSC clears
 away many of the ideological and hardware constraints inherent to MIDI

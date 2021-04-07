@@ -1,5 +1,8 @@
 # Website Editors' Workflow
 
+The current editors of OpenSoundControl.org are Matt Wright and Jeremy
+Wagner.
+
 This document is a place to gather notes, "recipes", best practices,
 etc., related to the ongoing task of maintaining the content of
 OpenSoundControl.org.

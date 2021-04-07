@@ -7,7 +7,11 @@ if [ ! -f $tsv ]; then
     exit -1
 fi
 
-if [[  $oldest_imp  -nt $tsv ]] ; then
+num_tsv=`wc -l implementations.tsv | awk '{print $1}'`
+num_md=`ls -1 implementations | wc -l`
+
+
+if (( $num_tsv -eq $num_md)) && [[  $oldest_imp  -nt $tsv ]] ; then
     echo All files in implementations/\*.md are newer than $tsv
     echo So we don\'t need to build implementations.
     exit 0;
@@ -194,8 +198,6 @@ tail +2 $tsv | \
             # XXX This needs to be much much smarter, like to handle
             # multiple images
 
-            *[^[:alnum:]]* 
-                             
             if [[ $IMAGES == *[\(\)\<\>]* ]]
             then
                 # assume it's proper markdown

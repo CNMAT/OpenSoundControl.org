@@ -4,16 +4,14 @@ This is the 2021 version of the OpenSoundControl
 [website](opensoundcontrol.org). It combines legacy OSC website
 content (especially including the 1.0 Specification) with the
 bare-bones implementation of [Matt Wright's CCRMA
-Documentation](https://ccrma.stanford.edu/docs/toc.html).
+Documentation](https://ccrma.stanford.edu/docs/toc.html) and a way for
+people to [contribute](contribute.html) content that
+[editors](editors.html) will moderate/curate/organize/publish.
 
 The auto-generated [list of pages](page-list.html) and [table of
 contents](toc.html) are one of the best ways to find information on
 the site.
 
-
-## How to Contribute
-
-Please see the [page about how to contribute to the site](contribute.html).
 
 
 ## Site Implementation
@@ -45,13 +43,13 @@ the output [README.html](README.html).
 The site's repo contains
 [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) scripts to
 [build](build.sh) the website html with [pandoc](https://pandoc.org),
-[deploy](deploy.sh) to the webserver, and [build the overall table of
-contents](buildindex.sh).
+[deploy](deploy-test.sh) to the webserver, and [build the overall
+table of contents](build-index.sh).
 
 Part of the simplicity of these scripts is based on limiting
 assumptions about the structure of the source markdown files,
-especially in the creation of the site's [index](index) and [table of
-contents](toc.html):
+especially in the creation of the site's [page list](page-list) and
+[table of contents](toc.html):
 
 * all headings must use the markdown syntax with some number of `#` at
   the beginning of the line (not the line of `---` on the next line).
@@ -79,10 +77,8 @@ Here are some of the values and goals embodied in this project:
   useful information
 * Central location aspiring to link to "all" the world's information
   about OpenSoundControl
-* Mechanism for the OSC community to [contribute](#how-to-contribute)
+* Mechanism for the OSC community to [contribute](contribute.html)
   site content so it stays up do date.
-* Weak preference for the [serial
-  comma](https://en.wikipedia.org/wiki/Serial_comma)
 * The site is for publication, not discussion. In other words, it's a
   long-term site containing curated information intended to be useful
   in the future, not a discusison forum such as slack / twitter /
@@ -93,12 +89,14 @@ Here are some of the values and goals embodied in this project:
 * Not a tech support help desk; more of an unstaffed reference library
 * Slow publication cycle, easy to maintain (by volunteers hoping to
   spend ~1-2 hours/month)
+* Weak preference for the [serial
+  comma](https://en.wikipedia.org/wiki/Serial_comma)
 
 
 ### Technical Values
 
-* Source content stored in simple files, not some software's internal
-  database
+* Source content stored in simple files in a version control
+  repository (that tracks history), not some software's internal database
 * Never have email addresses on the site or in the site's back-end repo
 * Simple, lightweight open-source toolchain; not tied to any "heavy"
   infrastructure such as Drupal.

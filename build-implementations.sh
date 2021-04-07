@@ -10,8 +10,9 @@ fi
 num_tsv=`wc -l implementations.tsv | awk '{print $1}'`
 num_md=`ls -1 implementations | wc -l`
 
+echo we have $num_tsv lines of TSV and $num_md implementations pages.
 
-if (( $num_tsv -eq $num_md)) && [[  $oldest_imp  -nt $tsv ]] ; then
+if [[ $num_tsv -eq $num_md ]] && [[  $oldest_imp  -nt $tsv ]] ; then
     echo All files in implementations/\*.md are newer than $tsv
     echo So we don\'t need to build implementations.
     exit 0;

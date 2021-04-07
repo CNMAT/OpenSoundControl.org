@@ -10,15 +10,20 @@ web forms:
 * [Implementation](https://forms.gle/fPnM82RxS1hBNPua8): hardware or
   software that sends and/or receives OSC and could be useful to
   other people.
-* [Publication](): a journal article, conference paper, technical
-  report, etc., describing research related to (implementing, using,
-  teaching, extending...) OSC.
-* Best practice
-* Project using OSC
-* Address space / schema that other people may like to copy or know about
-* Simple boilerplate template code that can be a starting point for OSC sending/receiving in various languages
-* Suggested edit/correction/update to an existing page on the site.
-* ...
+* [Publication](https://forms.gle/LxepP12pPrFK1iZb7): a journal
+  article, conference paper, technical report, etc., describing
+  research related to (implementing, using, teaching, extending...)
+  OSC.
+* [Contribution](https://forms.gle/ZXmAjC6tySM3Wy7e6), a generic
+  category (like the [OSC-blob
+  type](spec-1_0.html#atomic-data-types)), e.g.,
+  * Best practice
+  * Project using OSC
+  * Address space / schema that other people may like to copy or know about
+  * Simple boilerplate template code that can be a starting point for
+    OSC sending/receiving in various languages
+  * Suggested edit/correction/update to an existing page on the site.
+  * ...
 
 Site editors will manually review form submissions and approve all
 legitimate additions to the site. The result of approved submissions is

@@ -86,7 +86,9 @@ for d in . $dirs; do
 
                 # XXX these two different while loops could be refactored a bit
                 while IFS= read -r line || [[ -n $line ]]; do
-                    sharpsigns=`echo $line | tr -Cd \#`;
+                    # bug: this assumes sharp signs occur only at the beginning of a line
+                    # sharpsigns=`echo $line | tr -Cd \#`;
+                    sharpsigns=`echo $line | sed 's|\(^#*\).*$|\1|g'`
                     mdListIndentation=`echo $sharpsigns | cut -c2- | sed 's/#/    /g'`;
                     text=`echo $line | tr -d \# | cut -c2-` ;
 

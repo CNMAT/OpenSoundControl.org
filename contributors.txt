@@ -1,4 +1,4 @@
 [Matthew Wright](https://ccrma.stanford.edu/~matt)
 [Gabriel Pettier](https://pypi.org/project/oscpy/)
 [Jeremy Wagner](https://www.jeremywagner.info)
-[Legacy](https://web.archive.org)
+[Legacy](legacy-site.html)

@@ -7,7 +7,8 @@
 [/spec/1.1](../spec-1_1.html) &nbsp;
 [/implementations](../page-list.html#implementations) &nbsp;
 [/publications](../page-list.html#publications) &nbsp;
-[/about](../README.html)
+[/about](../README.html)<br>
+(contents of this file: links to each section)
 </small>
 </p>
 ---

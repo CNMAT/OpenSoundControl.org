@@ -3,8 +3,6 @@
 
 ## Matt Urgent
 
-- Make a general "blob" / "other" form for site contributions
-
 what happened to the posters in legacy/2011-site/clean/files/wright-posters.pdf
 
 
@@ -225,3 +223,6 @@ How do we know the URL of a submitted publication so that the implementation, et
 make a site [page explaining the rule for publication filenames](publication-filename-rules.html).
 
 Why doesn't build script re-build missing page-list.md ?
+
+Make a general "blob" / "other" form for site contributions
+

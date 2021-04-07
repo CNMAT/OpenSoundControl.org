@@ -7,8 +7,8 @@ if [ ! -f $tsv ]; then
     exit -1
 fi
 
-num_tsv=`wc -l implementations.tsv | awk '{print $1}'`
-num_md=`ls -1 implementations | wc -l`
+num_tsv=`wc -l implementations.tsv | awk '{print $1-1}'`
+num_md=`ls -1 implementations/*.md | wc -l`
 
 echo we have $num_tsv lines of TSV and $num_md implementations pages.
 
@@ -94,13 +94,6 @@ tail +2 $tsv | \
         # Convert spaces to '-'
         # Convert repeated '--' to just one
         FILENAME=`echo $NAME | sed 's/(.*)//g' | sed 's/[,:][ ].*//g' | tr '-' ' ' | tr  -d '[:punct:]' | sed 's/[ ]*$//g' | tr ' ' '-' | tr -s '-'`
-
-
-        if [ "$FILENAME" == "Arduino" ] ; then
-            # Kludge for now based on problematic legacy content - should be fixed better.
-            echo skip Arduino
-            continue;
-        fi
 
         FILENAME=${impl_dir}/${FILENAME}.md
 

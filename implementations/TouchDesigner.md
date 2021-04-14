@@ -1,8 +1,5 @@
 # TouchDesigner
 
-**This implementation has been superseded by another!**
-No
-
 **[status](../implementation-status.html)**: Active (as of 11-Mar-21)
 
 **Status details**: 

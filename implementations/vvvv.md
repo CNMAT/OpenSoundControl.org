@@ -1,12 +1,9 @@
 # vvvv
 
-**This implementation has been superseded by another!**
-No
-
 **[status](../implementation-status.html)**: Active  (as of 11-Mar-21)
 
 **Status details**: 
-Product appears to be active.  OSC documentation is referenced here: https://vvvv.org/documentation/protocols#osc
+Product appears to be active.
 
 **Project Type**: Software Application
 

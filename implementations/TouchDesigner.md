@@ -12,6 +12,8 @@ I have reached out through their webform for appropriate contact info.
 
 **Project URL**: <http://www.derivative.ca/>
 
+**OSC Documentation URL**: <https://docs.derivative.ca/OSC>
+
 ## Description
 
 TouchDesigner is a gpu accelerated realtime visual programming interface, incorporating 2D+3D graphics, motion and audio processing, full scripting and multiple hardware communication interfaces to create systems for interactive art production, live character puppeteering, 3d animation and special effects, visualization, application building and much more. <p> The OSC support is implemented through procedural nodes, consistent with the overall visual programming paradigm, so that any message may influence any aspect of the system. All standard types are supported, and scripting extensions for non-recognized data is also available.

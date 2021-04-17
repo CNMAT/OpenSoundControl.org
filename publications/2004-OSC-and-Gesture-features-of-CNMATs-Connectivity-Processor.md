@@ -1,0 +1,14 @@
+# OSC and Gesture features of CNMAT's Connectivity Processor
+
+Rimas Avizienis, Adrian Freed. *OSC and Gesture features of CNMAT's Connectivity Processor*. 2004.  OSC Conference 2004. 
+
+**URL**: <http://cnmat.berkeley.edu/publications/open_sound_control_state_art_2003>
+
+**Download**: [files/OSC2004-RimasBox.pdf](../files/OSC2004-RimasBox.pdf)
+
+**Abstract**: CNMAT's Connectivity Processor is a modular audio and gesture interface system based on a motherboard with connectors for two daughter cards. The motherboard provides digital audio connectivity using ADAT, AES-3 via Gigabit or 100BaseT ethernet to a host computer and additionally has one channel of MIDI in and out and 12 channels of D/A conversion. Typically one of the two daughter cards is used to provide analog audio A/D conversion and the other is used for multichannel gesture sensor acquisition. The primary advantages of this system over commercial Firewire audio devices are the reliable timing and delivery of gesture synchronized to the audio streams and the modularity of the daughterboard system. The first gesture sensor interface board we developed has 16 channels of analog input sampled with 12-bit resoluation at 1/8th the sample rate of the connectivity processor (48kHz or 44.1kHz). Each input has a 3rd-order lowpass analog filter and supports signal ranges from 0-5v. We chose the 3 row 48-pin DIN connector used by the ICube system to support a wide range of readily available sensors. For custom applications we also provide a DB25. The latest gesture sensor interface daughter board was developed to take advantage of an important trend in sensor design: integration of A/D conversion within the sensor. This board therefor has a modest 4-channels of A/D conversion and four DB-9 connectors for connecting digital sensor arrays using a new protocol under development at CNMAT. The DB-9 connector provides power and a configuration pin. All remaining pins are custom programmable using a Spartan III FPGA. The current OS/X driver for the connectivity processor upsamples sensor data to turn it into streams of audio giving access to the data with no jitter to any CoreAudio compatible application. MIDI data is routed through CoreMIDI but this interface doesn't appear to deliver the timing performance the hardware provides. We are now developing a driver to provide a UNIX socket interface to the gesture data which will be encoded as OSC messages. We preserve the timing performance by tagging the packets with tags derived from the precision sample rate clock of the connectivity processor.
+
+**Context**: This was a featured publication on the legacy (pre-2011) opensoundcontrol.org website, ported to the new site by Matt Wright in early 2021
+
+---
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 03/26/2021 17:03:31

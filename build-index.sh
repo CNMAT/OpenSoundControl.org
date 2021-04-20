@@ -106,17 +106,35 @@ for d in . $dirs; do
                     printf "%s* [%s](%s#%s)\n" "$mdListIndentation" "$text" "$mhtml" "$link";
                 done < $tmpfile;
             else
-                # printf instead of echo because https://apple.stackexchange.com/questions/173836/why-echo-n-doesnt-work-in-this-script-on-mac-terminal
 
                 # Index has one line per .md file
-                printf "${thisFileWithLink}:  "
-            
+
+                # kludge to solve the "nerdy version" problem
+
+                if [ "$d" != "implementations" ] && [ "$d" != "publications" ]
+                then
+                    # printf instead of echo because
+                    # https://apple.stackexchange.com/questions/173836/why-echo-n-doesnt-work-in-this-script-on-mac-terminal
+
+                    printf "${thisFileWithLink}:  "
+                fi
+
+                # But we need to see publications' year because it's in that order because the filename begins with year
+                if [ "$d" == "publications" ]
+                then
+                    # Luckily it has to be the first 4 characters of the filename
+                    YEAR=`echo $base | cut -c 1-4`
+                    printf "$YEAR, "
+                fi
+                
+
+                       
                 while IFS= read -r line || [[ -n $line ]]; do
                     text=`echo $line | tr -d \# | cut -c2-` ;
                     link=`echo $text | \
                         tr '[:upper:]' '[:lower:]' | tr  -d '[:punct:]' | \
                         tr ' ' '-' | sed 's/--*/-/g'`
-                    printf "%s\n" "$text";
+                    printf "[%s](%s)\n" "$text" "$mhtml";
                 done < $tmpfile;
             fi
         fi

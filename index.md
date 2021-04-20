@@ -29,7 +29,8 @@ a highly accurate, low latency, lightweight, and flexible method of
 communication for use in realtime musical performance.  They proposed
 OSC in 1997 as "[a new protocol for communication among computers,
 sound synthesizers, and other multimedia devices that is optimized for
-modern networking technology](files/1997-ICMC-OSC.pdf)".
+modern networking
+technology](publications/1997-Open-SoundControl-A-New-Protocol-for-Communicating-with-Sound-Synthesizers.html)".
 
 OSC can be understood as a more flexible alternative MIDI; OSC clears
 away many of the ideological and hardware constraints inherent to MIDI

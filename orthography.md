@@ -16,9 +16,10 @@ to separate the words with spaces or join them with
 
 ## History
 
-The [1997 ICMC paper](files/1997-ICMC-OSC.pdf) introduced OSC to the
-world as "Open SoundControl", with a space between the first two words
-and CamelCase connecting the last two.
+The [1997 ICMC
+paper](publications/1997-Open-SoundControl-A-New-Protocol-for-Communicating-with-Sound-Synthesizers.html)
+introduced OSC to the world as "Open SoundControl", with a space
+between the first two words and CamelCase connecting the last two.
 
 The [1998 ICMC paper](files/1998-OSC-Kit.pdf) consistently did the
 opposite: "OpenSound Control".  (This might have been part of some

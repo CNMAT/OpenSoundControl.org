@@ -5,6 +5,8 @@
 
 Put in 97 and 98 papers as publications (not just files/1997-ICMC-OSC.pdf)
 
+[1997 paper](publications/1997-Open-SoundControl-A-New-Protocol-for-Communicating-with-Sound-Synthesizers.html)
+
 what happened to the posters in legacy/2011-site/clean/files/wright-posters.pdf
 
 Fix broken URLs of 2004 conference publications

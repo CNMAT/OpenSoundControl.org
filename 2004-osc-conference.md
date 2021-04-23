@@ -38,7 +38,7 @@ areas](publications/2004-Brief-Overview-of-OSC-and-its-Application-Areas.html)*
 Music and Audio Technologies (CNMAT), UC Berkeley
 
 9:25 - 9:55 am - *[Keynote address: OSC and Digital Lifestyle
-Aggregation](publication/keynote-address-osc-and-digital-lifestyle-aggregation "reference on Keynote address: OSC and Digital Lifestyle Aggregation")*
+Aggregation](publications/keynote-address-osc-and-digital-lifestyle-aggregation "reference on Keynote address: OSC and Digital Lifestyle Aggregation")*
 , [Marc Canter](http://marc.canter.com/) , [Broadband
 Mechanics](http://www.broadbandmechanics.com/)
 

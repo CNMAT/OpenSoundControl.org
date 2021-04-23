@@ -1,16 +1,13 @@
 
 # Site Implementation To Do list
 
-## Matt Urgent
+## Matt
 
-Put in 97 and 98 papers as publications (not just files/1997-ICMC-OSC.pdf)
-
-[1997 paper](publications/1997-Open-SoundControl-A-New-Protocol-for-Communicating-with-Sound-Synthesizers.html)
-
-what happened to the posters in legacy/2011-site/clean/files/wright-posters.pdf
+what happened to the posters in legacy/2011-site/clean/files/wright-posters.pdf ?
 
 Fix broken URLs of 2004 conference publications
 
+Get in some more of the known publications
 
 
 ## Legacy Implementation Research
@@ -145,7 +142,6 @@ What needs to be updated or discarded?
 Here's what we have from the top-level folder of the legacy site that's not yet on the new site:
 
 ````
-2004-osc-conference.md
 cnmat-software-library-downloads.md
 guide-osc-libraries.md
 implementations.md

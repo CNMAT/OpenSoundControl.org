@@ -21,12 +21,14 @@ paper](publications/1997-Open-SoundControl-A-New-Protocol-for-Communicating-with
 introduced OSC to the world as "Open SoundControl", with a space
 between the first two words and CamelCase connecting the last two.
 
-The [1998 ICMC paper](files/1998-OSC-Kit.pdf) consistently did the
-opposite: "OpenSound Control".  (This might have been part of some
-attempt at a portfolio of "OpenSound" items, including not just
-Control but [World](http://osw.sourceforge.net) and perhaps others.)
-The paper also introduced the all-CamelCase "OpenSoundControl," but
-only as part of a [URL](https://en.wikipedia.org/wiki/URL).
+The [1998 ICMC
+paper](publications/1998-Implementation-and-Performance-Issues-with-OpenSound-Control.html)
+consistently did the opposite: "OpenSound Control".  (This might have
+been part of some attempt at a portfolio of "OpenSound" items,
+including not just Control but [World](http://osw.sourceforge.net) and
+perhaps others.)  The paper also introduced the all-CamelCase
+"OpenSoundControl," but only as part of a
+[URL](https://en.wikipedia.org/wiki/URL).
 
 The [2002 OSC Spec 1.0](spec-1_0.html) used the remaining alternative,
 "Open Sound Control" as three separate words with spaces.

@@ -20,6 +20,23 @@ More perspectives:
 Within TouchDesigner: <https://www.lynda.com/course-tutorials/OSC-Open-Sound-Control-overview/513599/589292-4.html>
 
 
+Make an actual "publications" page framing what this collection is and providing several views:
+
+- the raw source file <publications.tsv>
+- alphabetical
+- chronological
+- contribute link
+
+
+Make an actual "implementations" page saying we aspire to point to all known implementations.  Provide several views:
+
+- the raw source file <implementations.tsv>
+- list of active (or generally by status)
+- Those that have a specific feature? Maybe some commandline examples using the TSV?
+- Fancy in-browser table query / rearrangement seems beyond the scope of the site for now.
+
+
+
 ## Legacy Implementation Research
 
 Find easily findable implementations:

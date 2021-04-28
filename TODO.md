@@ -1,11 +1,13 @@
 
 # Site Implementation To Do list
 
+## Hallie
+
+Fix broken URLs of 2004 conference publications
+
 ## Matt
 
 what happened to the posters in legacy/2011-site/clean/files/wright-posters.pdf ?
-
-Fix broken URLs of 2004 conference publications
 
 Get in some more of the known publications
 
@@ -20,12 +22,11 @@ Within TouchDesigner: <https://www.lynda.com/course-tutorials/OSC-Open-Sound-Con
 
 ## Legacy Implementation Research
 
-Are we missing any super old implementations from <http://cnmat.org/OpenSoundControl/> ?
-
 Find easily findable implementations:
 
 * Search the iOS App Store
 * Search for Android apps
+
 
 ## sendOSC and dumpOSC
 
@@ -63,6 +64,19 @@ Prerequisites:
 
 
 ## Future improvements
+
+### Ongoing goals
+
+ongoing OSC publications search
+
+ongoing OSC implementations search
+
+- Are we missing any super old implementations from <http://cnmat.org/OpenSoundControl/> ?
+
+Link to every top-level page from the prose of the home page:
+
+- perspectives
+
 
 
 ### Code improvements

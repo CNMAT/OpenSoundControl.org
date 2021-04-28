@@ -26,6 +26,7 @@ Find easily findable implementations:
 
 * Search the iOS App Store
 * Search for Android apps
+* <https://en.wikipedia.org/wiki/Open_Sound_Control#Applications>
 
 
 ## sendOSC and dumpOSC
@@ -41,7 +42,19 @@ Old web pages:
 
 binary downloads would be great
 
-Link from 98 OSC Kit context
+Link to the new site page from the 98 OSC Kit publication page's "context"
+
+
+
+## Switch the Domain Name
+
+Fix links from Google Docs into stanford.edu
+
+Make sure links to old <http://opensoundcontrol.org/OSCGestureMapping> will still work.
+
+Something something [CCRMA
+sysadmin](https://ccrma.stanford.edu/docs/system/sysadmin.html)
+something something.
 
 
 ## Charm offensive

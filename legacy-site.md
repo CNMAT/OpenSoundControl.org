@@ -12,3 +12,7 @@ collection of kludgy bash scripts in the repository. Matt, Jeremy
 Wagner, and Hallie Smith then confirmed all this information .
 
 All site content marked "legacy" came from the above process.
+
+(Another source of legacy information is the [Archive of the UCSB
+Create OSC developer mailing
+list](https://osc-dev.create.ucsb.narkive.com), which closed in 2017.)

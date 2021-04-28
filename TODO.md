@@ -9,38 +9,18 @@ Fix broken URLs of 2004 conference publications
 
 Get in some more of the known publications
 
+More perspectives:
+
+<https://www.music.mcgill.ca/~gary/306/week9/osc.html> / <https://www.music.mcgill.ca/~gary/306/index.html#Outline>
+
+<https://www.researchgate.net/publication/228777611_Open_Sound_Control_Constraints_and_Limitations>
+
+Within TouchDesigner: <https://www.lynda.com/course-tutorials/OSC-Open-Sound-Control-overview/513599/589292-4.html>
+
 
 ## Legacy Implementation Research
 
-manually check up on each legacy implementation
-
- - for the external links, which ones still work?
- - For the ones that don't, is it relatively easy to find a new URL for the project?
- - For the ones that seem to be dead projects, can we confirm the
-   death and the date, and can we find something that's superseded it?
- - are there any publications?
- 
-Find publications for legacy implementations.
-
 Are we missing any super old implementations from <http://cnmat.org/OpenSoundControl/> ?
-
-Enter other known implementations:
-
-* [MOTU AVB audio interfaces](https://motu.com/en-us/)
-* [QLab](https://qlab.app/)
-* [ETC Lighting](https://www.etcconnect.com/Products/Consoles/Eos-Family/Eos-Ti/Features.aspx)
-* [Meyer Sound D-Mitri](https://meyersound.com/product/d-mitri/)
-* [osc-node](https://githu]b.com/marsvaardig/osc-node)
-* [x-osc](https://x-io.co.uk/x-osc)
-* [wekinator](http://www.wekinator.org)
-* [python-Osc](https://pypi.org/project/python-osc/)
-* [oscPy](https://pypi.org/project/oscpy/)
-* [sensors2osc](https://sensors2.org/osc/)
-* [atemOSC - OSC bridge fro Blackmagic Design video switchers](https://github.com/SteffeyDev/atemOSC)
-* [qualisys](https://www.qualisys.com/software/open-sound-control/)
-* [lightform](https://lightform.com/blog/lightform-osc-interactivity)
-* 
-
 
 Find easily findable implementations:
 
@@ -49,15 +29,18 @@ Find easily findable implementations:
 
 ## sendOSC and dumpOSC
 
-Are these already on github?
+Are these already on github?  Yes! <https://github.com/CNMAT/CNMAT-OSC>
 
-Need binary downloads
 
 Old web pages:
 
 <http://cnmat.org/OpenSoundControl/dumpOSC.html>
 <http://cnmat.org/OpenSoundControl/clients/sendOSC.html>
 
+
+binary downloads would be great
+
+Link from 98 OSC Kit context
 
 
 ## Charm offensive
@@ -229,3 +212,13 @@ Why doesn't build script re-build missing page-list.md ?
 
 Make a general "blob" / "other" form for site contributions
 
+
+manually check up on each legacy implementation
+
+ - for the external links, which ones still work?
+ - For the ones that don't, is it relatively easy to find a new URL for the project?
+ - For the ones that seem to be dead projects, can we confirm the
+   death and the date, and can we find something that's superseded it?
+ - are there any publications?
+ 
+Find publications for legacy implementations.

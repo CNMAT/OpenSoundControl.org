@@ -57,6 +57,7 @@ for d in . $dirs; do
            
         # >&2 echo file $m is html $mhtml;
 
+        # XXX these should grep for one or more # followed by a space
         if $buildtoc; then
             # All headings; strip out any legacy HTML anchors
             egrep ^\# $m | sed 's/\[\]{.*}//g' > $tmpfile;

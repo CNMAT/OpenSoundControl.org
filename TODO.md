@@ -7,8 +7,6 @@ Fix broken URLs of 2004 conference publications
 
 ## Matt
 
-what happened to the posters in legacy/2011-site/clean/files/wright-posters.pdf ?
-
 Get in some more of the known publications
 
 More perspectives:

@@ -106,3 +106,5 @@ Here are some of the values and goals embodied in this project:
 * Designed to be easy to migrate site content to another platform in the future
 * Imposes some limits on markdown use to make the scripts easier to
   implement 
+* Nothing set in stone: any aspects of the implementation are open
+  to improvement.

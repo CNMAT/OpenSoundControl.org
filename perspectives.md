@@ -1,6 +1,9 @@
 # Perspectives on OSC
 
-[Wikipedia page](https://en.wikipedia.org/wiki/Open_Sound_Control)
+Annotated bibliography of links to helpful perspectives about the
+nature and use of OSC.
+
+(alphabetical order)
 
 [Joe
 Armstrong](https://en.wikipedia.org/wiki/Joe_Armstrong_(programmer)),
@@ -18,6 +21,27 @@ and developers more flexibility in the kinds of data they can send
 over the wire, enabling new applications that can communicate with
 each other at a high level."
 
+[Create Digital Music](https://cdm.link) has over [100 articles tagged
+`opensoundcontrol`](https://cdm.link/tag/opensoundcontrol).
+
+[Adrian Freed](http://adrianfreed.com)'s 2021 [annotated
+version](http://opensoundcontrol.org/OSCGestureMapping) of the 2001
+ICMC paper "[Managing Complexity with Explicit Mapping of Gestures to
+Sound Control with
+OSC](publications/2001-Managing-Complexity-with-Explicit-Mapping-of-Gestures-to-Sound-Control-with-OSC.html)",
+"intented to provide context and readability unavailable in the
+original [pdf](files/2001-ICMC-Managing-Complexity-OSC.pdf)."
+
+James McCartney's [SuperCollider](https://supercollider.github.io)
+language's fundamental architecture is based on a division between
+`scsynth` the audio-processing "synthesis server" versus `sclang` the
+general-purpose programming language, connected via [sending OSC to
+the
+server](http://doc.sccode.org/Reference/Server-Command-Reference.html).
+It's also possible to control `scsynth` from [a different OSC
+sender](https://en.wikipedia.org/wiki/SuperCollider#Clients).
+
+
 [Dave Phillips](https://www.linuxjournal.com/users/dave-phillips),
 2008, "[An Introduction To
 OSC](https://www.linuxjournal.com/content/introduction-osc)": "OSC's
@@ -28,5 +52,4 @@ representation, as long as the data format is supported by the
 protocol." Detailed example: AlgoScore drives AVSynthesis.
 
 
-[Create Digital Music](https://cdm.link) has over [100 articles tagged
-`opensoundcontrol`](https://cdm.link/tag/opensoundcontrol).
+[Wikipedia page](https://en.wikipedia.org/wiki/Open_Sound_Control)

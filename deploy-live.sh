@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo Deploying from this computer to the live site\!
 
 rsync -aLvzh --delete \

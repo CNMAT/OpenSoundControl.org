@@ -1,3 +1,5 @@
+#!/bin/bash
+
 tsv=publications.tsv
 
 if [ ! -f $tsv ]; then

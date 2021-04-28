@@ -1,3 +1,4 @@
+#!/bin/bash
 rsync -aLvzh --delete \
       --exclude .git --exclude \*~ --exclude raw --exclude .DS_Store \
       --exclude legacy \

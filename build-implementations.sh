@@ -1,3 +1,5 @@
+#!/bin/bash
+
 tsv=implementations.tsv
 oldest_imp=`ls -t implementations/*.md | tail -1`
 

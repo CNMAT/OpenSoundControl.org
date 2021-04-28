@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [[ contributors.txt -nt contributors.md ]] ; then
     echo Updating contributors.md
     rm -f contributors.md

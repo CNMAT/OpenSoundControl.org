@@ -1,3 +1,4 @@
+#!/bin/bash
 echo Deploying from this computer to the test site
 
 rsync -aLvzh --delete \

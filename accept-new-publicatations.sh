@@ -1,3 +1,5 @@
+#!/bin/bash
+
 googledownload="Publications (Responses) - Form Responses 1.tsv"
 tsv=publications.tsv
 

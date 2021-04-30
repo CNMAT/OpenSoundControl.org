@@ -78,3 +78,61 @@ function [message args] = parse_message(bytes)
 
 end
 ```
+
+And here is the UDP listener it goes with, (probably) written by [Karl Yerkes](https://github.com/kybr) around 2012.
+
+```
+function udp_listen(handler, port, timeout, address)
+% function udp_listen(handler, port, timeout, address)
+%
+% udp_listen accepts 4 arguments:
+%
+%   handler - a function that accepts a column vector of bytes and returns nothing
+%   port - the port on which to listen
+%   timeout - the number of seconds to wait before giving up on a single read
+%   address - the ipv4 address on which to listen
+%
+% try these examples:
+%
+%   udp_listen(@(bytes) disp(bytes'), 12345, 0.01, '127.0.0.1')
+%   udp_listen(@(bytes) disp(char(bytes')), 12345, 0.01, '127.0.0.1')
+%
+
+  % open a udp socket and listen
+  %
+  udp_object = udp(address, ...
+    'LocalPort', port, ...
+    'Timeout', timeout, ...
+    'Terminator', '', ...
+    'InputBufferSize', 65536);
+  fopen(udp_object);
+
+  % ensure that the udp socket gets destroyed when this function is done
+  %
+  localObject = onCleanup(@() delete(udp_object));
+
+  % loop forever (until ctrl-c, matlab shutdown, crash, or earthquake)
+  %
+  while true
+    try
+      [data, count, error_message, from_address, from_port] = fread(udp_object);
+
+      % uncomment for debugging
+      disp(['got ', int2str(count), ' bytes from ', from_address, ':', int2str(from_port)])
+
+      if isempty(data)
+        disp(['still listening...']);
+      else
+        handler(data);
+      end
+
+    catch me
+      % hide errors/exceptions when we break this infinite loop with ctrl-c
+      % we should actually check if this is exception is ctrl-c related (TBD)
+      %
+      disp(['Exception caught ', me])
+      return
+    end
+  end
+end
+```

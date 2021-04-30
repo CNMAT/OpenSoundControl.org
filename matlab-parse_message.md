@@ -81,7 +81,7 @@ end
 
 And here is the UDP listener it goes with, (probably) written by [Karl Yerkes](https://github.com/kybr) around 2012.
 
-```
+```matlab
 function udp_listen(handler, port, timeout, address)
 % function udp_listen(handler, port, timeout, address)
 %

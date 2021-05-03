@@ -2,8 +2,6 @@
 
 Emmanuel FlÃ©ty, Nicolas Leroy. *EtherSense, an OSC-based sensor platform*. 2004.  OSC Conference 2004. 
 
-**URL**: <http://cnmat.berkeley.edu/publications/control_vst_plug_ins_using_osc>
-
 **Download**: [files/ethersense-diagram.gif](../files/ethersense-diagram.gif)
 
 **Abstract**: This paper reports our recent developments on sensor acquisition systems, using computer network technology. We present a versatile hardware system that can be connected to wireless modules, Analog to Digital Converters, and enables Ethernet communication. We are planning to make freely available the design of this architecture. We describe also several approaches we tested for wireless communication. Such technology developments are currently used in our newly formed Performance Arts Technology Group.

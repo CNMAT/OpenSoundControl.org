@@ -2,8 +2,6 @@
 
 Adrian Freed, Andrew Schmeder, Michael Zbyszynski. *OSC Showcase for Maker Faire 2007*. 2007.  Maker Faire 2007. 
 
-**URL**: <http://cnmat.berkeley.edu/publications/osc_design_space>
-
 **Download**: [files/OSC-Demo.pdf](../files/OSC-Demo.pdf)
 
 **Abstract**: This was an interactive demo and information booth at the 2007 Maker Faire featuring Open Sound Control hardware and software. Open Sound Control (OSC) is a protocol for communication among computers, sound synthesizers, and other multimedia devices that is optimized for modern networking technology. Compared to protocols such as MIDI, OSC's advantages include interoperability, accuracy, flexibility, and enhanced organization and documentation. ![](http://farm1.static.flickr.com/206/507425696_599591cb2b_o.jpg)

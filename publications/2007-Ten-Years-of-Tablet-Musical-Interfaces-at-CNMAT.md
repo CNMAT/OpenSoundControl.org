@@ -2,8 +2,6 @@
 
 Michael Zbyszynski, Matthew Wright, Ali Momeni, Daniel Cullen. *Ten Years of Tablet Musical Interfaces at CNMAT*. 2007.  New Interfaces for Musical Expression. Pages 100-105. 
 
-**URL**: <http://cnmat.berkeley.edu/publications/query_system_open_sound_control>
-
 **Download**: [files/Zbyszynski_NIME_CR02.pdf](../files/Zbyszynski_NIME_CR02.pdf)
 
 **Abstract**: We summarize a decade of musical projects and research employing Wacom digitizing tablets as musical controllers, discussing general implementation schemes using Max/MSP and OpenSoundControl, and specific implementations in musical improvisation, interactive sound installation, interactive multimedia performance, and as a compositional assistant. We examine two-handed sensing strategies and schemes for gestural mapping.

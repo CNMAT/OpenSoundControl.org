@@ -1,8 +1,8 @@
 # Open Sound Control 1.0 Specification
 
-Matthew Wright. *Open Sound Control 1.0 Specification*. 2002.  Software PUBLICATION. 
+Matthew Wright. *Open Sound Control 1.0 Specification*. 2002.  Web publication. 
 
-**URL**: <spec-1_0>
+**URL**: <../spec-1_0.html>
 
 **Context**: This was a featured publication on the legacy (pre-2011) opensoundcontrol.org website, ported to the new site by Matt Wright in early 2021
 

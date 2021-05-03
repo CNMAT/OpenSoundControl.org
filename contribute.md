@@ -23,6 +23,7 @@ web forms:
   * Simple boilerplate template code that can be a starting point for
     OSC sending/receiving in various languages
   * Suggested edit/correction/update to an existing page on the site.
+  * Another useful [perspective](perspectives.html) on OSC.
   * ...
 
 Site editors will manually review form submissions and approve all

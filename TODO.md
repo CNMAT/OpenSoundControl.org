@@ -89,6 +89,8 @@ Prerequisites:
 
 <https://x-io.co.uk/contact/>
 
+linux-audio-user@lists.linuxaudio.org
+
 
 
 ## Future improvements

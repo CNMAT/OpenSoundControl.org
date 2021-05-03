@@ -1,6 +1,6 @@
 # An OSC Driver Framework for Gesture Sensors
 
-Stephen PopeTravis. *An OSC Driver Framework for Gesture Sensors*. 2004.  OSC Conference 2004. 
+Stephen Travis Pope . *An OSC Driver Framework for Gesture Sensors*. 2004.  OSC Conference 2004. 
 
 **Download**: [files/stp-create-osc.pdf](../files/stp-create-osc.pdf)
 

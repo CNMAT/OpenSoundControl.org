@@ -1,6 +1,6 @@
 # EtherSense, an OSC-based sensor platform
 
-Emmanuel FlÃ©ty, Nicolas Leroy. *EtherSense, an OSC-based sensor platform*. 2004.  OSC Conference 2004. 
+Emmanuel Fléty, Nicolas Leroy. *EtherSense, an OSC-based sensor platform*. 2004.  OSC Conference 2004. 
 
 **Download**: [files/ethersense-diagram.gif](../files/ethersense-diagram.gif)
 

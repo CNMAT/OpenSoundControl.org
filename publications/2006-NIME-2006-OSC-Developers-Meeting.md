@@ -1,8 +1,6 @@
 # NIME 2006 OSC Developers Meeting
 
-Matt Wright, RÃ©my Muller. *NIME 2006 OSC Developers Meeting*. 2006.  NIME 2006. 
-
-**URL**: <http://www.plateforme-virage.org/?p=1444>
+Matt Wright, Rémy Muller. *NIME 2006 OSC Developers Meeting*. 2006.  NIME 2006. 
 
 **Abstract**: Remy Muller (from IRCAM) and I organized an OSC Developers' Meeting at the 2006 NIME conference (http://nime06.ircam.fr). The meeting was organized at the last minute and I profoundly apologize that nobody remembered to send out an invitation to the osc_dev list. Nevertheless, there were about 20 OSC developers in attendance.
 

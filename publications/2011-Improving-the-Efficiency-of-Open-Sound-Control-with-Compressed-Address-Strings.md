@@ -1,6 +1,6 @@
 # Improving the Efficiency of Open Sound Control with Compressed Address Strings
 
-Jari Kleimola, Patrick McGlynn. *Improving the Efficiency of Open Sound Control with Compressed Address Strings*. 2011.  Sound and Music Computing Conference (SMC-2011). Pages pp. 479-485. 
+Jari Kleimola, Patrick McGlynn. *Improving the Efficiency of Open Sound Control with Compressed Address Strings*. 2011.  Sound and Music Computing Conference (SMC-2011). Pages 479-485. 
 
 **URL**: <http://www.acoustics.hut.fi/publications/papers/smc2011-osc>
 

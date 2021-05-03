@@ -1,6 +1,6 @@
 # Real-time Distributed Media Applications in LANs with OSC
 
-Tristan Jehan, Dan Overholt, Hugo GarciaSolÃ­s , Cati Vaucelle. *Real-time Distributed Media Applications in LANs with OSC*. 2004.  OSC Conference 2004. 
+Tristan Jehan, Dan Overholt, Hugo Solís Garcia, Cati Vaucelle. *Real-time Distributed Media Applications in LANs with OSC*. 2004.  OSC Conference 2004. 
 
 **Download**: [files/Tristan-2004-OSC-Poster.pdf](../files/Tristan-2004-OSC-Poster.pdf)
 

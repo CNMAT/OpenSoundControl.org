@@ -1,6 +1,6 @@
 # Preparation for Interactive Live Computer Performance in Collaboration with a Symphony Orchestra
 
-Timothy Madden, Ronald SmithBruce , Matthew Wright, David Wessel. *Preparation for Interactive Live Computer Performance in Collaboration with a Symphony Orchestra*. 2001.  ICMC 2001. 
+Timothy Madden, Ronald Bruce Smith, Matthew Wright, David Wessel. *Preparation for Interactive Live Computer Performance in Collaboration with a Symphony Orchestra*. 2001.  ICMC 2001. 
 
 **Abstract**: This paper describes the design, implementation, and use of an interactive computer-based instrument in the context of a composition for orchestra and live electronics. We will begin with an overview of the piece from a compositional point of view, emphasizing the musical goals for the electronics aspect. Then we will discuss the extremely demanding technical requirements of integrating live electronics with a full orchestra. We will describe the interactive instrument in detail, emphasizing the novel mapping of performer's gestures to computer-generated sound events and the novel OpenSound Control-based structure of the software.
 

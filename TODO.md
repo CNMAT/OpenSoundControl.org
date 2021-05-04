@@ -80,6 +80,10 @@ Something something [CCRMA
 sysadmin](https://ccrma.stanford.edu/docs/system/sysadmin.html)
 something something.
 
+Make sure the new site gets archived on archive.org.
+
+- <https://archive-it.org/blog/files/2021/03/Archive-It_Basic.pdf> ?
+
 
 ## Charm offensive
 

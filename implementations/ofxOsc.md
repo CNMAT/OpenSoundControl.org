@@ -24,4 +24,4 @@ ofxOsc is an add-on for the [openFrameworks](http://openframeworks.cc/) system t
 **Bundle support**: Creates Bundles, Supports Nested Bundles
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

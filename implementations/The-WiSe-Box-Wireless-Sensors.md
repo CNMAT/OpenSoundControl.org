@@ -22,4 +22,4 @@ The WiSe Box project was started to solve the question of multiple performers eq
 **Supported OSC types**: i: int32
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

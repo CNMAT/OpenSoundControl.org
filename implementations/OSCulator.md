@@ -26,4 +26,4 @@ OSCulator is a software that links your controllers to your music and video soft
 **Bundle support**: Reads Bundles, Creates Bundles
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

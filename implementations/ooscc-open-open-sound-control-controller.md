@@ -24,4 +24,4 @@ The ooscc is an open source/hardware controller whose eventual goal is to allow 
 **Supported OSC types**: i: int32
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

@@ -26,4 +26,4 @@ NetUtil is a compact java library for sending and receiving messages using the O
 **Bundle support**: Reads Bundles, Creates Bundles
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

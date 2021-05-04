@@ -26,4 +26,4 @@ TJShow is a show controller that can control a wide range of devices through pro
 **Timetag support**: Performs scheduling on received timestamped data
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

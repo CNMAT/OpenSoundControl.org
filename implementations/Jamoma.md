@@ -20,4 +20,4 @@ Jamoma provides a clear structure and common features for building Max/MSP/Jitte
 **Platform(s)**: Windows, Macintosh
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

@@ -24,4 +24,4 @@ DSSI (pronounced "dizzy") is an API for audio processing plugins, particularly u
 **Supported OSC types**: i: int32, s: string, f: float32, m: MIDI message
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

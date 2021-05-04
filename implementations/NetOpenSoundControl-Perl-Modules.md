@@ -28,4 +28,4 @@ Net::OpenSoundControl provides a translation from OSC messages to Perl datastruc
 **Timetag support**: Generates "immedate" timestamp, Timestamps are UTC-synchronized
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

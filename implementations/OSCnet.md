@@ -28,4 +28,4 @@ A free OSC library for Microsoft.Net with a **full** implementation of the OSC p
 **Timetag support**: Generates "immedate" timestamp
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

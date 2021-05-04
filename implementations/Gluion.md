@@ -16,4 +16,4 @@ site is active as of 2021.
 The gluion is a new sensor interface for music and media applications that stands out for its speed and flexibility. thru the use of FPGA technology it can be adapted for many specific needs. While most other interfaces only feature analog inputs and simple digital I/O, the gluion offers connectivity to more complex digital sensors (and actuators!). Simple examples are rotary encoders and ultrasound distance measurement - for details and more examples make sure to check the digital sensors section.
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

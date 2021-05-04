@@ -28,4 +28,4 @@ Ruby OSC implementation <p> - Consise code - Test driven developed - 1.9.1 and j
 **Timetag support**: Generates "immedate" timestamp, Generates timestamped sequenced data, Performs scheduling on received timestamped data
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

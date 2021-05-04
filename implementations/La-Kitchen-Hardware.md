@@ -16,4 +16,4 @@ http://www.le-hub.org/ is the main site. Unclear if they are using OSC at all fr
 The Toaster, the Kroonde, and the Warhol are high speed, high precision, captation systems, dedicated to real time applications. they can be used for artistic interactive installation or for musical interface etc.
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

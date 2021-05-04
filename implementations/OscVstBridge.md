@@ -28,4 +28,4 @@ A VST plugin that bridges VST data to the Open Sound Control networked domain. T
 **Timetag support**: Generates timestamped sequenced data, Timestamps are UTC-synchronized, Performs scheduling on received timestamped data
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

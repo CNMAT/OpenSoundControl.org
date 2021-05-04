@@ -31,4 +31,4 @@ CNMAT's OpenSoundControl object extends MaxMSP 4.5+ to support OSC bundles. <p> 
 **Timetag support**: Generates "immedate" timestamp, Generates timestamped sequenced data, Timestamps are UTC-synchronized, Performs scheduling on received timestamped data
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

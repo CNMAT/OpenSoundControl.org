@@ -24,4 +24,4 @@ Lily is an Open Source, browser-based, visual programming environment written in
 **Supported OSC types**: i: int32, s: string, f: float32, T: true, F: false
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

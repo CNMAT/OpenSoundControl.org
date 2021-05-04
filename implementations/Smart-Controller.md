@@ -24,4 +24,4 @@ The Smart Controller is a portable hardware device that allows performers to cre
 **Supported OSC types**: i: int32, s: string, f: float32
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

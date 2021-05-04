@@ -24,4 +24,4 @@ This is a proposal for a standardized namespace within OSC. <p> Its main applica
 **Supported OSC types**: i: int32, b: blob, T: true, F: false, N: null
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

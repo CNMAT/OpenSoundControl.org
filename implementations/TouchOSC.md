@@ -24,4 +24,4 @@ TouchOSC is an iPhone/iPod Touch application that lets you send and receive Open
 **Supported OSC types**: i: int32, f: float32
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](https://web.archive.org) at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

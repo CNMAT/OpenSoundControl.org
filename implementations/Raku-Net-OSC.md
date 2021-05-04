@@ -1,6 +1,6 @@
 # Raku-Net-OSC
 
-**[status](../implementation-status.html)**: Active / maintained (as of )
+**[status](../implementation-status.html)**: Active / maintained
 
 **Project Type**: Programming Language Library
 

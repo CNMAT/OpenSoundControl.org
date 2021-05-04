@@ -121,7 +121,14 @@ tail +2 $tsv | \
             echo "" >> $FILENAME
         fi
 
-        echo "**[status](../implementation-status.html)**: $STATUS (as of $STATUSDATE)" >> $FILENAME
+        if [ ! -z "$STATUSDATE" ] ; then
+            ASOF=" (as of $STATUSDATE)";
+        else
+            ASOF="";
+        fi
+        
+
+        echo "**[status](../implementation-status.html)**: ${STATUS}${ASOF}" >> $FILENAME
         echo "" >> $FILENAME
         if  [ ! -z "$STATUSDETAILS" ] ; then
             echo "**Status details**: " >> $FILENAME

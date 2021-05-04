@@ -1,6 +1,13 @@
 
 # Site Implementation To Do list
 
+## Jeremy
+
+Fix the URLs in implementations.tsv that went into "Jeremy's Homepage" column 3 
+
+Fix broken links from publications into http://cnmat.berkeley.edu/publications
+
+
 ## Hallie
 
 Fix broken URLs of 2004 conference publications
@@ -111,16 +118,13 @@ Link to every top-level page from the prose of the home page:
 
 ### Code improvements
 
-- leave out "status details" label if contents are empty
+
 
 - Make accept-new-implementations handle image downloads
 
-- still need accept-new-publications.sh
-
-- Local download of publications-that-are-downloasd
+- accept-new-publications.sh local download of publications-that-are-downloads
   - rewrite those URLs to be served locally
   - document editor's workflow for this (when to commit the downloaded files etc)
-
 
 - Make the one build script build everything (calling
   build-implementations etc as needed)
@@ -132,13 +136,15 @@ build-index.sh will source)
 
 - refactor everything about build?
 
+- Let build-implementations.sh take an argument for the last N lines in the
+TSV instead of always deleting and rebuilding everything
 
-### Other site contributions
+### Other structured site contributions
 
 What other kinds of community contributions does the new site solicit?
 (List in [contribute](contribute.html))
 
-For each, need to:
+Do we want to structure these?  If so, for each, need to:
 
 - decide the fields
 - make the Google form

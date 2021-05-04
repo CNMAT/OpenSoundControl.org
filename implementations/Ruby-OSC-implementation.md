@@ -25,5 +25,7 @@ This seems to be the most current Ruby implementation. An update with a few bugf
 
 **Bundle support**: Reads Bundles, Creates Bundles, Supports Nested Bundles
 
+**Transport support**: UDP
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:33

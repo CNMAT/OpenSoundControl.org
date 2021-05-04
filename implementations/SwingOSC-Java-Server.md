@@ -23,5 +23,7 @@ SwingOSC is intended as a compact java(tm)-reflection/beans and swing based GUI 
 
 **Supported OSC types**: i: int32, b: blob, s: string, f: float32, h: int64, d: float64, T: true, F: false, []: array
 
+**Transport support**: UDP, TCP
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:33

@@ -23,5 +23,7 @@ OSC for Matlab -- based on Liblo. Supports windows, linux, osx.
 
 **Supported OSC types**: i: int32, s: string, f: float32, d: float64, T: true, F: false
 
+**Transport support**: UDP
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32

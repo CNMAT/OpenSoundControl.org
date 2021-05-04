@@ -25,5 +25,7 @@ oscP5 is an osc implementation for the programming environment [processing](http
 
 **Bundle support**: Reads Bundles, Creates Bundles
 
+**Transport support**: UDP, TCP
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32

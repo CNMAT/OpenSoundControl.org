@@ -25,9 +25,11 @@ Qualisys Track Manager (QTM) can stream data in Open Sound Control (OSC) format 
 
 **Bundle support**: Creates Bundles
 
+**Transport support**: HTTP
+
 ## Images 
 
 <https://cdn-content.qualisys.com/assets/images/qualisys-logo.svg>
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (Admin)](https://www.qualisys.com/) at 4/3/2021 21:24:14
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/3/2021 21:24:14

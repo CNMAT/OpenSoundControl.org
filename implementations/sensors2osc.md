@@ -27,9 +27,11 @@ This is an Android app for sending sensor data via Open Sound Control (OSC).
 
 **Timetag support**: unknown
 
+**Transport support**: UDP, TCP
+
 ## Images 
 
 <https://sensors2.org/wp-content/uploads/2014/12/osc_header.png>
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (Admin)](https://sensors2.org/osc/) at 4/3/2021 21:02:42
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/3/2021 21:02:42

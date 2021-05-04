@@ -27,6 +27,8 @@ The CNMAT Stompbox 2.0 is a microcontroller-based, WiFi/Ethernet connected OSC I
 
 **Timetag support**: Generates timestamped sequenced data
 
+**Transport support**: UDP, Bidirectional UDP (via sendto/recvfrom)
+
 ## Publications 
 
 forthcoming
@@ -36,4 +38,4 @@ forthcoming
 <forthcoming>
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner](https://www.jeremywagner.info) at 3/8/2021 12:54:10
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 3/8/2021 12:54:10

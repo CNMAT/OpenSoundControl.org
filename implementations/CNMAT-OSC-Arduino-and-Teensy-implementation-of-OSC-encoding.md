@@ -27,5 +27,7 @@ Arduino (C++ subset) library and examples for embedded controllers to send and r
 
 **Timetag support**: Generates "immediate" timestamp, Generates timestamped sequenced data
 
+**Transport support**: UDP, Serial-SLIP
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 4/17/2021 12:52:12
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/17/2021 12:52:12

@@ -27,5 +27,7 @@ Liblo for embedded systems
 
 **Timetag support**: Generates "immedate" timestamp, Generates timestamped sequenced data
 
+**Transport support**: None / Transport Independent
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32

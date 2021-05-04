@@ -23,5 +23,7 @@ The ooscc is an open source/hardware controller whose eventual goal is to allow 
 
 **Supported OSC types**: i: int32
 
+**Transport support**: UDP
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32

@@ -25,5 +25,7 @@ q3osc is a heavily modified version of the ioquake3 gaming engine featuring an i
 
 **Bundle support**: Reads Bundles, Creates Bundles
 
+**Transport support**: Bidirectional UDP (via sendto/recvfrom)
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:33

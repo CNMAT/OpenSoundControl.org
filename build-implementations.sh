@@ -127,13 +127,14 @@ tail +2 $tsv | \
             ASOF="";
         fi
         
-
-        echo "**[status](../implementation-status.html)**: ${STATUS}${ASOF}" >> $FILENAME
-        echo "" >> $FILENAME
-        if  [ ! -z "$STATUSDETAILS" ] ; then
-            echo "**Status details**: " >> $FILENAME
-            echo "$STATUSDETAILS" >> $FILENAME
-            echo "" >> $FILENAME            
+        if [ ! -z "$STATUS" ] ; then
+            echo "**[status](../implementation-status.html)**: ${STATUS}${ASOF}" >> $FILENAME
+            echo "" >> $FILENAME
+            if  [ ! -z "$STATUSDETAILS" ] ; then
+                echo "**Status details**: " >> $FILENAME
+                echo "$STATUSDETAILS" >> $FILENAME
+                echo "" >> $FILENAME            
+            fi
         fi
 
         if [ ! -z "$TYPE" ] ; then
@@ -189,6 +190,13 @@ tail +2 $tsv | \
             echo "" >> $FILENAME
         fi
 
+        if [ ! -z "$TRANSPORT" ] ; then
+            echo "**Transport support**: ${TRANSPORT}" >> $FILENAME
+            echo "" >> $FILENAME
+        fi
+
+
+
         if [ ! -z "$PUBLICATIONS" ] ; then
             echo "## Publications " >> $FILENAME
             echo "" >> $FILENAME
@@ -223,18 +231,22 @@ tail +2 $tsv | \
             echo "" >> $FILENAME
         fi
 
-                
-        if [ -z "$SUBMITTER_WEBSITE" ] ; then
-            FULLSUBMITTER="$SUBMITTER_NAME"
-        else
-            FULLSUBMITTER="[$SUBMITTER_NAME]($SUBMITTER_WEBSITE)"
-        fi
 
-        if [ -z "$UPDATE" ] ; then
-            MAYBEUPDATE="as an update "
+        if [ -z "$SUBMITTER" ] ; then
+            FULLSUBMITTER="Anonymous"
+        else 
+            if [ -z "$SUBMITTER_WEBSITE" ] ; then
+                FULLSUBMITTER="$SUBMITTER_NAME"
+            else
+                FULLSUBMITTER="[$SUBMITTER_NAME]($SUBMITTER_WEBSITE)"
+            fi
         fi
         
-
+        if [ -z "$UPDATE" ] ; then
+            MAYBEUPDATE="as an update "
+        else
+            MAYBEUPDATE=""
+        fi
 
         echo "---" >> $FILENAME
         echo "Submitted "$MAYBEUPDATE"to [opensoundcontrol.org](https://opensoundcontrol.org) by $FULLSUBMITTER at $TIMESTAMP" >> $FILENAME

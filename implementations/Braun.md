@@ -21,5 +21,7 @@ Braun is an application for visualising Open Sound Control (OSC) data. It acts a
 
 **Supported OSC types**: i: int32, f: float32, h: int64, d: float64
 
+**Transport support**: UDP
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32

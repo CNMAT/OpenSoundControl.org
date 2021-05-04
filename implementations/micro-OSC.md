@@ -27,5 +27,7 @@ micro-OSC (uOSC) is a firmware runtime system for embedded platforms designed to
 
 **Timetag support**: Generates "immedate" timestamp, Generates timestamped sequenced data, Timestamps are UTC-synchronized, Performs scheduling on received timestamped data
 
+**Transport support**: Serial-SLIP
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32

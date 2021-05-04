@@ -23,5 +23,7 @@ Bowsense is a compact wireless motion sensor device, with 3D accelerometers and 
 
 **Supported OSC types**: i: int32, s: string
 
+**Transport support**: UDP, Other
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32

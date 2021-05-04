@@ -21,5 +21,7 @@ OSC enables interaction between different audio processes, and in particular bet
 
 **Supported OSC types**: i: int32, s: string, f: float32, h: int64, d: float64, c: char
 
+**Transport support**: UDP
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32

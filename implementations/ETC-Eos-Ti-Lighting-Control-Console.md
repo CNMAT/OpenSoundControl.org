@@ -27,9 +27,11 @@ ETC consoles are the industry standard in theater lighting.  These consoles supp
 
 **Timetag support**: Unknown
 
+**Transport support**: UDP, TCP, Bidirectional UDP (via sendto/recvfrom)
+
 ## Images 
 
 <https://www.etcconnect.com/Content/Images/logo-header.png>
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (admin)](https://www.etcconnect.com/) at 4/3/2021 14:45:05
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/3/2021 14:45:05

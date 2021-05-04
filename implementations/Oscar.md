@@ -17,5 +17,7 @@ Oscar is an OSC-to-Flash bridge, much like Flosc, developed with Cocoa and Pytho
 
 **Platform(s)**: Macintosh
 
+**Transport support**: UDP
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32

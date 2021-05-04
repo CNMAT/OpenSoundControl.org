@@ -20,4 +20,4 @@ KWlive is the (working) name for the set of applications within the KeyWorx plat
 **Platform(s)**: Macintosh
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32

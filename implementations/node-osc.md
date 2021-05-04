@@ -25,5 +25,7 @@ This OSC wrapper for the Raspberry Pi omxplayer allows users to trigger video pl
 
 **Bundle support**: Reads Bundles
 
+**Transport support**: UDP, TCP
+
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (Admin)](https://github.com/MylesBorins/node-osc) at 4/3/2021 16:18:34
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/3/2021 16:18:34

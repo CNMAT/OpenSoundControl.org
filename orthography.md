@@ -32,6 +32,7 @@ perhaps others.)  The paper also introduced the all-CamelCase
 
 The [2002 OSC Spec 1.0](spec-1_0.html) used the remaining alternative,
 "Open Sound Control" as three separate words with spaces.
+([Wikipedia](https://en.wikipedia.org/wiki/Open_Sound_Control) too.)
 
 The 2007 original OpenSoundControl.org website strictly used "OSC"
 except in the (all-one-word,

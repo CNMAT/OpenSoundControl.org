@@ -50,6 +50,8 @@ Find easily findable implementations:
 * Search for Android apps
 * <https://en.wikipedia.org/wiki/Open_Sound_Control#Applications>
 
+Add lighting consoles such as <https://www.fullcompass.com/prod/511232-etc-colorsource-20-av-dmx-control-console-for-40-fixtures-with-20-faders-hdmi-and-audio-output>
+
 
 ## sendOSC and dumpOSC
 

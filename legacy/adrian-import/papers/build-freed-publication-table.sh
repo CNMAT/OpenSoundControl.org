@@ -21,33 +21,47 @@ for h in *.html ; do
 
     TITLE=`pup -p '[class="biblio-field-contents-title"] text{}' < $h`
 
-    # so do it the hard way
+    if [ -z "$TITLE" ]  ; then
+        # This is a Freed website self-publication
+        TITLE=`pup -p '[class="print-title"] text{}' < $h`
+        PUB_TYPE="Blog post"
+        PUB_DETAILS="Blog post"
+        AUTHORS="Adrian Freed"
+        FIRST_AUTHOR_LAST_NAME="Freed"
 
-    PUB_TYPE=`pup -p '[class="biblio-field-contents-type"] text{}' < $h`
-    # echo PUB_TYPE $PUB_TYPE
+        YEAR=`pup -p '[class="submitted"] text{}' < $h | awk -F/ '{print $3}' | awk '{print $1}'`
+        # echo YEAR $YEAR
+    else
+        PUB_TYPE=`pup -p '[class="biblio-field-contents-type"] text{}' < $h`
+        # echo PUB_TYPE $PUB_TYPE
 
-    
-    AUTHORSBIG=`pup -p '[class="biblio-field-contents-authors"] text{}' < $h`
-    # echo AUTHORSBIG $AUTHORSBIG 
+        PUB_DETAILS=`pup -p '[class="biblio-field-contents-secondary-title"] text{}' < $h`
+    # echo PUB_DETAILS $PUB_DETAILS
 
-    # Each author's name is a link with "Name [1]" syntax.
-    # Discard the part [in brackets]    
-
-    AUTHORS=`echo $AUTHORSBIG | sed 's/\[[^\]]*\]//g' `
-
-    # echo $AUTHORS
-
-    # Grab first author's last name while it's conveniently at the beginning
-    FIRST_AUTHOR_LAST_NAME=`echo "$AUTHORS" | awk -F \, '{print $1}'`
-
-    # echo FIRST_AUTHOR_LAST_NAME $FIRST_AUTHOR_LAST_NAME AUTHORS $AUTHORS
 
     
-    YEAR=`pup -p '[class="biblio-field-contents-year"] text{}' < $h`
-    # echo $YEAR
+        AUTHORSBIG=`pup -p '[class="biblio-field-contents-authors"] text{}' < $h`
+        # echo AUTHORSBIG $AUTHORSBIG 
 
-    URL=`pup -p '[class="print-source_url"] a attr{href}' < $h`
-    # echo URL $URL
+        # Each author's name is a link with "Name [1]" syntax.
+        # Discard the part [in brackets]    
+
+        AUTHORS=`echo $AUTHORSBIG | sed 's/\[[^\]]*\]//g' `
+
+        # echo $AUTHORS
+
+        # Grab first author's last name while it's conveniently at the beginning
+        FIRST_AUTHOR_LAST_NAME=`echo "$AUTHORS" | awk -F \, '{print $1}'`
+
+        # echo FIRST_AUTHOR_LAST_NAME $FIRST_AUTHOR_LAST_NAME AUTHORS $AUTHORS
+
+    
+        YEAR=`pup -p '[class="biblio-field-contents-year"] text{}' < $h`
+        # echo $YEAR
+    fi
+
+    # echo $AUTHORS $TITLE $PUB_TYPE $YEAR
+
 
     ABSTRACT=`pup -p '[class="biblio-field-contents-abst-e"] text{}' < $h | tr -d '\n'`
     # echo ABSTRACT $ABSTRACT
@@ -55,12 +69,11 @@ for h in *.html ; do
     # Apparently not present
     PAGES=''
 
-    # Publication details is the hairy part because of the different types
-    # initialize and hope we overwrite:
-    PUB_DETAILS=`pup -p '[class="biblio-field-contents-secondary-title"] text{}' < $h`
     
-    echo PUB_DETAILS $PUB_DETAILS
-    
+    URL=`pup -p '[class="print-source_url"] a attr{href}' < $h`
+    # echo URL $URL
+
+
 
     # Now write all this publication's data as a row of $tsv
     

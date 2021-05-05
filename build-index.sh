@@ -59,14 +59,13 @@ for d in . $dirs; do
            
         # >&2 echo file $m is html $mhtml;
 
-        # XXX these should grep for one or more # followed by a space
         if $buildtoc; then
-            # All headings; strip out any legacy HTML anchors
-            egrep ^\# $m | sed 's/\[\]{.*}//g' > $tmpfile;
+            # All headings | strip out any legacy HTML anchors
+            egrep "^\#+ " $m | sed 's/\[\]{.*}//g' > $tmpfile;
         else
-            # The "index" = only H1 toplevel headings
+            # The "page list" = only H1 toplevel headings
             # XXX this is a kludge!  This requires each file to have exactly one H1
-            egrep ^\# $m | grep -v "##" | head -1 > $tmpfile;
+            egrep "^\# " $m | head -1 > $tmpfile;
         fi
 
         # Make index or toc able to be output as rawtext
@@ -110,7 +109,7 @@ for d in . $dirs; do
                 done < $tmpfile;
             else
 
-                # Index has one line per .md file
+                # Page List has one line per .md file
 
                 # kludge to solve the "nerdy version" problem
 

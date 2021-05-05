@@ -6,7 +6,7 @@ Matthew Wright, Adrian Freed, Ali Momeni. *Open Sound Control: State of the Art 
 
 **Download**: [files/Open+Sound+Control-state+of+the+art.pdf](../files/Open+Sound+Control-state+of+the+art.pdf)
 
-**Abstract**: OpenSoundControl (?OSC?) is a protocol for communication among computers, sound synthesizers, and other multimedia devices that is optimized for modern networking technology. OSC has achieved wide use in the field of computer-based new interfaces for musical expression for wide-area and local-area networked distributed music systems, inter-process communication, and even within a single application.
+**Abstract**: OpenSoundControl ("OSC") is a protocol for communication among computers, sound synthesizers, and other multimedia devices that is optimized for modern networking technology. OSC has achieved wide use in the field of computer-based new interfaces for musical expression for wide-area and local-area networked distributed music systems, inter-process communication, and even within a single application.
 
 **Context**: This was a featured publication on the legacy (pre-2011) opensoundcontrol.org website, ported to the new site by Matt Wright in early 2021
 

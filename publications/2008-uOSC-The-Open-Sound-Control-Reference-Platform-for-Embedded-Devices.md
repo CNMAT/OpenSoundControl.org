@@ -1,6 +1,6 @@
 # uOSC: The Open Sound Control Reference Platform for Embedded Devices
 
-Schmeder, Andy  , and Freed Adrian . *uOSC: The Open Sound Control Reference Platform for Embedded Devices*. 2008.  NIME. 
+Andy Schmeder, Adrian Freed. *uOSC: The Open Sound Control Reference Platform for Embedded Devices*. 2008.  NIME. 
 
 **URL**: <http://www.adrianfreed.com/content/uosc-open-sound-control-reference-platform-embedded-devices>
 
@@ -9,4 +9,4 @@ Schmeder, Andy  , and Freed Adrian . *uOSC: The Open Sound Control Reference Pla
 **Context**: Adrian Freed kindly provided a parseable collection of OSC-related papers from his website, ported to the new site by Matt Wright in May 2021
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 16:58:20
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 17:53:01

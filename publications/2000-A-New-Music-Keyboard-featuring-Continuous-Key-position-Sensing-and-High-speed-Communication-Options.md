@@ -1,6 +1,6 @@
 # A New Music Keyboard featuring Continuous Key-position Sensing and High-speed Communication Options
 
-Freed, Adrian  , and Avizienis Rimas . *A New Music Keyboard featuring Continuous Key-position Sensing and High-speed Communication Options*. 2000.  International Computer Music Conference. 
+Adrian Freed, Rimas Avizienis. *A New Music Keyboard featuring Continuous Key-position Sensing and High-speed Communication Options*. 2000.  International Computer Music Conference. 
 
 **URL**: <http://www.adrianfreed.com/content/new-music-keyboard-featuring-continuous-key-position-sensing-and-high-speed-communication-op>
 
@@ -9,4 +9,4 @@ Freed, Adrian  , and Avizienis Rimas . *A New Music Keyboard featuring Continuou
 **Context**: Adrian Freed kindly provided a parseable collection of OSC-related papers from his website, ported to the new site by Matt Wright in May 2021
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 16:58:22
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 17:53:02

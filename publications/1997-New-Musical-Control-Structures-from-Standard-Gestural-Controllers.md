@@ -1,6 +1,6 @@
 # New Musical Control Structures from Standard Gestural Controllers
 
-Wright, Matthew  , Wessel David  , and Freed Adrian . *New Musical Control Structures from Standard Gestural Controllers*. 1997.  International Computer Music Conference. 
+Matthew Wright, David Wessel, Adrian Freed. *New Musical Control Structures from Standard Gestural Controllers*. 1997.  International Computer Music Conference. 
 
 **URL**: <http://www.adrianfreed.com/content/new-musical-control-structures-standard-gestural-controllers>
 
@@ -9,4 +9,4 @@ Wright, Matthew  , Wessel David  , and Freed Adrian . *New Musical Control Struc
 **Context**: Adrian Freed kindly provided a parseable collection of OSC-related papers from his website, ported to the new site by Matt Wright in May 2021
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 16:58:22
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 17:53:03

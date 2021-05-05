@@ -11,4 +11,4 @@ Amar Chaudhary, Adrian Freed, Matthew Wright. *An Open Architecture for Real-Tim
 **Context**: Adrian Freed kindly provided a parseable collection of OSC-related papers from his website, ported to the new site by Matt Wright in May 2021
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 16:58:22
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 17:53:03

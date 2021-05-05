@@ -1,6 +1,6 @@
 # Implementation and Applications of Open Sound Control Timestamps
 
-Schmeder, Andy  , and Freed Adrian . *Implementation and Applications of Open Sound Control Timestamps*. 2008.  ICMC 2008. 
+Andy Schmeder, Adrian Freed . *Implementation and Applications of Open Sound Control Timestamps*. 2008.  ICMC 2008. 
 
 **URL**: <http://www.adrianfreed.com/content/implementation-and-applications-open-sound-control-timestamps>
 
@@ -9,4 +9,4 @@ Schmeder, Andy  , and Freed Adrian . *Implementation and Applications of Open So
 **Context**: Adrian Freed kindly provided a parseable collection of OSC-related papers from his website, ported to the new site by Matt Wright in May 2021
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 16:58:20
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 17:53:01

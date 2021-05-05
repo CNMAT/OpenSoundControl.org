@@ -1,6 +1,6 @@
 # Application of new Fiber and Malleable Materials for Agile Development of Augmented Instruments and Controllers
 
-Freed, Adrian . *Application of new Fiber and Malleable Materials for Agile Development of Augmented Instruments and Controllers*. 2008.  NIME 2008. 
+Adrian Freed . *Application of new Fiber and Malleable Materials for Agile Development of Augmented Instruments and Controllers*. 2008.  NIME 2008. 
 
 **URL**: <http://www.adrianfreed.com/content/application-new-fiber-and-malleable-materials-agile-development-augmented-instruments-and-co>
 
@@ -9,4 +9,4 @@ Freed, Adrian . *Application of new Fiber and Malleable Materials for Agile Deve
 **Context**: Adrian Freed kindly provided a parseable collection of OSC-related papers from his website, ported to the new site by Matt Wright in May 2021
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 16:58:20
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 17:53:01

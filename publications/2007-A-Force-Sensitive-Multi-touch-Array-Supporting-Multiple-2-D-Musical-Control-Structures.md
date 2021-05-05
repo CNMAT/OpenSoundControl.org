@@ -1,6 +1,6 @@
 # A Force Sensitive Multi-touch Array Supporting Multiple 2-D Musical Control Structures
 
-Wessel, David  , Avizienis Rimas  , Freed Adrian  , and Wright Matthew . *A Force Sensitive Multi-touch Array Supporting Multiple 2-D Musical Control Structures*. 2007.  New Interfaces for Musical Expression. 
+David Wessel, Rimas Avizienis, Adrian Freed, Matthew Wright. *A Force Sensitive Multi-touch Array Supporting Multiple 2-D Musical Control Structures*. 2007.  New Interfaces for Musical Expression. 
 
 **URL**: <http://www.adrianfreed.com/content/force-sensitive-multi-touch-array-supporting-multiple-2-d-musical-control-structures>
 
@@ -9,4 +9,4 @@ Wessel, David  , Avizienis Rimas  , Freed Adrian  , and Wright Matthew . *A Forc
 **Context**: Adrian Freed kindly provided a parseable collection of OSC-related papers from his website, ported to the new site by Matt Wright in May 2021
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 16:58:20
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 17:53:02

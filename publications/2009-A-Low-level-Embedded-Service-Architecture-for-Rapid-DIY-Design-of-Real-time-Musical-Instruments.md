@@ -1,6 +1,6 @@
 # A Low-level Embedded Service Architecture for Rapid DIY Design of Real-time  Musical Instruments
 
-Schmeder, Andrew  , and Freed Adrian . *A Low-level Embedded Service Architecture for Rapid DIY Design of Real-time  Musical Instruments*. 2009.  NIME 2009. 
+Andrew Schmeder, Adrian Freed . *A Low-level Embedded Service Architecture for Rapid DIY Design of Real-time  Musical Instruments*. 2009.  NIME 2009. 
 
 **URL**: <http://www.adrianfreed.com/content/low-level-embedded-service-architecture-rapid-diy-design-real-time-musical-instruments>
 
@@ -9,4 +9,4 @@ Schmeder, Andrew  , and Freed Adrian . *A Low-level Embedded Service Architectur
 **Context**: Adrian Freed kindly provided a parseable collection of OSC-related papers from his website, ported to the new site by Matt Wright in May 2021
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 16:58:19
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 17:53:01

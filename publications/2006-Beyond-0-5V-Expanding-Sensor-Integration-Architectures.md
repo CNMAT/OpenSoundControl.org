@@ -1,6 +1,6 @@
 # Beyond 0-5V: Expanding Sensor Integration Architectures
 
-Freed, Adrian  , Avizienis Rimas  , and Wright Matthew . *Beyond 0-5V: Expanding Sensor Integration Architectures*. 2006.  New Interfaces for Musical Expression. 
+Adrian Freed, Rimas Avizienis, Matthew Wright. *Beyond 0-5V: Expanding Sensor Integration Architectures*. 2006.  New Interfaces for Musical Expression. 
 
 **URL**: <http://www.adrianfreed.com/content/beyond-0-5v-expanding-sensor-integration-architectures>
 
@@ -9,4 +9,4 @@ Freed, Adrian  , Avizienis Rimas  , and Wright Matthew . *Beyond 0-5V: Expanding
 **Context**: Adrian Freed kindly provided a parseable collection of OSC-related papers from his website, ported to the new site by Matt Wright in May 2021
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 16:58:20
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 17:53:02

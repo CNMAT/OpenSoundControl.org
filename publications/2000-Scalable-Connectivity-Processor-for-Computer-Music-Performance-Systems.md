@@ -1,6 +1,6 @@
 # Scalable Connectivity Processor for Computer Music Performance Systems
 
-Avizienis, Rimas  , Freed Adrian  , Suzuki Takahiko  , and Wessel David . *Scalable Connectivity Processor for Computer Music Performance Systems*. 2000.  International Computer Music Conference. 
+Rimas Avizienis, Adrian Freed, Takahiko Suzuki, David Wessel. *Scalable Connectivity Processor for Computer Music Performance Systems*. 2000.  International Computer Music Conference. 
 
 **URL**: <http://www.adrianfreed.com/content/scalable-connectivity-processor-computer-music-performance-systems>
 
@@ -9,4 +9,4 @@ Avizienis, Rimas  , Freed Adrian  , Suzuki Takahiko  , and Wessel David . *Scala
 **Context**: Adrian Freed kindly provided a parseable collection of OSC-related papers from his website, ported to the new site by Matt Wright in May 2021
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 16:58:22
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 17:53:03

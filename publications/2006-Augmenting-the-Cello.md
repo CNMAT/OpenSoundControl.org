@@ -1,6 +1,6 @@
 # Augmenting the Cello
 
-Freed, Adrian  , Uitti Frances-Marie  , Wessel David  , and Zbyszynski Michael . *Augmenting the Cello*. 2006.  New Interfaces for Musical Expression. 
+Adrian Freed, Frances-Marie Uitti, David Wessel, Michael Zbyszynski. *Augmenting the Cello*. 2006.  New Interfaces for Musical Expression. 
 
 **URL**: <http://www.adrianfreed.com/content/augmenting-cello>
 
@@ -9,4 +9,4 @@ Freed, Adrian  , Uitti Frances-Marie  , Wessel David  , and Zbyszynski Michael .
 **Context**: Adrian Freed kindly provided a parseable collection of OSC-related papers from his website, ported to the new site by Matt Wright in May 2021
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 16:58:20
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Adrian Freed](http://adrianfreed.com) at 05/04/2021 17:53:02

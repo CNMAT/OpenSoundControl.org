@@ -40,7 +40,7 @@ Make an actual "implementations" page saying we aspire to point to all known imp
 - Those that have a specific feature? Maybe some commandline examples using the TSV?
 - Fancy in-browser table query / rearrangement seems beyond the scope of the site for now.
 
-
+Make OSC Conference 2004 publications link back to the page
 
 ## Legacy Implementation Research
 

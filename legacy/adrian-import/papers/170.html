@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href='http://www.adrianfreed.com/content/open-sound-control-new-protocol-communicating-sound-synthesizers' />
+    <title>Open Sound Control: A New Protocol for Communicating with Sound Synthesizers</title>
+    <script type="text/javascript" src="/misc/jquery.js?l"></script>
+<script type="text/javascript" src="/misc/drupal.js?l"></script>
+<script type="text/javascript" src="/sites/all/modules/jquerymenu/jquerymenu.js?l"></script>
+<script type="text/javascript" src="/sites/all/libraries/jqzoom_ev-2.3/js/jquery.jqzoom-core.js?l"></script>
+<script type="text/javascript" src="/sites/all/modules/swftools/shared/swfobject2/swfobject.js?l"></script>
+<script type="text/javascript" src="/sites/all/libraries/syntaxhighlighter_2.0.320/scripts/shCore.js?l"></script>
+<script type="text/javascript" src="/sites/all/libraries/syntaxhighlighter_2.0.320/scripts/shBrushCpp.js?l"></script>
+<script type="text/javascript" src="/sites/all/libraries/syntaxhighlighter_2.0.320/scripts/shBrushJava.js?l"></script>
+<script type="text/javascript" src="/sites/all/libraries/syntaxhighlighter_2.0.320/scripts/shBrushPhp.js?l"></script>
+<script type="text/javascript" src="/sites/all/libraries/syntaxhighlighter_2.0.320/scripts/shBrushPython.js?l"></script>
+<script type="text/javascript" src="/misc/tableheader.js?l"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "syntaxhighlighter": { "clipboard": "/sites/all/libraries/syntaxhighlighter_2.0.320/scripts/clipboard.swf" } });
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+$(document).ready(function(){var jqz_options = { zoomWidth: 300, zoomHeight: 300, xOffset: 10, yOffset: 20, title: true, zoomType: "innerzoom" }; $(".jqzoom").jqzoom(jqz_options);});
+//--><!]]>
+</script>
+        <meta name='robots' content='noindex, nofollow' />
+    <link rel='shortcut icon' href='/misc/favicon.ico' type='image/x-icon' />
+    <link type="text/css" rel="stylesheet" media="all" href="/modules/book/book.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/cck/theme/content-module.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/ctools/css/ctools.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/filefield/filefield.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/jquerymenu/jquerymenu.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/libraries/jqzoom_ev-2.3/css/jquery.jqzoom.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/libraries/syntaxhighlighter_2.0.320/styles/shCore.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/libraries/syntaxhighlighter_2.0.320/styles/shThemeDefault.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/taxonomy_browser/taxonomy_browser.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/video_filter/video_filter.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/biblio/biblio.css?l" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/print/css/print.css?l" />
+  </head>
+  <body>
+        <div class="print-logo"><img src="/sites/default/files/garland_logo.jpg" alt="Adrian Freed" title=""  class="print-logo" id="logo" /></div>
+    <div class="print-site_name">Published on <em>Adrian Freed</em> (<a href="http://www.adrianfreed.com">http://www.adrianfreed.com</a>)</div>
+    <p />
+    <div class="print-breadcrumb"><a href="/">Home</a> &gt; <a href="/Publications">Publications</a> &gt; Open Sound Control: A New Protocol for Communicating with Sound Synthesizers</div>
+    <hr class="print-hr" />
+    <h1 class="print-title">Open Sound Control: A New Protocol for Communicating with Sound Synthesizers</h1>
+    <div class="print-content"><div id="node-170" class="node">
+
+
+
+      <span class="submitted">Mon, 09/21/2009 - 10:57 — AdrianFreed</span>
+  
+  <div class="content clear-block">
+    <div id="biblio-node"><span class="Z3988" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft.title=Open+Sound+Control%3A+A+New+Protocol+for+Communicating+with+Sound+Synthesizers&amp;rft.date=1997&amp;rft.spage=101&amp;rft.epage=104&amp;rft.aulast=Wright&amp;rft.aufirst=Matthew&amp;rft.pub=International+Computer+Music+Association+%28ICMA%29&amp;rft.place=Thessaloniki%2C+Hellas"></span><table>
+<tbody>
+ <tr class="odd"><td class="biblio-row-title biblio-field-title-title">Title</td><td class="biblio-field-contents-title">Open Sound Control: A New Protocol for Communicating with Sound Synthesizers</td> </tr>
+ <tr class="even"><td class="biblio-row-title biblio-field-title-type">Publication Type</td><td class="biblio-field-contents-type">Conference Paper</td> </tr>
+ <tr class="odd"><td class="biblio-row-title biblio-field-title-year">Year of Publication</td><td class="biblio-field-contents-year">1997</td> </tr>
+ <tr class="even"><td class="biblio-row-title biblio-field-title-authors">Authors</td><td class="biblio-field-contents-authors"><a href="http://www.adrianfreed.com/Publications/author/13">Wright, Matthew</a> <span class="print-footnote">[1]</span>, and <a href="http://www.adrianfreed.com/Publications/author/2" class="biblio-local-author">Freed Adrian</a> <span class="print-footnote">[2]</span></td> </tr>
+ <tr class="odd"><td class="biblio-row-title biblio-field-title-refereed">Refereed Designation</td><td class="biblio-field-contents-refereed">Refereed</td> </tr>
+ <tr class="even"><td class="biblio-row-title biblio-field-title-secondary-title">Conference Name</td><td class="biblio-field-contents-secondary-title">International Computer Music Conference (ICMC)</td> </tr>
+ <tr class="odd"><td class="biblio-row-title biblio-field-title-date">Date Published</td><td class="biblio-field-contents-date">1997</td> </tr>
+ <tr class="even"><td class="biblio-row-title biblio-field-title-publisher">Publisher</td><td class="biblio-field-contents-publisher">International Computer Music Association (ICMA)</td> </tr>
+ <tr class="odd"><td class="biblio-row-title biblio-field-title-place-published">Conference Location</td><td class="biblio-field-contents-place-published">Thessaloniki, Hellas</td> </tr>
+ <tr class="even"><td class="biblio-row-title biblio-field-title-keywords">Keywords</td><td class="biblio-field-contents-keywords"><a href="http://www.adrianfreed.com/Publications/keyword/36">OSC</a> <span class="print-footnote">[3]</span></td> </tr>
+ <tr class="odd"><td class="biblio-row-title biblio-field-title-abst-e">Abstract</td><td class="biblio-field-contents-abst-e"> Open SoundControl is a new protocol for communication among computers, sound synthesizers, and other multimedia devices that is optimized for modern networking technology. Entities within a system are addressed individually by an open-ended URL-style symbolic naming scheme that includes a powerful pattern matching language to specify multiple recipients of a single message. We provide high resolution time tags and a mechanism for specifying groups of messages whose effects are to occur simultaneously. There is also a mechanism for dynamically querying an Open SoundControl system to find out its capabilities and documentation of its features.
+
+ </td> </tr>
+ <tr class="even"><td class="biblio-row-title biblio-field-title-url">URL</td><td class="biblio-field-contents-url"><a href="http://cnmat.berkeley.edu/http://hdl.handle.net/2027/spo.bbp2372.1997.033/open_sound_control_new_protocol_communicating_sound_synthesizers">http://cnmat.berkeley.edu/http://hdl.handle.net/2027/spo.bbp2372.1997.033/open_sound_control_new_protocol_communicating_sound_synthesizers</a> <span class="print-footnote">[4]</span></td> </tr>
+ <tr class="odd"><td valign="top">Full Text</td><td>  <H3>1 Introduction</H3>
+
+<P>A better integration of computers, controllers and sound synthesizers
+will lead to lower costs, increased reliability, greater user convenience,
+and more reactive musical control. The prevailing technologies to interconnect
+these elements are bus (motherboard or PCI), operating system interface
+(software synthesis), or serial LAN (Firewire, USB, ethernet, fast ethernet).
+It is easy to adapt MIDI streams to this new communication substrate [11].
+To do so needlessly discards new potential and perpetuates MIDI's well-documented
+flaws. Instead we have designed a new protocol optimized for modern transport
+technologies.</P>
+
+<P>Open SoundControl is an open, efficient, transport-independent, message-based
+protocol developed for communication among computers, sound synthesizers,
+and other multimedia devices. Open SoundControl is a machine and operating
+system neutral protocol and readily implementable on constrained, embedded
+systems.</P>
+
+<P>We begin by examining various networking technologies suitable for carrying
+Open SoundControl data and discuss shared features of these technologies
+that impact the design of our protocol.  Next we discuss the encoding and
+formatting of data.  We describe our novel addressing scheme based on a
+URL-style symbolic syntax.  In our last section we specify a number of query
+messages that request information from an Open SoundControl system. </P>
+
+<H3>2 Transport Layer Assumptions</H3>
+
+<P>Open SoundControl is a transport-independent protocol, meaning that it
+is a format for data that can be carried across a variety of networking
+technologies. Networking technologies currently becoming widely available
+and economical include high speed busses such as PCI [8] and medium speed
+serial LANs such as USB [10], IEEE-1394 (&quot;Firewire&quot;) [3], Ethernet,
+and Fast Ethernet [4].  Although Open SoundControl was not designed with
+a particular transport layer in mind, our design reflects features shared
+by modern networking technologies.</P>
+
+<P>We assume that Open SoundControl will be transmitted on a system with
+a bandwidth in the 10+ megabit/sec range.  MIDI's bandwidth, by contrast,
+is only 31.25 kilobit/sec, roughly 300 times slower.  Therefore, our design
+is not preoccupied with squeezing musical information into the minimum number
+of bytes.  We encode numeric data in 32-bit or 64-bit quantities, provide
+symbolic addressing, time-tag messages, and in general are much more liberal
+about using bandwidth for important features.</P>
+
+<P>We assume that data will be delivered in packets (a.k.a. &quot;datagrams&quot;)
+rather than as a stream of data traveling along an established connection.
+ (Although many LANs <I>transmit</I> data serially, they <I>deliver</I>
+ the data as a single block.)  This leads to a protocol that is as stateless
+as possible: rather than assuming that the receiver holds some state from
+previous communications  (e.g., MIDI's running status), we send information
+in larger, self-contained chunks that include all the relevant data in one
+place.  This packet-based delivery model provides a mechanism for <I>synchronicity</I>:
+messages in the same packet (e.g., messages to start each of the notes in
+a chord) can be specified to have their effects occur at the same time as
+each other.  We assume that the network services will tell us the length
+of each packet that we receive.</P>
+
+<P>All modern networking technologies have the notion of multiple devices
+connected together in a LAN, with each device able to send a packet to any
+other device.  So we assume that any number of clients might send Open SoundControl
+messages to a particular device.  We also assume that the transport layer
+provides a return address mechanism that allows a device to send a response
+back to the device that sends it a message.</P>
+
+<H3>3 Data Representation</H3>
+
+<P>All Open SoundControl data is aligned on 4-byte boundaries.  Numeric
+data are encoded using native machine representations of 32-bit or 64-bit
+big-endian twos-complement integers and IEEE floating point numbers.  Strings
+are represented as a sequence of non-null ASCII characters followed by a
+null, padded with enough extra null characters to make the total length
+be a multiple of 4 bytes.  These representations facilitate real-time performance
+by eliminating the need to reformat received data.  (Except for the unavoidable
+big-endian/small-endian conversion.  We note that most small-endian machines
+provide special instructions for this conversion.)</P>
+
+<P>The basic unit of Open SoundControl data is a <I>message</I>, which consists
+of the following:</P>
+
+<UL>
+  <LI>A symbolic address and message name (a string whose meaning is described
+  below)
+  <LI>Any amount of binary data up to the end of the message, which represent
+  the arguments to the message.
+</UL>
+
+<P>An Open SoundControl packet can contain either a single message or a
+<I>bundle</I>.  A bundle consists of the following:</P>
+
+<UL>
+  <LI>The special string &quot;#bundle&quot; (which is illegal as a message
+  address)
+  <LI>A 64 bit fixed point time tag
+  <LI>Any number of messages or bundles, each preceded by a 4-byte integer
+  byte count
+</UL>
+
+<P>Note that bundles are recursively defined; bundles can contain other
+bundles.</P>
+
+<P>Messages in the same bundle are atomic; their effects should be implemented
+concurrently by the receiver.  This provides the important service in multimedia
+applications of specifying values that have to be set simultaneously.</P>
+
+<P>Time tags allow receiving synthesizers to eliminate jitter introduced
+during packet transport by resynchronizing with bounded latency.  They specify
+the desired time at which the messages in the bundle should take effect,
+a powerful mechanism for precise specification of rhythm and scheduling
+of events in the future.  To implement time tags properly, message recipients
+need a real-time scheduler like those described by Dannenberg [1].</P>
+
+<P>Time tags are represented by  a 64 bit fixed point number.  The first
+32 bits specify the number of seconds since midnight on January 1, 1900,
+and the last 32 bits specify fractional parts of a second to a precision
+of about 200 picoseconds.  This is the representation used by Internet NTP
+timestamps [6].  The Open SoundControl protocol does not provide a mechanism
+for clock synchronization; we assume either that the underlying network
+will provide a synchronization service or that the two systems will take
+advantage of a protocol such as NTP or SNTP [7].</P>
+
+<H3>4 Addressing Scheme</H3>
+
+<P>The model for Open SoundControl message addressing is a hierarchical
+set of dynamic objects that include, for example, synthesis voices, output
+channels, filters, and a memory manager. Messages are addressed to a feature
+of a particular object or set of objects through a hierarchical namespace
+similar to URL notation, e.g., /voices/drone-b/resonators/3/set-Q.  This
+protocol does not proscribe anything about the objects that should be in
+this hierarchy or how they should be organized; each system that can be
+controlled by Open SoundControl will define its own address hierarchy. This
+open-ended mechanism avoids the addressing limitations inherent in protocols
+such as MIDI and ZIPI [5] that rely on short fixed length bit fields.</P>
+
+<P>To allow efficient addressing of multiple destination objects for parameter
+updates, we define a pattern-matching syntax similar to regular expressions.
+ When a message's address is a pattern, the receiving device expands the
+pattern into a list of all the addresses in the current hierarchy that match
+the pattern, similar to the way UNIX shell &quot;globbing&quot; interprets
+special characters in filenames.  Each address in the list then receives
+a message with the given arguments.  </P>
+
+<P>We reserve the following special characters for pattern matching and
+forbid their use in object addresses: ?, *, [, ], {, and }. The # character
+is also forbidden in object address names to allow the bundle mechanism.
+ Here are the rules for pattern matching:</P>
+
+<UL>
+  <LI>? matches any single character except /
+  <LI>* matches zero or more characters except /
+  <LI>A string of characters in square brackets (e.g., [string]) matches
+  any character in the string.  Inside square brackets, the minus sign (-)
+  and exclamation point (!) have special meanings:  two characters separated
+  by a minus sign indicate the range of characters between the given two
+  in ASCII collating sequence.  (A minus sign at the end of the string has
+  no special meaning.)  An exclamation point at the beginning of a bracketed
+  string negates the sense of the list, meaning that the list matches any
+  character not in the list.  (An exclamation point anywhere besides the
+  first character after the open bracket has no special meaning.)
+  <LI>A comma-separated list of strings enclosed in curly braces (e.g., {foo,bar})
+  matches any of the strings in the list.
+</UL>
+
+<P>Our experience is that with modern transport technologies and careful
+programming, this addressing scheme incurs no significant performance penalty
+either in network bandwidth utilization or in message processing.</P>
+
+<H3>5 Requests for Information</H3>
+
+<P>Some Open SoundControl messages are requests for information; the receiving
+device (which we'll call the <I>Responder</I> in this section) constructs
+a response to the request and sends it back to the requesting device (which
+we'll call the <I>Questioner</I>).  We assume that the underlying transport
+layer will provide a mechanism for sending a reply to the sender of a message.
+ </P>
+
+<P>Return messages are formatted according to this same Open SoundControl
+protocol.  There is always enough information in a return message to unambiguously
+identify what question is being answered; this allows Questioners to send
+multiple queries without waiting for a response to each before sending the
+next.  The time tag in a return message indicates the time that the Responder
+processed the message, i.e., the time at which the information in the response
+was true.</P>
+
+<H4>Exploring the Address Space</H4>
+
+<P>Any message address that ends with a trailing slash is a query asking
+for the list of addresses underneath the given node.  These messages do
+not take arguments.  This kind of query allows the user of an Open SoundControl
+system to map out the entire address space of possible messages as the system
+is running.</P>
+
+<H4>Message Type Signatures</H4>
+
+<P>Because Open SoundControl messages do not have any explicit type tags
+in their arguments, it is necessary for the sender of a message to know
+how to lay out the argument values so that they will be interpreted correctly.</P>
+
+<P>An address that ends with the reserved name &quot;/type-signature&quot;
+is a query for the &quot;type signature&quot; of a message, i.e., the list
+of types of the arguments it expects.  We have a simple syntax for representing
+type signatures as strings; see our WWW site for details.</P>
+
+<H4>Requests For Documentation</H4>
+
+<P>An address that ends with the reserved name &quot;/documentation&quot;
+is a request for human-readable documentation about the object or feature
+specified by the prefix of the address.  The return message will have the
+same address as the request, and a single string argument.  The argument
+will either be the URL of a WWW page documenting the given object or feature,
+or a human-readable string giving the documentation directly.  This allows
+for &quot;hot-plugging&quot; extensible synthesis resources and internetworked
+multimedia applications.</P>
+
+<H4>Parameter Value Queries</H4>
+
+<P>An address that ends with the reserved name &quot;/current-value&quot;
+is a query of the current value of the parameter specified by the prefix
+of the address.  Presumably this parameter could be set to its current value
+by a message with the appropriate arguments; these arguments are returned
+as the arguments to the message from the Responder. The address of the return
+message should be the same as the address of the request.</P>
+
+<H3>6 Conclusion</H3>
+
+<P>We have had successful early results transmitting this protocol over
+UDP and Ethernet to control real-time sound synthesis on SGI workstations
+from MAX [9] programs running on Macintosh computers.  Composers appreciate
+being freed from the limited addressing model and limited numeric precision
+of MIDI, and find it much easier to work with symbolic names of objects
+than to remember an arbitrary mapping involving channel numbers, program
+change numbers, and controller numbers.  This protocol affords satisfying
+reactive real-time performance.</P>
+
+<H3>7 References</H3>
+
+<P>[1]	Dannenberg, R, 1989.  &quot;Real-Time Scheduling and Computer Accompaniment,&quot;
+in M. Mathews and J. Pierce, Editors, <I>Current Directions in Computer
+Music Research</I>, Cambridge, Massachusetts: MIT Press, pp. 225-261.</P>
+
+<P>[2]	Freed, A.  1996.  &quot;Firewires, LANs and Buses,&quot; from SIGGRAPH
+Course Notes <I>Creating and Manipulating Sound to Enhance Computer Graphics</I>,
+New Orleans, Louisiana, pp. 84-87.</P>
+
+<P>[3]	IEEE 1995.  &quot;1394-1995: IEEE Standard for a High Performance
+Serial Bus,&quot; New York: The Institute of Electronical and Electronic
+Engineers.</P>
+
+<P>[4]	IEEE 1995b.  &quot;802.3u-1995 IEEE Standards for Local and Metropolitan
+Area Networks: Supplement to Carrier Sense Multiple Access with Collision
+Detection (CSMA/CD) Access Method and Physical Layer Specifications: Media
+Access Control (MAC) Parameters, Physical Layer, Medium Attachment Units,
+and Repeater for 100 Mb/s Operation,&quot; New York: The Institute of Electronical
+and Electronic Engineers.</P>
+
+<P>[5]	McMillen, K, D. Wessel, and M. Wright, 1994.  &quot;The ZIPI Music
+Parameter Description Language,&quot; <I>Computer Music Journal</I>, Volume
+18, Number 4, pp. 52-73.</P>
+
+<P>[6]	Mills, D., 1992.  &quot;Network Time Protocol (Version 3) Specification,
+Implementation, and Analysis,&quot; Internet RFC 1305.  (<a href="http://sunsite.auc.dk/RFC/rfc1305.html" title="http://sunsite.auc.dk/RFC/rfc1305.html">http://sunsite.auc.dk/RFC/rfc1305.html</a> <span class="print-footnote">[5]</span>)</P>
+
+<P>[7]	Mills, D., 1996.  &quot;Simple Network Time Protocol (SNTP) Version
+4 for Ipv4, Ipv6 and OSI,&quot; Internet RFC 2030.  (<a href="http://sunsite.auc.dk/RFC/rfc2030.html" title="http://sunsite.auc.dk/RFC/rfc2030.html">http://sunsite.auc.dk/RFC/rfc2030.html</a> <span class="print-footnote">[6]</span>)</P>
+
+<P>[8]	PCI 1993. <I>PCI Local Bus Specification</I>, Revision 2.0, Hillsboro,
+Oregon: PCI Special Interest Group.</P>
+
+<P>[9]	Puckette, M.,  1991. &quot;Combining Event and Signal Processing
+in the MAX Graphical Programming Environment,&quot;  <I>Computer Music Journal</I>,
+Volume 15, Number 3, pp. 58-67.</P>
+
+<P>[10]	The USB web site is <A HREF="http://www.adrianfreed.com/www.usb.org">www.usb.org</A> <span class="print-footnote">[7]</span></P>
+
+<P>[11]	Yamaha 1996.  &quot;Preliminary Proposal for Audio and Music Protocol,
+Draft Version 0.32,&quot; Tokyo, Japan: Yamaha Corporation.
+
+ 
+
+ </td> </tr>
+</tbody>
+</table>
+</div><div class="item-list"><h3>Publication Keywords</h3><ul class="vocabulary-list"><li class="first last"><a href="http://www.adrianfreed.com/taxonomy/term/119">OSC</a> <span class="print-footnote">[8]</span></li>
+</ul></div><table id="attachments" class="sticky-enabled">
+ <thead><tr><th>Attachment</th><th>Size</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td><a href="http://www.adrianfreed.com/sites/default/files/open-soundcontrol-a-new-protocol-for-communicating-with.pdf">open-soundcontrol-a-new-protocol-for-communicating-with.pdf</a> <span class="print-footnote">[9]</span></td><td>53.44 KB</td> </tr>
+</tbody>
+</table>
+  </div>
+
+  <div class="clear-block">
+    <div class="meta">
+          <div class="terms"><ul class="links inline"><li class="taxonomy_term_270 first"><a href="http://www.adrianfreed.com/category/collaborations/coinvented-matt-wright" rel="tag" title="">Coinvented by Matt Wright</a> <span class="print-footnote">[10]</span></li>
+<li class="taxonomy_term_85"><a href="http://www.adrianfreed.com/category/creations/conventions-and-encodings/osc" rel="tag" title="">OSC</a> <span class="print-footnote">[11]</span></li>
+<li class="taxonomy_term_304 last"><a href="http://www.adrianfreed.com/category/exhibitions-and-presentations/icmc" rel="tag" title="">ICMC</a> <span class="print-footnote">[12]</span></li>
+</ul></div>
+        </div>
+
+      </div>
+
+</div>
+</div>
+    <div class="print-footer">Copyright 1960-2021. Adrian Freed. All Rights Reserved
+</div>
+    <hr class="print-hr" />
+    <div class="print-source_url"><strong>Source URL:</strong> <a href="http://www.adrianfreed.com/content/open-sound-control-new-protocol-communicating-sound-synthesizers">http://www.adrianfreed.com/content/open-sound-control-new-protocol-communicating-sound-synthesizers</a></div>
+    <div class="print-links"><p><strong>Links:</strong><br />[1] http://www.adrianfreed.com/Publications/author/13<br />
+[2] http://www.adrianfreed.com/Publications/author/2<br />
+[3] http://www.adrianfreed.com/Publications/keyword/36<br />
+[4] http://cnmat.berkeley.edu/http://hdl.handle.net/2027/spo.bbp2372.1997.033/open_sound_control_new_protocol_communicating_sound_synthesizers<br />
+[5] http://sunsite.auc.dk/RFC/rfc1305.html<br />
+[6] http://sunsite.auc.dk/RFC/rfc2030.html<br />
+[7] http://www.adrianfreed.com/www.usb.org<br />
+[8] http://www.adrianfreed.com/taxonomy/term/119<br />
+[9] http://www.adrianfreed.com/sites/default/files/open-soundcontrol-a-new-protocol-for-communicating-with.pdf<br />
+[10] http://www.adrianfreed.com/category/collaborations/coinvented-matt-wright<br />
+[11] http://www.adrianfreed.com/category/creations/conventions-and-encodings/osc<br />
+[12] http://www.adrianfreed.com/category/exhibitions-and-presentations/icmc<br />
+</p></div>
+    <script type="text/javascript" src="/sites/all/modules/syntaxhighlighter/syntaxhighlighter.min.js?l"></script>
+  </body>
+</html>

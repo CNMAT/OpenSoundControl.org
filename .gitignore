@@ -19,3 +19,6 @@ contributors.md
 # ...except that some of our saved legacy site content came as html
 #  files, so allow those in the repo.
 !legacy/**/*.html
+
+# Also Adrian's "annotated" paper is done in pure html
+!OSCGestureMapping/index.html

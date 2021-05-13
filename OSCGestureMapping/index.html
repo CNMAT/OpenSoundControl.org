@@ -1,0 +1,518 @@
+
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<STYLE>
+a:link {
+  text-decoration: none;
+    color: red;
+
+}
+
+a:visited {
+  text-decoration: none;
+    color: green;
+
+}
+
+a:hover {
+  text-decoration: underline;
+    color: hotpink;
+      color: blue;
+
+
+}
+
+a:active {
+  text-decoration: underline;
+}
+#paper {
+  font-family: Georgia, serif;
+  font-size: 14pt;
+  margin-inline-start: 200px;
+  text-align: justify;
+
+}
+#preamble, #postamble {
+		  font-size: 14pt;
+		  left:-100;
+		  background-color:lightgrey;
+		  left: 0px;
+}
+.Authors,  .Institution{
+  text-align: center;
+}
+.References, .ArticleBody, .Abstract {
+  text-align: justify;
+}
+.intext {
+  &__image {
+        width: 30%;
+
+    float: left;
+  }
+  &__text {
+          width: 90%;
+    display: inline;
+  }
+}
+figure, figurecaption {
+align:center;
+text-align: center;
+}
+.dlcode {
+	font-family: courier;
+}
+.i-left {
+	float: left; 
+	margin: 15px 15px 15px 15px;
+}
+.i-right {
+	float: right; 
+	margin: 15px 15px 15px 15px;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-align:center;
+	  font-family:Tahoma, Verdana, sans-serif;
+
+}
+dl, ul, bl, pre {
+ margin-inline-start: 30px;
+ }
+
+body {
+	margin-right: 20px;
+} 
+ 
+aside {
+	position:absolute;
+			  background-color:lightgrey;
+
+left: 0px;
+	width:180px;
+	text-align: right;
+	  font-size: 12pt;
+}
+video {
+  display: block;
+  margin: auto;
+}
+</STYLE>
+<TITLE>Managing Complexity with Explicit Mapping of Gestures to Sound Control with OSC
+</TITLE>
+</HEAD>
+<BODY>
+<article id="preamble">
+This <a href="http://hdl.handle.net/2027/spo.bbp2372.2001.087">paper</a> 
+was presented by Matt Wright in 2001 at the ICMC in Havana, Cuba.
+<p>
+This annotated version by Adrian Freed borrows some ideas from medieval glosses.
+It is intented to provide context and readability unavailable in the original
+<a href="https://quod.lib.umich.edu/cgi/p/pod/dod-idx/managing-complexity-with-explicit-mapping-of-gestures.pdf?c=icmc;idno=bbp2372.2001.087;format=pdf">
+pdf</a>.
+</article>
+
+<article id="paper">
+<H1><cite>Managing Complexity<br>with Explicit Mapping of Gestures to Sound Control<br>with OSC</cite></H1>
+<section class="Authors">
+<aside>
+John Schott should have been included in this list of authors.
+</aside>
+<p>Matthew Wright
+<br>Adrian Freed
+<br>Ahm Lee
+<br>Tim Madden
+<br>Ali Momeni
+
+<P><I>email:</I> {matt,adrian,ahm,tjmadden,ali}@cnmat.berkeley.edu
+
+<section class="Institution">
+<B>CNMAT</B>
+<br>UC Berkeley
+<br>1750 Arch St.
+<br>Berkeley, CA 94709, USA
+</section>
+
+<section class="Abstract">
+<H2>Abstract</H2>
+We present a novel use of the <abbr title="Open Sound Control">OSC</abbr> protocol to represent the output 
+of gestural controllers as well as the input to sound synthesis processes. With 
+this scheme, the problem of <mark>mapping</mark> gestural input into sound synthesis control 
+becomes a simple translation from OSC messages into other OSC messages. We provide 
+examples of this strategy and show benefits including increased encapsulation 
+and program clarity. 
+</section>
+
+<section class="ArticleBody">
+<H2>Introduction</H2>
+<figure class="i-left" ><img src="sound-check.gif">
+<figcaption>David Wessel (L)<br>Shafqat Ali Kahn<br>Matt Wright (R)</figcaption>
+</figure>
+We  desire expressive real-time control of computer sound synthesis and processing 
+from many different gestural interface devices such as the Boie/Mathews Radio Drum, 
+the Buchla Thunder, Wacom Tablets, gaming joysticks, etc. 
+
+Unlike acoustic instruments, 
+these devices have no built-in associations of the gestures they sense 
+and the resulting sound output.
+
+<figure>
+<img src="controlstructure.png" width="50%">
+</figure>
+
+Indeed, most of the art of designing a real-time-playable 
+computer music instrument lies in designing useful mappings between sensed gestures 
+and sound generating and processing. 
+
+
+<P>Open Sound Control (OSC) offers much to the
+creators of these gesture-to-sound-control mappings: It is general enough to
+represent both the sensed gestures from physical controllers and the parameter
+settings needed to control sound synthesis. It provides a uniform syntax
+and conceptual framework for this mapping. The symbolic names for all OSC
+parameters make explicit what is being controlled and can make programs easier
+to read and understand. An OSC interface to a gestural-sensing or
+signal-processing subprogram is an effective form of abstraction that exposes
+pertinent features while hiding the complexities of implementation.
+</P>
+<aside>David Wessel called these mappings: "control structures" 
+inspired by his studies of cybernetics at Stanford University in the 1960's
+</aside>
+<P>We  present a paradigm for using OSC for  mapping tasks and describe a
+series of examples culled from several years of live performance with a
+variety of gestural controllers and performance paradigms.
+</P>
+
+
+<H2>Open Sound Control</H2>
+
+<P>Open Sound Control (OSC) was originally developed to facilitate the
+distribution of <mark>control-structure</mark>  computations to small arrays of loosely-coupled heterogeneous computer systems.
+ A common application of OSC is to
+communicate control-structure computations from one client machine to an array
+of synthesis servers. The abstraction mechanisms built into OSC, a
+hierarchical name space and regular-expression message dispatch, are also useful
+ in implementations running entirely on a single
+machine.  In this situation we have adapted the OSC client/server model to the organization of the gestural
+component of control-structure computations. 
+<p>The basic strategy is to:
+
+<UL>
+
+<LI>Translate all incoming gestural data into OSC messages with descriptive
+addresses</LI>
+
+<LI>Make all controllable parameters in the rest of the system
+OSC-addressable</LI>
+
+</UL>
+
+
+<P>Now the gestural performance mapping is simply a translation of one set of
+OSC messages to another. This gives performers greater scope and facility in
+choosing how best to effect the required parameter changes.
+</P>
+<H2>An OSC Address Subspace for Wacom Tablet Data</H2>
+<pre>
+<code>
+/{tip, eraser}/{hovering, drawing} x y xtilt ytilt pressure
+/{tip, eraser}/{touch, release} x y xtilt ytilt
+/{airbrush, puckWheel, puckRotation} value
+/buttons/[1-2] booleanValue
+</code>
+</pre>
+<P>Wacom digitizing graphic tablets are attractive gestural interfaces for
+real-time computer music. They provide extremely accurate two-dimensional
+absolute position sensing of a stylus, along with measurements of pressure,
+two-dimensional tilt, and the state of the switches on the side of the stylus,
+with reasonably low latency.  The styli (pens) are two-sided, with a
+<em>tip</em> and an <em>eraser.</em>; 
+<aside>
+Bill Buxton successfully encouraged Wacom to add two-device support. A few models later they
+eliminated this support.
+</aside>
+The tablets also support other
+devices, including a mouse-like <em>puck,</em> and can be used with two
+devices simultaneously.
+
+<P>Unfortunately, this measurement data comes from the Wacom drivers in an inconvenient form. Each 
+of the five continuous parameters is available independently, but another parameter, 
+the <em>device type,</em> indicates what kind of device is being used and, 
+for the case of pens, whether the tip or eraser is being used. For a program to 
+have different behavior based on which end of the pen is used, there must be a 
+switching and gating mechanism to route the continuous parameters to the correct 
+processing based on the <em>device type.</em> Similarly, the tablet senses 
+position and tilt even when the pen is not touching the tablet, so a program that 
+behaves differently based on whether or not the pen is touching the tablet must 
+examine another variable to properly dispatch the continuous parameters.</P>
+
+<P>Instead of simply providing the raw data from the Wacom drivers, our
+<CODE>Wacom-OSC</CODE> object outputs OSC messages with different addresses for the
+different states.  For example, if the eraser end of the pen is currently
+touching the tablet, <CODE>Wacom-OSC</CODE> continuously outputs messages whose
+address is <CODE>/eraser/drawing</CODE> and whose arguments are the current values of position, tilt, and pressure.
+<p>
+At the moment the eraser end of the pen is released from the tablet,
+<CODE>Wacom-OSC</CODE> outputs the message <CODE>/eraser/release</CODE>.  As long as the
+eraser is within range of the tablet surface, <CODE>Wacom-OSC</CODE> continuously
+outputs messages with the address <CODE>/eraser/hovering</CODE> and the same
+position, tilt, and pressure arguments.</P>
+
+<P>With this scheme, all of the dispatching on the <em>device type</em>
+variables is done once and for all inside <CODE>Wacom-OSC</CODE>, and hidden from
+the interface designer. The interface designer simply uses the existing
+mechanisms for routing OSC messages to map the different pen states to
+different musical behaviors.</P>
+
+<P>We use another level of OSC addressing to define 
+distinct behaviors for different regions of the tablet. The interface designer 
+creates a data structure giving the names and locations of any number of regions 
+on the tablet surface. An object called <CODE>Wacom-Regions</CODE> takes the OSC messages 
+from <CODE>Wacom-OSC</CODE> and prepends the appropriate region name for events that 
+occur in the region. </P>
+
+<P>For example, suppose the pen is drawing within a region named
+<em>foo.</em> <CODE>Wacom-OSC</CODE> outputs the message <CODE>/tip/drawing</CODE> with
+arguments giving the current pen position, tilt, and pressure.
+<CODE>Wacom-Regions</CODE> looks up this current pen position in the data structure
+of all the regions and sees that the pen is currently in region
+<em>foo</em> so it outputs the message <CODE>/foo/tip/drawing</CODE>
+with the same arguments. Now the standard OSC message routing mechanisms can
+dispatch these messages to the part of the program that implements the
+behavior of the region <em>foo</em>.
+
+<P>Once again tedious programming work is hidden from the interface designer,
+whose job is simply to take OSC messages describing tablet gestures and map
+them to musical control.</P>
+<video controls src="matttablet.mp4">
+Matt Wright playing a tablet instrument
+</video>
+
+<H2>4. Dimensionality Reduction for the Tactex Control Surface</H2>
+
+<aside>
+Tactex went out of business.
+As of 2021, The Sensel Morph is a comparable controller.
+</aside>
+<figure class="i-right" >
+  <IMG SRC="tactex.png" WIDTH=240>
+  <figcaption>Tactex MTC Express</figcaption>
+</figure>
+<P>Tactex's MTC Express controller senses pressure at multiple points on
+a surface. The primary challenge using the device is to reduce the high
+dimensionality of the raw sensor output (over a hundred pressure values) to a
+small number of parameters that can be reliably controlled. </P>
+
+<P>One approach is to install physical 
+tactile guides over the surface and interpret the result as a set of sliders controlled 
+by a performer's fingers. Apart from not fully exploiting the potential of 
+the controller this approach has the disadvantage of introducing delays as the 
+performer finds the slider positions. </P>
+
+<P>An alternative approach 
+is to interpret the output of the tactile array as an <em>image</em> and use 
+computer vision techniques to estimate pressure for each finger of the hand. Software 
+provided by Tactex outputs four parameters for each of up to five sensed <em>fingers,</em> 
+which we represent with the following OSC addresses:
+
+
+<dl>
+<dt class="dlcode">/x</dt>
+<dd>X position on the surface</dd>
+<dt class="dlcode">/y</dt>
+<dd>Y position on the surface</dd>
+<dt class="dlcode">/z</dt>
+<dd>Pressure</dd>
+<dt class="dlcode">/age</dt>
+<dd>Amount of time this finger has been touching the surface</dd>
+</dl>
+
+<P>The anatomy of the human hand makes it impossible to control these four
+variables independently for each of five fingers. We have developed another
+level of analysis, based on interpreting the parameters of three fingers as a
+triangle, as shown below. This results in the parameters listed below.
+ These parameters are particularly easy to control and were chosen because they work
+  with any orientation of the hand. </P>
+<figure>
+<IMG SRC="handTriangleparameters.png" WIDTH="60%">
+  <figcaption>Parameters of Triangle Formed by 3 Fingers</figcaption>
+</figure>
+
+<figure>
+  <IMG SRC="tactexclosup.jpg" WIDTH="50%" style="transform:rotate(180deg);">
+  <figcaption>Tactex with 3-point touch</figcaption>
+</figure>
+<PRE>
+<CODE>
+/area &lt;area_of_inscribed_triangle&gt;
+/averageX &lt;avg_X_value&gt;
+/averageY &lt;avg_Y_value&gt;
+/incircle/radius &lt;Incircle radius&gt;
+/incircle/area &lt;Incircle area&gt;
+/sideLengths &lt;side1&gt; &lt;side2&gt; &lt;side3&gt;
+/baseLength &lt;length_of_longest_side&gt;
+/orientation &lt;slope_of_longest_side&gt;
+/pressure/average &lt;avg_pressure_value&gt;
+/pressure/max &lt;maximum_pressure_value&gt;
+/pressure/min &lt;minimum_pressure_value&gt;
+/pressure/tilt &lt;leftmost_Z-rightmost_Z&gt; 
+</CODE>
+</PRE>
+
+
+
+<H2>An OSC Address Space for Joysticks</H2>
+
+
+<P>USB joysticks used for computer games also have good properties as musical
+controllers.  One model senses two dimensions of tilt, rotation of the
+joystick, and a large array of buttons and switches. The buttons support
+<em>chording,</em> meaning that multiple buttons can be pressed at once and
+detected individually.</P>
+
+<P>We developed a modal interface in which each button corresponds to a particular musical 
+behavior. With no buttons pressed, no sound results. When one or more buttons 
+are pressed, the joystick's tilt and rotation continuously affect the behaviors 
+associated with those buttons.</P>
+
+<P>The raw joystick data is converted into OSC messages whose address
+indicates which button is pressed and whose arguments give the current
+continuous measurements of the joystick&#146;s state. When two or more buttons
+are depressed, the mapper outputs one OSC message per depressed button, each
+having identical arguments.  For example, while buttons <em>B</em> and
+<em>D</em> are pressed, our software continuously outputs these two
+messages:</P>
+
+<UL>
+<LI><code>/joystick/b <I>xtilt 
+ytilt rotation</I></code></LI>
+<LI><code>/joystick/d <I>xtilt 
+ytilt rotation</I></LI></CODE>
+</UL>
+
+<P>Messages with the address <CODE>/joystick/b</CODE>
+are then routed to the software implementing the behavior associated with
+button <em>B</em> with the normal OSC message routing
+mechanisms.</P>
+
+
+<H2>Mapping Incoming MIDI to OSC</H2>
+
+<P>Suppose a computer-music instrument is to be controlled by two keyboards,
+two continuous foot-pedals, and a foot- switch. There is no reason for the
+designer of this instrument to think about which MIDI channels will be used,
+which MIDI controller numbers the foot-pedals output, whether the input comes
+to the computer on one or more MIDI ports, etc.</P>
+
+<P>We map MIDI message to OSC messages as soon as possible. Only the part of
+the program which does this translation needs to embody any of the MIDI
+addressing details listed above. The rest of the program sees messages with
+symbolic names like <CODE>/footpedal1</CODE>, so the
+mapping of MIDI to synthesis control is clear and
+self-documenting.</P>
+
+<H2>Controller Remapping</H2>
+
+<P>The use of an explicit mapping from gestural input to sound control, both
+represented as OSC messages, makes it easy to change this mapping in real-time
+to create different modes of behavior for an instrument. Simply route incoming
+OSC messages to the mapping software corresponding to the current mode. </P>
+
+<P>For example, we have developed Wacom tablet interfaces where the region in
+which the pen touches the tablet surface defines a musical behavior to be
+controlled by the continuous pen parameters even as the pen moves outside the
+original region.  Selection of a region when the pen touches the tablet
+determines which mapper(s) will interpret the continuous pen parameters until
+the pen is released from the tablet.</P>
+
+<H2>OSC to Control Hexaphonic Guitar Processing</H2>
+
+<P>We have created a large body of signal processing instruments that
+transform the hexaphonic output of an electric guitar. Many of these effects
+are structured as groups of 6 signal-processing modules, one for each string,
+with individual control of all parameters on a per-string basis. For example,
+a hexaphonic 4-tap delay has 6 signal inputs, 6 signal outputs, and six groups
+of nine parameters:  the gain of the undelayed signal, four tap times, and
+four tap gains.</P>
+
+<P>OSC gives us a clean way to organize these 54 parameters. We make an
+address space whose top level chooses one of the six delay lines with the
+numerals 1-6, and whose bottom level names the parameters. For example, the
+address <CODE>/3/tap2time</CODE> sets the time of the
+second delay tap for the third string. We can then leverage OSC&#146;s
+pattern-matching capabilities, for example, 
+by sending the message <CODE>/[4-6]/tap[3-4]gain</CODE> to set the gain of taps three
+and four of strings four, five, and six all at once.</P>
+
+
+<H2>Example:  A Tactex-Controlled Granular Synthesis Instrument</H2>
+
+<P>We have developed an interface that controls granular synthesis from the
+triangle-detection software for the Tactex MTC described above. Our granular
+synthesis instrument continuously synthesizes grains each with a location in
+the original sound and frequency transposition value that are chosen randomly
+from within a range of possible values. The real-time-controllable parameters
+of this instrument are arranged in a straightforward OSC address
+space:</P>
+
+<DL>
+<dt class="dlcode">/bufpos</DT><DD>Avg. grain position in input sound</DD>
+<dt class="dlcode">/bufposrange</dt><dd>Range of possible values around </dd>
+<dt class="dlcode">/duration</dt><dd>duration of each grain<dd>
+<dt class="dlcode">/transpose</dt><dd>Average transposition per grain</dd>
+<dt class="dlcode">/transposerange</dt><dd>Range of possible transposition values around </dd>
+</dl>
+
+<P>The Max/MSP patch shown below maps incoming Tactex
+triangle-detection OSC messages to OSC messages to control this granular
+synthesizer.
+
+
+<aside>
+As our use of this strategy grew, we became unhappy with having to crack apart and reassemble OSC messages
+to access the limited "expr" features of Max/MSP. This resulted in development of "o.", a language
+where OSC messages are the native data structure.
+</aside>
+<figure>
+  <IMG SRC="tactexMaxMsp.png" WIDTH="80%">
+  <figcaption>Tactex Granular Max/MSP Patch</figcaption>
+</figure>
+<P>This mapping was codeveloped with Guitarist/Composer John Schott and used
+for his composition <cite>The Fly</cite>.
+<video controls src="fly.mp4">
+John Schott performing with Tactex MTC and Guitar</video>
+<H2>Conclusion</H2>
+
+<P>We have described the benefits in diverse contexts of explicit mapping of
+gestures to sound control parameters with OSC.
+
+</section>
+<section class="References">
+<H2>References</H2>
+
+<P>Boie, B., M. Mathews, and A. Schloss 1989. <cite>The Radio Drum as a Synthesizer
+Controller</cite>. Proceedings of the International Computer Music Conference,
+Columbus, OH, pp. 42-45. </P>
+
+<P>Buchla, D. 2001. <cite>Buchla Thunder.</cite>
+<a href="https://web.archive.org/web/20120204132548/https://buchla.com/historical/thunder/index.html">
+http://www.buchla.com/historical/thunder/index.html</a></P>
+
+<P>Tactex.  2001. <cite>Tactex Controls Home Page.</cite> http://www.tactex.com</P>
+
+<P>Wright, M. 1998.  <cite>Implementation and Performance Issues with Open Sound
+Control.</cite> Proceedings of the International Computer Music Conference, Ann
+Arbor, Michigan. </P>
+
+<P>Wright, M.  and A. Freed 1997. <cite>Open Sound Control: A New Protocol for
+Communicating with Sound Synthesizers.</cite> Proceedings of the International
+Computer Music Conference, Thessaloniki, Hellas, pp. 101-104. </P>
+
+<P>Wright, M., D. Wessel, and A. Freed 1997. <cite>New Musical Control Structures
+from Standard Gestural Controllers</cite>. Proceedings of the International Computer
+Music Conference, Thessaloniki, Hellas.  </P>
+</section>
+<article id="postamble">
+</article>
+</BODY>
+</HTML>

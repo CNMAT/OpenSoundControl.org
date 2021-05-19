@@ -6,6 +6,7 @@ raw/
 .DS_Store
 /Implementations (Responses) - Form Responses 1.tsv
 /Publications (Responses) - Form Responses 1.tsv
+OpenSoundControl.org - Google Drive.webloc
 contributors.md
 
 
@@ -22,3 +23,4 @@ contributors.md
 
 # Also Adrian's "annotated" paper is done in pure html
 !OSCGestureMapping/index.html
+

@@ -24,7 +24,10 @@ web forms:
     OSC sending/receiving in various languages
   * Suggested edit/correction/update to an existing page on the site.
   * Another useful [perspective](perspectives.html) on OSC.
-  * ...
+  * ...nn
+
+You do not have the be the author of the publication or the creator of
+the implementation to add content to the site.
 
 Site editors will manually review form submissions and approve all
 legitimate additions to the site. The result of approved submissions is

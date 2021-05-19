@@ -10,6 +10,7 @@ rsync -aLvzh --delete \
       --exclude implementations-google-column-names.tsv \
       . ccrma-gate.stanford.edu:/usr/ccrma/web/html/groups/osc
 
-open http://opensoundcontrol.stanford.edu
-open https://ccrma.stanford.edu/groups/osc/
+open http://opensoundcontrol.stanford.edu/page-list.html
+open https://ccrma.stanford.edu/groups/osc/page-list.html
+
 

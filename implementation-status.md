@@ -43,6 +43,18 @@ Defunct
   [archive.org](https://web.archive.org).  Hopefully it has been
   superceded by a newer *active* implementation with similar features.
 
+
+To be clear, we are using the term "implementation" to refer to the
+*entire* thing that implements OSC, not just the OSC portion of that
+thing. Maybe the OSC module works and hasn't been touched in years; as
+long as the thing around the OSC module is Active, then for purposes
+of this website, the entire "implementation" would be Active.  For
+example, the [Wireshark](https://www.wireshark.org) project is Active,
+so even though the [wireshark.osc](implementations/wiresharkosc.html)
+OSC-specific plugin is not likely to need to change in the future, the 
+implementation as a whole would be Active rather than Legacy.
+
+
 ## Related to Status
 
 The implementations on this site conform to a certain field

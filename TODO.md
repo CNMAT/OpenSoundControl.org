@@ -14,6 +14,10 @@ Fix broken URLs of 2004 conference publications
 
 ## Matt
 
+Make an implementations page for the original libOSC from
+<https://github.com/CNMAT/CNMAT-OSC>
+
+
 Get in some more of the known publications
 
 More perspectives:
@@ -33,7 +37,8 @@ Make an actual "publications" page framing what this collection is and providing
 - contribute link
 
 
-Make an actual "implementations" page saying we aspire to point to all known implementations.  Provide several views:
+Make an actual "implementations" page saying we aspire to point to all
+known implementations.  Provide several views:
 
 - the raw source file <implementations.tsv>
 - list of active (or generally by status)
@@ -100,6 +105,13 @@ Prerequisites:
 
 ### Reach out to
 
+
+CNMAT home page and email list
+
+CCRMA announcements, facebook
+
+Old Emails scraped from `osc_dev` list
+
 <https://x-io.co.uk/contact/>
 
 linux-audio-user@lists.linuxaudio.org
@@ -112,11 +124,15 @@ A guide to OSC libraries, e.g., grouped by programming language and
 linking to pages in `implementations/*.html`
 
 
+More introductory materials
 
 
 ### Ongoing goals
 
 ongoing OSC publications search
+
+- e.g., <https://cnmat.berkeley.edu/search/node/OSC%20type%3Abiblio>
+
 
 ongoing OSC implementations search
 

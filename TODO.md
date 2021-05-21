@@ -108,13 +108,23 @@ linux-audio-user@lists.linuxaudio.org
 
 ## Future improvements
 
+A guide to OSC libraries, e.g., grouped by programming language and
+linking to pages in `implementations/*.html`
+
+
+
+
 ### Ongoing goals
 
 ongoing OSC publications search
 
 ongoing OSC implementations search
 
-- Are we missing any super old implementations from <http://cnmat.org/OpenSoundControl/> ?
+- Are we missing any super old implementations from <http://cnmat.org/OpenSoundControl> ?
+
+Make sure we have, e.g., github links, for all the implementations.
+
+
 
 Link to every top-level page from the prose of the home page:
 
@@ -122,9 +132,7 @@ Link to every top-level page from the prose of the home page:
 
 
 
-### Code improvements
-
-
+### Site implementation improvements
 
 - Make accept-new-implementations handle image downloads
 

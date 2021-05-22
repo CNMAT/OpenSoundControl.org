@@ -11,8 +11,8 @@ how the site determines each publication's filename:
 * Omit anything in parentheses
 * Omit all punctuation characters
 * Remove trailing whitespace
-* Convert spaces to '-'
-* Convert repeated '--' to just one
+* Convert spaces to `-`
+* Convert repeated `--` to just one
 
 This is the line of `build-pubs.sh` implementing this:
 

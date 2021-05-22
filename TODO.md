@@ -77,14 +77,6 @@ Link to the new site page from the 98 OSC Kit publication page's "context"
 
 ## Switch the Domain Name
 
-Fix links from Google Docs into stanford.edu
-
-Make sure links to old <http://opensoundcontrol.org/OSCGestureMapping> will still work.
-
-Something something [CCRMA
-sysadmin](https://ccrma.stanford.edu/docs/system/sysadmin.html)
-something something.
-
 Make sure the new site gets archived on archive.org.
 
 - <https://archive-it.org/blog/files/2021/03/Archive-It_Basic.pdf> ?

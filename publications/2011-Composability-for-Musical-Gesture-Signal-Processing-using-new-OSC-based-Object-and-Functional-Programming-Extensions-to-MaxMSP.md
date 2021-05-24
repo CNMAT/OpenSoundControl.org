@@ -1,6 +1,6 @@
 # Composability for Musical Gesture Signal Processing using new OSC-based Object and Functional Programming Extensions to Max/MSP
 
-Adrian Freed, John MacCallum, Andrew Schmeder. *Composability for Musical Gesture Signal Processing using new OSC-based Object and Functional Programming Extensions to Max/MSP*. 2011.  New Interfaces for Musical Expression. 
+Adrian Freed, John MacCallum, Andrew Schmeder. *Composability for Musical Gesture Signal Processing using new OSC-based Object and Functional Programming Extensions to Max/MSP*. 2011.  NIME. 
 
 **URL**: <http://www.adrianfreed.com/content/composability-musical-gesture-signal-processing-using-new-osc-based-object-and-functional-pr>
 

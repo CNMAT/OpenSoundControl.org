@@ -161,6 +161,10 @@ build-index.sh will source)
 - Let build-implementations.sh take an argument for the last N lines in the
 TSV instead of always deleting and rebuilding everything
 
+Switch to [MkDocs](https://www.mkdocs.org) or
+[Hugo](https://gohugo.io/about/features/) or...?
+
+
 ### Other structured site contributions
 
 What other kinds of community contributions does the new site solicit?

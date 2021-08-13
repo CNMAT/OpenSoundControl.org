@@ -11,10 +11,11 @@ OpenSoundControl.org.
 
 The website's information is structured as follows:
 
-- Git repository containing "the real content" (and its history).  For
-  now this is hosted by github.com and the expectation is that each
-  editor will make a local clone to use as a working directory. This
-  is world-readable.
+- [Our git repository](site-repo.html) containing "the real content"
+  (and its history).  For now this is hosted by github.com and the
+  expectation is that each editor (as well as git-savvy would-be
+  contributors) will make a local clone to use as a working
+  directory. This is world-readable.
 - Various online forms where anyone on the Internet can submit
   contributions to the site.  For now these are Google Forms, each
   with a corresponding/resulting (editable) Google Sheet containing
@@ -26,9 +27,9 @@ The website's information is structured as follows:
 ## Making Small Changes Directly in GitHub
 
 1. Log into GitHub 
-1. <https://github.com/CNMAT/OpenSoundControl.org>
+1. [Our repo](site-repo.html) is <https://github.com/CNMAT/OpenSoundControl.org>
 1. Follow [these general
-   instructions](https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository),
+   instructions][editing-repo-files],
    keeping these opensoundcontrol.org-specific details in mind:
     - add your commit to the current branch / Commit directly to the
       `main` branch
@@ -38,6 +39,9 @@ The website's information is structured as follows:
       pandoc's flavors of markdown.  For the real site, pandoc wins
       (but try to avoid those features at all if possible).
 1. Now somebody has to pull, build, and deploy
+
+[editing-repo-files]:https://docs.github.com/en/github/managing-files-in-a-repository/editing-files-in-your-repository
+
 
 ## Accepting Content from Form Submissions
 

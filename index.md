@@ -11,9 +11,9 @@ publishing, sharing, and showcasing all things OSC; we encourage
 [contributions](contribute.html) which the [editors](editors.html)
 will review and incorporate. You might start with the [list of
 pages](page-list.html), site-wide [table of contents](toc.html)
-(listing all the sections of every page), or more info
-[about](README.html) the site.  All site content is covered by the
-CC-BY [license](license.html).
+(listing all the sections of every page), info [about](README.html)
+the site, or the [git repository behind this site](site-repo.html).
+All site content is covered by the CC-BY [license](license.html).
 
 
 ## What is OSC?
@@ -76,10 +76,12 @@ a network."
   specifications: [Spec_1.0](spec-1_0.html) &
   [Spec_1.1](spec-1_1.html)
 
-* Browse the
-  [implementations](page-list.html#implementations)
-  to discover the many ways in which OSC is used in artistic and
-  commercial projects.
+* Browse the implementations (as a [list of web
+  pages](page-list.html#implementations) or a [huge TSV
+  file](implementations.tsv)) to discover the many kinds of things that
+  can send OSC to each other.
+
+* Clone the [git repository behind this site](site-repo.html)
 
 * [Contribute to the site](contribute.html) by submitting information
   about your own project.

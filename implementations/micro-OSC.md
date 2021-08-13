@@ -30,4 +30,4 @@ micro-OSC (uOSC) is a firmware runtime system for embedded platforms designed to
 **Transport support**: Serial-SLIP
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

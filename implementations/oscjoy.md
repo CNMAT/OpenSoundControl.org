@@ -24,4 +24,4 @@ A little command line utility that lets you use connected joysticks as OpenSound
 **Transport support**: UDP
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

@@ -28,4 +28,4 @@ NetUtil is a compact java library for sending and receiving messages using the O
 **Transport support**: UDP, TCP
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

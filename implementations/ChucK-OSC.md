@@ -26,4 +26,4 @@ ChucK is a new (and developing) audio programming language for real-time synthes
 **Transport support**: UDP
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

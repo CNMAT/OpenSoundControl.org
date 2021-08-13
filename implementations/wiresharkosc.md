@@ -25,4 +25,4 @@ The plugin is written as a heuristic dissector, e.g. it will automatically recog
 **Transport support**: UDP, TCP
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 5/19/2021 13:21:20
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Karl Yerkes at 5/19/2021 13:21:20

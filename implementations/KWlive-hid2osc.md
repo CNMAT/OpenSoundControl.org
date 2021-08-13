@@ -16,4 +16,4 @@ unable to get anything on either URL, and search returns no results. wayback mac
 The hid2osc OSX application reads values from devices that meet the HID (Human Interface Device) specification (most mice and joysticks) and outputs those values as OSC
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

@@ -32,4 +32,4 @@ x-OSC is a wireless I/O board that provides just about any software with access 
 <https://x-io.co.uk/wp-content/themes/foundationpress_2020-12-30_11-57/assets/images/x-io-header-logo.png>
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/3/2021 20:00:49
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (Admin)](https://x-io.co.uk/x-osc/) at 4/3/2021 20:00:49

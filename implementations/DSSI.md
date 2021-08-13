@@ -26,4 +26,4 @@ DSSI (pronounced "dizzy") is an API for audio processing plugins, particularly u
 **Transport support**: Bidirectional UDP (via sendto/recvfrom)
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

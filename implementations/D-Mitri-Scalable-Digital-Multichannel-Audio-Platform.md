@@ -34,4 +34,4 @@ The D-Mitri platform is a scalable networked audio solution at the heart of Meye
 <https://meyersound.com/wp-content/uploads/2017/01/d-mitri_main.png>
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/3/2021 15:26:53
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (Admin)](http://www.meyersound.com) at 4/3/2021 15:26:53

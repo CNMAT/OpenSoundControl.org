@@ -22,4 +22,4 @@ Website http://robold.tim-schenk.de/ is live but has no contact. Archive.org has
 **Transport support**: TCP, HTTP
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

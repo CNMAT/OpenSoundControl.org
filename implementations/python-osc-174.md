@@ -28,4 +28,4 @@ Open Sound Control server and client implementations in pure python (3.5+). This
 **Transport support**: None / Transport Independent
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/3/2021 20:43:35
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (Admin)](https://pypi.org/project/python-osc/) at 4/3/2021 20:43:35

@@ -26,4 +26,4 @@ OSC for Matlab -- based on Liblo. Supports windows, linux, osx.
 **Transport support**: UDP
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

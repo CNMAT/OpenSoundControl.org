@@ -16,4 +16,4 @@ Product appears to be active.
 vvvv is a toolkit for real time video synthesis. It is designed to facilitate the handling of large media environments with physical interfaces, real-time motion graphics, audio and video that can interact with many users simultaneously. vvvv uses a visual programming interface. Therefore it provides a graphical programming language for easy prototyping and development. vvvv is free for non-commercial use. Commercial use requires a license. <p> vvvv osc nodes use: [Delphi OSC](implementation/delphi-osc)
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

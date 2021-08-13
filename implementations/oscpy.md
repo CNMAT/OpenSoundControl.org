@@ -28,4 +28,4 @@ OpenSoundControl is an UDP based network protocol, that is designed for fast dis
 **Transport support**: None / Transport Independent
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/3/2021 20:53:09
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Gabriel Pettier](https://pypi.org/project/oscpy/) at 4/3/2021 20:53:09

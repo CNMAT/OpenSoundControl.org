@@ -28,4 +28,4 @@ AdLibitouch Lite is a cross-platform touch and wireless 'client-server' hybrid c
 **Transport support**: UDP, TCP, Bidirectional UDP (via sendto/recvfrom)
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

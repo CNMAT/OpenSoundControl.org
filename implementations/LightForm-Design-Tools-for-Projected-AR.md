@@ -32,4 +32,4 @@ Lightform makes computer vision add-ons for projectors, sensor integrated projec
 <https://lightform.com/wp-content/uploads/2019/07/lightform-wordmark-blak.svg>
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/3/2021 21:35:15
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (Admin)](https://lightform.com/) at 4/3/2021 21:35:15

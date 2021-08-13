@@ -232,7 +232,7 @@ tail +2 $tsv | \
         fi
 
 
-        if [ -z "$SUBMITTER" ] ; then
+        if [ -z "$SUBMITTER_NAME" ] ; then
             FULLSUBMITTER="Anonymous"
         else 
             if [ -z "$SUBMITTER_WEBSITE" ] ; then

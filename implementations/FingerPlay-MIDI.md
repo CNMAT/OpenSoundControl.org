@@ -20,4 +20,4 @@ It is an app for Android capable devices in the marketplace used to send OSC inf
 **Platform(s)**: Windows, Macintosh
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:32
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:32

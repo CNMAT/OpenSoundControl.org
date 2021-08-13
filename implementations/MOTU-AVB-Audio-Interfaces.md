@@ -32,4 +32,4 @@ MOTU is a company that produces audio/MIDI interfaces.  MOTU pro audio audio int
 <https://cdn-data.motu.com/django_prod/filer_public_thumbnails/filer_public/1c/b6/1cb69cfe-095a-4ba6-8bbd-f3db9b55c118/blue_logo.png__814x212_q85_subsampling-2.png>
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/2/2021 23:28:49
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner (Admin)](http://www.motu.com) at 4/2/2021 23:28:49

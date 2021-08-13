@@ -28,4 +28,4 @@ OSC objects for Pure-data, by Martin Peach
 **Transport support**: None / Transport Independent
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

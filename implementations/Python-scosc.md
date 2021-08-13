@@ -18,4 +18,4 @@ scosc is an implementation of OSC for Python.
 **Platform(s)**: Any / Platform Independent
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

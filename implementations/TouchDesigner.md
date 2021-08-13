@@ -30,4 +30,4 @@ TouchDesigner is a gpu accelerated realtime visual programming interface, incorp
 **Transport support**: UDP, TCP, Bidirectional UDP (via sendto/recvfrom), HTTP, Other
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 2/24/21 12:33
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Legacy](legacy-site.html) at 2/24/21 12:33

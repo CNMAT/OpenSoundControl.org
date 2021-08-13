@@ -38,4 +38,4 @@ forthcoming
 <forthcoming>
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 3/8/2021 12:54:10
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by [Jeremy Wagner](https://www.jeremywagner.info) at 3/8/2021 12:54:10

@@ -27,4 +27,4 @@ This is a Raku (formerly Perl6) module implementing Open Sound Control. It inclu
 **Transport support**: UDP, TCP
 
 ---
-Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Anonymous at 4/30/2021 17:05:24
+Submitted to [opensoundcontrol.org](https://opensoundcontrol.org) by Karl Yerkes at 4/30/2021 17:05:24

@@ -11,6 +11,6 @@ rsync -aLvzh --delete \
       . ccrma-gate.stanford.edu:/usr/ccrma/web/html/groups/osc
 
 open http://opensoundcontrol.stanford.edu/page-list.html
-open https://ccrma.stanford.edu/groups/osc/page-list.html
+# open https://ccrma.stanford.edu/groups/osc/page-list.html
 
 

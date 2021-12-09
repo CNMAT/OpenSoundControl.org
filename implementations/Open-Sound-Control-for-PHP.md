@@ -2,9 +2,6 @@
 
 **[status](../implementation-status.html)**: Unknown (as of 23-Feb-21)
 
-**Status details**: 
-
-
 **Project Type**: Programming Language Library
 
 **Project URL**: <implementation/open-sound-control-php>

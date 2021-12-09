@@ -2,9 +2,6 @@
 
 **[status](../implementation-status.html)**: Active / maintained (as of 4/2/2021)
 
-**Status details**: 
-
-
 **Project Type**: Programming Language Library
 
 **Project URL**: <https://pypi.org/project/oscpy/>

@@ -3,7 +3,7 @@
 **[status](../implementation-status.html)**: active (as of 12-Mar-21)
 
 **Status details**: 
-unclear when the last update was, but the site says 2002-present and all links on it work. 
+unclear when the last update was, but the site says 2002-present and all links on it work.
 
 **Project Type**: Programming Language Library
 

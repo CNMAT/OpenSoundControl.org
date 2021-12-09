@@ -40,9 +40,11 @@ if (( $numlines < 1 + $num_new )); then
     exit -3;
 fi
 
+# The heart of it:
 # Remove fields including timestamp, email...
 # Append to end of implementations
-tail -$num_new "$googledownload" | cut -f 1-3,5-21,23-24 >> $tsv
+# `cut` is adding weird ^M newlines, hence the calls to `tr`
+tail -$num_new "$googledownload" | cut -f 1-3,5-21,23-24 | tr '\015' '\012' | tr -s '\012' >> $tsv
 
 
 # echo check for duplicates.  Field 4 is \"Name\"
@@ -79,9 +81,10 @@ tail +2 $tsv | cut -f 2,3 |\
 
 newbies=`comm -13 $contributors $new`
 
+# XXX need to better handle contributors without a website
 if [ ! -z "$newbies" ] ; then
-    echo Adding new contributors to $contributors
-    echo "$newbies"
+    echo Adding the following new contributors to $contributors:
+    echo "    $newbies"
 
     # Sort in the new ones, re-using $new
     rm -f $new

@@ -2,9 +2,6 @@
 
 **[status](../implementation-status.html)**: Active (as of 15-Mar-21)
 
-**Status details**: 
-
-
 **Project Type**: Programming Language Library
 
 **Project URL**: <http://puredata.info/>

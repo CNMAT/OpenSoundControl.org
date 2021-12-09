@@ -3,7 +3,7 @@
 **[status](../implementation-status.html)**: Unknown/Legacy (as of 23-Feb-21)
 
 **Status details**: 
-This one appears to be functional at the following link: http://aestesis.eu/elektronika/ 
+This one appears to be functional at the following link: http://aestesis.eu/elektronika/
 
 **Project Type**: Software Application
 

@@ -5,9 +5,6 @@ Yes. Superseded by odot: https://github.com/CNMAT/CNMAT-odot
 
 **[status](../implementation-status.html)**: Defunct/Legacy (as of 15-Mar-21)
 
-**Status details**: 
-
-
 **Project Type**: Programming Language Library
 
 **Project URL**: <http://cnmat.berkeley.edu/downloads>

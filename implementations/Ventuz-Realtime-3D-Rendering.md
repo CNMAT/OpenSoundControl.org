@@ -2,9 +2,6 @@
 
 **[status](../implementation-status.html)**: Active (as of 11-Mar-21)
 
-**Status details**: 
-
-
 **Project Type**: Software Application
 
 **Project URL**: <http://www.ventuz.com/>

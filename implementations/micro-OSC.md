@@ -2,9 +2,6 @@
 
 **[status](../implementation-status.html)**: Unknown (as of 23-Feb-21)
 
-**Status details**: 
-
-
 **Project Type**: Hardware
 
 **Project URL**: <http://cnmat.berkeley.edu/research/uosc>

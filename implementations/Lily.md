@@ -3,7 +3,7 @@
 **[status](../implementation-status.html)**: Unknown/defunct (as of 19-Mar-21)
 
 **Status details**: 
-unable to reach lilyapp.org as well as both of these links. Seems like the server for their site is down. 
+unable to reach lilyapp.org as well as both of these links. Seems like the server for their site is down.
 
 **Project Type**: Programming Language Library
 

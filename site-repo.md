@@ -9,11 +9,8 @@ repository:
 Therefore you can:
 
 - Clone the site for yourself to download and examine all the files.
-- Browse the content of the site within github's website.
+- Browse the content of the site within github's website (e.g., [this
+  file](https://github.com/CNMAT/OpenSoundControl.org/blob/master/site-repo.md))
 - [Contribute](contribute.html) to the site via a pull request (if you
   know what you're doing).
 - Keep your own copy or mirror of the site content.
-
-
-
-

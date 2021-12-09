@@ -1,8 +1,10 @@
 [Adrian Freed](http://adrianfreed.com)
+[Artem Popov](https://github.com/artfwo)
 [Gabriel Pettier](https://pypi.org/project/oscpy/)
 [Jeremy Wagner](https://www.jeremywagner.info)
 [John MacCallum](https://john-maccallum.com)
-Karl Yerkes
+ KaWo
+ Karl Yerkes
 [Legacy](legacy-site.html)
 [Matthew Wright](https://ccrma.stanford.edu/~matt)
 [Sam Smallman](https://artificers.co.uk/)

@@ -13,7 +13,7 @@ Active
 
 ## Description
 
-It's a eurorack sensor platform using BTLE sensors, has wifi (2.4) and uses OSC and midi for comms.
+It's a eurorack sensor platform using BTLE sensors, has wifi (2.4) and uses OSC and midi for comms. OSC can be used via Wi-Fi only.
 
 ## Implementation Details
 

@@ -88,7 +88,12 @@ For example, for implementations.
     * Commit all desired updates to git
     * build and deploy the site as usual
     
+4. Thank the contributors
 
+    * Email "Thanks for your contribution to opensoundcontrol.org!"
+    * Include URL of new page
+    * Include [contributors page](contributors.html) which should now
+      have their name
 
 
 ## Editing site content

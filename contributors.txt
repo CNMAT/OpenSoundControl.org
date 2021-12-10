@@ -3,8 +3,8 @@
 [Gabriel Pettier](https://pypi.org/project/oscpy/)
 [Jeremy Wagner](https://www.jeremywagner.info)
 [John MacCallum](https://john-maccallum.com)
-KaWo
-Karl Yerkes
+ KaWo
+ Karl Yerkes
 [Legacy](legacy-site.html)
 [Matthew Wright](https://ccrma.stanford.edu/~matt)
 [Sam Smallman](https://artificers.co.uk/)

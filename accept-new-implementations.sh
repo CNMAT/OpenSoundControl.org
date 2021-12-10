@@ -59,14 +59,13 @@ if [ ! -z "$duplicates" ] ; then
 fi
 
 
-# Check if any of the submitters are new site contributors and if so add them to the list.
+# Check if any of the submitters are new site contributors and if so
+# add them to the list.
 
 contributors=contributors.txt
 new=/tmp/newcontribs
 
-# Omit header line | just contributor's name and possible website |
-# XXX temp kludge 
-#  convert to markdown | sort | uniq 
+# Here's what's happening:
 
 # We want all names alphabetical regardless of whether they have
 # websites listed, so special kludge: sort on the second character
@@ -74,7 +73,13 @@ new=/tmp/newcontribs
 # non-website ones (so the name starts on the second character of the
 # line).
 
-tail +2 $tsv | cut -f 2,3 |\
+# Breaking down this huge chain of pipes:
+#  Only the desired number | just contributor's name and possible website |
+#  XXX temp kludge involving Jeremy |
+#  convert to markdown (kludgily handing missing websites) |
+#  sort | uniq 
+
+tail -$num_new $tsv | cut -f 2,3 |\
     fgrep -v "Jeremy Wagner" |\
     awk  -F'\t' '{if (length($2)==0) print "", $1; else printf("[%s](%s)\n",$1,$2);}' | \
     sort -k 1.2 | uniq > $new
@@ -88,10 +93,10 @@ if [ ! -z "$newbies" ] ; then
 
     # Sort in the new ones, re-using $new
     rm -f $new
-    echo "$newbies" | cat - $contributors | sort -k 1.2  > $new
+    echo "$newbies" | cat - $contributors | sort -k 1.2  | uniq > $new
     cp -f $new $contributors
 fi
-rm $new 
+rm -f $new 
 
 
 echo XXX Need to download any images...

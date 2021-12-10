@@ -7,4 +7,5 @@
  Karl Yerkes
 [Legacy](legacy-site.html)
 [Matthew Wright](https://ccrma.stanford.edu/~matt)
+[Romain Michon](https://ccrma.stanford.edu/~rmichon)
 [Sam Smallman](https://artificers.co.uk/)

@@ -188,7 +188,7 @@ size (in 8-bit bytes) of each part.
 
   Second bundle element's contents   As many bytes as given by "size of second bundle element"    Second bundle element
 
-  etc.                                                                                            Addtional bundle elements
+  etc.                                                                                            Additional bundle elements
 
   ---------------------------------- ------------------------------------------------------------ --------------------------------------
 

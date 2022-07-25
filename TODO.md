@@ -74,6 +74,12 @@ binary downloads would be great
 Link to the new site page from the 98 OSC Kit publication page's "context"
 
 
+### Upgrades
+
+support TCP, websockets
+
+Might need to rewrite in C++
+
 
 ## Switch the Domain Name
 

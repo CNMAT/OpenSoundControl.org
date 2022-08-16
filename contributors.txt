@@ -7,6 +7,7 @@
  Karl Yerkes
 [Legacy](legacy-site.html)
 [Matthew Wright](https://ccrma.stanford.edu/~matt)
+[nik gaffney](https://github.com/zzkt)
 [Phill Tew](https://github.com/tilde-love/osc-core)
 [Romain Michon](https://ccrma.stanford.edu/~rmichon)
 [Sam Smallman](https://artificers.co.uk/)

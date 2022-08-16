@@ -53,3 +53,11 @@ request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-re
 for each proposed contribution to the site. (Don't forget to add
 yourself to contributors.txt so you'll appear in the [site's list of
 contributors](contributors.html).)
+
+Please note that the script <build-implementations.sh> procedurally
+generates all of the `.md` files inside the `implementations`
+subdirectory; **you must change information about an implementation in
+awkward `tsv` format instead of simply editing the resulting `.md`
+file**.  (It [would be nice](TODO.html) to change the implementation
+to use something like `.yaml` instead of `.tsv` to hold the structured
+table of implementation info.)

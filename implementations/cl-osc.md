@@ -7,9 +7,9 @@ Updates from 2021 on the website.
 
 **Project Type**: Programming Language Library
 
-**Project URL**: <http://www.cliki.net/OSC>
+**Project URL**: <https://github.com/zzkt/osc>
 
-**OSC Documentation URL**: <http://fo.am/darcs/osc/README.txt>
+**OSC Documentation URL**: <https://github.com/zzkt/osc>
 
 ## Description
 

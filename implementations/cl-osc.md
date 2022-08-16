@@ -1,9 +1,6 @@
 # cl-osc
 
-**[status](../implementation-status.html)**: active (as of 12-Mar-21)
-
-**Status details**: 
-Updates from 2021 on the website.
+**[status](../implementation-status.html)**: active (as of 16-Aug-22)
 
 **Project Type**: Programming Language Library
 

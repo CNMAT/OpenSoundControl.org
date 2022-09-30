@@ -89,7 +89,7 @@ Strings to start with a comma makes it easier for the recipient of an
 OSC Message to determine whether that OSC Message is lacking an OSC Type
 Tag String.)
 
-This table lists the correspondance between each OSC Type Tag and the
+This table lists the correspondence between each OSC Type Tag and the
 type of its corresponding OSC Argument:
 
   ------------------ ------------------------------------
@@ -188,7 +188,7 @@ size (in 8-bit bytes) of each part.
 
   Second bundle element's contents   As many bytes as given by "size of second bundle element"    Second bundle element
 
-  etc.                                                                                            Addtional bundle elements
+  etc.                                                                                            Additional bundle elements
 
   ---------------------------------- ------------------------------------------------------------ --------------------------------------
 
@@ -207,14 +207,14 @@ available. "Invoking" an OSC method is analogous to a procedure call;
 it means supplying the method with arguments and causing the method's
 effect to take place.
 
-An OSC Server's OSC Methods are arranged in a tree strcuture called an
+An OSC Server's OSC Methods are arranged in a tree structure called an
 *OSC Address Space*. The leaves of this tree are the OSC Methods and
 the branch nodes are called *OSC Containers*. An OSC Server's OSC
 Address Space can be dynamic; that is, its contents and shape can change
 over time.
 
 Each OSC Method and each OSC Container other than the root of the tree
-has a symbolic name, an ASCII string consiting of printable characters
+has a symbolic name, an ASCII string consisting of printable characters
 other than the following:
 
   --------------- ------------------- --------------------------
@@ -257,7 +257,7 @@ substrings between adjacent pairs of forward slash characters and the
 substring after the last forward slash
 character. ([examples](spec-1_0-examples.html#addressparts))
 
-A received OSC Message must be disptched to every OSC method in the
+A received OSC Message must be dispatched to every OSC method in the
 current OSC Address Space whose OSC Address matches the OSC Message's
 OSC Address Pattern. An OSC Address Pattern matches an OSC Address if
 
@@ -300,7 +300,7 @@ current absolute time. OSC does not provide any mechanism for clock
 synchronization.
 
 When a received OSC Packet contains only a single OSC Message, the OSC
-Server should invoke the correponding OSC Methods immediately, i.e., as
+Server should invoke the corresponding OSC Methods immediately, i.e., as
 soon as possible after receipt of the packet. Otherwise a received OSC
 Packet contains an OSC Bundle, in which case the OSC Bundle's OSC Time
 Tag determines when the OSC Bundle's OSC Messages' corresponding OSC
@@ -316,8 +316,8 @@ Time tags are represented by a 64 bit fixed point number. The first 32
 bits specify the number of seconds since midnight on January 1, 1900,
 and the last 32 bits specify fractional parts of a second to a precision
 of about 200 picoseconds. This is the representation used by Internet
-NTP timestamps.The time tag value consisting of 63 zero bits followed by
-a one in the least signifigant bit is a special case meaning
+NTP timestamps. The time tag value consisting of 63 zero bits followed by
+a one in the least significant bit is a special case meaning
 "immediately."
 
 OSC Messages in the same OSC Bundle are *atomic*; their corresponding

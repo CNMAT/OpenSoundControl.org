@@ -70,7 +70,7 @@ Here are some of the values and goals embodied in this project:
 
 ### User Values
 
-* Simple, clear documentation oriented towards both beginngers ("what
+* Simple, clear documentation oriented towards both beginners ("what
   is OSC? / "how do I use it?") and experts (implementors, developers, etc.)
 * Simple, clean, accessible web design, not flashy / graphics-rich
 * Clear and useful site navigation supporting discovery of curated
@@ -81,7 +81,7 @@ Here are some of the values and goals embodied in this project:
   site content so it stays up do date.
 * The site is for publication, not discussion. In other words, it's a
   long-term site containing curated information intended to be useful
-  in the future, not a discusison forum such as slack / twitter /
+  in the future, not a discussion forum such as slack / twitter /
   reddit /
   [stackoverflow](https://stackoverflow.com/search?q=opensoundcontrol).
   (If something like this takes off, we would link to it from this
